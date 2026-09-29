@@ -34,6 +34,9 @@ for i, o in enumerate(items):
         errors.append(f"{name}: funding must be one of {sorted(FUNDING)}")
     if o.get("campuses") is not None and not isinstance(o.get("campuses"), list):
         errors.append(f"{name}: campuses must be a list of campus names")
+    for site in o.get("sites") or []:
+        if not (isinstance(site, dict) and site.get("name") and isinstance(site.get("lat"), (int, float)) and isinstance(site.get("lon"), (int, float))):
+            errors.append(f"{name}: each site needs name, lat and lon")
     if not str(o.get("url", "")).startswith("http"):
         errors.append(f"{name}: url must start with http")
 if errors:

@@ -8,6 +8,8 @@ It started as a prototype for the ASCENDR Opportunity Advising Think Lab. It is 
 
 ## What the site does
 
+- **New look:** a search box with a campus picker up top, doors for each career level, headline numbers and a Closing soon row.
+- **Distance and map:** pick a campus to see each program's distance and filter to within 50, 150 or 300 miles; the Near my campus tab has a map with rings around your campus.
 - **Students tab:** nationwide programs. **Near my campus tab:** regional opportunities at DoW labs, bases, national labs and defense employers near each HSRU campus, grouped by region, or only the ones near your campus once you pick it. **Faculty tab:** grants, fellowships and summer programs.
 - **Funding comes first.** Every listing carries a funding label (Fully funded, Paid, Travel support, Research grant, Free, Unpaid, Funding not stated) and a plain note on what is paid or covered (pay, tuition, travel, housing, meals). **Funded only** is on by default, so students see the options that pay their way; one click shows the rest.
 - Filters for level, citizenship, campus, type, sponsor, reach and deadline.
@@ -75,6 +77,7 @@ On Tuesdays, `digest-email.yml` emails the digest if SMTP secrets are set.
 | `eligibility`, `citizenship`, `cit`, `award` | Who can apply and what it pays (`cit`: `us`, `us_pr`, `open`, `varies`, `unknown`) |
 | `funding`, `fundingNote` | `full`, `stipend`, `travel`, `grant`, `free`, `unpaid` or `unknown`, plus one plain sentence on what is covered. The first four count as funded. |
 | `campuses` | HSRU campus names when a program is open only to those campuses; empty otherwise |
+| `sites` | Where the program happens: a list of `{name, lat, lon}`. Used for "miles from your campus", the 50 / 150 / 300 mile filter and the map |
 | `opens`, `deadline`, `deadlineNote`, `recurs` | Dates as `YYYY-MM-DD`, or `null` with a note when not posted |
 | `status`, `needsCheck`, `changeNote`, `verified`, `added` | Review workflow |
 

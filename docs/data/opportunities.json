@@ -76,7 +76,24 @@
   "type": "Internship",
   "url": "https://aerospace.org/careers/students-and-recent-graduates",
   "verified": "2026-09-29",
-  "id": "aerospace-corp"
+  "id": "aerospace-corp",
+  "sites": [
+   {
+    "name": "El Segundo, CA",
+    "lat": 33.92,
+    "lon": -118.39
+   },
+   {
+    "name": "Colorado Springs, CO",
+    "lat": 38.83,
+    "lon": -104.82
+   },
+   {
+    "name": "Albuquerque, NM",
+    "lat": 35.08,
+    "lon": -106.65
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -188,7 +205,19 @@
   "type": "Internship",
   "url": "https://afrlscholars.usra.edu/scholarsprogram/locations/afwerx/",
   "verified": "2026-09-29",
-  "id": "afrl-afwerx"
+  "id": "afrl-afwerx",
+  "sites": [
+   {
+    "name": "Las Vegas, NV",
+    "lat": 36.17,
+    "lon": -115.14
+   },
+   {
+    "name": "Austin, TX",
+    "lat": 30.27,
+    "lon": -97.74
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -227,7 +256,14 @@
   "type": "Internship",
   "url": "https://afrlscholars.usra.edu/scholarsprogram/locations/",
   "verified": "2026-09-29",
-  "id": "afrl-catalyst"
+  "id": "afrl-catalyst",
+  "sites": [
+   {
+    "name": "Colorado Springs, CO",
+    "lat": 38.83,
+    "lon": -104.82
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -266,7 +302,14 @@
   "type": "Internship",
   "url": "https://afrlscholars.usra.edu/scholarsprogram/locations/edwards-afb/",
   "verified": "2026-09-29",
-  "id": "afrl-edwards"
+  "id": "afrl-edwards",
+  "sites": [
+   {
+    "name": "Edwards AFB, CA",
+    "lat": 34.905,
+    "lon": -117.884
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -305,7 +348,14 @@
   "type": "Internship",
   "url": "https://afrlscholars.usra.edu/scholarsprogram/locations/eglin/",
   "verified": "2026-09-29",
-  "id": "afrl-eglin"
+  "id": "afrl-eglin",
+  "sites": [
+   {
+    "name": "Eglin AFB, FL",
+    "lat": 30.483,
+    "lon": -86.525
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -344,7 +394,14 @@
   "type": "Internship",
   "url": "https://afrlscholars.usra.edu/scholarsprogram/locations/kirtland/",
   "verified": "2026-09-29",
-  "id": "afrl-kirtland"
+  "id": "afrl-kirtland",
+  "sites": [
+   {
+    "name": "Kirtland AFB, NM",
+    "lat": 35.04,
+    "lon": -106.61
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -383,7 +440,14 @@
   "type": "Internship",
   "url": "https://afrlscholars.usra.edu/scholarsprogram/locations/",
   "verified": "2026-09-29",
-  "id": "afrl-rome"
+  "id": "afrl-rome",
+  "sites": [
+   {
+    "name": "Rome, NY",
+    "lat": 43.22,
+    "lon": -75.41
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -531,7 +595,14 @@
   "type": "Internship",
   "url": "https://www.orau.org/ARLFellowship/fellowship-types/how-to-apply-summer-student-experience.htm",
   "verified": "2026-09-29",
-  "id": "arl-south"
+  "id": "arl-south",
+  "sites": [
+   {
+    "name": "Austin, TX",
+    "lat": 30.285,
+    "lon": -97.734
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -568,7 +639,24 @@
   "type": "Internship",
   "url": "https://www.orau.org/ARLFellowship/fellowship-types/how-to-apply-summer-student-experience.htm",
   "verified": "2026-09-29",
-  "id": "arl-sse"
+  "id": "arl-sse",
+  "sites": [
+   {
+    "name": "Adelphi, MD",
+    "lat": 39.0,
+    "lon": -76.97
+   },
+   {
+    "name": "Aberdeen, MD",
+    "lat": 39.47,
+    "lon": -76.13
+   },
+   {
+    "name": "Austin, TX",
+    "lat": 30.285,
+    "lon": -97.734
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -609,7 +697,14 @@
   "type": "Research job",
   "url": "https://www.arlut.utexas.edu/students.shtml",
   "verified": "2026-09-29",
-  "id": "arlut"
+  "id": "arlut",
+  "sites": [
+   {
+    "name": "Austin, TX",
+    "lat": 30.39,
+    "lon": -97.73
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -830,7 +925,14 @@
   "type": "Scholarship",
   "url": "https://deanofstudents.arizona.edu/defense-civilian-training-corps-program",
   "verified": "2026-09-29",
-  "id": "dctc-arizona"
+  "id": "dctc-arizona",
+  "sites": [
+   {
+    "name": "Tucson, AZ",
+    "lat": 32.232,
+    "lon": -110.953
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -943,7 +1045,14 @@
   "type": "Internship",
   "url": "https://www.zintellect.com/Opportunity/Details/ERDC-CERL-2026-0001",
   "verified": "2026-09-29",
-  "id": "erdc-cerl"
+  "id": "erdc-cerl",
+  "sites": [
+   {
+    "name": "Champaign, IL",
+    "lat": 40.11,
+    "lon": -88.24
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -982,7 +1091,14 @@
   "type": "Internship",
   "url": "https://www.ga.com/careers/early-career",
   "verified": "2026-09-29",
-  "id": "general-atomics"
+  "id": "general-atomics",
+  "sites": [
+   {
+    "name": "San Diego, CA",
+    "lat": 32.89,
+    "lon": -117.23
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1058,7 +1174,14 @@
   "type": "Internship",
   "url": "https://www.lanl.gov/engage/collaboration/student-programs",
   "verified": "2026-09-29",
-  "id": "lanl"
+  "id": "lanl",
+  "sites": [
+   {
+    "name": "Los Alamos, NM",
+    "lat": 35.88,
+    "lon": -106.3
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1097,7 +1220,14 @@
   "type": "Internship",
   "url": "https://computing.llnl.gov/careers/interns",
   "verified": "2026-09-29",
-  "id": "llnl"
+  "id": "llnl",
+  "sites": [
+   {
+    "name": "Livermore, CA",
+    "lat": 37.69,
+    "lon": -121.7
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1136,7 +1266,19 @@
   "type": "Internship",
   "url": "https://www.navair.navy.mil/nawcad/undergrad",
   "verified": "2026-09-29",
-  "id": "nawcad-ssep"
+  "id": "nawcad-ssep",
+  "sites": [
+   {
+    "name": "Lakehurst, NJ",
+    "lat": 40.03,
+    "lon": -74.35
+   },
+   {
+    "name": "Patuxent River, MD",
+    "lat": 38.29,
+    "lon": -76.41
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1175,7 +1317,14 @@
   "type": "Internship",
   "url": "https://www.navalsteminterns.us/internships/nreip/labs/",
   "verified": "2026-09-29",
-  "id": "nawctsd"
+  "id": "nawctsd",
+  "sites": [
+   {
+    "name": "Orlando, FL",
+    "lat": 28.59,
+    "lon": -81.2
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1214,7 +1363,19 @@
   "type": "Internship",
   "url": "https://www.navair.navy.mil/nawcwd/now_hiring",
   "verified": "2026-09-29",
-  "id": "nawcwd"
+  "id": "nawcwd",
+  "sites": [
+   {
+    "name": "China Lake, CA",
+    "lat": 35.65,
+    "lon": -117.66
+   },
+   {
+    "name": "Point Mugu, CA",
+    "lat": 34.12,
+    "lon": -119.12
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1289,7 +1450,14 @@
   "type": "Internship",
   "url": "https://www.niwcpacific.navy.mil/Connect/Internships-Externships-Student-Employment/",
   "verified": "2026-09-29",
-  "id": "niwc-pacific"
+  "id": "niwc-pacific",
+  "sites": [
+   {
+    "name": "San Diego, CA",
+    "lat": 32.71,
+    "lon": -117.24
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1330,7 +1498,14 @@
   "type": "Training program",
   "url": "https://psl.nmsu.edu/student-programs/student-programs.html",
   "verified": "2026-09-29",
-  "id": "nmsu-crew"
+  "id": "nmsu-crew",
+  "sites": [
+   {
+    "name": "Las Cruces, NM",
+    "lat": 32.28,
+    "lon": -106.75
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1369,7 +1544,14 @@
   "type": "Internship",
   "url": "https://nnss.gov/careers/student-programs/",
   "verified": "2026-09-29",
-  "id": "nnss"
+  "id": "nnss",
+  "sites": [
+   {
+    "name": "North Las Vegas, NV",
+    "lat": 36.2,
+    "lon": -115.12
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1445,7 +1627,14 @@
   "type": "Internship",
   "url": "https://nps.edu/web/stem/college",
   "verified": "2026-09-29",
-  "id": "nps-monterey"
+  "id": "nps-monterey",
+  "sites": [
+   {
+    "name": "Monterey, CA",
+    "lat": 36.6,
+    "lon": -121.87
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1557,7 +1746,14 @@
   "type": "Internship",
   "url": "https://www.navalsteminterns.us/nreip/labs/nswc_corona.html",
   "verified": "2026-09-29",
-  "id": "nswc-corona"
+  "id": "nswc-corona",
+  "sites": [
+   {
+    "name": "Corona, CA",
+    "lat": 33.87,
+    "lon": -117.57
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1707,7 +1903,14 @@
   "type": "Internship",
   "url": "https://ac.devcom.army.mil/people-careers/",
   "verified": "2026-09-29",
-  "id": "picatinny"
+  "id": "picatinny",
+  "sites": [
+   {
+    "name": "Picatinny Arsenal, NJ",
+    "lat": 40.95,
+    "lon": -74.55
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1746,7 +1949,14 @@
   "type": "Internship",
   "url": "https://careers.rtx.com/global/en/internship-search-results",
   "verified": "2026-09-29",
-  "id": "rtx-tucson"
+  "id": "rtx-tucson",
+  "sites": [
+   {
+    "name": "Tucson, AZ",
+    "lat": 32.15,
+    "lon": -110.93
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1786,7 +1996,19 @@
   "type": "Internship",
   "url": "https://sandia.jobs/job-family/student/jobs/",
   "verified": "2026-09-29",
-  "id": "sandia"
+  "id": "sandia",
+  "sites": [
+   {
+    "name": "Albuquerque, NM",
+    "lat": 35.05,
+    "lon": -106.54
+   },
+   {
+    "name": "Livermore, CA",
+    "lat": 37.68,
+    "lon": -121.7
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1899,7 +2121,14 @@
   "type": "Internship",
   "url": "https://www.swri.org/careers/interns",
   "verified": "2026-09-29",
-  "id": "swri"
+  "id": "swri",
+  "sites": [
+   {
+    "name": "San Antonio, TX",
+    "lat": 29.45,
+    "lon": -98.62
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1940,7 +2169,14 @@
   "type": "Scholarship",
   "url": "https://sciences.ucf.edu/politics/iccae/",
   "verified": "2026-09-29",
-  "id": "ucf-iccae"
+  "id": "ucf-iccae",
+  "sites": [
+   {
+    "name": "Orlando, FL",
+    "lat": 28.6,
+    "lon": -81.2
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1978,7 +2214,14 @@
   "type": "Research program",
   "url": "https://usaisr.health.mil/index.cfm/join/students",
   "verified": "2026-09-29",
-  "id": "usaisr"
+  "id": "usaisr",
+  "sites": [
+   {
+    "name": "San Antonio, TX",
+    "lat": 29.46,
+    "lon": -98.43
+   }
+  ]
  },
  {
   "added": "2026-09-29",
@@ -2023,7 +2266,139 @@
   "type": "Internship",
   "url": "https://www.asrcfederal.com/trmc-internships/",
   "verified": "2026-09-29",
-  "id": "wsmr"
+  "id": "wsmr",
+  "sites": [
+   {
+    "name": "White Sands Missile Range, NM",
+    "lat": 32.38,
+    "lon": -106.48
+   },
+   {
+    "name": "Holloman AFB, NM",
+    "lat": 32.85,
+    "lon": -106.1
+   },
+   {
+    "name": "Albuquerque, NM",
+    "lat": 35.08,
+    "lon": -106.65
+   },
+   {
+    "name": "Yuma Proving Ground, AZ",
+    "lat": 32.87,
+    "lon": -114.33
+   },
+   {
+    "name": "Fort Huachuca, AZ",
+    "lat": 31.55,
+    "lon": -110.35
+   },
+   {
+    "name": "Edwards AFB, CA",
+    "lat": 34.905,
+    "lon": -117.884
+   },
+   {
+    "name": "China Lake, CA",
+    "lat": 35.65,
+    "lon": -117.66
+   },
+   {
+    "name": "Point Mugu, CA",
+    "lat": 34.12,
+    "lon": -119.12
+   },
+   {
+    "name": "Vandenberg SFB, CA",
+    "lat": 34.74,
+    "lon": -120.57
+   },
+   {
+    "name": "Moffett Field, CA",
+    "lat": 37.415,
+    "lon": -122.05
+   },
+   {
+    "name": "Las Vegas, NV",
+    "lat": 36.24,
+    "lon": -115.03
+   },
+   {
+    "name": "Eglin AFB, FL",
+    "lat": 30.483,
+    "lon": -86.525
+   },
+   {
+    "name": "Cape Canaveral, FL",
+    "lat": 28.49,
+    "lon": -80.58
+   },
+   {
+    "name": "Orlando, FL",
+    "lat": 28.54,
+    "lon": -81.38
+   },
+   {
+    "name": "West Palm Beach, FL",
+    "lat": 26.71,
+    "lon": -80.05
+   },
+   {
+    "name": "Arnold AFB, TN",
+    "lat": 35.39,
+    "lon": -86.09
+   },
+   {
+    "name": "Ogden, UT",
+    "lat": 41.22,
+    "lon": -111.97
+   },
+   {
+    "name": "Dugway Proving Ground, UT",
+    "lat": 40.19,
+    "lon": -112.94
+   },
+   {
+    "name": "Aberdeen Proving Ground, MD",
+    "lat": 39.47,
+    "lon": -76.13
+   },
+   {
+    "name": "Patuxent River, MD",
+    "lat": 38.29,
+    "lon": -76.41
+   },
+   {
+    "name": "White Oak, MD",
+    "lat": 39.04,
+    "lon": -76.98
+   },
+   {
+    "name": "Fort Meade, MD",
+    "lat": 39.11,
+    "lon": -76.74
+   },
+   {
+    "name": "Huntsville, AL",
+    "lat": 34.73,
+    "lon": -86.59
+   },
+   {
+    "name": "Redstone Arsenal, AL",
+    "lat": 34.68,
+    "lon": -86.65
+   },
+   {
+    "name": "Keyport, WA",
+    "lat": 47.7,
+    "lon": -122.62
+   },
+   {
+    "name": "Buffalo, NY",
+    "lat": 42.89,
+    "lon": -78.88
+   }
+  ]
  },
  {
   "added": "2026-09-29",
