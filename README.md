@@ -16,6 +16,7 @@ It started as a prototype for the ASCENDR Opportunity Advising Think Lab. It is 
 - **Prepare:** a plain language FAQ (security clearances, service commitments, citizenship, timing) and prep kits for SMART, NDSEG, NREIP and AFRL Scholars.
 - **People:** stories from HSRU winners and a faculty mentor directory.
 - **Advising session:** for Think Lab facilitators and advisors to build a plan with a student, add notes and next steps, then download it or copy it into an email. Saved in the viewer's own browser.
+- **Comments & suggestions:** a button on every page for corrections, missing content and ideas; see below.
 - **English and Spanish.**
 - **RSS feed:** https://xuwenwu.github.io/dow-opportunity-finder/feed.xml
 - **Weekly digest page:** https://xuwenwu.github.io/dow-opportunity-finder/digest.html
@@ -54,9 +55,12 @@ On Tuesdays, `digest-email.yml` emails the digest if SMTP secrets are set.
 | `ANTHROPIC_MODEL` variable (optional) | Same place, Variables tab | Choosing the Claude model |
 | `SMTP_SERVER`, `SMTP_PORT`, `SMTP_USERNAME`, `SMTP_PASSWORD`, `DIGEST_FROM`, `DIGEST_TO` secrets (optional) | Same place | Weekly email digest |
 
-## Suggestions, stories, mentors and feedback
+## Comments, suggestions, stories and mentors
 
-Use the issue forms: **Issues, New issue**. A maintainer adds approved stories to `docs/data/stories.json` and mentors to `docs/data/mentors.json`.
+- **Comments & suggestions button** (bottom right on every page, a "Send a comment" link in the footer, and "Report a problem" on each listing). Visitors pick a type (add content, report an error or broken link, improve the site, something else), write a comment, and may add their name, email and role. No account needed.
+- On this public site, comments and the Contribute forms (suggested opportunities, stories, mentor entries) are emailed to the maintainer (wenwu.xu@sdsu.edu) through the free [FormSubmit](https://formsubmit.co) relay. **One time setup:** the first message sent from the live site triggers an activation email from FormSubmit to that address; click the activation link once (check spam or junk if it does not arrive). If the relay ever fails, the form shows a ready to send email link instead.
+- A hidden spam trap field blocks most automated submissions.
+- The maintainer adds approved stories to `docs/data/stories.json` and mentors to `docs/data/mentors.json`. People with a GitHub account can also use **Issues, New issue**.
 
 ## Data
 
