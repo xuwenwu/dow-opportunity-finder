@@ -80,6 +80,10 @@ On Tuesdays, `digest-email.yml` emails the digest if SMTP secrets are set.
 
 Run `python scripts/validate.py` before committing data changes.
 
+## Maintaining
+
+See [MAINTAINING.md](MAINTAINING.md). The page source is in `src/`; run `python src/build.py` after editing it.
+
 ## Local preview
 
 ```bash

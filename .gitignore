@@ -1,3 +1,5 @@
 weekly_summary.md
 __pycache__/
 .DS_Store
+build/
+export/
