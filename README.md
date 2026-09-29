@@ -1,6 +1,6 @@
 # DoW Opportunity Finder
 
-A searchable, shareable list of Department of War (DoW) scholarships, fellowships, internships, workshops and faculty programs for students and faculty at the 20+ universities of the Alliance of Hispanic Serving Research Universities (HSRU).
+A searchable, shareable list of Department of War (DoW) and defense related scholarships, fellowships, internships, workshops, trainings and faculty programs for students and faculty at the 20+ universities of the Alliance of Hispanic Serving Research Universities (HSRU).
 
 **Live site:** https://xuwenwu.github.io/dow-opportunity-finder/
 
@@ -8,7 +8,9 @@ It started as a prototype for the ASCENDR Opportunity Advising Think Lab. It is 
 
 ## What the site does
 
-- **Students and Faculty tabs:** national listings plus regional DoW labs near each HSRU campus. Filters for level, citizenship, campus, type, sponsor, reach and deadline.
+- **Students tab:** nationwide programs. **Near my campus tab:** regional opportunities at DoW labs, bases, national labs and defense employers near each HSRU campus, grouped by region, or only the ones near your campus once you pick it. **Faculty tab:** grants, fellowships and summer programs.
+- **Funding comes first.** Every listing carries a funding label (Fully funded, Paid, Travel support, Research grant, Free, Unpaid, Funding not stated) and a plain note on what is paid or covered (pay, tuition, travel, housing, meals). **Funded only** is on by default, so students see the options that pay their way; one click shows the rest.
+- Filters for level, citizenship, campus, type, sponsor, reach and deadline.
 - **On every listing:** deadline countdown, citizenship rules, Save, Add to Google or Outlook calendar, Share (LinkedIn, X, Facebook, Bluesky, copy link, Instagram image card) and "Copy note for a student."
 - **Deadline calendar:** deadlines by month for the coming year, plus programs whose dates are not posted yet.
 - **Prepare:** a plain language FAQ (security clearances, service commitments, citizenship, timing) and prep kits for SMART, NDSEG, NREIP and AFRL Scholars.
@@ -27,7 +29,7 @@ Paste this into any lab, department or institute page:
 <script src="https://xuwenwu.github.io/dow-opportunity-finder/embed.js" async></script>
 ```
 
-Optional settings: `data-campus` (any HSRU campus name), `data-level` (`undergrad`, `grad`, `postdoc`), `data-branch` (`Navy`, `Army`, `Air Force`, `DoW wide`, `HSRU`), `data-type`, `data-tab` (`students`, `faculty`, `calendar`, `prepare`) and `data-lang` (`en` or `es`). The frame resizes itself to fit.
+Optional settings: `data-campus` (any HSRU campus name), `data-level` (`undergrad`, `grad`, `postdoc`), `data-branch` (`Navy`, `Army`, `Air Force`, `DoW wide`, `HSRU`), `data-type`, `data-tab` (`students`, `local` for Near my campus, `faculty`, `calendar`, `prepare`), `data-lang` (`en` or `es`) and `data-funded="0"` to also show items without stated funding. The frame resizes itself to fit.
 
 A plain link works too, with the same settings as URL parameters, for example `https://xuwenwu.github.io/dow-opportunity-finder/?campus=University%20of%20Texas%20at%20El%20Paso&lang=es`.
 
@@ -37,7 +39,7 @@ Every Monday a GitHub Action (`.github/workflows/weekly-update.yml`):
 
 1. Archives expired items, or resets recurring ones to "dates not posted yet."
 2. Checks that every official link still loads.
-3. If an `ANTHROPIC_API_KEY` secret is set, asks Claude with web search to re-check dates and find new opportunities near HSRU campuses. New finds are added with status `pending`.
+3. If an `ANTHROPIC_API_KEY` secret is set, asks Claude with web search to re-check dates and funding and to find new opportunities near HSRU campuses, funded ones first. New finds are added with status `pending`.
 4. Rebuilds the feed, digest and header date, and **opens a pull request**. A person reviews it, changes `pending` items to `published` if they fit, and merges. Nothing reaches the site without that review.
 
 On Tuesdays, `digest-email.yml` emails the digest if SMTP secrets are set.
@@ -67,6 +69,8 @@ Use the issue forms: **Issues, New issue**. A maintainer adds approved stories t
 | `scope`, `regions`, `location` | `National` or `Regional`; regions match HSRU campus areas |
 | `summary`, `summary_es` | One or two sentences in English and Spanish |
 | `eligibility`, `citizenship`, `cit`, `award` | Who can apply and what it pays (`cit`: `us`, `us_pr`, `open`, `varies`, `unknown`) |
+| `funding`, `fundingNote` | `full`, `stipend`, `travel`, `grant`, `free`, `unpaid` or `unknown`, plus one plain sentence on what is covered. The first four count as funded. |
+| `campuses` | HSRU campus names when a program is open only to those campuses; empty otherwise |
 | `opens`, `deadline`, `deadlineNote`, `recurs` | Dates as `YYYY-MM-DD`, or `null` with a note when not posted |
 | `status`, `needsCheck`, `changeNote`, `verified`, `added` | Review workflow |
 

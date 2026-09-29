@@ -92,6 +92,13 @@ textarea{min-height:90px;resize:vertical}
 .chip.reg{background:var(--good-soft);color:var(--good);border-color:transparent}
 .chip.soon{background:var(--signal-soft);color:var(--signal);border-color:transparent}
 .chip.tbc{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+.chip.fund-full,.chip.fund-stipend,.chip.fund-grant{background:var(--good-soft);color:var(--good);border-color:transparent;font-weight:500}
+.chip.fund-travel{background:var(--accent-soft);color:var(--ink);border-color:transparent}
+.chip.fund-unknown,.chip.fund-unpaid{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+.region-head{font-family:var(--display);font-weight:800;font-stretch:112%;font-size:20px;margin:18px 0 2px;display:flex;gap:10px;align-items:baseline}
+.region-head span{font:500 13px var(--mono);color:var(--muted)}
+.note-bar{font-size:13.5px;color:var(--muted);margin:0 0 10px}
+.note-bar button{font:inherit;color:var(--accent);background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}
 .chip.hsru{background:var(--ink);color:var(--bg);border-color:transparent}
 .opp h3,.card h3{font-family:var(--display);font-weight:600;font-stretch:112%;font-size:19px;line-height:1.2;margin:0;text-wrap:balance}
 .spons{margin:0;color:var(--muted);font-size:13.5px}
@@ -168,6 +175,7 @@ body.embed header.top .brand p,body.embed #fbBtn{display:none}
 
   <nav class="tabs" role="tablist" aria-label="Views">
     <button role="tab" id="tab-students" aria-selected="true" data-tab="students" data-i18n="tStudents">Students</button>
+    <button role="tab" id="tab-local" aria-selected="false" data-tab="local" data-i18n="tLocal">Near my campus</button>
     <button role="tab" id="tab-faculty" aria-selected="false" data-tab="faculty" data-i18n="tFaculty">Faculty</button>
     <button role="tab" id="tab-calendar" aria-selected="false" data-tab="calendar" data-i18n="tCalendar">Deadline calendar</button>
     <button role="tab" id="tab-prepare" aria-selected="false" data-tab="prepare" data-i18n="tPrepare">Prepare</button>
@@ -190,7 +198,7 @@ body.embed header.top .brand p,body.embed #fbBtn{display:none}
         <label class="f" for="p-campus"><span data-i18n="campus">Campus</span>
           <select id="p-campus"><option value="" data-i18n="allCampuses">All HSRU campuses</option></select>
         </label>
-        <p class="hint" data-i18n="campusHint">Choosing a campus puts nearby DoW labs first and hides regional items from other areas.</p>
+        <p class="hint" data-i18n="campusHint">Your campus decides which labs and employers appear on the Near my campus tab.</p>
       </details>
       <details class="panel" id="pn-filter" open>
         <summary><h2 data-i18n="filter">Filter</h2></summary>
@@ -203,9 +211,10 @@ body.embed header.top .brand p,body.embed #fbBtn{display:none}
         <label class="f" for="f-branch"><span data-i18n="sponsor">Sponsor</span>
           <select id="f-branch"><option value="">All sponsors</option></select>
         </label>
-        <label class="f" for="f-scope"><span data-i18n="reach">Reach</span>
+        <label class="f" for="f-scope" id="reachLabel"><span data-i18n="reach">Reach</span>
           <select id="f-scope"><option value="" data-i18n="natReg">National and regional</option><option value="National" data-i18n="natOnly">National only</option><option value="Regional" data-i18n="regOnly">Regional only</option></select>
         </label>
+        <label class="check" for="f-funded"><input type="checkbox" id="f-funded" checked> <span data-i18n="fundedOnly">Funded only (pay, tuition or travel covered)</span></label>
         <label class="check" for="f-soon"><input type="checkbox" id="f-soon"> <span data-i18n="soon60">Deadline in the next 60 days</span></label>
         <label class="check" for="f-saved"><input type="checkbox" id="f-saved"> <span data-i18n="savedOnly">My saved list only</span></label>
         <div style="display:flex;gap:6px;flex-wrap:wrap">
@@ -406,7 +415,7 @@ const I18N={
 en:{title:"DoW Opportunity Finder",tagline:"Department of War scholarships, fellowships, internships, workshops and faculty programs for students and faculty at HSRU member universities. A prototype for the ASCENDR Opportunity Advising Think Lab.",
  weekly:"Weekly check:",tStudents:"Students",tFaculty:"Faculty",tCalendar:"Deadline calendar",tPrepare:"Prepare",tPeople:"People",tAdvise:"Advising session",tContribute:"Contribute",tReview:"Review queue",
  aboutYou:"About you",level:"Career level",anyLevel:"Any level",undergrad:"Undergraduate",grad:"Graduate student",postdoc:"Postdoc",citizenship:"Citizenship",showAll:"Show everything",usCit:"U.S. citizen",prCit:"Permanent resident",otherCit:"Neither",
- campus:"Campus",allCampuses:"All HSRU campuses",campusHint:"Choosing a campus puts nearby DoW labs first and hides regional items from other areas.",filter:"Filter",search:"Search",type:"Type",sponsor:"Sponsor",reach:"Reach",
+ campus:"Campus",allCampuses:"All HSRU campuses",campusHint:"Your campus decides which labs and employers appear on the Near my campus tab.",filter:"Filter",search:"Search",type:"Type",sponsor:"Sponsor",reach:"Reach",
  natReg:"National and regional",natOnly:"National only",regOnly:"Regional only",soon60:"Deadline in the next 60 days",savedOnly:"My saved list only",clear:"Clear filters",exportSaved:"Download saved list (CSV)",
  allTypes:"All types",allSponsors:"All sponsors",openSession:"Open session",calIntro:"Deadlines by month, October 2026 to September 2027. Uses the filters and campus you chose on the Students tab.",
  faqTitle:"Common questions",kitsTitle:"Prep kits for the biggest programs",kitsIntro:"Checklists and timelines drawn from each program's official pages. Always confirm details in the program portal.",
@@ -433,11 +442,11 @@ en:{title:"DoW Opportunity Finder",tagline:"Department of War scholarships, fell
  approve:"Approve",reject:"Reject",archive:"Archive",markConfirmed:"Mark confirmed",markHandled:"Mark handled",publish:"Publish",dismiss:"Dismiss",
  viewsL:"Page views",viewersL:"People counted",savesL:"Saves",sharesL:"Shares",calL:"Calendar adds",notesL:"Notes copied",
  nothingWaiting:"Nothing waiting.",allConfirmed:"Every published item is confirmed.",
- countsLine:"{s} student · {f} faculty listings",whatItIs:"What it is",youNeed:"What you need",tips:"Tips",timeline:"Timeline",keyDates:"Current dates",fromListing:"From the listing",reachOut:"Contact",ghIssue:"Suggestions for the public site go through GitHub. Open the form ↗"},
+ countsLine:"{s} student · {f} faculty listings",tLocal:"Near my campus",fundedOnly:"Funded only (pay, tuition or travel covered)",fundingL:"Funding",f_full:"Fully funded",f_stipend:"Paid",f_travel:"Travel support",f_grant:"Research grant",f_free:"Free",f_unpaid:"Unpaid",f_unknown:"Funding not stated",hiddenUnfunded:"{n} more without stated funding are hidden.",showAll:"Show them",pickCampus:"Pick your campus under About you to see DoW labs and defense employers near you. Below, everything is grouped by region.",nearCampus:"Near {c}",onlyFor:"Only for {c} students",regionalOpps:"regional opportunities",noRegional:"No regional listings for this area yet. Suggest one on the Contribute tab.",whatItIs:"What it is",youNeed:"What you need",tips:"Tips",timeline:"Timeline",keyDates:"Current dates",fromListing:"From the listing",reachOut:"Contact",ghIssue:"Suggestions for the public site go through GitHub. Open the form ↗"},
 es:{title:"Buscador de Oportunidades del DoW",tagline:"Becas, becas de investigación, prácticas, talleres y programas para docentes del Departamento de Guerra, para estudiantes y docentes de las universidades de HSRU. Un prototipo para el ASCENDR Opportunity Advising Think Lab.",
  weekly:"Revisión semanal:",tStudents:"Estudiantes",tFaculty:"Docentes",tCalendar:"Calendario de plazos",tPrepare:"Prepararse",tPeople:"Personas",tAdvise:"Sesión de asesoría",tContribute:"Contribuir",tReview:"Revisión",
  aboutYou:"Sobre usted",level:"Nivel",anyLevel:"Cualquier nivel",undergrad:"Licenciatura",grad:"Posgrado",postdoc:"Posdoctorado",citizenship:"Ciudadanía",showAll:"Mostrar todo",usCit:"Ciudadano de EE. UU.",prCit:"Residente permanente",otherCit:"Ninguno",
- campus:"Campus",allCampuses:"Todos los campus de HSRU",campusHint:"Al elegir un campus, los laboratorios del DoW cercanos aparecen primero y se ocultan los regionales de otras zonas.",filter:"Filtrar",search:"Buscar",type:"Tipo",sponsor:"Patrocinador",reach:"Alcance",
+ campus:"Campus",allCampuses:"Todos los campus de HSRU",campusHint:"Su campus define qué laboratorios y empleadores aparecen en la pestaña Cerca de mi campus.",filter:"Filtrar",search:"Buscar",type:"Tipo",sponsor:"Patrocinador",reach:"Alcance",
  natReg:"Nacional y regional",natOnly:"Solo nacional",regOnly:"Solo regional",soon60:"Fecha límite en los próximos 60 días",savedOnly:"Solo mi lista guardada",clear:"Borrar filtros",exportSaved:"Descargar lista guardada (CSV)",
  allTypes:"Todos los tipos",allSponsors:"Todos los patrocinadores",openSession:"Abrir sesión",calIntro:"Fechas límite por mes, de octubre de 2026 a septiembre de 2027. Usa los filtros y el campus elegidos en la pestaña Estudiantes.",
  faqTitle:"Preguntas frecuentes",kitsTitle:"Guías para los programas más grandes",kitsIntro:"Listas y calendarios tomados de las páginas oficiales de cada programa. Confirme siempre los detalles en el portal del programa.",
@@ -464,7 +473,7 @@ es:{title:"Buscador de Oportunidades del DoW",tagline:"Becas, becas de investiga
  approve:"Aprobar",reject:"Rechazar",archive:"Archivar",markConfirmed:"Marcar confirmado",markHandled:"Marcar atendido",publish:"Publicar",dismiss:"Descartar",
  viewsL:"Visitas",viewersL:"Personas contadas",savesL:"Guardados",sharesL:"Compartidos",calL:"Al calendario",notesL:"Notas copiadas",
  nothingWaiting:"Nada pendiente.",allConfirmed:"Todo lo publicado está confirmado.",
- countsLine:"{s} para estudiantes · {f} para docentes",whatItIs:"Qué es",youNeed:"Qué necesita",tips:"Consejos",timeline:"Calendario",keyDates:"Fechas actuales",fromListing:"Del anuncio",reachOut:"Contacto",ghIssue:"Las sugerencias para el sitio público se envían por GitHub. Abrir el formulario ↗"}};
+ countsLine:"{s} para estudiantes · {f} para docentes",tLocal:"Cerca de mi campus",fundedOnly:"Solo con financiamiento (pago, matrícula o viaje cubiertos)",fundingL:"Financiamiento",f_full:"Financiado completo",f_stipend:"Pagado",f_travel:"Apoyo de viaje",f_grant:"Subvención de investigación",f_free:"Gratis",f_unpaid:"Sin pago",f_unknown:"Financiamiento no indicado",hiddenUnfunded:"Se ocultan {n} más sin financiamiento indicado.",showAll:"Mostrarlos",pickCampus:"Elija su campus en Sobre usted para ver laboratorios del DoW y empleadores de defensa cercanos. Abajo, todo está agrupado por región.",nearCampus:"Cerca de {c}",onlyFor:"Solo para estudiantes de {c}",regionalOpps:"oportunidades regionales",noRegional:"Aún no hay anuncios regionales para esta zona. Sugiera uno en Contribuir.",whatItIs:"Qué es",youNeed:"Qué necesita",tips:"Consejos",timeline:"Calendario",keyDates:"Fechas actuales",fromListing:"Del anuncio",reachOut:"Contacto",ghIssue:"Las sugerencias para el sitio público se envían por GitHub. Abrir el formulario ↗"}};
 const LEVEL_KEYS={undergrad:"undergrad",grad:"grad",postdoc:"postdoc",faculty:"tFaculty"};
 const MONTHS=["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
 const MONTHS_ES=["ENE","FEB","MAR","ABR","MAY","JUN","JUL","AGO","SEP","OCT","NOV","DIC"];
@@ -512,7 +521,9 @@ function applyI18n(){
 
 /* ---------- filtering ---------- */
 function published(){return st.opps.filter(o=>o.status==="published");}
-function visible(audience){
+const FUNDED=new Set(["full","stipend","travel","grant"]);
+const REGION_ORDER=["Southern California","Northern California","Arizona","Nevada","New Mexico","Texas","Colorado","Illinois","New York and New Jersey","Florida"];
+function visible(audience,scopeOnly,ignoreFunded){
   const q=$("#f-q").value.trim().toLowerCase(),type=$("#f-type").value,br=$("#f-branch").value,scope=$("#f-scope").value,soon=$("#f-soon").checked,savedOnly=$("#f-saved").checked;
   const lvl=st.prefs.level,cit=st.prefs.cit,region=regionOf(st.prefs.campus);
   if(params.get("branch")&&!br){}
@@ -525,6 +536,9 @@ function visible(audience){
     if(br&&o.branch!==br)return false;
     if(!br&&brParam&&o.branch!==brParam)return false;
     if(scope&&o.scope!==scope)return false;
+    if(scopeOnly&&o.scope!==scopeOnly)return false;
+    if(st.prefs.campus&&Array.isArray(o.campuses)&&o.campuses.length&&!o.campuses.includes(st.prefs.campus))return false;
+    if(!ignoreFunded&&$("#f-funded").checked&&!FUNDED.has(o.funding))return false;
     if(savedOnly&&!st.saved.has(o.id))return false;
     if(lvl&&o.audience==="student"&&Array.isArray(o.levels)&&!o.levels.includes(lvl))return false;
     if(cit==="pr"&&o.cit==="us")return false;
@@ -583,7 +597,8 @@ function whenBlock(o){
 function activeSess(){return st.sessions.find(s=>s.id===st.activeSession)||null;}
 function card(o){
   const d=daysUntil(o.deadline);
-  const chips=['<span class="chip type">'+esc(o.type)+'</span>','<span class="chip">'+esc(o.branch)+'</span>'];
+  const chips=['<span class="chip fund-'+esc(o.funding||'unknown')+'">'+esc(T('f_'+(o.funding||'unknown')))+'</span>','<span class="chip type">'+esc(o.type)+'</span>','<span class="chip">'+esc(o.branch)+'</span>'];
+  if(Array.isArray(o.campuses)&&o.campuses.length)chips.push('<span class="chip hsru">'+esc(T('onlyFor',{c:o.campuses.join(', ')}))+'</span>');
   chips.push(o.scope==="Regional"?'<span class="chip reg">'+esc(T("regional"))+' · '+esc(o.location)+'</span>':'<span class="chip">'+esc(T("national"))+'</span>');
   if(o.hsi==="HSRU members only")chips.push('<span class="chip hsru">'+esc(T("hsruOnly"))+'</span>');
   else if(o.hsi)chips.push('<span class="chip">'+esc(o.hsi)+'</span>');
@@ -592,6 +607,7 @@ function card(o){
   if(o.needsCheck)chips.push('<span class="chip tbc">'+esc(T("tbc"))+'</span>');
   const facts=[];
   if(o.audience==="student"&&Array.isArray(o.levels)&&o.levels.length)facts.push([T("who"),o.levels.map(l=>T(LEVEL_KEYS[l]||l)).join(", ")]);
+  if(o.fundingNote)facts.push([T("fundingL"),o.fundingNote]);
   if(o.eligibility)facts.push([T("eligibility"),o.eligibility]);
   if(o.citizenship)facts.push([T("citizenship"),o.citizenship]);
   if(o.award)facts.push([T("award"),o.award]);
@@ -626,12 +642,24 @@ function renderList(){
   const sess=activeSess();$("#sessBar").hidden=!sess;if(sess)$("#sessBarText").textContent=T("sessActive",{s:sess.label});
   if(st.mode==="none"){list.innerHTML='<div class="empty">'+esc(T("unavailable"))+'</div>';$("#resultCount").textContent=T("unavailable");return;}
   if(!st.loaded){list.innerHTML='<div class="empty">'+esc(T("loading"))+'</div>';$("#resultCount").textContent=T("loading");return;}
-  const aud=st.tab==="faculty"?"faculty":"student";
-  const items=visible(aud);
+  const local=st.tab==="local",aud=st.tab==="faculty"?"faculty":"student";
+  const scopeOnly=st.tab==="students"?"National":(local?"Regional":"");
+  const items=visible(local?"":aud,scopeOnly);
+  const hidden=$("#f-funded").checked?visible(local?"":aud,scopeOnly,true).length-items.length:0;
   const soonN=items.filter(o=>{const d=daysUntil(o.deadline);return d!==null&&d>=0&&d<=30;}).length;
-  $("#resultCount").textContent=items.length+" "+T(aud==="faculty"?"facultyProgs":"studentOpps")+(soonN?" · "+soonN+" "+T("closing30"):"")+(st.prefs.campus?" · "+T("nearbyFirst",{c:st.prefs.campus}):"");
+  const region=regionOf(st.prefs.campus);
+  $("#resultCount").textContent=items.length+" "+T(local?"regionalOpps":(aud==="faculty"?"facultyProgs":"studentOpps"))+(soonN?" · "+soonN+" "+T("closing30"):"")+(local&&st.prefs.campus?" · "+T("nearCampus",{c:st.prefs.campus}):"");
   if(!published().length){list.innerHTML='<div class="empty">'+esc(T("noListings"))+'</div>';return;}
-  list.innerHTML=items.length?items.map(card).join(""):'<div class="empty">'+esc(T("noMatch"))+'</div>';
+  const note=hidden>0?'<p class="note-bar">'+esc(T("hiddenUnfunded",{n:hidden}))+' <button type="button" id="showUnfunded">'+esc(T("showAll"))+'</button></p>':"";
+  if(local&&!region){
+    const groups=REGION_ORDER.map(r=>[r,items.filter(o=>(o.regions||[]).includes(r))]);
+    list.innerHTML='<p class="note-bar">'+esc(T("pickCampus"))+'</p>'+note+groups.map(([r,g])=>'<h2 class="region-head">'+esc(r)+' <span>'+g.length+'</span></h2>'+(g.length?g.map(card).join(""):'<div class="empty">'+esc(T("noRegional"))+'</div>')).join("");
+  }else if(local){
+    list.innerHTML=note+'<h2 class="region-head">'+esc(T("nearCampus",{c:st.prefs.campus}))+' <span>'+esc(region)+'</span></h2>'+(items.length?items.map(card).join(""):'<div class="empty">'+esc(T("noRegional"))+'</div>');
+  }else{
+    list.innerHTML=note+(items.length?items.map(card).join(""):'<div class="empty">'+esc(T("noMatch"))+'</div>');
+  }
+  const su=$("#showUnfunded");if(su)su.addEventListener("click",()=>{$("#f-funded").checked=false;lsSet("fundedOnly",false);render();});
   $("#exportSaved").hidden=!st.saved.size;
 }
 function renderCalendar(){
@@ -725,11 +753,12 @@ function fillFilterOptions(){
 }
 function render(){
   renderStatus();
-  const listView=st.tab==="students"||st.tab==="faculty";
+  const listView=st.tab==="students"||st.tab==="faculty"||st.tab==="local";
   $("#view-list").hidden=!listView;
   ["calendar","prepare","people","advise","contribute","review"].forEach(k=>{$("#view-"+k).hidden=st.tab!==k;});
   document.querySelectorAll("nav.tabs button").forEach(b=>b.setAttribute("aria-selected",String(b.dataset.tab===st.tab)));
   $("#p-level").closest("label").hidden=st.tab==="faculty";
+  $("#reachLabel").hidden=st.tab!=="faculty";
   if(listView)renderList();
   if(st.tab==="calendar")renderCalendar();
   if(st.tab==="prepare")renderPrepare();
@@ -742,6 +771,8 @@ function render(){
 document.querySelector("nav.tabs").addEventListener("click",e=>{const b=e.target.closest("button[data-tab]");if(!b)return;st.tab=b.dataset.tab;lsSet("tab",st.tab);render();});
 document.querySelector(".lang").addEventListener("click",e=>{const b=e.target.closest("button[data-lang]");if(!b)return;st.lang=b.dataset.lang;lsSet("lang",st.lang);applyI18n();render();});
 ["#f-q","#f-type","#f-branch","#f-scope","#f-soon","#f-saved"].forEach(s=>$(s).addEventListener(s==="#f-q"?"input":"change",render));
+$("#f-funded").addEventListener("change",()=>{lsSet("fundedOnly",$("#f-funded").checked);render();});
+{const fo=lsGet("fundedOnly");if(fo===false)$("#f-funded").checked=false;if(params.get("funded")==="0")$("#f-funded").checked=false;}
 $("#m-campus").addEventListener("change",renderPeople);
 $("#f-reset").addEventListener("click",()=>{$("#f-q").value="";$("#f-type").value="";$("#f-branch").value="";$("#f-scope").value="";$("#f-soon").checked=false;$("#f-saved").checked=false;render();});
 let prefTimer=null;
@@ -865,7 +896,7 @@ async function igCard(o){
 
 /* ---------- data ---------- */
 const localTab=lsGet("tab");
-if(params.get("tab"))st.tab=params.get("tab");else if(localTab&&["students","faculty","calendar","prepare","people","advise","contribute"].includes(localTab))st.tab=localTab;
+if(params.get("tab"))st.tab=params.get("tab");else if(localTab&&["students","local","faculty","calendar","prepare","people","advise","contribute"].includes(localTab))st.tab=localTab;
 if(window.matchMedia&&window.matchMedia("(max-width:860px)").matches){$("#pn-filter").open=false;}
 applyI18n();render();
 

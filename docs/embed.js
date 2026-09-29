@@ -7,11 +7,12 @@
     <script src="https://xuwenwu.github.io/dow-opportunity-finder/embed.js" async></script>
 
   Optional attributes:
-    data-campus   an HSRU campus name; nearby DoW labs are listed first
+    data-campus   an HSRU campus name; the Near my campus tab shows opportunities near it
     data-level    undergrad | grad | postdoc
     data-branch   Navy | Army | Air Force | DoW wide | HSRU
     data-type     Scholarship | Fellowship | Internship | Postdoc | Workshop ...
-    data-tab      students | faculty | calendar | prepare
+    data-tab      students | local | faculty | calendar | prepare  (local = Near my campus)
+    data-funded   0 to also show unfunded items (default shows funded only)
     data-lang     en | es
     data-height   starting height in pixels (default 900); the frame then grows to fit
 */
@@ -23,7 +24,7 @@
   Array.prototype.forEach.call(hosts, function (host) {
     host.setAttribute("data-dow-ready", "1");
     var q = new URLSearchParams({ embed: "1" });
-    ["campus", "level", "branch", "type", "tab", "lang"].forEach(function (k) {
+    ["campus", "level", "branch", "type", "tab", "lang", "funded"].forEach(function (k) {
       var v = host.getAttribute("data-" + k);
       if (v) q.set(k, v);
     });

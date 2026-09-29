@@ -32,6 +32,7 @@ MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-5")
 DISCOVER = os.environ.get("DISCOVER", "0") == "1"
 MAX_NEW = int(os.environ.get("MAX_NEW", "10"))
 UA = {"User-Agent": "Mozilla/5.0 (DoW Opportunity Finder link check; +https://github.com/xuwenwu/dow-opportunity-finder)"}
+FUNDING = {"full", "stipend", "travel", "grant", "free", "unpaid", "unknown"}
 REGIONS = ["Southern California", "Northern California", "Arizona", "Nevada", "New Mexico", "Texas",
            "Colorado", "Illinois", "New York and New Jersey", "Florida"]
 
@@ -112,12 +113,14 @@ def main():
                 "You verify listings for a student opportunity directory. Use web search and read the OFFICIAL program "
                 f"page ({o['url']}) and related official pages only.\n\nProgram: {o['title']} ({o['sponsor']}).\n"
                 f"Current listing: opens={o.get('opens')}, deadline={o.get('deadline')}, note={o.get('deadlineNote')!r}, "
-                f"citizenship={o.get('citizenship')!r}, award={o.get('award')!r}.\n\n"
+                f"citizenship={o.get('citizenship')!r}, award={o.get('award')!r}, funding={o.get('funding')!r}, "
+                f"fundingNote={o.get('fundingNote')!r}.\n\n"
                 f"Today is {today.isoformat()}. Find the dates for the next or current application cycle. "
                 "Never guess: if an official source does not state a date, return null for it.\n"
                 "Reply with only a JSON object: {\"changed\": true|false, \"opens\": \"YYYY-MM-DD\"|null, "
                 "\"deadline\": \"YYYY-MM-DD\"|null, \"deadlineNote\": \"short plain note\", \"citizenship\": \"...\"|null, "
-                "\"award\": \"...\"|null, \"source\": \"url you used\", \"note\": \"one sentence on what changed\"}"
+                "\"award\": \"...\"|null, \"funding\": \"full|stipend|travel|grant|free|unpaid|unknown\"|null, "
+                "\"fundingNote\": \"what is paid or covered (pay, tuition, travel, housing, meals)\"|null, \"source\": \"url you used\", \"note\": \"one sentence on what changed\"}"
             )
             try:
                 res = extract_json(claude(prompt))
@@ -127,9 +130,11 @@ def main():
             if not isinstance(res, dict) or not res.get("changed"):
                 o["verified"] = today.isoformat()
                 continue
-            for k in ("opens", "deadline", "deadlineNote", "citizenship", "award"):
+            for k in ("opens", "deadline", "deadlineNote", "citizenship", "award", "funding", "fundingNote"):
                 if res.get(k) not in (None, ""):
                     if k in ("opens", "deadline") and not parse(res[k]):
+                        continue
+                    if k == "funding" and res[k] not in FUNDING:
                         continue
                     o[k] = res[k]
             o.update(verified=today.isoformat(), needsCheck=True,
@@ -140,9 +145,11 @@ def main():
     if API_KEY and DISCOVER:
         known = "\n".join(f"- {o['title']} | {o['url']}" for o in items)
         prompt = (
-            "Find up to " + str(MAX_NEW) + " CURRENT Department of War (formerly Department of Defense) funded or hosted "
-            "scholarships, fellowships, internships, workshops or faculty programs useful to students or faculty at "
-            "Hispanic Serving Research Universities (HSRU). Include regional programs at DoW labs near: San Diego, Riverside, "
+            "Find up to " + str(MAX_NEW) + " CURRENT Department of War (formerly Department of Defense) or defense related "
+            "(national labs, FFRDCs, UARCs, defense industry) scholarships, fellowships, internships, workshops, trainings, "
+            "seminars or faculty programs. PRIORITIZE funded ones (paid, stipend, tuition, or travel, lodging and meals covered), "
+            "because students often have no other funds; always state the funding clearly. Programs must be useful to students or faculty at "
+            "Hispanic Serving Research Universities (HSRU). Include regional programs at DoW and defense labs, bases and employers near: San Diego, Riverside, "
             "Irvine, Santa Barbara, Davis, Merced, Santa Cruz, Phoenix, Tucson, Las Vegas, Albuquerque, Las Cruces, El Paso, "
             "San Antonio, Austin, Houston, Dallas and Fort Worth, College Station, Lubbock, Denver, Chicago, New York, Newark, "
             "Orlando, Miami, Boca Raton. Skip anything already listed here:\n" + known + "\n\n"
@@ -151,7 +158,9 @@ def main():
             "(Scholarship|Fellowship|Internship|Postdoc|Research program|Workshop|Faculty grant|Faculty fellowship), "
             "audience (student|faculty), levels (array of undergrad|grad|postdoc|faculty), scope (National|Regional), regions "
             f"(array from {REGIONS}), location, summary, summary_es (Spanish), eligibility, citizenship, cit "
-            "(us|us_pr|open|varies|unknown), award, opens, deadline, deadlineNote, url."
+            "(us|us_pr|open|varies|unknown), award, funding (full|stipend|travel|grant|free|unpaid|unknown), fundingNote "
+            "(one plain sentence on what is paid or covered), campuses (array of HSRU campus names if only open to those "
+            "campuses, else []), opens, deadline, deadlineNote, url."
         )
         try:
             new = extract_json(claude(prompt, 8000)) or []
@@ -164,8 +173,11 @@ def main():
             base = dict(status="pending", seed=False, added=today.isoformat(), verified=today.isoformat(), needsCheck=True,
                         recurs=True, hsi="", format="", changeNote="Found by the weekly check; review before publishing",
                         regions=[], levels=[], opens=None, deadline=None, deadlineNote="", award="", eligibility="",
-                        citizenship="", cit="unknown", summary="", summary_es="")
+                        citizenship="", cit="unknown", summary="", summary_es="", funding="unknown", fundingNote="",
+                        campuses=[])
             base.update({k: v for k, v in n.items() if v is not None})
+            if base.get("funding") not in FUNDING:
+                base["funding"] = "unknown"
             if base.get("deadline") and not parse(base["deadline"]):
                 base["deadline"] = None
             items.append(base)
