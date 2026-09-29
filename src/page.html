@@ -830,7 +830,7 @@ $("#mentorForm").addEventListener("submit",async e=>{
 const CONTACT="wenwu.xu@sdsu.edu";
 /* Public site email relay (Web3Forms, free). Paste the access key sent to CONTACT here.
    While it is empty, Send opens the visitor's email app with the message filled in. */
-const WEB3FORMS_KEY="";
+const WEB3FORMS_KEY="ea385308-8ac3-4046-8764-cdab5350577c";
 let fbRate="";
 function mailtoHref(subject,body){return "mailto:"+CONTACT+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body.slice(0,1800));}
 function fieldsText(f){return Object.entries(f).filter(([k,v])=>v).map(([k,v])=>k+": "+v).join("\n");}
