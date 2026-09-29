@@ -1,0 +1,16 @@
+name: Suggest an opportunity
+description: A DoW funded or hosted scholarship, fellowship, internship, workshop or faculty program
+title: "[Suggestion] "
+labels: [suggestion]
+body:
+  - type: input
+    id: name
+    attributes: {label: Program name}
+    validations: {required: true}
+  - type: input
+    id: url
+    attributes: {label: Official page link}
+    validations: {required: true}
+  - type: textarea
+    id: why
+    attributes: {label: Why it fits HSRU students or faculty (optional)}

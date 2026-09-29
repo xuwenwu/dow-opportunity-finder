@@ -1,0 +1,30 @@
+name: Share your story
+description: For HSRU students who won or completed a DoW scholarship, fellowship or internship
+title: "[Story] "
+labels: [story]
+body:
+  - type: input
+    id: name
+    attributes: {label: Name as it should appear}
+    validations: {required: true}
+  - type: input
+    id: campus
+    attributes: {label: Campus}
+    validations: {required: true}
+  - type: input
+    id: program
+    attributes: {label: Program and year}
+  - type: textarea
+    id: story
+    attributes: {label: Your story (what you did, what helped you get in)}
+    validations: {required: true}
+  - type: input
+    id: contact
+    attributes: {label: How students can reach you (optional, shown publicly)}
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Consent
+      options:
+        - label: I agree that this can be published on the site.
+          required: true

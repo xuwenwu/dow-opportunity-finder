@@ -1,0 +1,13 @@
+name: Feedback
+description: Tell us what works and what would make the site better
+title: "[Feedback] "
+labels: [feedback]
+body:
+  - type: dropdown
+    id: useful
+    attributes:
+      label: Is the site useful?
+      options: ["Yes", "Somewhat", "No"]
+  - type: textarea
+    id: text
+    attributes: {label: What would make it better?}

@@ -1,0 +1,32 @@
+name: Weekly email digest
+
+# Sends docs/digest.html by email after the weekly update is merged.
+# Runs only when the SMTP secrets below are set; otherwise it just rebuilds the digest.
+on:
+  schedule:
+    - cron: "0 16 * * 2"   # Tuesdays 16:00 UTC, after Monday's review
+  workflow_dispatch:
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    env:
+      SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/build_outputs.py
+      - name: Send digest
+        if: env.SMTP_SERVER != ''
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: DoW Opportunity Finder weekly digest
+          to: ${{ secrets.DIGEST_TO }}
+          from: ${{ secrets.DIGEST_FROM }}
+          html_body: file://docs/digest.html

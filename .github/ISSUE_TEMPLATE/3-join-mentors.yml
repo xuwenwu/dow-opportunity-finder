@@ -1,0 +1,30 @@
+name: Join the mentor directory
+description: For HSRU faculty and staff willing to advise applicants or review essays
+title: "[Mentor] "
+labels: [mentor]
+body:
+  - type: input
+    id: name
+    attributes: {label: Name as it should appear}
+    validations: {required: true}
+  - type: input
+    id: campus
+    attributes: {label: Campus}
+    validations: {required: true}
+  - type: input
+    id: dept
+    attributes: {label: Department or office}
+  - type: textarea
+    id: exp
+    attributes: {label: DoW experience and programs you know well}
+    validations: {required: true}
+  - type: input
+    id: contact
+    attributes: {label: Contact (shown publicly)}
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Consent
+      options:
+        - label: I agree that this can be published on the site.
+          required: true

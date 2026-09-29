@@ -1,0 +1,84 @@
+# DoW Opportunity Finder
+
+A searchable, shareable list of Department of War (DoW) scholarships, fellowships, internships, workshops and faculty programs for students and faculty at the 20+ universities of the Alliance of Hispanic Serving Research Universities (HSRU).
+
+**Live site:** https://xuwenwu.github.io/dow-opportunity-finder/
+
+It started as a prototype for the ASCENDR Opportunity Advising Think Lab. It is an independent project, not an official site of the Department of War or of HSRU. Every listing links to the official program page, which is the final word on eligibility and deadlines.
+
+## What the site does
+
+- **Students and Faculty tabs:** national listings plus regional DoW labs near each HSRU campus. Filters for level, citizenship, campus, type, sponsor, reach and deadline.
+- **On every listing:** deadline countdown, citizenship rules, Save, Add to Google or Outlook calendar, Share (LinkedIn, X, Facebook, Bluesky, copy link, Instagram image card) and "Copy note for a student."
+- **Deadline calendar:** deadlines by month for the coming year, plus programs whose dates are not posted yet.
+- **Prepare:** a plain language FAQ (security clearances, service commitments, citizenship, timing) and prep kits for SMART, NDSEG, NREIP and AFRL Scholars.
+- **People:** stories from HSRU winners and a faculty mentor directory.
+- **Advising session:** for Think Lab facilitators and advisors to build a plan with a student, add notes and next steps, then download it or copy it into an email. Saved in the viewer's own browser.
+- **English and Spanish.**
+- **RSS feed:** https://xuwenwu.github.io/dow-opportunity-finder/feed.xml
+- **Weekly digest page:** https://xuwenwu.github.io/dow-opportunity-finder/digest.html
+
+## Put the list on your own web page
+
+Paste this into any lab, department or institute page:
+
+```html
+<div data-dow-finder data-campus="San Diego State University" data-level="grad"></div>
+<script src="https://xuwenwu.github.io/dow-opportunity-finder/embed.js" async></script>
+```
+
+Optional settings: `data-campus` (any HSRU campus name), `data-level` (`undergrad`, `grad`, `postdoc`), `data-branch` (`Navy`, `Army`, `Air Force`, `DoW wide`, `HSRU`), `data-type`, `data-tab` (`students`, `faculty`, `calendar`, `prepare`) and `data-lang` (`en` or `es`). The frame resizes itself to fit.
+
+A plain link works too, with the same settings as URL parameters, for example `https://xuwenwu.github.io/dow-opportunity-finder/?campus=University%20of%20Texas%20at%20El%20Paso&lang=es`.
+
+## How it stays current
+
+Every Monday a GitHub Action (`.github/workflows/weekly-update.yml`):
+
+1. Archives expired items, or resets recurring ones to "dates not posted yet."
+2. Checks that every official link still loads.
+3. If an `ANTHROPIC_API_KEY` secret is set, asks Claude with web search to re-check dates and find new opportunities near HSRU campuses. New finds are added with status `pending`.
+4. Rebuilds the feed, digest and header date, and **opens a pull request**. A person reviews it, changes `pending` items to `published` if they fit, and merges. Nothing reaches the site without that review.
+
+On Tuesdays, `digest-email.yml` emails the digest if SMTP secrets are set.
+
+### Repository settings to finish setup
+
+| Setting | Where | Needed for |
+| --- | --- | --- |
+| GitHub Pages: deploy from branch `main`, folder `/docs` | Settings, Pages | The public site |
+| Allow GitHub Actions to create pull requests | Settings, Actions, General | Weekly update PRs |
+| `ANTHROPIC_API_KEY` secret (optional) | Settings, Secrets and variables, Actions | Date checks and discovery |
+| `ANTHROPIC_MODEL` variable (optional) | Same place, Variables tab | Choosing the Claude model |
+| `SMTP_SERVER`, `SMTP_PORT`, `SMTP_USERNAME`, `SMTP_PASSWORD`, `DIGEST_FROM`, `DIGEST_TO` secrets (optional) | Same place | Weekly email digest |
+
+## Suggestions, stories, mentors and feedback
+
+Use the issue forms: **Issues, New issue**. A maintainer adds approved stories to `docs/data/stories.json` and mentors to `docs/data/mentors.json`.
+
+## Data
+
+`docs/data/opportunities.json` holds one record per opportunity:
+
+| Field | Meaning |
+| --- | --- |
+| `id`, `title`, `sponsor`, `url` | Identity and the official page |
+| `branch`, `type`, `audience`, `levels` | Filters (`audience` is `student` or `faculty`) |
+| `scope`, `regions`, `location` | `National` or `Regional`; regions match HSRU campus areas |
+| `summary`, `summary_es` | One or two sentences in English and Spanish |
+| `eligibility`, `citizenship`, `cit`, `award` | Who can apply and what it pays (`cit`: `us`, `us_pr`, `open`, `varies`, `unknown`) |
+| `opens`, `deadline`, `deadlineNote`, `recurs` | Dates as `YYYY-MM-DD`, or `null` with a note when not posted |
+| `status`, `needsCheck`, `changeNote`, `verified`, `added` | Review workflow |
+
+Run `python scripts/validate.py` before committing data changes.
+
+## Local preview
+
+```bash
+cd docs && python -m http.server 8000
+# open http://localhost:8000
+```
+
+## License
+
+Code: MIT (see `LICENSE`). Listing text summarizes public program information; check each official page before applying.

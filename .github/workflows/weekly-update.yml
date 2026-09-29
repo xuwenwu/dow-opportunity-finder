@@ -1,0 +1,49 @@
+name: Weekly update
+
+# Every Monday: check deadlines and links, optionally re-verify dates and find new
+# opportunities with Claude, rebuild the feed and digest, and open a pull request
+# for a person to review. Nothing reaches the public site until the PR is merged.
+on:
+  schedule:
+    - cron: "45 10 * * 1"   # Mondays 10:45 UTC (6:45 AM Eastern in summer)
+  workflow_dispatch:
+    inputs:
+      discover:
+        description: "Search for new opportunities with Claude (needs ANTHROPIC_API_KEY)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Weekly check
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+          DISCOVER: ${{ (github.event_name == 'schedule' || inputs.discover) && '1' || '0' }}
+        run: python scripts/weekly_check.py
+      - name: Build feed, digest and meta
+        run: python scripts/build_outputs.py
+      - name: Open pull request for review
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: weekly-update
+          delete-branch: true
+          commit-message: "Weekly update of opportunity listings"
+          title: "Weekly update: please review before merging"
+          body-path: weekly_summary.md
+          add-paths: |
+            docs/data/opportunities.json
+            docs/data/meta.json
+            docs/feed.xml
+            docs/digest.html

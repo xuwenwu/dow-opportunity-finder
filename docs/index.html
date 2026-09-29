@@ -1,0 +1,920 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Department of War scholarships, fellowships, internships, workshops and faculty programs for students and faculty at HSRU member universities.">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+</head><body>
+<title>DoW Opportunity Finder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,600;112,800&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a filter rail beside a dated listing, like a posting board where the deadline column leads each row. */
+:root{
+  --bg:#EEF2F1; --surface:#FFFFFF; --sunk:#E3E9E8; --ink:#13212A; --muted:#51616B; --line:#CCD6D7;
+  --accent:#0E5A6B; --accent-ink:#FFFFFF; --accent-soft:#D6E8EC;
+  --signal:#B04E17; --signal-soft:#F6E1D3; --good:#2E6A3C; --good-soft:#DCEBDD; --warn:#8A6100; --warn-soft:#F3E6C4;
+  --display:"Archivo","Arial Narrow",system-ui,sans-serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --r:6px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1417; --surface:#162027; --sunk:#111A1F; --ink:#E4EBEE; --muted:#98A8B1; --line:#2A3942;
+  --accent:#63B8CB; --accent-ink:#0B1A20; --accent-soft:#17343C;
+  --signal:#EE965E; --signal-soft:#3A2517; --good:#7FC08E; --good-soft:#18301E; --warn:#E3B54D; --warn-soft:#352A12;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1417; --surface:#162027; --sunk:#111A1F; --ink:#E4EBEE; --muted:#98A8B1; --line:#2A3942;
+  --accent:#63B8CB; --accent-ink:#0B1A20; --accent-soft:#17343C;
+  --signal:#EE965E; --signal-soft:#3A2517; --good:#7FC08E; --good-soft:#18301E; --warn:#E3B54D; --warn-soft:#352A12;
+  color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:20px;padding-block:24px 48px}
+body.embed .wrap{padding-block:12px 24px}
+header.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 32px;padding-bottom:18px;border-bottom:2px solid var(--ink)}
+.brand h1{font-family:var(--display);font-weight:800;font-stretch:112%;font-size:clamp(26px,4vw,38px);line-height:1.05;margin:0;letter-spacing:.005em;text-wrap:balance}
+.brand p{margin:6px 0 0;color:var(--muted);max-width:62ch}
+.status{font-family:var(--mono);font-size:12.5px;color:var(--muted);text-align:right;display:grid;gap:4px;justify-items:end}
+.status b{color:var(--ink);font-weight:500}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{font:600 12px var(--body);background:transparent;color:var(--muted);border:0;padding:4px 10px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+nav.tabs{display:flex;gap:4px;margin:16px 0 20px;overflow-x:auto;scrollbar-width:none}
+nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs button{flex:0 0 auto;font:600 14px var(--body);background:transparent;color:var(--muted);border:1px solid transparent;border-radius:999px;padding:7px 14px;cursor:pointer}
+nav.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+nav.tabs button:hover:not([aria-selected="true"]){border-color:var(--line);color:var(--ink)}
+.grid{display:grid;grid-template-columns:280px minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:860px){.grid{grid-template-columns:minmax(0,1fr)}}
+aside.rail{position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px);display:grid;gap:18px}
+@media (max-width:860px){aside.rail{position:static}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 14px 16px;display:grid;gap:10px}
+.panel>summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.panel>summary::-webkit-details-marker{display:none}
+.panel>summary::after{content:"+";font:500 16px var(--mono);color:var(--muted)}
+.panel[open]>summary::after{content:"−"}
+.panel:not([open]){gap:0}
+.panel h2{font:700 12px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+label.f{display:grid;gap:4px;font-size:13px;font-weight:500;color:var(--muted)}
+select,input[type=search],input[type=text],input[type=url],textarea{font:inherit;font-size:14px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:7px 9px;width:100%}
+textarea{min-height:90px;resize:vertical}
+.check{display:flex;gap:8px;align-items:flex-start;font-size:14px}
+.check input{margin-top:4px}
+.hint{font-size:12.5px;color:var(--muted);margin:0}
+.btn{font:600 13.5px var(--body);display:inline-flex;align-items:center;gap:6px;border-radius:4px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:6px 11px;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn:hover{border-color:var(--ink)}
+.btn:disabled{opacity:.55;cursor:default}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
+.btn.small{font-size:12.5px;padding:4px 9px}
+.results-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:10px}
+.results-head p{margin:0;color:var(--muted);font-size:14px}
+.list{display:grid;gap:12px}
+.opp{display:grid;grid-template-columns:104px minmax(0,1fr);background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:visible}
+@media (max-width:520px){.opp{grid-template-columns:minmax(0,1fr)}}
+.when{background:var(--sunk);border-right:1px solid var(--line);border-radius:var(--r) 0 0 var(--r);padding:14px 10px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:2px;text-align:center;font-family:var(--mono)}
+@media (max-width:520px){.when{flex-direction:row;justify-content:flex-start;gap:10px;border-right:0;border-bottom:1px solid var(--line);border-radius:var(--r) var(--r) 0 0;padding:8px 14px}}
+.when .d{font-family:var(--display);font-weight:800;font-stretch:112%;font-size:34px;line-height:1}
+.when .m{font-size:12px;letter-spacing:.06em}
+.when .t{font-size:11.5px;color:var(--muted);margin-top:6px}
+.when.soon{background:var(--signal-soft)} .when.soon .t{color:var(--signal);font-weight:500}
+.when.none .d{font-size:15px;font-family:var(--mono);font-weight:500}
+.when.past{opacity:.7}
+.body{padding:14px 16px 14px;display:grid;gap:8px;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:500 11.5px var(--mono);letter-spacing:.02em;padding:2px 7px;border-radius:3px;background:var(--sunk);color:var(--muted);border:1px solid var(--line)}
+.chip.type{background:var(--accent-soft);color:var(--ink);border-color:transparent}
+.chip.reg{background:var(--good-soft);color:var(--good);border-color:transparent}
+.chip.soon{background:var(--signal-soft);color:var(--signal);border-color:transparent}
+.chip.tbc{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+.chip.hsru{background:var(--ink);color:var(--bg);border-color:transparent}
+.opp h3,.card h3{font-family:var(--display);font-weight:600;font-stretch:112%;font-size:19px;line-height:1.2;margin:0;text-wrap:balance}
+.spons{margin:0;color:var(--muted);font-size:13.5px}
+.sum{margin:0;max-width:72ch}
+dl.facts{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:3px 14px;margin:2px 0 0;font-size:13.5px}
+dl.facts dt{color:var(--muted);font-weight:500}
+dl.facts dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;align-items:flex-start}
+details.menu{position:relative}
+details.menu>summary{list-style:none}
+details.menu>summary::-webkit-details-marker{display:none}
+details.menu[open]>summary{border-color:var(--ink)}
+.menu-pop{position:absolute;z-index:5;top:calc(100% + 4px);left:0;min-width:210px;background:var(--surface);border:1px solid var(--ink);border-radius:4px;padding:6px;display:grid;gap:2px;box-shadow:0 6px 18px rgb(0 0 0 / .12)}
+.menu-pop a,.menu-pop button{font:500 13.5px var(--body);color:var(--ink);text-decoration:none;text-align:left;background:none;border:0;padding:6px 8px;border-radius:3px;cursor:pointer}
+.menu-pop a:hover,.menu-pop button:hover{background:var(--sunk)}
+.empty{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r);padding:28px;color:var(--muted);text-align:center}
+.cal{display:grid;gap:14px}
+.month{display:grid;grid-template-columns:120px minmax(0,1fr);gap:14px;border-top:1px solid var(--line);padding-top:12px}
+@media (max-width:520px){.month{grid-template-columns:minmax(0,1fr)}}
+.month h3{font-family:var(--display);font-weight:800;font-stretch:112%;font-size:18px;margin:0;letter-spacing:.02em}
+.month ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.month li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:10px;font-size:14px}
+.month li .dt{font-family:var(--mono);font-size:12.5px;color:var(--muted);padding-top:1px}
+.month li.past{opacity:.55}
+.month .none{color:var(--muted);font-size:13.5px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:16px;align-items:start}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:grid;gap:10px;min-width:0}
+.card h4{font:700 12px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:6px 0 0}
+.card ul,.card ol{margin:0;padding-left:20px;display:grid;gap:4px}
+.card .tl{list-style:none;padding:0}
+.card .tl li{display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr);gap:10px;border-top:1px solid var(--line);padding-top:6px}
+.card .tl li b{font:500 12.5px var(--mono)}
+@media (max-width:520px){.card .tl li{grid-template-columns:minmax(0,1fr)}}
+details.faq{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px}
+details.faq summary{cursor:pointer;font-weight:600}
+details.faq p{margin:8px 0 0;max-width:72ch}
+.section-title{font-family:var(--display);font-weight:800;font-stretch:112%;font-size:22px;margin:26px 0 10px}
+.section-title:first-child{margin-top:0}
+.form{max-width:640px;display:grid;gap:12px}
+.rev{display:grid;gap:22px}
+.rev section{display:grid;gap:8px}
+.rev h2{font-family:var(--display);font-weight:600;font-stretch:112%;font-size:20px;margin:0}
+.row{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:10px 12px}
+.row .t{min-width:0;flex:1 1 280px}
+.row .t b{display:block}
+.row .t span{color:var(--muted);font-size:13px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px}
+.stat b{display:block;font-family:var(--display);font-weight:800;font-stretch:112%;font-size:28px;font-variant-numeric:tabular-nums}
+.stat span{color:var(--muted);font-size:13px}
+.session-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;background:var(--accent-soft);border:1px solid var(--accent);border-radius:var(--r);padding:8px 12px;margin-bottom:12px;font-size:14px}
+.sess-item{display:grid;gap:6px;border-top:1px solid var(--line);padding-top:10px}
+.sess-item textarea{min-height:56px}
+footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;display:grid;gap:4px}
+#toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:9px 14px;border-radius:4px;font-size:14px;z-index:20;max-width:calc(100% - 32px)}
+#fbBtn{position:fixed;right:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);z-index:15;box-shadow:0 4px 14px rgb(0 0 0 / .15)}
+#fbPanel{position:fixed;right:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 64px);z-index:16;width:min(340px,calc(100% - 32px));background:var(--surface);border:1px solid var(--ink);border-radius:var(--r);padding:14px;display:grid;gap:10px;box-shadow:0 10px 30px rgb(0 0 0 / .18)}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+body.embed header.top .brand p,body.embed #fbBtn{display:none}
+@media (prefers-reduced-motion:no-preference){.opp{animation:rise .25s ease both}@keyframes rise{from{transform:translateY(4px)}to{transform:none}}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <h1 data-i18n="title">DoW Opportunity Finder</h1>
+      <p data-i18n="tagline">Department of War scholarships, fellowships, internships, workshops and faculty programs for students and faculty at HSRU member universities. A prototype for the ASCENDR Opportunity Advising Think Lab.</p>
+    </div>
+    <div class="status" id="status">
+      <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">English</button><button type="button" data-lang="es" aria-pressed="false">Español</button></div>
+      <span><span data-i18n="weekly">Weekly check:</span> <b id="lastRun">…</b></span><span id="counts"></span>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Views">
+    <button role="tab" id="tab-students" aria-selected="true" data-tab="students" data-i18n="tStudents">Students</button>
+    <button role="tab" id="tab-faculty" aria-selected="false" data-tab="faculty" data-i18n="tFaculty">Faculty</button>
+    <button role="tab" id="tab-calendar" aria-selected="false" data-tab="calendar" data-i18n="tCalendar">Deadline calendar</button>
+    <button role="tab" id="tab-prepare" aria-selected="false" data-tab="prepare" data-i18n="tPrepare">Prepare</button>
+    <button role="tab" id="tab-people" aria-selected="false" data-tab="people" data-i18n="tPeople">People</button>
+    <button role="tab" id="tab-advise" aria-selected="false" data-tab="advise" data-i18n="tAdvise">Advising session</button>
+    <button role="tab" id="tab-contribute" aria-selected="false" data-tab="contribute" data-i18n="tContribute">Contribute</button>
+    <button role="tab" id="tab-review" aria-selected="false" data-tab="review" hidden><span data-i18n="tReview">Review queue</span> <span id="revCount"></span></button>
+  </nav>
+
+  <div id="view-list" class="grid">
+    <aside class="rail">
+      <details class="panel" id="pn-me" open>
+        <summary><h2 data-i18n="aboutYou">About you</h2></summary>
+        <label class="f" for="p-level"><span data-i18n="level">Career level</span>
+          <select id="p-level"><option value="" data-i18n="anyLevel">Any level</option><option value="undergrad" data-i18n="undergrad">Undergraduate</option><option value="grad" data-i18n="grad">Graduate student</option><option value="postdoc" data-i18n="postdoc">Postdoc</option></select>
+        </label>
+        <label class="f" for="p-cit"><span data-i18n="citizenship">Citizenship</span>
+          <select id="p-cit"><option value="" data-i18n="showAll">Show everything</option><option value="us" data-i18n="usCit">U.S. citizen</option><option value="pr" data-i18n="prCit">Permanent resident</option><option value="other" data-i18n="otherCit">Neither</option></select>
+        </label>
+        <label class="f" for="p-campus"><span data-i18n="campus">Campus</span>
+          <select id="p-campus"><option value="" data-i18n="allCampuses">All HSRU campuses</option></select>
+        </label>
+        <p class="hint" data-i18n="campusHint">Choosing a campus puts nearby DoW labs first and hides regional items from other areas.</p>
+      </details>
+      <details class="panel" id="pn-filter" open>
+        <summary><h2 data-i18n="filter">Filter</h2></summary>
+        <label class="f" for="f-q"><span data-i18n="search">Search</span>
+          <input type="search" id="f-q" placeholder="Navy, materials, San Diego">
+        </label>
+        <label class="f" for="f-type"><span data-i18n="type">Type</span>
+          <select id="f-type"><option value="">All types</option></select>
+        </label>
+        <label class="f" for="f-branch"><span data-i18n="sponsor">Sponsor</span>
+          <select id="f-branch"><option value="">All sponsors</option></select>
+        </label>
+        <label class="f" for="f-scope"><span data-i18n="reach">Reach</span>
+          <select id="f-scope"><option value="" data-i18n="natReg">National and regional</option><option value="National" data-i18n="natOnly">National only</option><option value="Regional" data-i18n="regOnly">Regional only</option></select>
+        </label>
+        <label class="check" for="f-soon"><input type="checkbox" id="f-soon"> <span data-i18n="soon60">Deadline in the next 60 days</span></label>
+        <label class="check" for="f-saved"><input type="checkbox" id="f-saved"> <span data-i18n="savedOnly">My saved list only</span></label>
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <button class="btn" id="f-reset" type="button" data-i18n="clear">Clear filters</button>
+          <button class="btn" id="exportSaved" type="button" hidden data-i18n="exportSaved">Download saved list (CSV)</button>
+        </div>
+      </details>
+    </aside>
+    <main>
+      <div class="session-bar" id="sessBar" hidden><span id="sessBarText"></span><button class="btn small" type="button" id="sessBarOpen" data-i18n="openSession">Open session</button></div>
+      <div class="results-head"><p id="resultCount" aria-live="polite">Loading listings…</p></div>
+      <div class="list" id="list"></div>
+    </main>
+  </div>
+
+  <section id="view-calendar" hidden>
+    <div class="results-head"><p data-i18n="calIntro">Deadlines by month, October 2026 to September 2027. Uses the filters and campus you chose on the Students tab.</p></div>
+    <div class="cal" id="cal"></div>
+  </section>
+
+  <section id="view-prepare" hidden>
+    <h2 class="section-title" data-i18n="faqTitle">Common questions</h2>
+    <div class="list" id="faq"></div>
+    <h2 class="section-title" data-i18n="kitsTitle">Prep kits for the biggest programs</h2>
+    <p class="hint" style="font-size:14px;margin-bottom:12px" data-i18n="kitsIntro">Checklists and timelines drawn from each program's official pages. Always confirm details in the program portal.</p>
+    <div class="cols" id="kits"></div>
+  </section>
+
+  <section id="view-people" hidden>
+    <h2 class="section-title" data-i18n="storiesTitle">Stories from HSRU winners</h2>
+    <div class="cols" id="stories"></div>
+    <h2 class="section-title" data-i18n="mentorsTitle">Faculty mentors</h2>
+    <p class="hint" style="font-size:14px;margin-bottom:12px" data-i18n="mentorsIntro">HSRU faculty and staff with DoW experience who volunteer to advise applicants or review essays.</p>
+    <label class="f" for="m-campus" style="max-width:320px;margin-bottom:12px"><span data-i18n="campus">Campus</span><select id="m-campus"><option value="" data-i18n="allCampuses">All HSRU campuses</option></select></label>
+    <div class="cols" id="mentors"></div>
+  </section>
+
+  <section id="view-advise" hidden>
+    <div class="cols">
+      <div class="card">
+        <h3 data-i18n="adviseTitle">Advising session</h3>
+        <p class="hint" style="font-size:14px" data-i18n="adviseIntro">For Think Lab facilitators and advisors. Start a session for a student, add opportunities from the Students tab, write notes and next steps, then download the plan or copy it into an email. Sessions are private to you.</p>
+        <label class="f" for="a-label"><span data-i18n="studentLabel">Student (initials or a short label)</span><input type="text" id="a-label" maxlength="60" placeholder="J.R., junior, ME"></label>
+        <div><button class="btn primary" type="button" id="a-new" data-i18n="startSession">Start session</button></div>
+        <label class="f" for="a-pick"><span data-i18n="yourSessions">Your sessions</span><select id="a-pick"></select></label>
+      </div>
+      <div class="card" id="a-detail"></div>
+    </div>
+  </section>
+
+  <section id="view-contribute" hidden>
+    <div class="cols">
+      <form class="card form" id="suggestForm" novalidate>
+        <h3 data-i18n="suggestTitle">Suggest an opportunity</h3>
+        <p class="hint" data-i18n="suggestIntro">Send the official link. The weekly check researches each suggestion and a reviewer approves it before it appears.</p>
+        <label class="f" for="s-title"><span data-i18n="progName">Program name</span><input type="text" id="s-title" maxlength="200"></label>
+        <label class="f" for="s-url"><span data-i18n="officialLink">Official page link</span><input type="url" id="s-url" maxlength="500" placeholder="https://"></label>
+        <label class="f" for="s-note"><span data-i18n="whyFits">Why it fits (optional)</span><textarea id="s-note" maxlength="1200"></textarea></label>
+        <div><button class="btn primary" type="submit" data-i18n="send">Send</button></div>
+        <p class="hint" id="s-msg" aria-live="polite"></p>
+      </form>
+      <form class="card form" id="storyForm" novalidate>
+        <h3 data-i18n="storyFormTitle">Share your story</h3>
+        <p class="hint" data-i18n="storyFormIntro">Won or completed a DoW scholarship, fellowship or internship? A short story helps the next student. A reviewer approves each story before it appears.</p>
+        <label class="f" for="st-name"><span data-i18n="nameShown">Name as it should appear</span><input type="text" id="st-name" maxlength="80"></label>
+        <label class="f" for="st-campus"><span data-i18n="campus">Campus</span><select id="st-campus"></select></label>
+        <label class="f" for="st-prog"><span data-i18n="programYear">Program and year</span><input type="text" id="st-prog" maxlength="120" placeholder="NREIP 2026, NIWC Pacific"></label>
+        <label class="f" for="st-text"><span data-i18n="yourStory">Your story (what you did, what helped you get in)</span><textarea id="st-text" maxlength="900"></textarea></label>
+        <label class="f" for="st-contact"><span data-i18n="contactOpt">How students can reach you (optional, shown publicly)</span><input type="text" id="st-contact" maxlength="160" placeholder="LinkedIn link or school email"></label>
+        <label class="check" for="st-ok"><input type="checkbox" id="st-ok"> <span data-i18n="consent">I agree that this can be published on this page.</span></label>
+        <div><button class="btn primary" type="submit" data-i18n="send">Send</button></div>
+        <p class="hint" id="st-msg" aria-live="polite"></p>
+      </form>
+      <form class="card form" id="mentorForm" novalidate>
+        <h3 data-i18n="mentorFormTitle">Join the mentor directory</h3>
+        <p class="hint" data-i18n="mentorFormIntro">For HSRU faculty and staff willing to advise applicants or review essays. A reviewer approves each entry.</p>
+        <label class="f" for="mt-name"><span data-i18n="nameShown">Name as it should appear</span><input type="text" id="mt-name" maxlength="80"></label>
+        <label class="f" for="mt-campus"><span data-i18n="campus">Campus</span><select id="mt-campus"></select></label>
+        <label class="f" for="mt-dept"><span data-i18n="dept">Department or office</span><input type="text" id="mt-dept" maxlength="120"></label>
+        <label class="f" for="mt-exp"><span data-i18n="dowExp">DoW experience and programs you know well</span><textarea id="mt-exp" maxlength="600" placeholder="ONR grants, NREIP host, SMART mentor"></textarea></label>
+        <label class="f" for="mt-contact"><span data-i18n="contactPub">Contact (shown publicly)</span><input type="text" id="mt-contact" maxlength="160"></label>
+        <label class="check" for="mt-ok"><input type="checkbox" id="mt-ok"> <span data-i18n="consent">I agree that this can be published on this page.</span></label>
+        <div><button class="btn primary" type="submit" data-i18n="send">Send</button></div>
+        <p class="hint" id="mt-msg" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <section id="view-review" hidden>
+    <div class="rev">
+      <section><h2 data-i18n="usage">Usage</h2><div class="stats" id="rv-stats"></div><p class="hint" data-i18n="usageNote">Counts come from signed in viewers with Contributor access or higher; view only visitors are not counted.</p></section>
+      <section><h2 data-i18n="rvPending">New items waiting for approval</h2><div id="rv-pending" class="list"></div></section>
+      <section><h2 data-i18n="rvCheck">Published items with details to confirm</h2><div id="rv-check" class="list"></div></section>
+      <section><h2 data-i18n="rvInbox">Stories, mentor entries and feedback</h2><div id="rv-inbox" class="list"></div></section>
+      <section><h2 data-i18n="rvSugg">Suggested opportunities</h2><div id="rv-sugg" class="list"></div></section>
+    </div>
+  </section>
+
+  <footer>
+    <span data-i18n="foot1">Each listing summarizes the official program page. The official page is the final word on eligibility and deadlines.</span>
+    <span data-i18n="foot2">Items marked "details to confirm" have a date or rule the weekly check could not verify yet.</span>
+    <span id="footLang" hidden data-i18n="foot3">Program names and details stay in English, as on the official pages.</span>
+  </footer>
+</div>
+<button class="btn primary" id="fbBtn" type="button" data-i18n="feedback">Feedback</button>
+<div id="fbPanel" hidden role="dialog" aria-labelledby="fbTitle">
+  <b id="fbTitle" data-i18n="fbTitle">Is this page useful?</b>
+  <div class="seg" id="fbRate"><button type="button" class="btn small" data-rate="yes" aria-pressed="false" data-i18n="yes">Yes</button><button type="button" class="btn small" data-rate="some" aria-pressed="false" data-i18n="somewhat">Somewhat</button><button type="button" class="btn small" data-rate="no" aria-pressed="false" data-i18n="no">No</button></div>
+  <label class="f" for="fbText"><span data-i18n="fbText">What would make it better? (optional)</span><textarea id="fbText" maxlength="1000"></textarea></label>
+  <div style="display:flex;gap:6px"><button class="btn primary" type="button" id="fbSend" data-i18n="send">Send</button><button class="btn" type="button" id="fbClose" data-i18n="close">Close</button></div>
+  <p class="hint" id="fbMsg" aria-live="polite"></p>
+</div>
+<div id="toast" hidden role="status"></div>
+
+<script>
+/* Static guidance content for the DoW Opportunity Finder (English and Spanish). */
+const FAQ = {
+en: [
+ ["Do I have to join the military?", "No. These are civilian programs. Scholarships such as SMART, the Cyber Service Academy and the Defense Civilian Training Corps lead to civilian jobs at DoW labs and offices after graduation. The Cyber Service Academy lets scholars choose military service instead, but that is optional."],
+ ["What does DoW mean?", "DoW is the Department of War, the name now used for the Department of Defense. Many program pages still say DoD; they mean the same department."],
+ ["What is a security clearance?", "A clearance is permission to work with classified information, granted after a background investigation. You fill out a detailed questionnaire about where you have lived, studied and worked, and investigators check it. The employer sponsors the process; you do not pay for it. Many internships only ask that you be able to obtain one, and NREIP runs background checks only for students it selects. Be complete and honest on the forms."],
+ ["What is a service commitment?", "Some scholarships pay tuition and a stipend in exchange for working for the DoW after graduation, usually one year of paid civilian work for each year of funding (SMART, Cyber Service Academy, DCTC). Leaving early can mean repaying part of the award, so read the service agreement before you sign."],
+ ["I am not a U.S. citizen. Is anything open to me?", "Most programs here require U.S. citizenship. Exceptions include the Army Research Laboratory Summer Student Experience, which does not require citizenship to apply, and NRC postdoctoral awards, where rules vary by lab. Some faculty programs accept permanent residents. Use the Citizenship setting under About you to see what fits."],
+ ["Do I need research experience or a perfect GPA?", "No. Several internships accept students from sophomore year, and GPA rules range from 2.5 to 3.0. AFRL Scholars encourages a 3.0 but does not require it. Curiosity, any project or lab work, and strong letters matter more than a perfect record."],
+ ["When should I start?", "Early fall. Most summer internships and scholarships close between October and February for the following year. Ask for letters at least three to four weeks before a deadline, and send each recommender your resume and a short note about the program."],
+ ["Are these programs paid?", "Most internships pay a stipend, and scholarships cover tuition plus a stipend. Amounts appear on each listing. Housing is often not included, so check before you accept."],
+ ["Who can help me apply?", "Start with your campus fellowship or career office and a faculty mentor. The People tab lists HSRU faculty who volunteer to advise applicants, and the Prepare tab has checklists for the largest programs."]
+],
+es: [
+ ["¿Tengo que unirme al ejército?", "No. Son programas civiles. Becas como SMART, la Cyber Service Academy y el Defense Civilian Training Corps llevan a empleos civiles en laboratorios y oficinas del DoW después de graduarse. La Cyber Service Academy permite elegir servicio militar en su lugar, pero es opcional."],
+ ["¿Qué significa DoW?", "DoW es el Departamento de Guerra (Department of War), el nombre que ahora se usa para el Departamento de Defensa. Muchas páginas todavía dicen DoD; se refieren al mismo departamento."],
+ ["¿Qué es una autorización de seguridad (security clearance)?", "Es un permiso para trabajar con información clasificada que se otorga después de una investigación de antecedentes. Usted llena un cuestionario detallado sobre dónde ha vivido, estudiado y trabajado, y los investigadores lo verifican. El empleador patrocina el proceso; usted no paga. Muchas prácticas solo piden que usted pueda obtenerla, y NREIP hace la verificación solo a los estudiantes seleccionados. Responda los formularios de manera completa y honesta."],
+ ["¿Qué es un compromiso de servicio?", "Algunas becas pagan la matrícula y un estipendio a cambio de trabajar para el DoW después de graduarse, por lo general un año de trabajo civil pagado por cada año de apoyo (SMART, Cyber Service Academy, DCTC). Si se retira antes, podría tener que devolver parte de la beca, así que lea el acuerdo antes de firmar."],
+ ["No soy ciudadano de EE. UU. ¿Hay algo para mí?", "La mayoría de los programas exige ciudadanía estadounidense. Algunas excepciones son el Summer Student Experience del Laboratorio de Investigación del Ejército, que no la exige para postular, y las becas posdoctorales del NRC, cuyas reglas varían según el laboratorio. Algunos programas para docentes aceptan residentes permanentes. Use la opción de ciudadanía en Sobre usted."],
+ ["¿Necesito experiencia en investigación o un promedio perfecto?", "No. Varias prácticas aceptan estudiantes desde el segundo año, y los promedios mínimos van de 2.5 a 3.0. AFRL Scholars recomienda 3.0 pero no lo exige. La curiosidad, cualquier proyecto o trabajo de laboratorio y buenas cartas pesan más que un expediente perfecto."],
+ ["¿Cuándo debo empezar?", "A inicios del otoño. La mayoría de las prácticas y becas de verano cierran entre octubre y febrero para el año siguiente. Pida sus cartas al menos tres o cuatro semanas antes de la fecha límite y envíe a cada persona su currículum y una nota breve sobre el programa."],
+ ["¿Estos programas son pagados?", "La mayoría de las prácticas paga un estipendio, y las becas cubren la matrícula más un estipendio. Los montos aparecen en cada anuncio. Con frecuencia no incluyen vivienda, así que verifique antes de aceptar."],
+ ["¿Quién me puede ayudar a postular?", "Empiece con la oficina de becas o de carreras de su campus y con un mentor docente. La pestaña Personas muestra docentes de HSRU que se ofrecen a orientar a postulantes, y la pestaña Prepararse tiene listas de verificación para los programas más grandes."]
+]};
+
+const KITS = [
+ {id:"smart", title:"SMART Scholarship for Service",
+  en:{what:"Full scholarship with paid summer internships and a civilian DoW job after graduation.",
+      need:["Profile and background sections in the online portal","Transcripts from every college you have attended","References (the portal lists how many and when they are due)","Personal statement","Proposed award details: degree, school and expected graduation date"],
+      tips:["Name DoW labs whose work matches your interests; SMART pairs each scholar with a sponsoring facility.","Explain in plain language how your degree connects to defense needs.","Read the service commitment before you apply: one year of DoW work per year of funding."],
+      time:[["August","Portal opens; create your account"],["September to October","Request references and draft your personal statement"],["November","Revise and confirm transcripts are uploaded"],["First Friday of December, 5 PM Eastern","Submit"]]},
+  es:{what:"Beca completa con prácticas pagadas en verano y un empleo civil en el DoW después de graduarse.",
+      need:["Secciones de perfil y antecedentes en el portal","Certificados de estudios de todas las universidades a las que ha asistido","Referencias (el portal indica cuántas y cuándo vencen)","Declaración personal","Detalles de la beca propuesta: título, universidad y fecha estimada de graduación"],
+      tips:["Nombre laboratorios del DoW cuyo trabajo coincida con sus intereses; SMART asigna a cada becario una instalación patrocinadora.","Explique en lenguaje sencillo cómo su carrera se relaciona con las necesidades de defensa.","Lea el compromiso de servicio antes de postular: un año de trabajo en el DoW por cada año de apoyo."],
+      time:[["Agosto","Se abre el portal; cree su cuenta"],["Septiembre a octubre","Pida referencias y redacte su declaración personal"],["Noviembre","Revise y confirme que sus certificados estén cargados"],["Primer viernes de diciembre, 5 PM hora del Este","Envíe su solicitud"]]},
+  url:"https://www.smartscholarship.org/smart/en"},
+ {id:"ndseg", title:"NDSEG Fellowship",
+  en:{what:"Three year fellowship for doctoral students in science and engineering fields of DoW interest.",
+      need:["Personal statement of up to 500 words","Research proposal of 3 pages plus 1 page of cited works, tied to DoW research interests","Three reference evaluations","Official undergraduate transcripts"],
+      tips:["Read the research interests of the Army, Navy and Air Force offices and say which one your work serves.","Write the proposal for a smart reader outside your field.","Share your proposal draft with your recommenders so their letters match it."],
+      time:[["August 3, 2026","Application opens"],["September","Draft the proposal and ask for references"],["October","Revise and confirm all references are in"],["October 30, 2026, 5 PM Eastern","Submit"]]},
+  es:{what:"Beca de tres años para estudiantes de doctorado en ciencias e ingeniería de interés para el DoW.",
+      need:["Declaración personal de hasta 500 palabras","Propuesta de investigación de 3 páginas más 1 página de referencias, vinculada a los intereses del DoW","Tres evaluaciones de referencia","Certificados oficiales de licenciatura"],
+      tips:["Lea los intereses de investigación de las oficinas del Ejército, la Marina y la Fuerza Aérea e indique a cuál sirve su trabajo.","Escriba la propuesta para un lector inteligente de otra área.","Comparta el borrador con quienes le escriben cartas para que coincidan con su propuesta."],
+      time:[["3 de agosto de 2026","Se abre la solicitud"],["Septiembre","Redacte la propuesta y pida referencias"],["Octubre","Revise y confirme que todas las referencias estén enviadas"],["30 de octubre de 2026, 5 PM hora del Este","Envíe su solicitud"]]},
+  url:"https://ndseg.sysplus.com/"},
+ {id:"nreip", title:"Naval Research Enterprise Internship Program (NREIP)",
+  en:{what:"Ten week paid summer research internship at Navy laboratories.",
+      need:["Transcripts (you cannot submit without them)","Names and emails of references, who upload their letters directly","Up to three lab choices","A current resume"],
+      tips:["Browse labs by subject and region and pick ones whose projects match your coursework.","Housing is not provided; plan early or choose a lab near home.","If selected, finish your security forms quickly."],
+      time:[["September 15, 2026","Enrollment opens"],["October","Ask references and choose three labs"],["November 30, 2026","Application deadline"],["Winter","Labs make offers; complete background forms promptly"]]},
+  es:{what:"Prácticas de investigación pagadas de diez semanas en verano en laboratorios de la Marina.",
+      need:["Certificados de estudios (sin ellos no puede enviar)","Nombres y correos de sus referencias, que suben las cartas directamente","Hasta tres laboratorios de su preferencia","Currículum actualizado"],
+      tips:["Explore los laboratorios por tema y región y elija aquellos cuyos proyectos coincidan con sus cursos.","No incluye vivienda; planifique con tiempo o elija un laboratorio cerca de casa.","Si lo seleccionan, complete pronto los formularios de seguridad."],
+      time:[["15 de septiembre de 2026","Se abre la inscripción"],["Octubre","Pida referencias y elija tres laboratorios"],["30 de noviembre de 2026","Fecha límite"],["Invierno","Los laboratorios hacen ofertas; complete los formularios de antecedentes a tiempo"]]},
+  url:"https://www.navalsteminterns.us/internships/nreip/"},
+ {id:"afrl-scholars", title:"AFRL Scholars Program",
+  en:{what:"Paid summer research internships at Air Force Research Laboratory sites.",
+      need:["An updated resume","Unofficial transcripts from all schools attended","Letters of recommendation (contact recommenders first)","Current contact information"],
+      tips:["Choose research topics and sites that fit your skills; California sites require age 18.","Open to U.S. citizens only.","A GPA of 3.0 is encouraged but not required."],
+      time:[["October 12, 2026","Applications open"],["November to December","Gather letters and polish your resume"],["January 11, 2027, 11:59 PM Central","Application deadline"]]},
+  es:{what:"Prácticas de investigación pagadas en verano en sedes del Laboratorio de Investigación de la Fuerza Aérea.",
+      need:["Currículum actualizado","Certificados no oficiales de todas las escuelas","Cartas de recomendación (contacte antes a quienes las escribirán)","Datos de contacto actualizados"],
+      tips:["Elija temas y sedes que se ajusten a sus habilidades; las sedes de California exigen 18 años.","Solo para ciudadanos de EE. UU.","Se recomienda un promedio de 3.0, pero no es obligatorio."],
+      time:[["12 de octubre de 2026","Se abren las solicitudes"],["Noviembre a diciembre","Reúna sus cartas y mejore su currículum"],["11 de enero de 2027, 11:59 PM hora del Centro","Fecha límite"]]},
+  url:"https://afrlscholars.usra.edu/scholarsprogram/"}
+];
+
+(function(){
+"use strict";
+const REPO_URL="https://github.com/xuwenwu/dow-opportunity-finder";
+const CAMPUSES=[
+ ["San Diego State University","Southern California"],["University of California, Irvine","Southern California"],["University of California, Riverside","Southern California"],["University of California, Santa Barbara","Southern California"],
+ ["University of California, Davis","Northern California"],["University of California, Merced","Northern California"],["University of California, Santa Cruz","Northern California"],
+ ["Arizona State University","Arizona"],["University of Arizona","Arizona"],["University of Nevada, Las Vegas","Nevada"],
+ ["University of New Mexico","New Mexico"],["New Mexico State University","New Mexico"],
+ ["University of Texas at El Paso","Texas"],["University of Texas at San Antonio","Texas"],["University of Texas at Arlington","Texas"],["University of Texas at Austin","Texas"],["University of North Texas","Texas"],["University of Houston","Texas"],["Texas A&M University","Texas"],["Texas Tech University","Texas"],
+ ["University of Colorado Denver","Colorado"],["University of Illinois Chicago","Illinois"],
+ ["CUNY Graduate Center","New York and New Jersey"],["New Jersey Institute of Technology","New York and New Jersey"],
+ ["University of Central Florida","Florida"],["Florida International University","Florida"],["Florida Atlantic University","Florida"]
+];
+const I18N={
+en:{title:"DoW Opportunity Finder",tagline:"Department of War scholarships, fellowships, internships, workshops and faculty programs for students and faculty at HSRU member universities. A prototype for the ASCENDR Opportunity Advising Think Lab.",
+ weekly:"Weekly check:",tStudents:"Students",tFaculty:"Faculty",tCalendar:"Deadline calendar",tPrepare:"Prepare",tPeople:"People",tAdvise:"Advising session",tContribute:"Contribute",tReview:"Review queue",
+ aboutYou:"About you",level:"Career level",anyLevel:"Any level",undergrad:"Undergraduate",grad:"Graduate student",postdoc:"Postdoc",citizenship:"Citizenship",showAll:"Show everything",usCit:"U.S. citizen",prCit:"Permanent resident",otherCit:"Neither",
+ campus:"Campus",allCampuses:"All HSRU campuses",campusHint:"Choosing a campus puts nearby DoW labs first and hides regional items from other areas.",filter:"Filter",search:"Search",type:"Type",sponsor:"Sponsor",reach:"Reach",
+ natReg:"National and regional",natOnly:"National only",regOnly:"Regional only",soon60:"Deadline in the next 60 days",savedOnly:"My saved list only",clear:"Clear filters",exportSaved:"Download saved list (CSV)",
+ allTypes:"All types",allSponsors:"All sponsors",openSession:"Open session",calIntro:"Deadlines by month, October 2026 to September 2027. Uses the filters and campus you chose on the Students tab.",
+ faqTitle:"Common questions",kitsTitle:"Prep kits for the biggest programs",kitsIntro:"Checklists and timelines drawn from each program's official pages. Always confirm details in the program portal.",
+ storiesTitle:"Stories from HSRU winners",mentorsTitle:"Faculty mentors",mentorsIntro:"HSRU faculty and staff with DoW experience who volunteer to advise applicants or review essays.",
+ adviseTitle:"Advising session",adviseIntro:"For Think Lab facilitators and advisors. Start a session for a student, add opportunities from the Students tab, write notes and next steps, then download the plan or copy it into an email. Sessions are private to you.",
+ studentLabel:"Student (initials or a short label)",startSession:"Start session",yourSessions:"Your sessions",
+ suggestTitle:"Suggest an opportunity",suggestIntro:"Send the official link. The weekly check researches each suggestion and a reviewer approves it before it appears.",progName:"Program name",officialLink:"Official page link",whyFits:"Why it fits (optional)",send:"Send",
+ storyFormTitle:"Share your story",storyFormIntro:"Won or completed a DoW scholarship, fellowship or internship? A short story helps the next student. A reviewer approves each story before it appears.",nameShown:"Name as it should appear",programYear:"Program and year",yourStory:"Your story (what you did, what helped you get in)",contactOpt:"How students can reach you (optional, shown publicly)",consent:"I agree that this can be published on this page.",
+ mentorFormTitle:"Join the mentor directory",mentorFormIntro:"For HSRU faculty and staff willing to advise applicants or review essays. A reviewer approves each entry.",dept:"Department or office",dowExp:"DoW experience and programs you know well",contactPub:"Contact (shown publicly)",
+ usage:"Usage",usageNote:"Counts come from signed in viewers with Contributor access or higher; view only visitors are not counted.",rvPending:"New items waiting for approval",rvCheck:"Published items with details to confirm",rvInbox:"Stories, mentor entries and feedback",rvSugg:"Suggested opportunities",
+ foot1:"Each listing summarizes the official program page. The official page is the final word on eligibility and deadlines.",foot2:"Items marked \"details to confirm\" have a date or rule the weekly check could not verify yet.",foot3:"Program names and details stay in English, as on the official pages.",
+ feedback:"Feedback",fbTitle:"Is this page useful?",yes:"Yes",somewhat:"Somewhat",no:"No",fbText:"What would make it better? (optional)",close:"Close",
+ notRun:"starts Monday, October 5, 2026",studentOpps:"student opportunities",facultyProgs:"faculty programs",closing30:"closing within 30 days",nearbyFirst:"nearby labs for {c} first",
+ loading:"Loading listings…",unavailable:"Listings unavailable here",noListings:"No listings yet. The weekly check adds them, or send one through Contribute.",noMatch:"Nothing matches these filters. Try \"Clear filters\", or pick a different campus or level.",
+ who:"Who",eligibility:"Eligibility",award:"Award",where:"Where",opens:"Opens",deadline:"Deadline",timing:"Timing",checked:"Checked",
+ official:"Official page ↗",save:"Save",saved:"Saved",addCal:"Add deadline to calendar",share:"Share",igCard:"Instagram image card",copyLink:"Copy link",noteStudent:"Copy note for a student",addToSession:"Add to session",inSession:"In session",
+ national:"National",regional:"Regional",hsruOnly:"HSRU only",closingSoon:"Closing soon",newWeek:"New this week",tbc:"Details to confirm",daysLeft:"{n} days left",dayLeft:"1 day left",dueToday:"due today",closed:"closed",seeNote:"see note",checkSite:"check site",
+ noDeadlines:"No deadlines listed yet.",datesTbc:"DATES TBC",none:"None.",
+ noStories:"No stories yet. Past winners can share theirs on the Contribute tab.",noMentors:"No mentors listed yet. Faculty and staff can join on the Contribute tab.",reach:"Reach",
+ needSignIn:"This needs the page opened from its claude.ai link while signed in.",viewOnly:"Your access to this page is view only, so it cannot take submissions. Ask the page owner for Contributor access.",notSent:"Not sent. Try again in a minute.",
+ thanksSugg:"Thanks. The weekly check will research it and a reviewer will approve it.",thanksReview:"Thanks. A reviewer will look at it before it appears.",needFields:"Please fill in the required fields and tick the consent box.",needLink:"Add the program name and a full link that starts with https://",
+ fbThanks:"Thank you for the feedback.",savedToList:"Saved to your list",removedFromList:"Removed from your list",linkCopied:"Link copied",noteCopied:"Note copied. Paste it into an email to a student.",updated:"Updated",notSaved:"That change was not saved. Only editors of this page can review items.",
+ sessEmpty:"Start or pick a session to see it here.",sessItems:"Opportunities in this plan",sessNoItems:"No opportunities yet. Go to the Students tab and use \"Add to session\" on any listing.",sessNotes:"General notes",nextStep:"Next step for this item",remove:"Remove",downloadPlan:"Download plan (CSV)",copyPlan:"Copy plan as email",deleteSession:"Delete session",sessActive:"Adding to session: {s}",planCopied:"Plan copied. Paste it into an email.",
+ approve:"Approve",reject:"Reject",archive:"Archive",markConfirmed:"Mark confirmed",markHandled:"Mark handled",publish:"Publish",dismiss:"Dismiss",
+ viewsL:"Page views",viewersL:"People counted",savesL:"Saves",sharesL:"Shares",calL:"Calendar adds",notesL:"Notes copied",
+ nothingWaiting:"Nothing waiting.",allConfirmed:"Every published item is confirmed.",
+ countsLine:"{s} student · {f} faculty listings",whatItIs:"What it is",youNeed:"What you need",tips:"Tips",timeline:"Timeline",keyDates:"Current dates",fromListing:"From the listing",reachOut:"Contact",ghIssue:"Suggestions for the public site go through GitHub. Open the form ↗"},
+es:{title:"Buscador de Oportunidades del DoW",tagline:"Becas, becas de investigación, prácticas, talleres y programas para docentes del Departamento de Guerra, para estudiantes y docentes de las universidades de HSRU. Un prototipo para el ASCENDR Opportunity Advising Think Lab.",
+ weekly:"Revisión semanal:",tStudents:"Estudiantes",tFaculty:"Docentes",tCalendar:"Calendario de plazos",tPrepare:"Prepararse",tPeople:"Personas",tAdvise:"Sesión de asesoría",tContribute:"Contribuir",tReview:"Revisión",
+ aboutYou:"Sobre usted",level:"Nivel",anyLevel:"Cualquier nivel",undergrad:"Licenciatura",grad:"Posgrado",postdoc:"Posdoctorado",citizenship:"Ciudadanía",showAll:"Mostrar todo",usCit:"Ciudadano de EE. UU.",prCit:"Residente permanente",otherCit:"Ninguno",
+ campus:"Campus",allCampuses:"Todos los campus de HSRU",campusHint:"Al elegir un campus, los laboratorios del DoW cercanos aparecen primero y se ocultan los regionales de otras zonas.",filter:"Filtrar",search:"Buscar",type:"Tipo",sponsor:"Patrocinador",reach:"Alcance",
+ natReg:"Nacional y regional",natOnly:"Solo nacional",regOnly:"Solo regional",soon60:"Fecha límite en los próximos 60 días",savedOnly:"Solo mi lista guardada",clear:"Borrar filtros",exportSaved:"Descargar lista guardada (CSV)",
+ allTypes:"Todos los tipos",allSponsors:"Todos los patrocinadores",openSession:"Abrir sesión",calIntro:"Fechas límite por mes, de octubre de 2026 a septiembre de 2027. Usa los filtros y el campus elegidos en la pestaña Estudiantes.",
+ faqTitle:"Preguntas frecuentes",kitsTitle:"Guías para los programas más grandes",kitsIntro:"Listas y calendarios tomados de las páginas oficiales de cada programa. Confirme siempre los detalles en el portal del programa.",
+ storiesTitle:"Historias de ganadores de HSRU",mentorsTitle:"Mentores docentes",mentorsIntro:"Docentes y personal de HSRU con experiencia en el DoW que se ofrecen a orientar a postulantes o revisar ensayos.",
+ adviseTitle:"Sesión de asesoría",adviseIntro:"Para facilitadores del Think Lab y asesores. Inicie una sesión para un estudiante, agregue oportunidades desde la pestaña Estudiantes, escriba notas y próximos pasos y luego descargue el plan o cópielo en un correo. Las sesiones son privadas.",
+ studentLabel:"Estudiante (iniciales o etiqueta breve)",startSession:"Iniciar sesión",yourSessions:"Sus sesiones",
+ suggestTitle:"Sugerir una oportunidad",suggestIntro:"Envíe el enlace oficial. La revisión semanal investiga cada sugerencia y un revisor la aprueba antes de publicarla.",progName:"Nombre del programa",officialLink:"Enlace a la página oficial",whyFits:"Por qué encaja (opcional)",send:"Enviar",
+ storyFormTitle:"Comparta su historia",storyFormIntro:"¿Ganó o completó una beca o práctica del DoW? Una historia breve ayuda al próximo estudiante. Un revisor aprueba cada historia antes de publicarla.",nameShown:"Nombre como debe aparecer",programYear:"Programa y año",yourStory:"Su historia (qué hizo y qué le ayudó a ser aceptado)",contactOpt:"Cómo pueden contactarle los estudiantes (opcional, público)",consent:"Acepto que esto se publique en esta página.",
+ mentorFormTitle:"Únase al directorio de mentores",mentorFormIntro:"Para docentes y personal de HSRU dispuestos a orientar a postulantes o revisar ensayos. Un revisor aprueba cada registro.",dept:"Departamento u oficina",dowExp:"Experiencia con el DoW y programas que conoce bien",contactPub:"Contacto (público)",
+ usage:"Uso",usageNote:"Los conteos provienen de personas con acceso de colaborador o superior; no se cuentan los visitantes de solo lectura.",rvPending:"Nuevos elementos por aprobar",rvCheck:"Elementos publicados con detalles por confirmar",rvInbox:"Historias, mentores y comentarios",rvSugg:"Oportunidades sugeridas",
+ foot1:"Cada anuncio resume la página oficial del programa. La página oficial tiene la última palabra sobre requisitos y fechas.",foot2:"Los elementos marcados \"detalles por confirmar\" tienen una fecha o regla que aún no se pudo verificar.",foot3:"Los nombres y detalles de los programas se muestran en inglés, como en las páginas oficiales.",
+ feedback:"Comentarios",fbTitle:"¿Le es útil esta página?",yes:"Sí",somewhat:"Algo",no:"No",fbText:"¿Qué la haría mejor? (opcional)",close:"Cerrar",
+ notRun:"comienza el lunes 5 de octubre de 2026",studentOpps:"oportunidades para estudiantes",facultyProgs:"programas para docentes",closing30:"cierran en 30 días",nearbyFirst:"laboratorios cercanos a {c} primero",
+ loading:"Cargando anuncios…",unavailable:"Anuncios no disponibles aquí",noListings:"Aún no hay anuncios. La revisión semanal los agrega, o envíe uno en Contribuir.",noMatch:"Nada coincide con estos filtros. Pruebe \"Borrar filtros\" o elija otro campus o nivel.",
+ who:"Para",eligibility:"Requisitos",award:"Apoyo",where:"Dónde",opens:"Abre",deadline:"Fecha límite",timing:"Plazos",checked:"Verificado",
+ official:"Página oficial ↗",save:"Guardar",saved:"Guardado",addCal:"Agregar al calendario",share:"Compartir",igCard:"Imagen para Instagram",copyLink:"Copiar enlace",noteStudent:"Copiar nota para un estudiante",addToSession:"Agregar a la sesión",inSession:"En la sesión",
+ national:"Nacional",regional:"Regional",hsruOnly:"Solo HSRU",closingSoon:"Cierra pronto",newWeek:"Nuevo esta semana",tbc:"Detalles por confirmar",daysLeft:"quedan {n} días",dayLeft:"queda 1 día",dueToday:"vence hoy",closed:"cerrado",seeNote:"ver nota",checkSite:"ver sitio",
+ noDeadlines:"Aún no hay fechas.",datesTbc:"FECHAS POR CONFIRMAR",none:"Ninguno.",
+ noStories:"Aún no hay historias. Los ganadores pueden compartir la suya en Contribuir.",noMentors:"Aún no hay mentores. Docentes y personal pueden inscribirse en Contribuir.",
+ needSignIn:"Esto requiere abrir la página desde su enlace de claude.ai con sesión iniciada.",viewOnly:"Su acceso es de solo lectura, así que no puede enviar. Pida acceso de colaborador a quien administra la página.",notSent:"No se envió. Intente de nuevo en un minuto.",
+ thanksSugg:"Gracias. La revisión semanal la investigará y un revisor la aprobará.",thanksReview:"Gracias. Un revisor lo verá antes de publicarlo.",needFields:"Complete los campos requeridos y marque la casilla de consentimiento.",needLink:"Agregue el nombre del programa y un enlace completo que empiece con https://",
+ fbThanks:"Gracias por sus comentarios.",savedToList:"Guardado en su lista",removedFromList:"Quitado de su lista",linkCopied:"Enlace copiado",noteCopied:"Nota copiada. Péguela en un correo a un estudiante.",updated:"Actualizado",notSaved:"El cambio no se guardó. Solo los editores pueden revisar.",
+ sessEmpty:"Inicie o elija una sesión para verla aquí.",sessItems:"Oportunidades en este plan",sessNoItems:"Aún no hay oportunidades. Vaya a Estudiantes y use \"Agregar a la sesión\".",sessNotes:"Notas generales",nextStep:"Próximo paso",remove:"Quitar",downloadPlan:"Descargar plan (CSV)",copyPlan:"Copiar plan como correo",deleteSession:"Eliminar sesión",sessActive:"Agregando a la sesión: {s}",planCopied:"Plan copiado. Péguelo en un correo.",
+ approve:"Aprobar",reject:"Rechazar",archive:"Archivar",markConfirmed:"Marcar confirmado",markHandled:"Marcar atendido",publish:"Publicar",dismiss:"Descartar",
+ viewsL:"Visitas",viewersL:"Personas contadas",savesL:"Guardados",sharesL:"Compartidos",calL:"Al calendario",notesL:"Notas copiadas",
+ nothingWaiting:"Nada pendiente.",allConfirmed:"Todo lo publicado está confirmado.",
+ countsLine:"{s} para estudiantes · {f} para docentes",whatItIs:"Qué es",youNeed:"Qué necesita",tips:"Consejos",timeline:"Calendario",keyDates:"Fechas actuales",fromListing:"Del anuncio",reachOut:"Contacto",ghIssue:"Las sugerencias para el sitio público se envían por GitHub. Abrir el formulario ↗"}};
+const LEVEL_KEYS={undergrad:"undergrad",grad:"grad",postdoc:"postdoc",faculty:"tFaculty"};
+const MONTHS=["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+const MONTHS_ES=["ENE","FEB","MAR","ABR","MAY","JUN","JUL","AGO","SEP","OCT","NOV","DIC"];
+const MONTH_LONG=["January","February","March","April","May","June","July","August","September","October","November","December"];
+const MONTH_LONG_ES=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+const $=s=>document.querySelector(s);
+const esc=v=>String(v==null?"":v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const today=(()=>{const n=new Date();return new Date(n.getFullYear(),n.getMonth(),n.getDate());})();
+const iso=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+function parseDate(s){if(!s||!/^\d{4}-\d{2}-\d{2}$/.test(s))return null;const[y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d);}
+function daysUntil(s){const d=parseDate(s);return d?Math.round((d-today)/864e5):null;}
+function lsGet(k){try{return JSON.parse(localStorage.getItem(k)||"null");}catch(e){return null;}}
+function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}
+let params;try{params=new URLSearchParams(location.search);}catch(e){params=new URLSearchParams("");}
+
+const st={lang:"en",opps:[],loaded:false,saved:new Set(),prefs:{level:"",cit:"",campus:""},tab:"students",canEdit:false,db:null,uid:null,sugg:[],meta:null,dl:null,mode:"loading",
+  stories:[],mentors:[],inbox:[],stats:[],sessions:[],activeSession:"",myStats:null,statsDirty:false};
+const T=(k,vars)=>{let s=(I18N[st.lang]&&I18N[st.lang][k])||I18N.en[k]||k;if(vars)for(const v in vars)s=s.replace("{"+v+"}",vars[v]);return s;};
+function fmt(s){const d=parseDate(s);return d?String(d.getDate()).padStart(2,"0")+" "+(st.lang==="es"?MONTHS_ES:MONTHS)[d.getMonth()]+" "+d.getFullYear():"";}
+function fmtLong(s){const d=parseDate(s);if(!d)return"";return st.lang==="es"?d.getDate()+" de "+MONTH_LONG_ES[d.getMonth()]+" de "+d.getFullYear():MONTH_LONG[d.getMonth()]+" "+d.getDate()+", "+d.getFullYear();}
+function fmtEn(s){const d=parseDate(s);return d?MONTH_LONG[d.getMonth()]+" "+d.getDate()+", "+d.getFullYear():"";}
+
+/* ---------- setup ---------- */
+function fillCampusSelect(sel,withAll){const keep=sel.value;const opts=CAMPUSES.slice().sort((a,b)=>a[0].localeCompare(b[0]));sel.innerHTML=(withAll?'<option value="">'+esc(T("allCampuses"))+'</option>':'<option value=""></option>')+opts.map(([n])=>'<option>'+esc(n)+'</option>').join("");sel.value=keep;}
+["#p-campus","#m-campus"].forEach(s=>fillCampusSelect($(s),true));["#st-campus","#mt-campus"].forEach(s=>fillCampusSelect($(s),false));
+const localPrefs=lsGet("prefs");if(localPrefs)Object.assign(st.prefs,localPrefs);
+const localSaved=lsGet("saved");if(Array.isArray(localSaved))localSaved.forEach(i=>st.saved.add(i));
+const localSess=lsGet("sessions");if(Array.isArray(localSess))st.sessions=localSess;
+st.activeSession=lsGet("activeSession")||"";
+st.lang=params.get("lang")==="es"?"es":(lsGet("lang")==="es"?"es":"en");
+if(params.get("campus")){const c=CAMPUSES.find(x=>x[0].toLowerCase()===params.get("campus").toLowerCase());if(c)st.prefs.campus=c[0];}
+if(params.get("level"))st.prefs.level=params.get("level");
+if(params.get("embed")==="1"){document.body.classList.add("embed");try{const post=()=>{try{window.parent.postMessage({dowFinderHeight:document.documentElement.scrollHeight},"*");}catch(e){}};new ResizeObserver(post).observe(document.body);window.addEventListener("load",post);}catch(e){}}
+function syncPrefInputs(){$("#p-level").value=st.prefs.level||"";$("#p-cit").value=st.prefs.cit||"";$("#p-campus").value=st.prefs.campus||"";}
+syncPrefInputs();
+function regionOf(campus){const c=CAMPUSES.find(x=>x[0]===campus);return c?c[1]:"";}
+function applyI18n(){
+  document.documentElement.lang=st.lang;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{el.textContent=T(el.dataset.i18n);});
+  document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.lang===st.lang)));
+  $("#footLang").hidden=st.lang!=="es";
+  ["#p-campus","#m-campus"].forEach(s=>fillCampusSelect($(s),true));
+  fillFilterOptions();
+}
+
+/* ---------- filtering ---------- */
+function published(){return st.opps.filter(o=>o.status==="published");}
+function visible(audience){
+  const q=$("#f-q").value.trim().toLowerCase(),type=$("#f-type").value,br=$("#f-branch").value,scope=$("#f-scope").value,soon=$("#f-soon").checked,savedOnly=$("#f-saved").checked;
+  const lvl=st.prefs.level,cit=st.prefs.cit,region=regionOf(st.prefs.campus);
+  if(params.get("branch")&&!br){}
+  const brParam=params.get("branch")||"",typeParam=params.get("type")||"";
+  let out=published().filter(o=>!audience||o.audience===audience);
+  out=out.filter(o=>{
+    if(q){const hay=[o.title,o.sponsor,o.summary,o.summary_es,o.location,o.eligibility,o.type,o.branch,(o.regions||[]).join(" ")].join(" ").toLowerCase();if(!hay.includes(q))return false;}
+    if(type&&o.type!==type)return false;
+    if(!type&&typeParam&&o.type!==typeParam)return false;
+    if(br&&o.branch!==br)return false;
+    if(!br&&brParam&&o.branch!==brParam)return false;
+    if(scope&&o.scope!==scope)return false;
+    if(savedOnly&&!st.saved.has(o.id))return false;
+    if(lvl&&o.audience==="student"&&Array.isArray(o.levels)&&!o.levels.includes(lvl))return false;
+    if(cit==="pr"&&o.cit==="us")return false;
+    if(cit==="other"&&(o.cit==="us"||o.cit==="us_pr"))return false;
+    if(region&&o.scope==="Regional"&&!(o.regions||[]).includes(region))return false;
+    if(soon){const d=daysUntil(o.deadline);if(d===null||d<0||d>60)return false;}
+    return true;
+  });
+  const rank=o=>{const d=daysUntil(o.deadline);if(d===null)return 1e6;if(d<0)return 2e6-d;return d;};
+  out.sort((a,b)=>{
+    if(region){const ra=a.scope==="Regional"?0:1,rb=b.scope==="Regional"?0:1;if(ra!==rb)return ra-rb;}
+    return rank(a)-rank(b)||a.title.localeCompare(b.title);
+  });
+  return out;
+}
+
+/* ---------- helpers ---------- */
+function shareText(o){const d=o.deadline?" Deadline "+fmtEn(o.deadline)+".":"";return o.title+" ("+o.sponsor+")."+d;}
+function gcal(o){const d=parseDate(o.deadline);if(!d)return"";const n=new Date(d);n.setDate(n.getDate()+1);const f=x=>iso(x).replace(/-/g,"");
+  return "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent("Deadline: "+o.title)+"&dates="+f(d)+"/"+f(n)+"&details="+encodeURIComponent((o.deadlineNote?o.deadlineNote+"\n":"")+o.url);}
+function outlook(o){const d=parseDate(o.deadline);if(!d)return"";const n=new Date(d);n.setDate(n.getDate()+1);
+  return "https://outlook.office.com/calendar/0/deeplink/compose?allday=true&subject="+encodeURIComponent("Deadline: "+o.title)+"&startdt="+iso(d)+"&enddt="+iso(n)+"&body="+encodeURIComponent(o.url);}
+function studentNote(o){
+  return "Hi,\n\nI thought of you for this opportunity: "+o.title+" ("+o.sponsor+").\n"+(o.summary?o.summary+"\n":"")+
+  (o.deadline?"Deadline: "+fmtEn(o.deadline)+(o.deadlineNote?" ("+o.deadlineNote+")":"")+"\n":(o.deadlineNote?"Timing: "+o.deadlineNote+"\n":""))+
+  (o.citizenship?"Citizenship: "+o.citizenship+"\n":"")+"Official page: "+o.url+"\n\nHappy to talk it through or write a letter if you decide to apply.";
+}
+function toast(msg){const t=$("#toast");t.textContent=msg;t.hidden=false;clearTimeout(toast._t);toast._t=setTimeout(()=>{t.hidden=true;},2800);}
+async function copy(text,msg){try{await navigator.clipboard.writeText(text);toast(msg||"Copied");}catch(e){const ta=document.createElement("textarea");ta.value=text;ta.setAttribute("readonly","");ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();let ok=false;try{ok=document.execCommand("copy");}catch(_){}ta.remove();toast(ok?(msg||"Copied"):text.slice(0,120));}}
+async function saveFile(filename,data){
+  if(st.dl){try{await st.dl.save({filename,data});}catch(e){if(e&&e.code!=="declined")toast("The download could not start here.");}return;}
+  try{const blob=data instanceof Blob?data:new Blob([data],{type:filename.endsWith(".csv")?"text/csv":"application/octet-stream"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=filename;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},500);}catch(e){toast("The download could not start here.");}
+}
+function csvRow(a){return a.map(v=>'"'+String(v==null?"":v).replace(/"/g,'""')+'"').join(",");}
+
+/* ---------- usage counts (per viewer doc, editors see totals) ---------- */
+function bump(kind,id){
+  if(!st.db||!st.uid)return;
+  const s=st.myStats||(st.myStats={views:0,saves:0,shares:0,cal:0,notes:0,byOpp:{},first:iso(today)});
+  s[kind]=(s[kind]||0)+1;
+  if(id){s.byOpp=s.byOpp||{};const o=s.byOpp[id]||(s.byOpp[id]={});o[kind]=(o[kind]||0)+1;}
+  s.last=iso(today);st.statsDirty=true;clearTimeout(bump._t);bump._t=setTimeout(flushStats,2500);
+}
+let statsWrite=Promise.resolve();
+function flushStats(){if(!st.statsDirty||!st.db||!st.uid)return;st.statsDirty=false;const body=JSON.parse(JSON.stringify(st.myStats));statsWrite=statsWrite.then(()=>st.db.doc("stats/"+st.uid).set(body)).catch(()=>{});}
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden")flushStats();});
+
+/* ---------- rendering: listings ---------- */
+function whenBlock(o){
+  const d=daysUntil(o.deadline);const M=st.lang==="es"?MONTHS_ES:MONTHS;
+  if(d===null){return '<div class="when none"><span class="d">TBC</span><span class="m">'+esc(T("deadline").toUpperCase())+'</span><span class="t">'+esc(o.deadlineNote?T("seeNote"):T("checkSite"))+'</span></div>';}
+  const dt=parseDate(o.deadline);const cls=d<0?"past":(d<=30?"soon":"");
+  const t=d<0?T("closed"):(d===0?T("dueToday"):(d===1?T("dayLeft"):T("daysLeft",{n:d})));
+  return '<div class="when '+cls+'"><span class="d">'+String(dt.getDate()).padStart(2,"0")+'</span><span class="m">'+M[dt.getMonth()]+" "+dt.getFullYear()+'</span><span class="t">'+esc(t)+'</span></div>';
+}
+function activeSess(){return st.sessions.find(s=>s.id===st.activeSession)||null;}
+function card(o){
+  const d=daysUntil(o.deadline);
+  const chips=['<span class="chip type">'+esc(o.type)+'</span>','<span class="chip">'+esc(o.branch)+'</span>'];
+  chips.push(o.scope==="Regional"?'<span class="chip reg">'+esc(T("regional"))+' · '+esc(o.location)+'</span>':'<span class="chip">'+esc(T("national"))+'</span>');
+  if(o.hsi==="HSRU members only")chips.push('<span class="chip hsru">'+esc(T("hsruOnly"))+'</span>');
+  else if(o.hsi)chips.push('<span class="chip">'+esc(o.hsi)+'</span>');
+  if(d!==null&&d>=0&&d<=30)chips.push('<span class="chip soon">'+esc(T("closingSoon"))+'</span>');
+  const addedDays=daysUntil(o.added);if(!o.seed&&addedDays!==null&&addedDays>=-7)chips.push('<span class="chip soon">'+esc(T("newWeek"))+'</span>');
+  if(o.needsCheck)chips.push('<span class="chip tbc">'+esc(T("tbc"))+'</span>');
+  const facts=[];
+  if(o.audience==="student"&&Array.isArray(o.levels)&&o.levels.length)facts.push([T("who"),o.levels.map(l=>T(LEVEL_KEYS[l]||l)).join(", ")]);
+  if(o.eligibility)facts.push([T("eligibility"),o.eligibility]);
+  if(o.citizenship)facts.push([T("citizenship"),o.citizenship]);
+  if(o.award)facts.push([T("award"),o.award]);
+  if(o.scope!=="Regional"&&o.location)facts.push([T("where"),o.location]);
+  if(o.opens)facts.push([T("opens"),fmtLong(o.opens)]);
+  if(o.deadline)facts.push([T("deadline"),fmtLong(o.deadline)+(o.deadlineNote?" · "+o.deadlineNote:"")]);
+  else if(o.deadlineNote)facts.push([T("timing"),o.deadlineNote]);
+  if(o.verified)facts.push([T("checked"),fmtLong(o.verified)]);
+  const saved=st.saved.has(o.id);
+  const u=encodeURIComponent(o.url),txt=encodeURIComponent(shareText(o));
+  const sess=activeSess();const inSess=sess&&sess.items.some(i=>i.id===o.id);
+  const summary=st.lang==="es"&&o.summary_es?o.summary_es:o.summary;
+  const cal=o.deadline&&d>=0?'<details class="menu"><summary class="btn">'+esc(T("addCal"))+'</summary><div class="menu-pop"><a href="'+esc(gcal(o))+'" target="_blank" rel="noopener" data-track="cal">Google Calendar</a><a href="'+esc(outlook(o))+'" target="_blank" rel="noopener" data-track="cal">Outlook</a></div></details>':"";
+  return '<article class="opp" data-id="'+esc(o.id)+'">'+whenBlock(o)+'<div class="body"><div class="chips">'+chips.join("")+'</div><h3>'+esc(o.title)+'</h3><p class="spons">'+esc(o.sponsor)+'</p>'+(summary?'<p class="sum">'+esc(summary)+'</p>':"")+
+  '<dl class="facts">'+facts.map(f=>'<dt>'+esc(f[0])+'</dt><dd>'+esc(f[1])+'</dd>').join("")+'</dl>'+
+  '<div class="actions"><a class="btn primary" href="'+esc(o.url)+'" target="_blank" rel="noopener" data-track="open">'+esc(T("official"))+'</a>'+
+  '<button class="btn" type="button" data-act="save" aria-pressed="'+saved+'">'+esc(saved?T("saved"):T("save"))+'</button>'+
+  (sess?'<button class="btn" type="button" data-act="sess" aria-pressed="'+(!!inSess)+'">'+esc(inSess?T("inSession"):T("addToSession"))+'</button>':"")+cal+
+  '<details class="menu"><summary class="btn">'+esc(T("share"))+'</summary><div class="menu-pop">'+
+   '<a href="https://www.linkedin.com/sharing/share-offsite/?url='+u+'" target="_blank" rel="noopener" data-track="shares">LinkedIn</a>'+
+   '<a href="https://twitter.com/intent/tweet?text='+txt+'&url='+u+'" target="_blank" rel="noopener" data-track="shares">X</a>'+
+   '<a href="https://www.facebook.com/sharer/sharer.php?u='+u+'" target="_blank" rel="noopener" data-track="shares">Facebook</a>'+
+   '<a href="https://bsky.app/intent/compose?text='+encodeURIComponent(shareText(o)+" "+o.url)+'" target="_blank" rel="noopener" data-track="shares">Bluesky</a>'+
+   '<button type="button" data-act="ig">'+esc(T("igCard"))+'</button>'+
+   '<button type="button" data-act="copylink">'+esc(T("copyLink"))+'</button>'+
+  '</div></details>'+
+  '<button class="btn" type="button" data-act="note">'+esc(T("noteStudent"))+'</button>'+
+  '</div></div></article>';
+}
+function renderList(){
+  const list=$("#list");
+  const sess=activeSess();$("#sessBar").hidden=!sess;if(sess)$("#sessBarText").textContent=T("sessActive",{s:sess.label});
+  if(st.mode==="none"){list.innerHTML='<div class="empty">'+esc(T("unavailable"))+'</div>';$("#resultCount").textContent=T("unavailable");return;}
+  if(!st.loaded){list.innerHTML='<div class="empty">'+esc(T("loading"))+'</div>';$("#resultCount").textContent=T("loading");return;}
+  const aud=st.tab==="faculty"?"faculty":"student";
+  const items=visible(aud);
+  const soonN=items.filter(o=>{const d=daysUntil(o.deadline);return d!==null&&d>=0&&d<=30;}).length;
+  $("#resultCount").textContent=items.length+" "+T(aud==="faculty"?"facultyProgs":"studentOpps")+(soonN?" · "+soonN+" "+T("closing30"):"")+(st.prefs.campus?" · "+T("nearbyFirst",{c:st.prefs.campus}):"");
+  if(!published().length){list.innerHTML='<div class="empty">'+esc(T("noListings"))+'</div>';return;}
+  list.innerHTML=items.length?items.map(card).join(""):'<div class="empty">'+esc(T("noMatch"))+'</div>';
+  $("#exportSaved").hidden=!st.saved.size;
+}
+function renderCalendar(){
+  const cal=$("#cal");
+  if(!st.loaded){cal.innerHTML='<div class="empty">'+esc(T("loading"))+'</div>';return;}
+  const all=visible("");const items=all.filter(o=>o.deadline),tbc=all.filter(o=>!o.deadline);
+  const M=st.lang==="es"?MONTHS_ES:MONTHS;let html="";
+  for(let i=0;i<12;i++){
+    const y=2026+Math.floor((9+i)/12),m=(9+i)%12;
+    const inMonth=items.filter(o=>{const d=parseDate(o.deadline);return d.getFullYear()===y&&d.getMonth()===m;}).sort((a,b)=>a.deadline.localeCompare(b.deadline));
+    html+='<div class="month"><h3>'+M[m]+" "+y+'</h3>'+(inMonth.length?'<ul>'+inMonth.map(o=>{const d=daysUntil(o.deadline);return '<li class="'+(d<0?"past":"")+'"><span class="dt">'+fmt(o.deadline).slice(0,6)+'</span><span><a href="'+esc(o.url)+'" target="_blank" rel="noopener">'+esc(o.title)+'</a> <span class="hint" style="display:inline">· '+esc(o.audience==="faculty"?T("tFaculty"):o.type)+'</span></span></li>';}).join("")+'</ul>':'<p class="none">'+esc(T("noDeadlines"))+'</p>')+'</div>';
+  }
+  html+='<div class="month"><h3>'+esc(T("datesTbc"))+'</h3>'+(tbc.length?'<ul>'+tbc.map(o=>'<li><span class="dt">—</span><span><a href="'+esc(o.url)+'" target="_blank" rel="noopener">'+esc(o.title)+'</a> <span class="hint" style="display:inline">· '+esc(o.deadlineNote||T("checkSite"))+'</span></span></li>').join("")+'</ul>':'<p class="none">'+esc(T("none"))+'</p>')+'</div>';
+  cal.innerHTML=html;
+}
+/* ---------- prepare ---------- */
+function renderPrepare(){
+  $("#faq").innerHTML=FAQ[st.lang].map(([q,a])=>'<details class="faq"><summary>'+esc(q)+'</summary><p>'+esc(a)+'</p></details>').join("");
+  $("#kits").innerHTML=KITS.map(k=>{const c=k[st.lang];const o=st.opps.find(x=>x.id===k.id);
+    const dates=o?[(o.opens?T("opens")+": "+fmtLong(o.opens):""),(o.deadline?T("deadline")+": "+fmtLong(o.deadline):(o.deadlineNote||""))].filter(Boolean).join(" · "):"";
+    return '<article class="card"><h3>'+esc(k.title)+'</h3><p class="sum">'+esc(c.what)+'</p>'+(dates?'<p class="hint"><b>'+esc(T("keyDates"))+':</b> '+esc(dates)+'</p>':"")+
+    '<h4>'+esc(T("youNeed"))+'</h4><ul>'+c.need.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ul>'+
+    '<h4>'+esc(T("tips"))+'</h4><ul>'+c.tips.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ul>'+
+    '<h4>'+esc(T("timeline"))+'</h4><ul class="tl">'+c.time.map(([a,b])=>'<li><b>'+esc(a)+'</b><span>'+esc(b)+'</span></li>').join("")+'</ul>'+
+    '<div><a class="btn primary" href="'+esc(k.url)+'" target="_blank" rel="noopener">'+esc(T("official"))+'</a></div></article>';}).join("");
+}
+/* ---------- people ---------- */
+function renderPeople(){
+  const sts=st.stories.filter(s=>s.status!=="hidden");
+  $("#stories").innerHTML=sts.length?sts.map(s=>'<article class="card"><h3>'+esc(s.name)+'</h3><p class="spons">'+esc([s.campus,s.program].filter(Boolean).join(" · "))+'</p><p class="sum">'+esc(s.text)+'</p>'+(s.contact?'<p class="hint"><b>'+esc(T("reachOut"))+':</b> '+esc(s.contact)+'</p>':"")+'</article>').join(""):'<div class="empty">'+esc(T("noStories"))+'</div>';
+  const mc=$("#m-campus").value;const ms=st.mentors.filter(m=>m.status!=="hidden"&&(!mc||m.campus===mc));
+  $("#mentors").innerHTML=ms.length?ms.map(m=>'<article class="card"><h3>'+esc(m.name)+'</h3><p class="spons">'+esc([m.dept,m.campus].filter(Boolean).join(" · "))+'</p><p class="sum">'+esc(m.exp)+'</p>'+(m.contact?'<p class="hint"><b>'+esc(T("reachOut"))+':</b> '+esc(m.contact)+'</p>':"")+'</article>').join(""):'<div class="empty">'+esc(T("noMentors"))+'</div>';
+}
+/* ---------- advising sessions ---------- */
+let sessTimer=null;
+function persistSessions(){lsSet("sessions",st.sessions);lsSet("activeSession",st.activeSession);clearTimeout(sessTimer);sessTimer=setTimeout(async()=>{if(!st.db||!st.uid)return;try{await st.db.doc("data/users/"+st.uid+"/advising").set({sessions:st.sessions,active:st.activeSession});}catch(e){}},900);}
+function renderAdvise(){
+  const pick=$("#a-pick");pick.innerHTML=st.sessions.length?st.sessions.map(s=>'<option value="'+esc(s.id)+'">'+esc(s.label+" · "+s.created)+'</option>').join(""):'<option value="">—</option>';
+  pick.value=st.activeSession||"";
+  const s=activeSess();const box=$("#a-detail");
+  if(!s){box.innerHTML='<p class="hint" style="font-size:14px">'+esc(T("sessEmpty"))+'</p>';return;}
+  const items=s.items.map(it=>{const o=st.opps.find(x=>x.id===it.id);if(!o)return"";return '<div class="sess-item" data-sid="'+esc(it.id)+'"><b>'+esc(o.title)+'</b><span class="hint">'+esc((o.deadline?fmtLong(o.deadline):(o.deadlineNote||""))+" · "+o.sponsor)+'</span><label class="f"><span>'+esc(T("nextStep"))+'</span><textarea data-field="step" maxlength="400">'+esc(it.step||"")+'</textarea></label><div><button class="btn small" type="button" data-sact="rm">'+esc(T("remove"))+'</button></div></div>';}).join("");
+  box.innerHTML='<h3>'+esc(s.label)+'</h3><h4>'+esc(T("sessItems"))+'</h4>'+(items||'<p class="hint">'+esc(T("sessNoItems"))+'</p>')+
+   '<label class="f"><span>'+esc(T("sessNotes"))+'</span><textarea id="a-notes" maxlength="2000">'+esc(s.notes||"")+'</textarea></label>'+
+   '<div class="actions"><button class="btn primary" type="button" data-sact="csv">'+esc(T("downloadPlan"))+'</button><button class="btn" type="button" data-sact="copy">'+esc(T("copyPlan"))+'</button><button class="btn" type="button" data-sact="del">'+esc(T("deleteSession"))+'</button></div>';
+}
+function planText(s){
+  const lines=["Opportunity plan: "+s.label+" ("+s.created+")",""];
+  s.items.forEach((it,i)=>{const o=st.opps.find(x=>x.id===it.id);if(!o)return;lines.push((i+1)+". "+o.title+" ("+o.sponsor+")");lines.push("   Deadline: "+(o.deadline?fmtEn(o.deadline):(o.deadlineNote||"see official page")));if(o.citizenship)lines.push("   Citizenship: "+o.citizenship);if(it.step)lines.push("   Next step: "+it.step);lines.push("   "+o.url);lines.push("");});
+  if(s.notes){lines.push("Notes:",s.notes);}
+  return lines.join("\n");
+}
+$("#a-new").addEventListener("click",()=>{const label=$("#a-label").value.trim()||("Session "+(st.sessions.length+1));const s={id:"s"+Date.now().toString(36),label,created:iso(today),items:[],notes:""};st.sessions.unshift(s);st.activeSession=s.id;$("#a-label").value="";persistSessions();render();});
+$("#a-pick").addEventListener("change",e=>{st.activeSession=e.target.value;persistSessions();render();});
+$("#sessBarOpen").addEventListener("click",()=>{st.tab="advise";render();});
+$("#a-detail").addEventListener("input",e=>{const s=activeSess();if(!s)return;if(e.target.id==="a-notes")s.notes=e.target.value;const row=e.target.closest(".sess-item");if(row&&e.target.dataset.field==="step"){const it=s.items.find(i=>i.id===row.dataset.sid);if(it)it.step=e.target.value;}persistSessions();});
+$("#a-detail").addEventListener("click",async e=>{const b=e.target.closest("[data-sact]");if(!b)return;const s=activeSess();if(!s)return;const k=b.dataset.sact;
+  if(k==="rm"){const id=b.closest(".sess-item").dataset.sid;s.items=s.items.filter(i=>i.id!==id);persistSessions();render();}
+  if(k==="del"){st.sessions=st.sessions.filter(x=>x.id!==s.id);st.activeSession=st.sessions[0]?st.sessions[0].id:"";persistSessions();render();}
+  if(k==="copy")copy(planText(s),T("planCopied"));
+  if(k==="csv"){const rows=[["Opportunity","Sponsor","Deadline","Timing note","Citizenship","Next step","Official page"]].concat(s.items.map(it=>{const o=st.opps.find(x=>x.id===it.id)||{};return[o.title,o.sponsor,o.deadline||"",o.deadlineNote||"",o.citizenship||"",it.step||"",o.url];}));if(s.notes)rows.push(["Notes","","","","","",s.notes]);await saveFile("plan-"+s.label.replace(/[^A-Za-z0-9]+/g,"-").slice(0,40)+".csv",rows.map(csvRow).join("\n"));}
+});
+/* ---------- review ---------- */
+function renderReview(){
+  const pend=st.opps.filter(o=>o.status==="pending");
+  const chk=st.opps.filter(o=>o.status==="published"&&o.needsCheck);
+  const sug=st.sugg.filter(s=>s.status!=="handled");
+  const inbox=st.inbox.filter(i=>i.status==="new");
+  $("#revCount").textContent=(pend.length+sug.length+inbox.length)?"("+(pend.length+sug.length+inbox.length)+")":"";
+  const row=(t,sub,btns)=>'<div class="row"><div class="t"><b>'+t+'</b><span>'+sub+'</span></div><div style="display:flex;gap:6px;flex-wrap:wrap">'+btns+'</div></div>';
+  const tot={views:0,saves:0,shares:0,cal:0,notes:0};st.stats.forEach(s=>{for(const k in tot)tot[k]+=Number(s[k]||0);});
+  $("#rv-stats").innerHTML=[["viewsL",tot.views],["viewersL",st.stats.length],["savesL",tot.saves],["sharesL",tot.shares],["calL",tot.cal],["notesL",tot.notes]].map(([k,v])=>'<div class="stat"><b>'+v+'</b><span>'+esc(T(k))+'</span></div>').join("");
+  $("#rv-pending").innerHTML=pend.length?pend.map(o=>row('<a href="'+esc(o.url)+'" target="_blank" rel="noopener">'+esc(o.title)+'</a>',esc(o.sponsor+" · "+o.type+" · "+(o.deadline?fmtEn(o.deadline):(o.deadlineNote||"no date"))+(o.changeNote?" · "+o.changeNote:"")),'<button class="btn primary" data-rv="approve" data-id="'+esc(o.id)+'">'+esc(T("approve"))+'</button><button class="btn" data-rv="reject" data-id="'+esc(o.id)+'">'+esc(T("reject"))+'</button>')).join(""):'<p class="hint">'+esc(T("nothingWaiting"))+'</p>';
+  $("#rv-check").innerHTML=chk.length?chk.map(o=>row('<a href="'+esc(o.url)+'" target="_blank" rel="noopener">'+esc(o.title)+'</a>',esc((o.changeNote?o.changeNote+" · ":"")+(o.deadlineNote||"Confirm details on the official page")),'<button class="btn" data-rv="verify" data-id="'+esc(o.id)+'">'+esc(T("markConfirmed"))+'</button><button class="btn" data-rv="archive" data-id="'+esc(o.id)+'">'+esc(T("archive"))+'</button>')).join(""):'<p class="hint">'+esc(T("allConfirmed"))+'</p>';
+  $("#rv-inbox").innerHTML=inbox.length?inbox.map(i=>{const kind=i.kind==="story"?"Story":i.kind==="mentor"?"Mentor entry":"Feedback";
+    const sub=i.kind==="feedback"?[(i.rate?"Rating: "+i.rate:""),(i.text||"")].filter(Boolean).join(" · "):[i.name,i.campus,i.program||i.dept,(i.text||i.exp||"").slice(0,220)].filter(Boolean).join(" · ");
+    const btns=(i.kind==="feedback"?"":'<button class="btn primary" data-rv="publish" data-id="'+esc(i._path)+'">'+esc(T("publish"))+'</button>')+'<button class="btn" data-rv="dismiss" data-id="'+esc(i._path)+'">'+esc(T("dismiss"))+'</button>';
+    return row(esc(kind)+(i.at?' <span class="hint" style="display:inline">'+esc(String(i.at).slice(0,10))+'</span>':""),esc(sub),btns);}).join(""):'<p class="hint">'+esc(T("nothingWaiting"))+'</p>';
+  $("#rv-sugg").innerHTML=sug.length?sug.map(s=>row('<a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(s.title)+'</a>',esc((s.note||"No note")+(s.at?" · sent "+String(s.at).slice(0,10):"")),'<button class="btn" data-rv="handled" data-id="'+esc(s._id)+'">'+esc(T("markHandled"))+'</button>')).join(""):'<p class="hint">'+esc(T("nothingWaiting"))+'</p>';
+}
+function renderStatus(){
+  const m=st.meta;
+  $("#lastRun").textContent=m&&m.lastRun?fmtLong(m.lastRun):(st.mode==="static"&&m&&m.updated?fmtLong(m.updated):T("notRun"));
+  const pub=published();
+  $("#counts").textContent=st.loaded?T("countsLine",{s:pub.filter(o=>o.audience==="student").length,f:pub.filter(o=>o.audience==="faculty").length}):"";
+}
+function fillFilterOptions(){
+  const types=[...new Set(published().map(o=>o.type))].sort(),brs=[...new Set(published().map(o=>o.branch))].sort();
+  const set=(sel,vals,first)=>{const cur=sel.value;sel.innerHTML='<option value="">'+esc(first)+'</option>'+vals.map(v=>'<option>'+esc(v)+'</option>').join("");sel.value=vals.includes(cur)?cur:"";};
+  set($("#f-type"),types,T("allTypes"));set($("#f-branch"),brs,T("allSponsors"));
+}
+function render(){
+  renderStatus();
+  const listView=st.tab==="students"||st.tab==="faculty";
+  $("#view-list").hidden=!listView;
+  ["calendar","prepare","people","advise","contribute","review"].forEach(k=>{$("#view-"+k).hidden=st.tab!==k;});
+  document.querySelectorAll("nav.tabs button").forEach(b=>b.setAttribute("aria-selected",String(b.dataset.tab===st.tab)));
+  $("#p-level").closest("label").hidden=st.tab==="faculty";
+  if(listView)renderList();
+  if(st.tab==="calendar")renderCalendar();
+  if(st.tab==="prepare")renderPrepare();
+  if(st.tab==="people")renderPeople();
+  if(st.tab==="advise")renderAdvise();
+  if(st.tab==="review"&&st.canEdit)renderReview();
+}
+
+/* ---------- events ---------- */
+document.querySelector("nav.tabs").addEventListener("click",e=>{const b=e.target.closest("button[data-tab]");if(!b)return;st.tab=b.dataset.tab;lsSet("tab",st.tab);render();});
+document.querySelector(".lang").addEventListener("click",e=>{const b=e.target.closest("button[data-lang]");if(!b)return;st.lang=b.dataset.lang;lsSet("lang",st.lang);applyI18n();render();});
+["#f-q","#f-type","#f-branch","#f-scope","#f-soon","#f-saved"].forEach(s=>$(s).addEventListener(s==="#f-q"?"input":"change",render));
+$("#m-campus").addEventListener("change",renderPeople);
+$("#f-reset").addEventListener("click",()=>{$("#f-q").value="";$("#f-type").value="";$("#f-branch").value="";$("#f-scope").value="";$("#f-soon").checked=false;$("#f-saved").checked=false;render();});
+let prefTimer=null;
+["#p-level","#p-cit","#p-campus"].forEach(s=>$(s).addEventListener("change",()=>{
+  st.prefs={level:$("#p-level").value,cit:$("#p-cit").value,campus:$("#p-campus").value};lsSet("prefs",st.prefs);render();
+  clearTimeout(prefTimer);prefTimer=setTimeout(async()=>{if(!st.db||!st.uid)return;try{await st.db.doc("data/users/"+st.uid+"/prefs").set({...st.prefs});}catch(e){}},800);
+}));
+let savingSaved=Promise.resolve();
+function persistSaved(){lsSet("saved",[...st.saved]);if(!st.db||!st.uid)return;const ids=[...st.saved];savingSaved=savingSaved.then(()=>st.db.doc("data/users/"+st.uid+"/saved").set({ids})).catch(()=>{});}
+document.addEventListener("click",e=>{
+  const tr=e.target.closest("[data-track]");if(tr){const card=tr.closest(".opp");bump(tr.dataset.track==="open"?"opens":tr.dataset.track,card?card.dataset.id:null);}
+  const a=e.target.closest("[data-act]");if(a){
+    const id=a.closest(".opp").dataset.id,o=st.opps.find(x=>x.id===id);if(!o)return;
+    const act=a.dataset.act;
+    if(act==="save"){if(st.saved.has(id))st.saved.delete(id);else{st.saved.add(id);bump("saves",id);}persistSaved();render();toast(st.saved.has(id)?T("savedToList"):T("removedFromList"));}
+    if(act==="sess"){const s=activeSess();if(s){if(s.items.some(i=>i.id===id))s.items=s.items.filter(i=>i.id!==id);else s.items.push({id,step:""});persistSessions();render();}}
+    if(act==="note"){bump("notes",id);copy(studentNote(o),T("noteCopied"));}
+    if(act==="copylink"){bump("shares",id);copy(o.url,T("linkCopied"));}
+    if(act==="ig"){bump("shares",id);igCard(o);}
+    const m=a.closest("details.menu");if(m)m.open=false;
+    return;
+  }
+  document.querySelectorAll("details.menu[open]").forEach(d=>{if(!d.contains(e.target))d.open=false;});
+  const r=e.target.closest("[data-rv]");if(r)review(r.dataset.rv,r.dataset.id,r);
+});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){document.querySelectorAll("details.menu[open]").forEach(d=>d.open=false);$("#fbPanel").hidden=true;}});
+
+async function review(kind,id,btn){
+  if(!st.db)return;btn.disabled=true;
+  try{
+    if(kind==="approve")await st.db.doc("opps/"+id).update({status:"published",added:iso(today),seed:false});
+    if(kind==="reject")await st.db.doc("opps/"+id).update({status:"rejected"});
+    if(kind==="archive")await st.db.doc("opps/"+id).update({status:"archived"});
+    if(kind==="verify")await st.db.doc("opps/"+id).update({needsCheck:false,verified:iso(today),changeNote:""});
+    if(kind==="handled")await st.db.doc("suggestions/"+id).update({status:"handled"});
+    if(kind==="publish"||kind==="dismiss"){
+      const it=st.inbox.find(i=>i._path===id);if(!it)return;
+      if(kind==="publish"){const body=it.kind==="story"?{name:it.name,campus:it.campus,program:it.program,text:it.text,contact:it.contact||"",status:"published",at:iso(today)}:{name:it.name,campus:it.campus,dept:it.dept,exp:it.exp,contact:it.contact||"",status:"published",at:iso(today)};
+        await st.db.collection(it.kind==="story"?"stories":"mentors").add(body);}
+      await st.db.doc(id).update({status:kind==="publish"?"published":"dismissed"});
+      it.status=kind==="publish"?"published":"dismissed";render();
+    }
+    toast(T("updated"));
+  }catch(e){btn.disabled=false;toast(T("notSaved"));}
+}
+
+$("#exportSaved").addEventListener("click",async()=>{
+  const rows=st.opps.filter(o=>st.saved.has(o.id));
+  const csv=[csvRow(["Title","Sponsor","Type","Deadline","Timing note","Citizenship","Official page"])].concat(rows.map(o=>csvRow([o.title,o.sponsor,o.type,o.deadline||"",o.deadlineNote||"",o.citizenship||"",o.url]))).join("\n");
+  await saveFile("my-dow-opportunities.csv",csv);
+});
+
+/* ---------- contributions ---------- */
+async function submitInbox(kind,body){
+  if(!st.db||!st.uid)throw{code:"no_db"};
+  const base=st.db.doc("inbox/"+st.uid);
+  await base.set({last:new Date().toISOString(),kind});
+  const ref=await base.collection("items").add({...body,kind,status:"new",at:new Date().toISOString()});
+  return ref;
+}
+function staticForm(msgEl){if(st.mode==="static"&&REPO_URL.startsWith("http")){msgEl.innerHTML='<a href="'+esc(REPO_URL)+'/issues/new/choose" target="_blank" rel="noopener">'+esc(T("ghIssue"))+'</a>';return true;}return false;}
+function errMsg(err){return err&&err.code==="no_db"?T("needSignIn"):(err&&err.code==="invalid_argument"?T("viewOnly"):T("notSent"));}
+$("#suggestForm").addEventListener("submit",async e=>{
+  e.preventDefault();const msg=$("#s-msg");if(staticForm(msg))return;const title=$("#s-title").value.trim(),url=$("#s-url").value.trim(),note=$("#s-note").value.trim();
+  if(!title||!/^https?:\/\/\S+\.\S+/.test(url)){msg.textContent=T("needLink");return;}
+  if(!st.db){msg.textContent=T("needSignIn");return;}
+  const b=e.target.querySelector("button[type=submit]");b.disabled=true;
+  try{await st.db.collection("suggestions").add({title,url,note,by:st.uid||null,at:new Date().toISOString(),status:"new"});msg.textContent=T("thanksSugg");e.target.reset();}
+  catch(err){msg.textContent=errMsg(err);}
+  b.disabled=false;
+});
+$("#storyForm").addEventListener("submit",async e=>{
+  e.preventDefault();const msg=$("#st-msg");if(staticForm(msg))return;
+  const body={name:$("#st-name").value.trim(),campus:$("#st-campus").value,program:$("#st-prog").value.trim(),text:$("#st-text").value.trim(),contact:$("#st-contact").value.trim()};
+  if(!body.name||!body.text||!$("#st-ok").checked){msg.textContent=T("needFields");return;}
+  const b=e.target.querySelector("button[type=submit]");b.disabled=true;
+  try{await submitInbox("story",body);msg.textContent=T("thanksReview");e.target.reset();}catch(err){msg.textContent=errMsg(err);}
+  b.disabled=false;
+});
+$("#mentorForm").addEventListener("submit",async e=>{
+  e.preventDefault();const msg=$("#mt-msg");if(staticForm(msg))return;
+  const body={name:$("#mt-name").value.trim(),campus:$("#mt-campus").value,dept:$("#mt-dept").value.trim(),exp:$("#mt-exp").value.trim(),contact:$("#mt-contact").value.trim()};
+  if(!body.name||!body.campus||!body.exp||!$("#mt-ok").checked){msg.textContent=T("needFields");return;}
+  const b=e.target.querySelector("button[type=submit]");b.disabled=true;
+  try{await submitInbox("mentor",body);msg.textContent=T("thanksReview");e.target.reset();}catch(err){msg.textContent=errMsg(err);}
+  b.disabled=false;
+});
+/* feedback */
+let fbRate="";
+$("#fbBtn").addEventListener("click",()=>{$("#fbPanel").hidden=!$("#fbPanel").hidden;});
+$("#fbClose").addEventListener("click",()=>{$("#fbPanel").hidden=true;});
+$("#fbRate").addEventListener("click",e=>{const b=e.target.closest("[data-rate]");if(!b)return;fbRate=b.dataset.rate;document.querySelectorAll("#fbRate button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));});
+$("#fbSend").addEventListener("click",async()=>{
+  const msg=$("#fbMsg");const text=$("#fbText").value.trim();if(!fbRate&&!text)return;
+  if(staticForm(msg))return;
+  $("#fbSend").disabled=true;
+  try{await submitInbox("feedback",{rate:fbRate,text,tab:st.tab});msg.textContent=T("fbThanks");$("#fbText").value="";fbRate="";document.querySelectorAll("#fbRate button").forEach(x=>x.setAttribute("aria-pressed","false"));}
+  catch(err){msg.textContent=errMsg(err);}
+  $("#fbSend").disabled=false;
+});
+
+/* ---------- Instagram card ---------- */
+async function igCard(o){
+  try{await document.fonts.ready;}catch(e){}
+  const W=1080,H=1350,c=document.createElement("canvas");c.width=W;c.height=H;const x=c.getContext("2d");
+  x.fillStyle="#0E3F4B";x.fillRect(0,0,W,H);
+  x.fillStyle="#F1C9AE";x.fillRect(0,0,W,18);
+  x.fillStyle="#9FD0DC";x.font="500 34px 'IBM Plex Mono', monospace";x.fillText((o.type+" · "+o.branch).toUpperCase(),84,140);
+  x.fillStyle="#FFFFFF";x.font="800 84px Archivo, 'Arial Narrow', sans-serif";
+  const words=o.title.split(/\s+/);let line="",y=270;const lines=[];
+  words.forEach(w=>{const t=line?line+" "+w:w;if(x.measureText(t).width>W-168){lines.push(line);line=w;}else line=t;});lines.push(line);
+  lines.slice(0,6).forEach(l=>{x.fillText(l,84,y);y+=96;});
+  x.fillStyle="#CFE3E8";x.font="400 38px 'Public Sans', sans-serif";x.fillText(o.sponsor.length>48?o.sponsor.slice(0,47)+"…":o.sponsor,84,y+20);
+  const dY=H-420;x.fillStyle="#F1C9AE";x.font="500 32px 'IBM Plex Mono', monospace";x.fillText(o.deadline?"DEADLINE":"TIMING",84,dY);
+  x.fillStyle="#FFFFFF";x.font="800 110px Archivo, 'Arial Narrow', sans-serif";x.fillText(o.deadline?fmt(o.deadline):"See site",84,dY+118);
+  x.fillStyle="#CFE3E8";x.font="400 34px 'Public Sans', sans-serif";let host="";try{host=new URL(o.url).host.replace(/^www\./,"");}catch(e){}
+  x.fillText("Apply at "+host,84,H-170);x.fillStyle="#9FD0DC";x.font="500 28px 'IBM Plex Mono', monospace";x.fillText("DoW Opportunity Finder · HSRU prototype",84,H-110);
+  const blob=await new Promise(r=>c.toBlob(r,"image/png"));
+  await saveFile((o.id||"opportunity")+"-instagram.png",blob);
+}
+
+/* ---------- data ---------- */
+const localTab=lsGet("tab");
+if(params.get("tab"))st.tab=params.get("tab");else if(localTab&&["students","faculty","calendar","prepare","people","advise","contribute"].includes(localTab))st.tab=localTab;
+if(window.matchMedia&&window.matchMedia("(max-width:860px)").matches){$("#pn-filter").open=false;}
+applyI18n();render();
+
+async function loadStatic(){
+  st.mode="static";document.querySelectorAll("#view-contribute form .hint[id]").forEach(el=>{if(REPO_URL.startsWith("http"))el.innerHTML='<a href="'+esc(REPO_URL)+'/issues/new/choose" target="_blank" rel="noopener">'+esc(T("ghIssue"))+'</a>';});
+  try{
+    const [o,s,m,meta]=await Promise.all(["data/opportunities.json","data/stories.json","data/mentors.json","data/meta.json"].map(p=>fetch(p).then(r=>r.ok?r.json():null).catch(()=>null)));
+    if(!o){st.mode="none";render();return;}
+    st.opps=o;st.stories=s||[];st.mentors=m||[];st.meta=meta;st.loaded=true;fillFilterOptions();render();
+  }catch(e){st.mode="none";render();}
+}
+(async()=>{
+  const cl=window.claude;
+  if(!cl||!cl.use){return loadStatic();}
+  const [db,user,dl]=await Promise.all([cl.use("db"),cl.use("user"),cl.use("downloads")]);
+  st.dl=dl;
+  if(!db){return loadStatic();}
+  st.db=db;st.mode="db";
+  if(user){
+    try{st.canEdit=await user.canEdit();}catch(e){}
+    try{st.uid=await user.id();}catch(e){}
+    $("#tab-review").hidden=!st.canEdit;
+  }
+  db.collection("opps").onSnapshot(snap=>{
+    st.opps=snap.docs.map(d=>({id:d.id,...d.data()}));
+    if(!snap.metadata.fromCache||st.opps.length)st.loaded=true;
+    fillFilterOptions();render();
+  },()=>{st.loaded=true;render();});
+  db.doc("meta/status").onSnapshot(s=>{st.meta=s.exists?s.data():null;renderStatus();},()=>{});
+  db.collection("stories").onSnapshot(s=>{st.stories=s.docs.map(d=>({_id:d.id,...d.data()}));if(st.tab==="people")renderPeople();},()=>{});
+  db.collection("mentors").onSnapshot(s=>{st.mentors=s.docs.map(d=>({_id:d.id,...d.data()}));if(st.tab==="people")renderPeople();},()=>{});
+  if(st.canEdit){
+    db.collection("suggestions").onSnapshot(snap=>{st.sugg=snap.docs.map(d=>({_id:d.id,...d.data()}));if(st.tab==="review")renderReview();},()=>{});
+    db.collection("stats").onSnapshot(snap=>{st.stats=snap.docs.map(d=>d.data());if(st.tab==="review")renderReview();},()=>{});
+    db.collection("inbox").onSnapshot(async snap=>{
+      const all=[];for(const d of snap.docs){try{const items=await db.collection("inbox/"+d.id+"/items").get();items.docs.forEach(x=>all.push({_path:"inbox/"+d.id+"/items/"+x.id,...x.data()}));}catch(e){}}
+      all.sort((a,b)=>String(b.at||"").localeCompare(String(a.at||"")));st.inbox=all;if(st.tab==="review")renderReview();
+    },()=>{});
+  }
+  if(st.uid){
+    try{const p=await db.doc("data/users/"+st.uid+"/prefs").get();if(p.exists&&!params.get("campus")){Object.assign(st.prefs,p.data());syncPrefInputs();lsSet("prefs",st.prefs);}}catch(e){}
+    try{const s=await db.doc("data/users/"+st.uid+"/saved").get();if(s.exists&&Array.isArray(s.data().ids)){s.data().ids.forEach(i=>st.saved.add(i));}}catch(e){}
+    try{const a=await db.doc("data/users/"+st.uid+"/advising").get();if(a.exists&&Array.isArray(a.data().sessions)){const remote=a.data().sessions;const ids=new Set(st.sessions.map(s=>s.id));remote.forEach(s=>{if(!ids.has(s.id))st.sessions.push(s);});if(!st.activeSession)st.activeSession=a.data().active||"";}}catch(e){}
+    try{const m=await db.doc("stats/"+st.uid).get();st.myStats=m.exists?JSON.parse(JSON.stringify(m.data())):null;}catch(e){}
+    bump("views");
+    render();
+  }
+})();
+})();
+</script>
+
+</body></html>
