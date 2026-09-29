@@ -31,5 +31,5 @@ Both are built from the same source in `src/` (`page.html` holds the layout and 
 
 ## Comments
 
-- Public site: the Comments button and Contribute forms email wenwu.xu@sdsu.edu through FormSubmit.
+- Public site: the Comments button and Contribute forms email wenwu.xu@sdsu.edu through Web3Forms (key in `WEB3FORMS_KEY` in `src/page.html`). Without a key, Send opens the visitor's email app instead.
 - Claude artifact: comments are saved in the `inbox` collection and shown in the Review queue.

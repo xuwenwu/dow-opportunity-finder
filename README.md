@@ -58,7 +58,7 @@ On Tuesdays, `digest-email.yml` emails the digest if SMTP secrets are set.
 ## Comments, suggestions, stories and mentors
 
 - **Comments & suggestions button** (bottom right on every page, a "Send a comment" link in the footer, and "Report a problem" on each listing). Visitors pick a type (add content, report an error or broken link, improve the site, something else), write a comment, and may add their name, email and role. No account needed.
-- On this public site, comments and the Contribute forms (suggested opportunities, stories, mentor entries) are emailed to the maintainer (wenwu.xu@sdsu.edu) through the free [FormSubmit](https://formsubmit.co) relay. **One time setup:** the first message sent from the live site triggers an activation email from FormSubmit to that address; click the activation link once (check spam or junk if it does not arrive). If the relay ever fails, the form shows a ready to send email link instead.
+- On this public site, comments and the Contribute forms are emailed to the maintainer (wenwu.xu@sdsu.edu) through the free [Web3Forms](https://web3forms.com) service (250 messages a month). Its access key goes in `WEB3FORMS_KEY` near the top of the comments code in `src/page.html`; then run `python src/build.py`. Until a key is set, or if the service fails, Send opens the visitor's email app with the message filled in and offers a copy button.
 - A hidden spam trap field blocks most automated submissions.
 - The maintainer adds approved stories to `docs/data/stories.json` and mentors to `docs/data/mentors.json`. People with a GitHub account can also use **Issues, New issue**.
 
