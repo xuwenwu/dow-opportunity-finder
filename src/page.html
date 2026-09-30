@@ -108,6 +108,7 @@ dl.facts dt{color:var(--muted);font-weight:500}
 dl.facts dd{margin:0;min-width:0;overflow-wrap:anywhere}
 .actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;align-items:flex-start}
 details.menu{position:relative}
+.opp:has(details.menu[open]){position:relative;z-index:6}
 details.menu>summary{list-style:none}
 details.menu>summary::-webkit-details-marker{display:none}
 details.menu[open]>summary{border-color:var(--ink)}
@@ -285,7 +286,7 @@ footer{border-top:1px solid var(--line)}
 #collectionChoices{display:grid;gap:10px;max-height:42vh;overflow:auto}
 #shareEmailForm{margin:16px 0}#shareLink{overflow-wrap:anywhere;min-height:80px}
 .match-reason{background:var(--accent-soft);border-radius:8px;padding:10px;font-size:13px;display:grid;gap:4px}
-#featureView{scroll-margin-top:16px}#featureTitle{overflow-wrap:anywhere}
+#matchPanel,#featureView{scroll-margin-top:16px}.search-actions{display:flex;flex-wrap:wrap;gap:8px}#featureTitle{overflow-wrap:anywhere}
 @media(max-width:720px){.discovery,.match-fields{grid-template-columns:minmax(0,1fr)}.feature-dialog{padding:16px}}
 </style>
 
@@ -734,7 +735,6 @@ function card(o){
   else if(o.deadlineNote)facts.push([T("timing"),o.deadlineNote]);
   if(o.verified)facts.push([T("checked"),fmtLong(o.verified)]);
   const saved=st.saved.has(o.id);
-  const u=encodeURIComponent(listingLink(o)),txt=encodeURIComponent(shareText(o));
   const sess=activeSess();const inSess=sess&&sess.items.some(i=>i.id===o.id);
   const summary=st.lang==="es"&&o.summary_es?o.summary_es:o.summary;
   const cal=o.deadline&&d>=0?'<details class="menu"><summary class="btn">'+esc(T("addCal"))+'</summary><div class="menu-pop"><a href="'+esc(gcal(o))+'" target="_blank" rel="noopener" data-track="cal">Google Calendar</a><a href="'+esc(outlook(o))+'" target="_blank" rel="noopener" data-track="cal">Outlook</a></div></details>':"";
@@ -744,15 +744,7 @@ function card(o){
   '<button class="btn" type="button" data-act="save" aria-pressed="'+saved+'">'+esc(saved?T("saved"):T("save"))+'</button>'+
   (sess?'<button class="btn" type="button" data-act="sess" aria-pressed="'+(!!inSess)+'">'+esc(inSess?T("inSession"):T("addToSession"))+'</button>':"")+cal+
   '<button class="btn" type="button" data-feature="item-email" data-id="'+esc(o.id)+'">'+esc(F('email'))+'</button>'+
-   '<details class="menu"><summary class="btn">'+esc(T("share"))+'</summary><div class="menu-pop">'+
-   '<a href="https://www.linkedin.com/sharing/share-offsite/?url='+u+'" target="_blank" rel="noopener" data-track="shares">LinkedIn</a>'+
-   '<a href="https://twitter.com/intent/tweet?text='+txt+'&url='+u+'" target="_blank" rel="noopener" data-track="shares">X</a>'+
-   '<a href="https://www.facebook.com/sharer/sharer.php?u='+u+'" target="_blank" rel="noopener" data-track="shares">Facebook</a>'+
-   '<a href="https://bsky.app/intent/compose?text='+encodeURIComponent(shareText(o)+" "+listingLink(o))+'" target="_blank" rel="noopener" data-track="shares">Bluesky</a>'+
-   '<button type="button" data-feature="item-share" data-id="'+esc(o.id)+'">'+esc(F('native'))+'</button>'+
-   '<button type="button" data-act="ig">'+esc(T("igCard"))+'</button>'+
-   '<button type="button" data-act="copylink">'+esc(T("copyLink"))+'</button>'+
-  '</div></details>'+
+  '<button class="btn" type="button" data-feature="item-share" data-id="'+esc(o.id)+'">'+esc(F('share'))+'</button>'+
   '<button class="btn" type="button" data-act="note">'+esc(T("noteStudent"))+'</button>'+
   '<button class="btn small report" type="button" data-act="report">'+esc(T("report"))+'</button>'+
   '</div></div></article>';
