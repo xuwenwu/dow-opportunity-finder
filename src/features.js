@@ -38,7 +38,7 @@ discovery.innerHTML=`<details class="panel" id="matchPanel"><summary><h2 data-fx
  <details class="panel"><summary><h2 data-fx="collections"></h2></summary><p class="hint" data-fx="device"></p><button class="btn" type="button" data-feature="saved" data-fx="saved"></button><div id="collectionList"></div></details>`;
 document.querySelector('nav.tabs').after(discovery);
 const featureView=document.createElement('section');featureView.id='featureView';featureView.hidden=true;
-featureView.innerHTML='<div class="results-head"><h2 id="featureTitle" tabindex="-1"></h2><div class="search-actions"><button class="btn primary" type="button" data-feature="edit-search" data-fx="editSearch"></button><button class="btn" type="button" data-feature="new-search" data-fx="newSearch"></button><button class="btn" type="button" data-feature="back" data-fx="back"></button></div></div><p class="hint" id="featureNote"></p><div class="collection-toolbar" id="featureToolbar"></div><div id="featureDistance" hidden><label class="f"><span data-fx="mapCampus"></span><select id="featureCampus"></select></label><div class="dist" id="featureDistBar"></div><p class="hint" id="featureCount" role="status"></p></div><div class="mapbox" id="featureMap" hidden></div><div class="list" id="featureList"></div>';
+featureView.innerHTML='<div class="results-head"><h2 id="featureTitle" tabindex="-1"></h2><div class="search-actions"><button class="btn primary" type="button" data-feature="edit-search" data-fx="editSearch"></button><button class="btn" type="button" data-feature="new-search" data-fx="newSearch"></button><button class="btn" type="button" data-feature="back" data-fx="back"></button></div></div><p class="hint" id="featureNote"></p><p class="source-notice" id="featureSourceNote"></p><div class="collection-toolbar" id="featureToolbar"></div><div id="featureDistance" hidden><label class="f"><span data-fx="mapCampus"></span><select id="featureCampus"></select></label><div class="dist" id="featureDistBar"></div><p class="hint" id="featureCount" role="status"></p></div><div class="mapbox" id="featureMap" hidden></div><div class="list" id="featureList"></div>';
 $('#view-list').before(featureView);
 const toolbar=document.createElement('div');toolbar.id='resultsToolbar';toolbar.className='collection-toolbar';$('#resultCount').parentElement.after(toolbar);
 const editDialog=document.createElement('dialog');editDialog.className='feature-dialog';editDialog.setAttribute('aria-labelledby','collectionHeading');
@@ -78,6 +78,7 @@ function renderFeatures(){
  if(!feature.mode)return;
  $('#view-list').hidden=true;$('#soonRail').hidden=true;
  $('#featureTitle').textContent=feature.title;
+ $('#featureSourceNote').textContent=T('sourceNotice');
  featureView.querySelector('[data-feature="edit-search"]').hidden=feature.mode!=='matches';
  $('#featureToolbar').innerHTML=toolButtons()+(feature.localId?'<button class="btn" type="button" data-feature="edit-collection">'+esc(F('edit'))+'</button>':'');
  const items=currentItems(),matching=feature.mode==='matches',campus=feature.criteria?.campus||'',radius=campusLL(campus)?feature.radius:0;

@@ -329,6 +329,7 @@ footer{border-top:1px solid var(--line)}
 .match-reason{background:var(--accent-soft);border-radius:8px;padding:10px;font-size:13px;display:grid;gap:4px}
 #matchPanel,#featureView{scroll-margin-top:16px}.search-actions{display:flex;flex-wrap:wrap;gap:8px}#featureTitle{overflow-wrap:anywhere}
 @media(max-width:720px){.discovery,.match-fields{grid-template-columns:minmax(0,1fr)}.feature-dialog{padding:16px}}
+.source-notice{margin:16px 0;padding:14px 18px;border-left:4px solid #087864;border-radius:8px;background:#edf7f4;color:#24443b;font-size:14px;line-height:1.5}.source-notice p{margin:4px 0 0}.source-card{font-size:13px;line-height:1.5;color:#425c54;margin:14px 0 8px}
 </style>
 
 <div class="topbar"><div class="topbar-in">
@@ -368,6 +369,8 @@ footer{border-top:1px solid var(--line)}
     <button role="tab" id="tab-contribute" aria-selected="false" data-tab="contribute" data-i18n="tContribute">Contribute</button>
     <button role="tab" id="tab-review" aria-selected="false" data-tab="review" hidden><span data-i18n="tReview">Review queue</span> <span id="revCount"></span></button>
   </nav>
+
+  <aside class="source-notice" aria-labelledby="sourceNoticeTitle"><strong id="sourceNoticeTitle" data-i18n="sourceTitle">Official program websites take precedence</strong><p data-i18n="sourceNotice">Listings are summaries and may change. If information differs or is unclear, the program’s official website takes precedence. Confirm eligibility, funding, deadlines and availability there before applying.</p></aside>
 
   <section class="soonrail" id="soonRail" aria-labelledby="soonTitle"></section>
   <div id="view-list" class="grid">
@@ -501,7 +504,7 @@ footer{border-top:1px solid var(--line)}
   </section>
 
   <footer>
-    <span data-i18n="foot1">Each listing summarizes the official program page. The official page is the final word on eligibility and deadlines.</span>
+    <span data-i18n="foot1">Listings are summaries and may change. If information differs or is unclear, the program’s official website takes precedence. Confirm eligibility, funding, deadlines and availability there before applying.</span>
     <span data-i18n="foot2">Items marked "details to confirm" have a date or rule the weekly check could not verify yet.</span>
     <span id="footLang" hidden data-i18n="foot3">Program names and details stay in English, as on the official pages.</span>
     <span><span data-i18n="footCm">Comments, corrections or ideas?</span> <button type="button" class="linkbtn" id="footCmBtn" data-i18n="footCmBtn">Send a comment</button> · <a id="footMail" href="mailto:wenwu.xu@sdsu.edu">wenwu.xu@sdsu.edu</a></span>
@@ -652,7 +655,7 @@ en:{title:"DoW Opportunity Finder",tagline:"Department of War scholarships, fell
  storyFormTitle:"Share your story",storyFormIntro:"Won or completed a DoW scholarship, fellowship or internship? A short story helps the next student. A reviewer approves each story before it appears.",nameShown:"Name as it should appear",programYear:"Program and year",yourStory:"Your story (what you did, what helped you get in)",contactOpt:"How students can reach you (optional, shown publicly)",consent:"I agree that this can be published on this page.",
  mentorFormTitle:"Join the mentor directory",mentorFormIntro:"For HSRU faculty and staff willing to advise applicants or review essays. A reviewer approves each entry.",dept:"Department or office",dowExp:"DoW experience and programs you know well",contactPub:"Contact (shown publicly)",
  usage:"Usage",usageNote:"Counts come from signed in viewers with Contributor access or higher; view only visitors are not counted.",rvPending:"New items waiting for approval",rvCheck:"Published items with details to confirm",rvInbox:"Comments, stories and mentor entries",rvSugg:"Suggested opportunities",
- foot1:"Each listing summarizes the official program page. The official page is the final word on eligibility and deadlines.",foot2:"Items marked \"details to confirm\" have a date or rule the weekly check could not verify yet.",foot3:"Program names and details stay in English, as on the official pages.",
+ sourceTitle:"Official program websites take precedence",sourceNotice:"Listings are summaries and may change. If information differs or is unclear, the program’s official website takes precedence. Confirm eligibility, funding, deadlines and availability there before applying.",sourceCard:"If details differ or you are unsure, follow this program’s official website.",foot1:"Listings are summaries and may change. If information differs or is unclear, the program’s official website takes precedence. Confirm eligibility, funding, deadlines and availability there before applying.",foot2:"Items marked \"details to confirm\" have a date or rule the weekly check could not verify yet.",foot3:"Program names and details stay in English, as on the official pages.",
  feedback:"Comments & suggestions",fbTitle:"Is this page useful? (optional)",yes:"Yes",somewhat:"Somewhat",no:"No",fbText:"What would make it better? (optional)",close:"Close",
  notRun:"starts Monday, October 5, 2026",studentOpps:"student opportunities",facultyProgs:"faculty programs",closing30:"closing within 30 days",nearbyFirst:"nearby labs for {c} first",
  loading:"Loading listings…",unavailable:"Listings unavailable here",noListings:"No listings yet. The weekly check adds them, or send one through Contribute.",noMatch:"Nothing matches these filters. Try \"Clear filters\", or pick a different campus or level.",
@@ -683,7 +686,7 @@ es:{title:"Buscador de Oportunidades del DoW",tagline:"Becas, becas de investiga
  storyFormTitle:"Comparta su historia",storyFormIntro:"¿Ganó o completó una beca o práctica del DoW? Una historia breve ayuda al próximo estudiante. Un revisor aprueba cada historia antes de publicarla.",nameShown:"Nombre como debe aparecer",programYear:"Programa y año",yourStory:"Su historia (qué hizo y qué le ayudó a ser aceptado)",contactOpt:"Cómo pueden contactarle los estudiantes (opcional, público)",consent:"Acepto que esto se publique en esta página.",
  mentorFormTitle:"Únase al directorio de mentores",mentorFormIntro:"Para docentes y personal de HSRU dispuestos a orientar a postulantes o revisar ensayos. Un revisor aprueba cada registro.",dept:"Departamento u oficina",dowExp:"Experiencia con el DoW y programas que conoce bien",contactPub:"Contacto (público)",
  usage:"Uso",usageNote:"Los conteos provienen de personas con acceso de colaborador o superior; no se cuentan los visitantes de solo lectura.",rvPending:"Nuevos elementos por aprobar",rvCheck:"Elementos publicados con detalles por confirmar",rvInbox:"Historias, mentores y comentarios",rvSugg:"Oportunidades sugeridas",
- foot1:"Cada anuncio resume la página oficial del programa. La página oficial tiene la última palabra sobre requisitos y fechas.",foot2:"Los elementos marcados \"detalles por confirmar\" tienen una fecha o regla que aún no se pudo verificar.",foot3:"Los nombres y detalles de los programas se muestran en inglés, como en las páginas oficiales.",
+ sourceTitle:"Prevalecen los sitios web oficiales de los programas",sourceNotice:"Los anuncios son resúmenes y pueden cambiar. Si la información difiere o no está clara, prevalece el sitio web oficial del programa. Confirme allí los requisitos, el financiamiento, las fechas límite y la disponibilidad antes de postular.",sourceCard:"Si los detalles difieren o tiene dudas, consulte el sitio web oficial de este programa.",foot1:"Los anuncios son resúmenes y pueden cambiar. Si la información difiere o no está clara, prevalece el sitio web oficial del programa. Confirme allí los requisitos, el financiamiento, las fechas límite y la disponibilidad antes de postular.",foot2:"Los elementos marcados \"detalles por confirmar\" tienen una fecha o regla que aún no se pudo verificar.",foot3:"Los nombres y detalles de los programas se muestran en inglés, como en las páginas oficiales.",
  feedback:"Comentarios y sugerencias",fbTitle:"¿Le es útil esta página? (opcional)",yes:"Sí",somewhat:"Algo",no:"No",fbText:"¿Qué la haría mejor? (opcional)",close:"Cerrar",
  notRun:"comienza el lunes 5 de octubre de 2026",studentOpps:"oportunidades para estudiantes",facultyProgs:"programas para docentes",closing30:"cierran en 30 días",nearbyFirst:"laboratorios cercanos a {c} primero",
  loading:"Cargando anuncios…",unavailable:"Anuncios no disponibles aquí",noListings:"Aún no hay anuncios. La revisión semanal los agrega, o envíe uno en Contribuir.",noMatch:"Nada coincide con estos filtros. Pruebe \"Borrar filtros\" o elija otro campus o nivel.",
@@ -852,6 +855,7 @@ function card(o,{campus=st.prefs.campus}={}){
   const cal=o.deadline&&d>=0?'<details class="menu"><summary class="btn">'+esc(T("addCal"))+'</summary><div class="menu-pop"><a href="'+esc(gcal(o))+'" target="_blank" rel="noopener" data-track="cal">Google Calendar</a><a href="'+esc(outlook(o))+'" target="_blank" rel="noopener" data-track="cal">Outlook</a></div></details>':"";
   return '<article class="opp" data-id="'+esc(o.id)+'">'+whenBlock(o)+'<div class="body"><div class="chips">'+chips.join("")+'</div><h3>'+esc(o.title)+'</h3>'+matchReason(o)+'<p class="spons">'+esc(o.sponsor)+'</p>'+(summary?'<p class="sum">'+esc(summary)+'</p>':"")+
   '<dl class="facts">'+facts.map(f=>'<div'+(String(f[1]).length>70?' class="wide"':'')+'><dt>'+esc(f[0])+'</dt><dd>'+esc(f[1])+'</dd></div>').join("")+'</dl>'+
+  '<p class="source-card">'+esc(T('sourceCard'))+'</p>'+
   '<div class="actions"><a class="btn primary" href="'+esc(o.url)+'" target="_blank" rel="noopener" data-track="open">'+esc(T("official"))+'</a>'+
   '<button class="btn" type="button" data-act="save" aria-pressed="'+saved+'">'+esc(saved?T("saved"):T("save"))+'</button>'+
   (sess?'<button class="btn" type="button" data-act="sess" aria-pressed="'+(!!inSess)+'">'+esc(inSess?T("inSession"):T("addToSession"))+'</button>':"")+cal+
@@ -1299,7 +1303,7 @@ discovery.innerHTML=`<details class="panel" id="matchPanel"><summary><h2 data-fx
  <details class="panel"><summary><h2 data-fx="collections"></h2></summary><p class="hint" data-fx="device"></p><button class="btn" type="button" data-feature="saved" data-fx="saved"></button><div id="collectionList"></div></details>`;
 document.querySelector('nav.tabs').after(discovery);
 const featureView=document.createElement('section');featureView.id='featureView';featureView.hidden=true;
-featureView.innerHTML='<div class="results-head"><h2 id="featureTitle" tabindex="-1"></h2><div class="search-actions"><button class="btn primary" type="button" data-feature="edit-search" data-fx="editSearch"></button><button class="btn" type="button" data-feature="new-search" data-fx="newSearch"></button><button class="btn" type="button" data-feature="back" data-fx="back"></button></div></div><p class="hint" id="featureNote"></p><div class="collection-toolbar" id="featureToolbar"></div><div id="featureDistance" hidden><label class="f"><span data-fx="mapCampus"></span><select id="featureCampus"></select></label><div class="dist" id="featureDistBar"></div><p class="hint" id="featureCount" role="status"></p></div><div class="mapbox" id="featureMap" hidden></div><div class="list" id="featureList"></div>';
+featureView.innerHTML='<div class="results-head"><h2 id="featureTitle" tabindex="-1"></h2><div class="search-actions"><button class="btn primary" type="button" data-feature="edit-search" data-fx="editSearch"></button><button class="btn" type="button" data-feature="new-search" data-fx="newSearch"></button><button class="btn" type="button" data-feature="back" data-fx="back"></button></div></div><p class="hint" id="featureNote"></p><p class="source-notice" id="featureSourceNote"></p><div class="collection-toolbar" id="featureToolbar"></div><div id="featureDistance" hidden><label class="f"><span data-fx="mapCampus"></span><select id="featureCampus"></select></label><div class="dist" id="featureDistBar"></div><p class="hint" id="featureCount" role="status"></p></div><div class="mapbox" id="featureMap" hidden></div><div class="list" id="featureList"></div>';
 $('#view-list').before(featureView);
 const toolbar=document.createElement('div');toolbar.id='resultsToolbar';toolbar.className='collection-toolbar';$('#resultCount').parentElement.after(toolbar);
 const editDialog=document.createElement('dialog');editDialog.className='feature-dialog';editDialog.setAttribute('aria-labelledby','collectionHeading');
@@ -1339,6 +1343,7 @@ function renderFeatures(){
  if(!feature.mode)return;
  $('#view-list').hidden=true;$('#soonRail').hidden=true;
  $('#featureTitle').textContent=feature.title;
+ $('#featureSourceNote').textContent=T('sourceNotice');
  featureView.querySelector('[data-feature="edit-search"]').hidden=feature.mode!=='matches';
  $('#featureToolbar').innerHTML=toolButtons()+(feature.localId?'<button class="btn" type="button" data-feature="edit-collection">'+esc(F('edit'))+'</button>':'');
  const items=currentItems(),matching=feature.mode==='matches',campus=feature.criteria?.campus||'',radius=campusLL(campus)?feature.radius:0;
