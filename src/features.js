@@ -12,8 +12,10 @@ FX.es.collectionNote='Oportunidades seleccionadas con detalles actuales. Guarda 
 FX.en.matchMap='Locations for your matches';FX.es.matchMap='Ubicaciones de tus coincidencias';
 FX.en.mapCoverage='Showing locations for {mapped} of {total} matches. Opportunities without a listed site remain in the full list below.';
 FX.es.mapCoverage='Se muestran ubicaciones de {mapped} de {total} coincidencias. Las oportunidades sin sede indicada permanecen en la lista completa de abajo.';
+FX.en.mapCampus='Campus for map and distance';FX.es.mapCampus='Universidad para el mapa y la distancia';
+FX.en.matchCount='{n} matching opportunities';FX.es.matchCount='{n} oportunidades coincidentes';
 const F=k=>FX[st.lang][k]||FX.en[k]||k;
-const feature={mode:null,ids:[],title:'',localId:null,matches:new Map(),criteria:null,collections:[],endpoint:'',busy:false,request:null,recognition:null};
+const feature={radius:150,mode:null,ids:[],title:'',localId:null,matches:new Map(),criteria:null,collections:[],endpoint:'',busy:false,request:null,recognition:null};
 try{feature.collections=(lsGet('dow.collections.v1')||[]).slice(0,100).map(c=>({...OpportunityTools.collection(c),localId:String(c.localId||'')}));}catch(_){}
 const discovery=document.createElement('section');discovery.id='discovery';discovery.className='discovery';
 discovery.innerHTML=`<details class="panel" id="matchPanel"><summary><h2 data-fx="find"></h2></summary>
@@ -36,7 +38,7 @@ discovery.innerHTML=`<details class="panel" id="matchPanel"><summary><h2 data-fx
  <details class="panel"><summary><h2 data-fx="collections"></h2></summary><p class="hint" data-fx="device"></p><button class="btn" type="button" data-feature="saved" data-fx="saved"></button><div id="collectionList"></div></details>`;
 document.querySelector('nav.tabs').after(discovery);
 const featureView=document.createElement('section');featureView.id='featureView';featureView.hidden=true;
-featureView.innerHTML='<div class="results-head"><h2 id="featureTitle" tabindex="-1"></h2><div class="search-actions"><button class="btn primary" type="button" data-feature="edit-search" data-fx="editSearch"></button><button class="btn" type="button" data-feature="new-search" data-fx="newSearch"></button><button class="btn" type="button" data-feature="back" data-fx="back"></button></div></div><p class="hint" id="featureNote"></p><div class="collection-toolbar" id="featureToolbar"></div><div class="mapbox" id="featureMap" hidden></div><div class="list" id="featureList"></div>';
+featureView.innerHTML='<div class="results-head"><h2 id="featureTitle" tabindex="-1"></h2><div class="search-actions"><button class="btn primary" type="button" data-feature="edit-search" data-fx="editSearch"></button><button class="btn" type="button" data-feature="new-search" data-fx="newSearch"></button><button class="btn" type="button" data-feature="back" data-fx="back"></button></div></div><p class="hint" id="featureNote"></p><div class="collection-toolbar" id="featureToolbar"></div><div id="featureDistance" hidden><label class="f"><span data-fx="mapCampus"></span><select id="featureCampus"></select></label><div class="dist" id="featureDistBar"></div><p class="hint" id="featureCount" role="status"></p></div><div class="mapbox" id="featureMap" hidden></div><div class="list" id="featureList"></div>';
 $('#view-list').before(featureView);
 const toolbar=document.createElement('div');toolbar.id='resultsToolbar';toolbar.className='collection-toolbar';$('#resultCount').parentElement.after(toolbar);
 const editDialog=document.createElement('dialog');editDialog.className='feature-dialog';editDialog.setAttribute('aria-labelledby','collectionHeading');
@@ -48,7 +50,10 @@ document.body.append(shareDialog);
 let editing=null,sharing=null;
 function listingLink(o){const u=new URL(location.href);u.search='';u.hash='opportunity='+encodeURIComponent(o.id);return u.href;}
 function collectionLink(c){const u=new URL(location.href);u.search='';u.hash='collection='+encodeURIComponent(JSON.stringify(OpportunityTools.collection(c)));return u.href;}
-function currentItems(){return feature.mode?feature.ids.map(id=>published().find(o=>o.id===id)).filter(Boolean):(st.currentResults||[]);}
+function currentItems(){
+ const items=feature.mode?feature.ids.map(id=>published().find(o=>o.id===id)).filter(Boolean):(st.currentResults||[]);
+ return feature.mode==='matches'?items.filter(o=>withinDistance(o,feature.criteria?.campus||'',feature.radius)):items;
+}
 function currentTitle(){return feature.mode?feature.title:F('shared');}
 function toolButtons(){return ['saveResults','email','share'].map(k=>'<button type="button" class="btn'+(k==='saveResults'?' primary':'')+'" data-feature="'+k+'">'+esc(F(k))+'</button>').join('');}
 function translateFeatures(){
@@ -58,6 +63,7 @@ function translateFeatures(){
  options($('#matchLevel'),['undergrad','grad','postdoc','faculty'].map(k=>[k,k==='faculty'?T('tFaculty'):T(k)]));
  options($('#matchCit'),[['us',T('usCit')],['pr',T('prCit')],['other',T('otherCit')]]);
  options($('#matchCampus'),CAMPUSES.map(c=>[c[0],c[0]]));
+ options($('#featureCampus'),CAMPUSES.map(c=>[c[0],c[0]]));
  options($('#matchType'),[...new Set(published().map(o=>o.type))].sort().map(t=>[t,t]));
  $('#matchVoice').textContent=F(feature.recognition?'stop':'voice');
  $('#nativeShare').hidden=!navigator.share;
@@ -74,11 +80,17 @@ function renderFeatures(){
  $('#featureTitle').textContent=feature.title;
  featureView.querySelector('[data-feature="edit-search"]').hidden=feature.mode!=='matches';
  $('#featureToolbar').innerHTML=toolButtons()+(feature.localId?'<button class="btn" type="button" data-feature="edit-collection">'+esc(F('edit'))+'</button>':'');
- const items=currentItems();
+ const items=currentItems(),matching=feature.mode==='matches',campus=feature.criteria?.campus||'',radius=campusLL(campus)?feature.radius:0;
+ $('#featureDistance').hidden=!matching;
+ $('#featureCampus').value=campus;
+ $('#featureDistBar').innerHTML=distanceControls(campus,radius);
+ $('#featureCount').textContent=F('matchCount').replace('{n}',items.length);
+ const wider=RADII.find(r=>r>radius)||0;
+ const empty=matching&&radius?esc(T('noneWithin',{n:radius}))+' <button type="button" class="linkbtn" data-radius="'+wider+'">'+esc(wider?T('tryWithin',{n:wider}):T('anyDist'))+'</button>':esc(F('empty'));
  $('#featureNote').textContent=feature.mode==='matches'?F('check')+' '+F('timing'):(items.length<feature.ids.length?F('unavailable'):F('collectionNote'));
- $('#featureList').innerHTML=st.loaded?(items.length?items.map(o=>feature.mode==='matches'?card(o,{campus:feature.criteria?.campus||''}):card(o)).join(''):'<p class="empty">'+esc(F('empty'))+'</p>'):'<p class="empty">'+esc(T('loading'))+'</p>';
+ $('#featureList').innerHTML=st.loaded?(items.length?items.map(o=>feature.mode==='matches'?card(o,{campus:feature.criteria?.campus||''}):card(o)).join(''):'<p class="empty">'+empty+'</p>'):'<p class="empty">'+esc(T('loading'))+'</p>';
  const map=$('#featureMap');
- renderMap(items,feature.mode==='matches'&&items.length>0,{box:map,campus:feature.criteria?.campus||'',radius:0,title:F('matchMap')});
+ renderMap(items,matching&&(items.length>0||!!campusLL(campus)),{box:map,campus,radius,title:campus?'':F('matchMap')});
  if(!map.hidden){
   const mapped=new Set(Object.values(map._groups).flatMap(g=>g.items.map(o=>o.id))).size;
   const note=document.createElement('p');note.className='hint';note.textContent=F('mapCoverage').replace('{mapped}',mapped).replace('{total}',items.length);map.append(note);
@@ -93,7 +105,7 @@ function openSearch(reset=false){
   feature.request?.abort();feature.request=null;feature.busy=false;$('#matchInterpret').disabled=false;
   if(feature.recognition){const r=feature.recognition;feature.recognition=null;r.onresult=r.onerror=r.onend=null;r.abort?r.abort():r.stop();}
   $('#matchIntro').value='';$('#matchConsent').checked=false;$('#matchStatus').textContent='';
-  fillCriteria({funded:true});feature.criteria=null;
+  fillCriteria({funded:true});feature.criteria=null;feature.radius=150;
  }
  clearFeature();st.tab='students';render();$('#matchPanel').open=true;
  $('#matchPanel').scrollIntoView({block:'start',behavior:'instant'});$('#matchIntro').focus({preventScroll:true});
@@ -137,7 +149,9 @@ $('#collectionForm').addEventListener('submit',e=>{
 $('#shareEmailForm').addEventListener('submit',e=>{e.preventDefault();const recipient=$('#shareRecipient').value.trim();if(/[\r\n]/.test(recipient))return;let body=shareBody();if(body.length>1400)body=sharing.title+'\n\n'+sharing.url;const a=document.createElement('a');a.href='mailto:'+encodeURIComponent(recipient)+'?subject='+encodeURIComponent(sharing.title)+'&body='+encodeURIComponent(body);a.click();});
 function readCriteria(){return OpportunityTools.criteria({level:$('#matchLevel').value,cit:$('#matchCit').value,campus:$('#matchCampus').value,type:$('#matchType').value,interests:$('#matchInterests').value,location:$('#matchLocation').value,funded:$('#matchFunded').checked});}
 function fillCriteria(c){for(const [key,id] of Object.entries({level:'matchLevel',cit:'matchCit',campus:'matchCampus',type:'matchType',interests:'matchInterests',location:'matchLocation'}))$('#'+id).value=c[key]||'';$('#matchFunded').checked=c.funded===true;}
-$('#matchForm').addEventListener('submit',e=>{e.preventDefault();feature.criteria=readCriteria();const results=OpportunityTools.rank(st.opps,feature.criteria,iso(today));feature.matches=new Map(results.map(m=>[m.id,m]));showItems(results.map(m=>m.id),F('matchTitle'),'matches');});
+function findMatches(){const results=OpportunityTools.rank(st.opps,feature.criteria,iso(today));feature.matches=new Map(results.map(m=>[m.id,m]));showItems(results.map(m=>m.id),F('matchTitle'),'matches');}
+$('#matchForm').addEventListener('submit',e=>{e.preventDefault();const criteria=readCriteria();if(criteria.campus!==feature.criteria?.campus)feature.radius=criteria.campus===st.prefs.campus?st.prefs.radius:150;feature.criteria=criteria;findMatches();});
+$('#featureCampus').addEventListener('change',()=>{feature.criteria={...feature.criteria,campus:$('#featureCampus').value};$('#matchCampus').value=feature.criteria.campus;findMatches();});
 $('#matchInterpret').addEventListener('click',async()=>{
  if(!feature.endpoint||feature.busy)return;
  if(!$('#matchConsent').checked){$('#matchStatus').textContent=F('consent');return;}

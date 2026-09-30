@@ -627,6 +627,12 @@ function campusLL(campus=st.prefs.campus){return CAMPUS_LL[campus]||null;}
 function campusShort(campus=st.prefs.campus){const c=campusLL(campus);return c?c[2]:"";}
 function distOf(o,campus=st.prefs.campus){const c=campusLL(campus);if(!c||!Array.isArray(o.sites)||!o.sites.length)return null;let best=null;
   o.sites.forEach(s=>{if(typeof s.lat!=="number"||typeof s.lon!=="number")return;const m=miles(c[0],c[1],s.lat,s.lon);if(!best||m<best.mi)best={mi:m,site:s.name};});return best;}
+function withinDistance(o,campus,radius){
+  if(!campusLL(campus)||!radius)return true;
+  const d=distOf(o,campus);
+  if(d)return d.mi<=radius;
+  return o.scope!=="Regional"||(o.regions||[]).includes(regionOf(campus));
+}
 /* Albers equal area projection matching the embedded US map (lower 48). */
 function proj(lat,lon){const r=Math.PI/180,p1=29.5*r,p2=45.5*r,n=(Math.sin(p1)+Math.sin(p2))/2,C=Math.cos(p1)**2+2*n*Math.sin(p1),r0=Math.sqrt(C)/n;
   const f=(l,ph)=>{const rr=Math.sqrt(C-2*n*Math.sin(ph))/n;return[rr*Math.sin(l*n),r0-rr*Math.cos(l*n)];};
@@ -764,9 +770,7 @@ function visible(audience,scopeOnly,ignoreFunded){
     if(lvl&&o.audience==="student"&&Array.isArray(o.levels)&&!o.levels.includes(lvl))return false;
     if(cit==="pr"&&o.cit==="us")return false;
     if(cit==="other"&&(o.cit==="us"||o.cit==="us_pr"))return false;
-    if(region&&o.scope==="Regional"){const dd=distOf(o);
-      if(dd){if(st.prefs.radius&&dd.mi>st.prefs.radius)return false;}
-      else if(!(o.regions||[]).includes(region))return false;}
+    if(!withinDistance(o,st.prefs.campus,st.prefs.radius))return false;
     if(soon){const d=daysUntil(o.deadline);if(d===null||d<0||d>60)return false;}
     return true;
   });
@@ -889,11 +893,12 @@ function renderList(){
   renderDist();renderMap(items,local);
 }
 /* ---------- hero, distance chips, closing soon, map ---------- */
-function distChips(){return RADII.map(r=>'<button type="button" class="dchip" data-radius="'+r+'" aria-pressed="'+(st.prefs.radius===r)+'">'+esc(r?T("withinMi",{n:r}):T("anyDist"))+'</button>').join("");}
+function distChips(radius=st.prefs.radius){return RADII.map(r=>'<button type="button" class="dchip" data-radius="'+r+'" aria-pressed="'+(radius===r)+'">'+esc(r?T("withinMi",{n:r}):T("anyDist"))+'</button>').join("");}
+function distanceControls(campus,radius){return campusLL(campus)?'<span>'+esc(T("distLabel",{c:campusShort(campus)}))+'</span>'+distChips(radius):'<span class="hint">'+esc(T("distHint"))+'</span>';}
 function renderDist(){
   const has=!!campusLL();
-  $("#h-dist").innerHTML=has?'<span>'+esc(T("distLabel",{c:campusShort()}))+'</span>'+distChips():'<span class="hint">'+esc(T("distHint"))+'</span>';
-  const bar=$("#distBar");bar.hidden=!(st.tab==="local"&&has);if(!bar.hidden)bar.innerHTML='<span>'+esc(T("distLabel",{c:campusShort()}))+'</span>'+distChips();
+  $("#h-dist").innerHTML=distanceControls(st.prefs.campus,st.prefs.radius);
+  const bar=$("#distBar");bar.hidden=!(st.tab==="local"&&has);if(!bar.hidden)bar.innerHTML=distanceControls(st.prefs.campus,st.prefs.radius);
 }
 function setRadius(r,goLocal){st.prefs.radius=r;lsSet("prefs",st.prefs);if(goLocal&&st.tab!=="local"){st.tab="local";lsSet("tab",st.tab);}render();}
 function renderHero(){
@@ -921,13 +926,13 @@ function renderSoon(){
 }
 function jumpTo(id){const o=st.opps.find(x=>x.id===id);if(!o)return;
   st.tab=o.audience==="faculty"?"faculty":(o.scope==="Regional"?"local":"students");lsSet("tab",st.tab);
-  if(!visible(st.tab==="local"?"":(st.tab==="faculty"?"faculty":"student"),st.tab==="students"?"National":(st.tab==="local"?"Regional":"")).some(x=>x.id===id)){$("#f-funded").checked=false;$("#f-q").value="";$("#h-q").value="";if(st.tab==="local")st.prefs.radius=0;}
+  if(!visible(st.tab==="local"?"":(st.tab==="faculty"?"faculty":"student"),st.tab==="students"?"National":(st.tab==="local"?"Regional":"")).some(x=>x.id===id)){$("#f-funded").checked=false;$("#f-q").value="";$("#h-q").value="";st.prefs.radius=0;}
   render();setTimeout(()=>{const el=document.querySelector('.opp[data-id="'+CSS.escape(id)+'"]');if(el){el.scrollIntoView({behavior:"smooth",block:"center"});el.classList.remove("flash");void el.offsetWidth;el.classList.add("flash");}},60);}
 function renderMap(items,enabled,{box=$("#mapBox"),campus=st.prefs.campus,radius=st.prefs.radius,title=""}={}){
   box.hidden=!enabled||!st.loaded;if(box.hidden)return;
   const c=campusLL(campus);const groups={};
   items.forEach(o=>(o.sites||[]).forEach(s=>{
-    if(!Number.isFinite(s.lat)||!Number.isFinite(s.lon))return;const k=s.lat.toFixed(2)+","+s.lon.toFixed(2);(groups[k]=groups[k]||{s,items:[]}).items.push(o);}));
+    if(!Number.isFinite(s.lat)||!Number.isFinite(s.lon)||c&&radius&&miles(c[0],c[1],s.lat,s.lon)>radius)return;const k=s.lat.toFixed(2)+","+s.lon.toFixed(2);(groups[k]=groups[k]||{s,items:[]}).items.push(o);}));
   /* Zoom to the chosen distance ring around the campus; whole map otherwise. */
   let vb=[0,0,975,610],k=1,me=null;
   const ringPx=r=>{const[,y1]=proj(c[0],c[1]),[,y2]=proj(c[0]+r/69.05,c[1]);return Math.abs(y1-y2);};
@@ -1073,7 +1078,7 @@ $("#h-q").addEventListener("input",()=>{$("#f-q").value=$("#h-q").value;if(st.ta
 $("#f-q").addEventListener("input",()=>{$("#h-q").value=$("#f-q").value;});
 $("#hForm").addEventListener("submit",e=>{e.preventDefault();$("#f-q").value=$("#h-q").value;const go=campusLL()&&!$("#h-q").value.trim()?"local":(st.tab==="faculty"||st.tab==="local"?st.tab:"students");st.tab=go;lsSet("tab",go);render();$("#view-list").scrollIntoView({behavior:"smooth",block:"start"});});
 document.addEventListener("click",e=>{
-  const rb=e.target.closest("[data-radius]");if(rb){setRadius(Number(rb.dataset.radius),!!rb.closest("#h-dist"));return;}
+  const rb=e.target.closest("[data-radius]");if(rb){if(rb.closest("#featureView")&&feature.mode==="matches"){feature.radius=Number(rb.dataset.radius);renderFeatures();}else setRadius(Number(rb.dataset.radius),!!rb.closest("#h-dist"));return;}
   const dr=e.target.closest("[data-door]");if(dr){const k=dr.dataset.door;if(k==="faculty"){st.tab="faculty";}else{st.tab="students";st.prefs.level=k;$("#p-level").value=k;lsSet("prefs",st.prefs);}lsSet("tab",st.tab);render();$("#view-list").scrollIntoView({behavior:"smooth",block:"start"});return;}
   const jp=e.target.closest("[data-jump]");if(jp){
     const inMatches=!!jp.closest("#featureMap"),id=jp.dataset.jump;
@@ -1268,8 +1273,10 @@ FX.es.collectionNote='Oportunidades seleccionadas con detalles actuales. Guarda 
 FX.en.matchMap='Locations for your matches';FX.es.matchMap='Ubicaciones de tus coincidencias';
 FX.en.mapCoverage='Showing locations for {mapped} of {total} matches. Opportunities without a listed site remain in the full list below.';
 FX.es.mapCoverage='Se muestran ubicaciones de {mapped} de {total} coincidencias. Las oportunidades sin sede indicada permanecen en la lista completa de abajo.';
+FX.en.mapCampus='Campus for map and distance';FX.es.mapCampus='Universidad para el mapa y la distancia';
+FX.en.matchCount='{n} matching opportunities';FX.es.matchCount='{n} oportunidades coincidentes';
 const F=k=>FX[st.lang][k]||FX.en[k]||k;
-const feature={mode:null,ids:[],title:'',localId:null,matches:new Map(),criteria:null,collections:[],endpoint:'',busy:false,request:null,recognition:null};
+const feature={radius:150,mode:null,ids:[],title:'',localId:null,matches:new Map(),criteria:null,collections:[],endpoint:'',busy:false,request:null,recognition:null};
 try{feature.collections=(lsGet('dow.collections.v1')||[]).slice(0,100).map(c=>({...OpportunityTools.collection(c),localId:String(c.localId||'')}));}catch(_){}
 const discovery=document.createElement('section');discovery.id='discovery';discovery.className='discovery';
 discovery.innerHTML=`<details class="panel" id="matchPanel"><summary><h2 data-fx="find"></h2></summary>
@@ -1292,7 +1299,7 @@ discovery.innerHTML=`<details class="panel" id="matchPanel"><summary><h2 data-fx
  <details class="panel"><summary><h2 data-fx="collections"></h2></summary><p class="hint" data-fx="device"></p><button class="btn" type="button" data-feature="saved" data-fx="saved"></button><div id="collectionList"></div></details>`;
 document.querySelector('nav.tabs').after(discovery);
 const featureView=document.createElement('section');featureView.id='featureView';featureView.hidden=true;
-featureView.innerHTML='<div class="results-head"><h2 id="featureTitle" tabindex="-1"></h2><div class="search-actions"><button class="btn primary" type="button" data-feature="edit-search" data-fx="editSearch"></button><button class="btn" type="button" data-feature="new-search" data-fx="newSearch"></button><button class="btn" type="button" data-feature="back" data-fx="back"></button></div></div><p class="hint" id="featureNote"></p><div class="collection-toolbar" id="featureToolbar"></div><div class="mapbox" id="featureMap" hidden></div><div class="list" id="featureList"></div>';
+featureView.innerHTML='<div class="results-head"><h2 id="featureTitle" tabindex="-1"></h2><div class="search-actions"><button class="btn primary" type="button" data-feature="edit-search" data-fx="editSearch"></button><button class="btn" type="button" data-feature="new-search" data-fx="newSearch"></button><button class="btn" type="button" data-feature="back" data-fx="back"></button></div></div><p class="hint" id="featureNote"></p><div class="collection-toolbar" id="featureToolbar"></div><div id="featureDistance" hidden><label class="f"><span data-fx="mapCampus"></span><select id="featureCampus"></select></label><div class="dist" id="featureDistBar"></div><p class="hint" id="featureCount" role="status"></p></div><div class="mapbox" id="featureMap" hidden></div><div class="list" id="featureList"></div>';
 $('#view-list').before(featureView);
 const toolbar=document.createElement('div');toolbar.id='resultsToolbar';toolbar.className='collection-toolbar';$('#resultCount').parentElement.after(toolbar);
 const editDialog=document.createElement('dialog');editDialog.className='feature-dialog';editDialog.setAttribute('aria-labelledby','collectionHeading');
@@ -1304,7 +1311,10 @@ document.body.append(shareDialog);
 let editing=null,sharing=null;
 function listingLink(o){const u=new URL(location.href);u.search='';u.hash='opportunity='+encodeURIComponent(o.id);return u.href;}
 function collectionLink(c){const u=new URL(location.href);u.search='';u.hash='collection='+encodeURIComponent(JSON.stringify(OpportunityTools.collection(c)));return u.href;}
-function currentItems(){return feature.mode?feature.ids.map(id=>published().find(o=>o.id===id)).filter(Boolean):(st.currentResults||[]);}
+function currentItems(){
+ const items=feature.mode?feature.ids.map(id=>published().find(o=>o.id===id)).filter(Boolean):(st.currentResults||[]);
+ return feature.mode==='matches'?items.filter(o=>withinDistance(o,feature.criteria?.campus||'',feature.radius)):items;
+}
 function currentTitle(){return feature.mode?feature.title:F('shared');}
 function toolButtons(){return ['saveResults','email','share'].map(k=>'<button type="button" class="btn'+(k==='saveResults'?' primary':'')+'" data-feature="'+k+'">'+esc(F(k))+'</button>').join('');}
 function translateFeatures(){
@@ -1314,6 +1324,7 @@ function translateFeatures(){
  options($('#matchLevel'),['undergrad','grad','postdoc','faculty'].map(k=>[k,k==='faculty'?T('tFaculty'):T(k)]));
  options($('#matchCit'),[['us',T('usCit')],['pr',T('prCit')],['other',T('otherCit')]]);
  options($('#matchCampus'),CAMPUSES.map(c=>[c[0],c[0]]));
+ options($('#featureCampus'),CAMPUSES.map(c=>[c[0],c[0]]));
  options($('#matchType'),[...new Set(published().map(o=>o.type))].sort().map(t=>[t,t]));
  $('#matchVoice').textContent=F(feature.recognition?'stop':'voice');
  $('#nativeShare').hidden=!navigator.share;
@@ -1330,11 +1341,17 @@ function renderFeatures(){
  $('#featureTitle').textContent=feature.title;
  featureView.querySelector('[data-feature="edit-search"]').hidden=feature.mode!=='matches';
  $('#featureToolbar').innerHTML=toolButtons()+(feature.localId?'<button class="btn" type="button" data-feature="edit-collection">'+esc(F('edit'))+'</button>':'');
- const items=currentItems();
+ const items=currentItems(),matching=feature.mode==='matches',campus=feature.criteria?.campus||'',radius=campusLL(campus)?feature.radius:0;
+ $('#featureDistance').hidden=!matching;
+ $('#featureCampus').value=campus;
+ $('#featureDistBar').innerHTML=distanceControls(campus,radius);
+ $('#featureCount').textContent=F('matchCount').replace('{n}',items.length);
+ const wider=RADII.find(r=>r>radius)||0;
+ const empty=matching&&radius?esc(T('noneWithin',{n:radius}))+' <button type="button" class="linkbtn" data-radius="'+wider+'">'+esc(wider?T('tryWithin',{n:wider}):T('anyDist'))+'</button>':esc(F('empty'));
  $('#featureNote').textContent=feature.mode==='matches'?F('check')+' '+F('timing'):(items.length<feature.ids.length?F('unavailable'):F('collectionNote'));
- $('#featureList').innerHTML=st.loaded?(items.length?items.map(o=>feature.mode==='matches'?card(o,{campus:feature.criteria?.campus||''}):card(o)).join(''):'<p class="empty">'+esc(F('empty'))+'</p>'):'<p class="empty">'+esc(T('loading'))+'</p>';
+ $('#featureList').innerHTML=st.loaded?(items.length?items.map(o=>feature.mode==='matches'?card(o,{campus:feature.criteria?.campus||''}):card(o)).join(''):'<p class="empty">'+empty+'</p>'):'<p class="empty">'+esc(T('loading'))+'</p>';
  const map=$('#featureMap');
- renderMap(items,feature.mode==='matches'&&items.length>0,{box:map,campus:feature.criteria?.campus||'',radius:0,title:F('matchMap')});
+ renderMap(items,matching&&(items.length>0||!!campusLL(campus)),{box:map,campus,radius,title:campus?'':F('matchMap')});
  if(!map.hidden){
   const mapped=new Set(Object.values(map._groups).flatMap(g=>g.items.map(o=>o.id))).size;
   const note=document.createElement('p');note.className='hint';note.textContent=F('mapCoverage').replace('{mapped}',mapped).replace('{total}',items.length);map.append(note);
@@ -1349,7 +1366,7 @@ function openSearch(reset=false){
   feature.request?.abort();feature.request=null;feature.busy=false;$('#matchInterpret').disabled=false;
   if(feature.recognition){const r=feature.recognition;feature.recognition=null;r.onresult=r.onerror=r.onend=null;r.abort?r.abort():r.stop();}
   $('#matchIntro').value='';$('#matchConsent').checked=false;$('#matchStatus').textContent='';
-  fillCriteria({funded:true});feature.criteria=null;
+  fillCriteria({funded:true});feature.criteria=null;feature.radius=150;
  }
  clearFeature();st.tab='students';render();$('#matchPanel').open=true;
  $('#matchPanel').scrollIntoView({block:'start',behavior:'instant'});$('#matchIntro').focus({preventScroll:true});
@@ -1393,7 +1410,9 @@ $('#collectionForm').addEventListener('submit',e=>{
 $('#shareEmailForm').addEventListener('submit',e=>{e.preventDefault();const recipient=$('#shareRecipient').value.trim();if(/[\r\n]/.test(recipient))return;let body=shareBody();if(body.length>1400)body=sharing.title+'\n\n'+sharing.url;const a=document.createElement('a');a.href='mailto:'+encodeURIComponent(recipient)+'?subject='+encodeURIComponent(sharing.title)+'&body='+encodeURIComponent(body);a.click();});
 function readCriteria(){return OpportunityTools.criteria({level:$('#matchLevel').value,cit:$('#matchCit').value,campus:$('#matchCampus').value,type:$('#matchType').value,interests:$('#matchInterests').value,location:$('#matchLocation').value,funded:$('#matchFunded').checked});}
 function fillCriteria(c){for(const [key,id] of Object.entries({level:'matchLevel',cit:'matchCit',campus:'matchCampus',type:'matchType',interests:'matchInterests',location:'matchLocation'}))$('#'+id).value=c[key]||'';$('#matchFunded').checked=c.funded===true;}
-$('#matchForm').addEventListener('submit',e=>{e.preventDefault();feature.criteria=readCriteria();const results=OpportunityTools.rank(st.opps,feature.criteria,iso(today));feature.matches=new Map(results.map(m=>[m.id,m]));showItems(results.map(m=>m.id),F('matchTitle'),'matches');});
+function findMatches(){const results=OpportunityTools.rank(st.opps,feature.criteria,iso(today));feature.matches=new Map(results.map(m=>[m.id,m]));showItems(results.map(m=>m.id),F('matchTitle'),'matches');}
+$('#matchForm').addEventListener('submit',e=>{e.preventDefault();const criteria=readCriteria();if(criteria.campus!==feature.criteria?.campus)feature.radius=criteria.campus===st.prefs.campus?st.prefs.radius:150;feature.criteria=criteria;findMatches();});
+$('#featureCampus').addEventListener('change',()=>{feature.criteria={...feature.criteria,campus:$('#featureCampus').value};$('#matchCampus').value=feature.criteria.campus;findMatches();});
 $('#matchInterpret').addEventListener('click',async()=>{
  if(!feature.endpoint||feature.busy)return;
  if(!$('#matchConsent').checked){$('#matchStatus').textContent=F('consent');return;}
