@@ -1474,20 +1474,20 @@
  {
   "added": "2026-09-29",
   "audience": "student",
-  "award": "",
+  "award": "Career preparation; clearance initiation and approval are not guaranteed.",
   "branch": "Defense research",
   "campuses": [
    "New Mexico State University"
   ],
-  "changeNote": "",
+  "changeNote": "Replaced general PSL link with CREW page; clarified experience requirement, schedule, funding and conditional clearance sponsorship.",
   "cit": "unknown",
-  "citizenship": "",
+  "citizenship": "Confirm citizenship and clearance eligibility with CREW; sponsorship depends on PSL’s DoD contract.",
   "deadline": null,
-  "deadlineNote": "Positions posted on Handshake",
-  "eligibility": "",
-  "format": "",
+  "deadlineNote": "September–April; in-person evening seminars every other week, plus about two hours of weekly preparation. Recruitment: late summer/early fall; no fixed deadline posted. Use the official interest form or crew@psl.nmsu.edu.",
+  "eligibility": "NMSU students with a qualifying defense, Department of Energy or industry internship, job, research assistantship, capstone or senior project. Confirm student-level eligibility with crew@psl.nmsu.edu.",
+  "format": "In-person evening seminars every other week, September–April; approximately two hours of weekly preparation.",
   "funding": "unknown",
-  "fundingNote": "Pay not stated; ask crew@psl.nmsu.edu",
+  "fundingNote": "No standard CREW stipend or tuition award is published; pay depends on the separate placement.",
   "hsi": "",
   "levels": [
    "undergrad",
@@ -1504,12 +1504,12 @@
   "seed": false,
   "sponsor": "NMSU Physical Science Laboratory",
   "status": "published",
-  "summary": "Career pathway into national security work: hands on experience, a national security affairs seminar and security clearance initiation; more than 157 students prepared so far.",
-  "summary_es": "Ruta hacia carreras de seguridad nacional: experiencia práctica, un seminario de asuntos de seguridad nacional e inicio de autorización de seguridad; más de 157 estudiantes preparados.",
-  "title": "NMSU Classified Ready Employee Workforce (CREW)",
+  "summary": "NMSU national-security career preparation combining practical experience, seminars and possible Secret-clearance sponsorship. NMSU reported DoD Chief Digital and Artificial Intelligence Office support in 2025.",
+  "summary_es": "Preparación profesional en seguridad nacional en NMSU mediante experiencia práctica, seminarios y posible patrocinio de autorización Secret.",
+  "title": "NMSU PSL — Classified Ready Employee Workforce (CREW)",
   "type": "Training program",
-  "url": "https://psl.nmsu.edu/student-programs/student-programs.html",
-  "verified": "2026-09-29",
+  "url": "https://psl.nmsu.edu/student-programs/crew.html",
+  "verified": "2026-09-30",
   "id": "nmsu-crew",
   "sites": [
    {
@@ -1517,6 +1517,10 @@
     "lat": 32.28,
     "lon": -106.75
    }
+  ],
+  "sources": [
+   "https://psl.nmsu.edu/student-programs/crew.html",
+   "https://psl.nmsu.edu/news/2025/crew-program-prepares-nmsu-students-for-national-security-careers.html"
   ]
  },
  {
