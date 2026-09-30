@@ -823,18 +823,18 @@
  {
   "added": "2026-09-29",
   "audience": "student",
-  "award": "Tuition, books, fees, a laptop, conference travel and a stipend: $25,000 community college, $29,000 undergraduate, $34,000 graduate",
+  "award": "Full tuition and fees, books/supplies, living stipend, certification allowance and paid summer internship; up to five years of support subject to program requirements",
   "branch": "DoW wide",
   "campuses": [],
-  "changeNote": "Link audit 2026-09-29: now links to the official DoW page instead of a contractor site",
+  "changeNote": "Clarified official program name, former CySP name, benefits and next-cycle timing using the AY 2026–2027 announcement.",
   "cit": "us",
   "citizenship": "U.S. citizens able to obtain a security clearance",
   "deadline": null,
-  "deadlineNote": "Apply through your school's program office; recent campus deadlines fell in mid February",
+  "deadlineNote": "Next recruitment deadline not verified; ask your participating campus CSA office for the next application window and any earlier campus deadline.",
   "eligibility": "Rising second year community college students, juniors, seniors and graduate students at NCAE-C designated schools; one year of DoW service for each year of scholarship.",
   "format": "",
   "funding": "full",
-  "fundingNote": "Tuition, books, fees, a laptop, conference travel and a stipend ($25,000 to $34,000 by level)",
+  "fundingNote": "Tuition and fees, books/supplies, living stipend, certification allowance and paid summer internship. Confirm current stipend amounts with the campus program office.",
   "hsi": "",
   "levels": [
    "undergrad",
@@ -849,13 +849,17 @@
   "seed": true,
   "sponsor": "Department of War",
   "status": "published",
-  "summary": "Cyber scholarships awarded through participating universities designated as National Centers of Academic Excellence in Cybersecurity.",
-  "summary_es": "Becas en ciberseguridad otorgadas a través de universidades designadas como Centros Nacionales de Excelencia Académica en Ciberseguridad.",
-  "title": "DoW Cyber Service Academy Scholarship",
+  "summary": "Scholarship for cyber-related study at participating National Centers of Academic Excellence in Cybersecurity (NCAE-C), with paid summer internships and a post-graduation service commitment. Previously called the DoD Cyber Scholarship Program (CySP).",
+  "summary_es": "Beca para estudios relacionados con ciberseguridad en instituciones NCAE-C participantes, con prácticas de verano pagadas y un compromiso de servicio tras graduarse. Antes se llamaba DoD Cyber Scholarship Program (CySP).",
+  "title": "DoW Cyber Service Academy (CSA) Scholarship",
   "type": "Scholarship",
   "url": "https://www.cloud.mil/Academic-Programs/DoW-Cyber-Service-Academy/",
-  "verified": "2026-09-29",
-  "id": "cyber-csa"
+  "verified": "2026-09-30",
+  "id": "cyber-csa",
+  "sources": [
+   "https://dowcio.war.gov/Portals/0/Documents/Announcement/CSA%20CIO%20Applicaton%20Announcement_Fall%202026-Spring%202027.pdf",
+   "https://www.cloud.mil/Academic-Programs/DoW-Cyber-Service-Academy/"
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1387,7 +1391,7 @@
   "award": "Three years: full tuition and fees, $3,600 a month stipend, up to $1,600 a year medical insurance",
   "branch": "DoW wide",
   "campuses": [],
-  "changeNote": "Link audit 2026-09-29: health insurance amount and citizenship corrected",
+  "changeNote": "Rechecked application window and tuition/insurance benefits; expanded the program name for search.",
   "cit": "us",
   "citizenship": "U.S. citizens or nationals",
   "deadline": "2026-10-30",
@@ -1409,13 +1413,17 @@
   "seed": true,
   "sponsor": "Department of War (Army, Navy, Air Force)",
   "status": "published",
-  "summary": "Three year graduate fellowship for doctoral students in science and engineering fields that matter to defense research.",
-  "summary_es": "Beca de posgrado de tres años para estudiantes de doctorado en ciencias e ingeniería de interés para la investigación de defensa.",
+  "summary": "National Defense Science and Engineering Graduate (NDSEG) Fellowship: three years of support for doctoral study in science and engineering aligned with defense research.",
+  "summary_es": "La beca National Defense Science and Engineering Graduate (NDSEG) ofrece tres años de apoyo para estudios de doctorado en ciencias e ingeniería vinculados a la investigación de defensa.",
   "title": "NDSEG Fellowship",
   "type": "Fellowship",
   "url": "https://ndseg.sysplus.com/",
-  "verified": "2026-09-29",
-  "id": "ndseg"
+  "verified": "2026-09-30",
+  "id": "ndseg",
+  "sources": [
+   "https://ndseg.sysplus.com/NDSEG/Applicants/How-to-Apply",
+   "https://ndseg.sysplus.com/NDSEG/Fellows/Tuition-Fees-Benefits"
+  ]
  },
  {
   "added": "2026-09-29",
@@ -2025,12 +2033,12 @@
   "award": "Full tuition, annual stipend of $30,000 to $46,000 by degree level, book and health allowances, summer internships",
   "branch": "DoW wide",
   "campuses": [],
-  "changeNote": "",
-  "cit": "us",
-  "citizenship": "U.S. citizens (some recent cycles also admitted citizens of Australia, Canada, New Zealand and the United Kingdom)",
+  "changeNote": "Confirmed 2026 application eligibility, including five eligible citizenships, incoming freshmen and August 2027 funding start.",
+  "cit": "varies",
+  "citizenship": "Citizens of the United States, Australia, Canada, New Zealand or United Kingdom; must obtain and maintain a security clearance.",
   "deadline": "2026-12-04",
-  "deadlineNote": "5 PM Eastern on the first Friday of December; applications open in August",
-  "eligibility": "STEM majors pursuing a BS, MS or PhD; one year of civilian service at a DoW facility for each year of funding.",
+  "deadlineNote": "December 4, 2026, 5 PM Eastern (first Friday in December), including reference submissions; funding begins August 2027.",
+  "eligibility": "BS, MS or PhD students in eligible STEM fields; high school seniors entering college in fall 2027 may also apply. GPA at least 3.0; age 18 by January 1, 2028. Request 1–5 years of funding beginning August 2027, complete required internships and serve one year as a DoW civilian for each funded year.",
   "format": "",
   "funding": "full",
   "fundingNote": "Full tuition, annual stipend of $30,000 to $46,000, health and book allowances, and paid summer internships",
@@ -2039,9 +2047,9 @@
    "undergrad",
    "grad"
   ],
-  "location": "",
+  "location": "Accredited U.S. universities, with internships and service at a sponsoring DoW facility",
   "needsCheck": false,
-  "opens": null,
+  "opens": "2026-08-01",
   "recurs": true,
   "regions": [],
   "scope": "National",
@@ -2053,8 +2061,13 @@
   "title": "SMART Scholarship for Service",
   "type": "Scholarship",
   "url": "https://www.smartscholarship.org/smart/en",
-  "verified": "2026-09-29",
-  "id": "smart"
+  "verified": "2026-09-30",
+  "id": "smart",
+  "sources": [
+   "https://www.smartscholarship.org/smart/en",
+   "https://www.smartscholarship.org/smart/en?id=smart_eligibility",
+   "https://www.smartscholarship.org/smart/en?id=kb_article&sys_id=0383c5d6db2a03006bb8f4b40f961956"
+  ]
  },
  {
   "added": "2026-09-29",
@@ -2614,6 +2627,90 @@
    "https://simpler.grants.gov/opportunity/318542ce-ac54-464c-91aa-cf525d3c36d5",
    "https://www.navsea.navy.mil/Home/Warfare-Centers/NSWC-Carderock/STEM/Internships-University-Engagement/",
    "https://www.navsea.navy.mil/Portals/103/Documents/NSWC_Phildelphia/Student_Programs_and_Scholarship_Overview.pdf?ver=Nl8JYIoeZ2TjZx2iM_j10A%3D%3D"
+  ]
+ },
+ {
+  "added": "2026-09-30",
+  "audience": "student",
+  "branch": "DoW wide",
+  "campuses": [],
+  "changeNote": "Added after official program review on 2026-09-30",
+  "cit": "us",
+  "deadline": null,
+  "format": "",
+  "hsi": "",
+  "levels": [
+   "undergrad",
+   "grad"
+  ],
+  "needsCheck": false,
+  "opens": null,
+  "recurs": true,
+  "regions": [],
+  "scope": "National",
+  "seed": false,
+  "status": "published",
+  "verified": "2026-09-30",
+  "id": "viceroy-scholars",
+  "title": "VICEROY Scholars — MAVEN and ENVOY Internships",
+  "type": "Internship",
+  "sponsor": "Department of War / AFRL / Griffiss Institute",
+  "url": "https://www.viceroyscholars.org/viceroy-scholars-internship-program/",
+  "summary": "Cybersecurity and electromagnetic spectrum training through VICEROY academic partners, with paid MAVEN and ENVOY summer internships at defense host sites. Includes research, mentoring and leadership development.",
+  "summary_es": "Formación en ciberseguridad y espectro electromagnético mediante instituciones asociadas a VICEROY, con prácticas de verano pagadas MAVEN y ENVOY en centros de defensa. Incluye investigación, mentoría y liderazgo.",
+  "eligibility": "Current VICEROY Scholars or active ROTC students in engineering, computer science, mathematics, physics or cyber-related fields. MAVEN is for rising undergraduates; ENVOY also accepts graduate students. A 3.2 GPA is preferred. Confirm the academic-partner or ROTC pathway with the program.",
+  "citizenship": "U.S. security-clearance eligibility required; confirm citizenship and clearance requirements with the host.",
+  "funding": "stipend",
+  "award": "Hourly pay plus housing and transportation support; exact rate and arrangements depend on the internship offer",
+  "fundingNote": "Paid internships with housing and transportation support; the public page does not state an hourly rate. This is not a full-tuition scholarship.",
+  "deadlineNote": "No dated next-cycle deadline is posted on the official internship page; check the application link and program office for the current MAVEN/ENVOY window.",
+  "location": "VICEROY academic partners and DoW host sites nationwide; placement depends on track",
+  "sources": [
+   "https://www.viceroyscholars.org/viceroy-scholars-internship-program/",
+   "https://www.viceroyscholars.org/viceroy-faqs/",
+   "https://www.viceroyscholars.org/"
+  ]
+ },
+ {
+  "added": "2026-09-30",
+  "audience": "student",
+  "branch": "DoW wide",
+  "campuses": [],
+  "changeNote": "Added after official program review on 2026-09-30",
+  "cit": "us",
+  "deadline": null,
+  "format": "",
+  "hsi": "",
+  "levels": [
+   "undergrad",
+   "grad"
+  ],
+  "needsCheck": false,
+  "opens": null,
+  "recurs": true,
+  "regions": [],
+  "scope": "National",
+  "seed": false,
+  "status": "published",
+  "verified": "2026-09-30",
+  "id": "scale",
+  "title": "SCALE — Microelectronics Research and Career Pathways",
+  "type": "Training program",
+  "sponsor": "Department of War / Purdue University-led SCALE consortium",
+  "url": "https://www.scale4me.org/students",
+  "summary": "Scalable Asymmetric Lifecycle Engagement (SCALE) connects students with semiconductor and microelectronics research, mentoring, internships and targeted scholarships. Topics include advanced packaging, radiation hardening, chip design and trusted AI.",
+  "summary_es": "SCALE conecta a estudiantes con investigación en semiconductores y microelectrónica, mentoría, prácticas y becas específicas. Incluye empaquetado avanzado, resistencia a la radiación, diseño de chips e inteligencia artificial confiable.",
+  "eligibility": "U.S. undergraduate and graduate students with GPA 2.8/4.0 or higher in eligible STEM majors, including materials science and mechanical engineering. Contact a SCALE academic partner or program coordinator to confirm participation and available opportunities at your institution.",
+  "citizenship": "U.S. citizens",
+  "funding": "unknown",
+  "award": "Targeted scholarships and internship/research opportunities; award amounts and compensation vary by campus and placement",
+  "fundingNote": "Targeted scholarships are offered, but no standard student award or universal stipend is stated. Membership does not guarantee funding; confirm each scholarship, research position or internship offer.",
+  "deadlineNote": "No single program-wide student deadline is posted. Use the student application page; scholarship, research and employer deadlines vary.",
+  "location": "SCALE partner universities and government/industry hosts nationwide",
+  "sources": [
+   "https://www.scale4me.org/students",
+   "https://www.scale4me.org/about",
+   "https://www.scale4me.org/partners"
   ]
  }
 ]
