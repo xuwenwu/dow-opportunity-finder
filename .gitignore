@@ -3,3 +3,11 @@ __pycache__/
 .DS_Store
 build/
 export/
+
+# Local service credentials and generated dependencies
+.dev.vars
+.env
+.env.*
+!.env.example
+node_modules/
+.wrangler/

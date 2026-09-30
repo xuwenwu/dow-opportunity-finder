@@ -1,0 +1,16 @@
+{
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  "name": "dow-opportunity-matching",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-09-29",
+  "vars": {
+    "AI_PROVIDER": "anthropic",
+    "AI_MODEL": "",
+    "ALLOWED_ORIGINS": "https://xuwenwu.github.io"
+  },
+  "ratelimits": [
+    {"name":"MATCH_LIMITER","namespace_id":"1001","simple":{"limit":5,"period":60}},
+    {"name":"TOTAL_LIMITER","namespace_id":"1002","simple":{"limit":30,"period":60}}
+  ],
+  "observability": {"enabled":false}
+}
