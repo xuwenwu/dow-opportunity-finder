@@ -100,6 +100,6 @@ Code: MIT (see `LICENSE`). Listing text summarizes public program information; c
 
 ## Matching, email and collections
 
-Open **Find opportunities for me** for editable matching preferences and optional voice input. AI interpretation is enabled only after a secure endpoint is configured; guided matching works immediately. Each listing has an Email action and a link back to its own view. Save a filtered result set as a named collection, edit its membership, reopen it from this browser, or share a link, email draft, text download or Instagram image. Recipients see the selected opportunities regardless of their own filters.
+Open **Find opportunities for me** for editable matching preferences and optional voice input. AI interpretation uses Claude Haiku 4.5 through a Cloudflare service after the visitor consents; guided matching is also available. Each listing has an Email action and a link back to its own view. Save a filtered result set as a named collection, edit its membership, reopen it from this browser, or share a link, email draft, text download or Instagram image. Recipients see the selected opportunities regardless of their own filters.
 
-See [FEATURE_SETUP.md](FEATURE_SETUP.md) for provider setup, privacy, limitations and tests. Live AI requires a separately provisioned endpoint and API key; no secret belongs in the static site.
+See [FEATURE_SETUP.md](FEATURE_SETUP.md) for provider setup, privacy, limitations and tests. The API key is stored privately in Cloudflare; no secret belongs in the static site.

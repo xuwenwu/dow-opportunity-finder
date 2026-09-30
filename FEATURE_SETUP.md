@@ -7,7 +7,7 @@ The public site stays on GitHub Pages. Individual saving, collection saving, ema
 The optional Cloudflare Worker in `service/worker.mjs` interprets an introduction into editable criteria. The browser searches the maintained catalog and explains matches from listing text. Neither provider is allowed to invent opportunity records. The user reviews criteria before running a search.
 
 1. Create a Cloudflare account and an API account with Anthropic (recommended to match the existing update workflow) or OpenAI. Enable API billing as required by your provider and set an appropriate spending limit. Do not put a secret in GitHub Pages, `features.json`, a URL, or a Git commit.
-2. In `service/wrangler.jsonc`, set `AI_PROVIDER` to `anthropic` or `openai`, and set `AI_MODEL` to an available model in that account. For Anthropic, choose a model supporting Messages API tool use. For OpenAI, choose a model supporting Responses API structured outputs. The empty model intentionally leaves the service disabled until configured.
+2. In `service/wrangler.jsonc`, set `AI_PROVIDER` to `anthropic` or `openai`, and set `AI_MODEL` to an available model in that account. For Anthropic, choose a model supporting Messages API tool use. For OpenAI, choose a model supporting Responses API structured outputs. This deployment uses Anthropic Claude Haiku 4.5 (`claude-haiku-4-5-20251001`).
 3. From `service/`, use the Cloudflare Wrangler CLI:
    ```sh
    npx wrangler login
@@ -18,7 +18,7 @@ The optional Cloudflare Worker in `service/worker.mjs` interprets an introductio
 4. Put the deployed HTTPS endpoint, ending in `/match`, into `docs/data/features.json`, for example `{"matchEndpoint":"https://YOUR-WORKER.YOUR-SUBDOMAIN.workers.dev/match"}`. This is a public URL, never an API key. Commit that configuration only after the endpoint is tested.
 5. On the site, open **Find opportunities for me**, enter a non-identifying example, consent to sending it, and request criteria. Confirm the form is filled correctly, then run **Find matches**. Verify a Spanish example, omitted citizenship, explicit noncitizenship, negations, no matches, and provider failures before announcing AI availability.
 
-The live provider has not been provisioned or tested as part of this change. Tests use mocked responses for both adapters and do not spend API credits. Model availability and real interpretation quality need an account-level acceptance check. Microphone logic is tested with a browser mock; actual speech availability and permission depend on the device.
+The deployed service is configured with Anthropic Claude Haiku 4.5 and an API key stored as a Cloudflare secret. Live acceptance checks passed for English and Spanish introductions, omitted citizenship, and explicitly stated permanent residency/noncitizenship. These are sample checks, not a guarantee of interpretation accuracy; users must review the editable criteria. Unit tests use mocked responses for both adapters. The optional `node tests/live-service.cjs https://dow-opportunity-matching.dow-opportunity-finder.workers.dev/match` acceptance check makes three real provider requests and consumes API credits. Microphone logic is tested with a browser mock; actual speech availability and permission depend on the device.
 
 ## Behavior and limits
 
