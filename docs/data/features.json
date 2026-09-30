@@ -1,1 +1,3 @@
-{"matchEndpoint":""}
+{
+  "matchEndpoint": "https://dow-opportunity-matching.dow-opportunity-finder.workers.dev/match"
+}
