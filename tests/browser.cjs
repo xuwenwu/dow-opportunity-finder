@@ -25,6 +25,39 @@ const root=path.resolve(__dirname,'../docs');
  for(const id of await page.locator('#featureList .opp').evaluateAll(nodes=>nodes.map(n=>n.dataset.id))){
    const o=data.find(o=>o.id===id);assert(!['us','us_pr'].includes(o.cit));assert.equal(o.status,'published');
  }
+ // Search results expose an editable return path and a clean restart.
+ await page.locator('#featureView').getByRole('button',{name:'Edit search',exact:true}).click();
+ assert.equal(await page.locator('#featureView').isHidden(),true);
+ assert.equal(await page.locator('#matchLevel').inputValue(),'undergrad');
+ assert.equal(await page.locator('#matchCit').inputValue(),'other');
+ assert.equal(await page.locator('#matchInterests').inputValue(),'materials, engineering');
+ await page.getByLabel('Describe your background and goals',{exact:true}).fill('Previous search introduction');
+ await page.getByRole('button',{name:'Find matches',exact:true}).click();
+ // Opening Share on a card must put usable links above adjacent cards.
+ for(const width of [1360,390]){
+  await page.setViewportSize({width,height:1000});
+  const card=page.locator('#featureList .opp').first(),id=await card.getAttribute('data-id');
+  await card.getByRole('button',{name:'Share',exact:true}).click();
+  const dialog=page.getByRole('dialog');await dialog.waitFor();
+  assert((await page.getByLabel('Collection link',{exact:true}).inputValue()).endsWith('#opportunity='+encodeURIComponent(id)));
+  const linkedin=dialog.getByRole('link',{name:'LinkedIn',exact:true});await linkedin.scrollIntoViewIfNeeded();
+  assert(await linkedin.evaluate(el=>{const r=el.getBoundingClientRect();return el.contains(document.elementFromPoint(r.x+r.width/2,r.y+r.height/2));}));
+  assert.equal(await dialog.getByRole('link',{name:'Bluesky',exact:true}).count(),1);
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:path.resolve(__dirname,'../build/qa/share-fixed-'+width+'.png')});
+  await page.keyboard.press('Escape');assert.equal(await dialog.isVisible(),false);
+ }
+ await page.locator('#featureView').getByRole('button',{name:'New search',exact:true}).click();
+ assert.equal(await page.locator('#featureView').isHidden(),true);
+ assert.equal(await page.locator('#matchIntro').inputValue(),'');
+ for(const id of ['matchLevel','matchCit','matchCampus','matchType','matchInterests','matchLocation'])assert.equal(await page.locator('#'+id).inputValue(),'');
+ assert.equal(await page.locator('#matchFunded').isChecked(),true);
+ assert.equal(await page.locator('#matchConsent').isChecked(),false);
+ assert.equal(await page.locator('#matchIntro').evaluate(el=>el===document.activeElement),true);
+ await page.getByRole('button',{name:'Find matches',exact:true}).click();
+ assert((await page.locator('#featureList .opp').count())>0);
+ await page.screenshot({path:path.resolve(__dirname,'../build/qa/new-search-mobile.png')});
+ await page.setViewportSize({width:1360,height:1000});
  await page.getByRole('button',{name:'Back to browsing',exact:true}).click();
  await page.locator('#resultsToolbar').getByRole('button',{name:'Save collection',exact:true}).click();
  console.log('Collection dialog:',(await page.getByRole('dialog').ariaSnapshot()).slice(0,800));
@@ -93,6 +126,18 @@ const root=path.resolve(__dirname,'../docs');
  await page.setViewportSize({width:390,height:844});await page.screenshot({path:path.resolve(__dirname,'../build/qa/mobile-matching.png')});
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
 
+ // New search can cancel an in-flight suggestion without restoring stale input.
+ let started,release;const pending=new Promise(r=>started=r),released=new Promise(r=>release=r);
+ await page.route('https://matching.example/match',async r=>{started();await released;try{await r.fulfill({json:{criteria:{level:'faculty',cit:'us',campus:'',type:'',interests:'stale',location:'',funded:false}}});}catch(_){}});
+ await page.getByRole('button',{name:'Suggest search criteria with AI',exact:true}).click();await pending;
+ await page.locator('#matchForm').getByRole('button',{name:'New search',exact:true}).click();release();
+ await page.waitForFunction(()=>!document.querySelector('#matchInterpret').disabled);
+ assert.equal(await page.locator('#matchIntro').inputValue(),'');assert.equal(await page.locator('#matchStatus').textContent(),'');
+ assert.equal(await page.locator('#matchLevel').inputValue(),'');
+ await page.getByRole('button',{name:'Español',exact:true}).click();
+ assert.equal(await page.locator('#matchForm').getByRole('button',{name:'Nueva búsqueda',exact:true}).count(),1);
+ await page.getByRole('button',{name:'English',exact:true}).click();
+
  // Individual saves survive reload, and storage failures never claim success.
  await page.goto(url);await page.locator('#list .opp').first().waitFor();
  const firstSave=page.locator('#list .opp').first().getByRole('button',{name:'Save',exact:true});await firstSave.click();
@@ -113,7 +158,7 @@ const root=path.resolve(__dirname,'../docs');
  await page.locator('#featureList .opp').first().waitFor();assert.equal(await page.locator('#featureTitle img').count(),0);
  await page.goto(url+'#collection=%oops');await page.locator('#list .opp').first().waitFor();assert.equal(await page.locator('#featureView').isHidden(),true);
  assert.deepEqual(errors,[]);
- console.log('PASS: matching, collection save/edit/reload, recipient isolation, single links, hash changes, email, downloads, Spanish, AI consent/failure, voice mock, mobile layout and malformed links.');
+ console.log('PASS: unobstructed sharing, edit/new search, cancellation, matching, collection save/edit/reload, recipient isolation, single links, hash changes, email, downloads, Spanish, AI consent/failure, voice mock, mobile layout and malformed links.');
 
 
  await page.screenshot({path:path.resolve(__dirname,'../build/qa/desktop.png')});
