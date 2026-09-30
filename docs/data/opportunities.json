@@ -2778,5 +2778,208 @@
   "seed": false,
   "hsi": "",
   "format": "Host-laboratory research appointment"
+ },
+ {
+  "added": "2026-09-30",
+  "verified": "2026-09-30",
+  "audience": "student",
+  "levels": [
+   "undergrad",
+   "grad"
+  ],
+  "scope": "National",
+  "regions": [],
+  "campuses": [],
+  "sites": [],
+  "status": "published",
+  "seed": false,
+  "recurs": true,
+  "needsCheck": true,
+  "opens": null,
+  "deadline": null,
+  "award": "",
+  "format": "Ten-week summer research internship",
+  "hsi": "",
+  "cit": "us",
+  "citizenship": "U.S. citizens",
+  "funding": "stipend",
+  "type": "Internship",
+  "changeNote": "Verified program and closed 2026 call. The linked ORISE project catalog redirects to a general page; no unverified host coordinates or future dates assigned.",
+  "id": "hpcmp-hip",
+  "title": "HPCMP High Performance Computing Internship Program (HIP)",
+  "sponsor": "DoW High Performance Computing Modernization Program / ORISE",
+  "branch": "DoW wide",
+  "url": "https://www.hpc.mil/solution-areas/workforce-development",
+  "summary": "Ten-week mentored research in high-performance computing at defense research organizations. Supports STEM students and recent graduates working on computational science and engineering. The 2026 call is closed; next-cycle dates are not announced.",
+  "summary_es": "Investigación de diez semanas en computación de alto rendimiento con mentores de organizaciones de defensa, para estudiantes STEM y recién graduados. La convocatoria de 2026 cerró; las próximas fechas no están anunciadas.",
+  "eligibility": "Last published call (2026): age 18+, GPA 3.0+, pursuing an associate, bachelor’s, master’s or doctoral degree, or graduated within five years in an eligible field. Background investigation and health insurance required; confirm next-cycle rules.",
+  "fundingNote": "The closed 2026 call offered a monthly stipend based on education, with possible relocation and approved professional-travel support. No universal dollar amount is published; future terms require confirmation.",
+  "deadlineNote": "Next application cycle not announced. The 2026 call closed March 26, 2026 at 6 p.m. Eastern. Monitor the sponsor and Zintellect for the next call.",
+  "location": "Participating defense research organizations nationwide; next-cycle host sites are not yet verified",
+  "sources": [
+   "https://www.hpc.mil/solution-areas/workforce-development",
+   "https://www.zintellect.com/Opportunity/Details/HPCMP-HIP-2026"
+  ]
+ },
+ {
+  "added": "2026-09-30",
+  "verified": "2026-09-30",
+  "audience": "student",
+  "levels": [
+   "undergrad",
+   "grad"
+  ],
+  "scope": "National",
+  "regions": [
+   "Ohio",
+   "Texas"
+  ],
+  "campuses": [],
+  "sites": [
+   {
+    "name": "Wright-Patterson AFB, OH — 2026 Repperger host",
+    "lat": 39.82,
+    "lon": -84.05
+   },
+   {
+    "name": "Fort Sam Houston, TX — 2026 Repperger host",
+    "lat": 29.46,
+    "lon": -98.44
+   }
+  ],
+  "status": "published",
+  "seed": false,
+  "recurs": true,
+  "needsCheck": true,
+  "opens": null,
+  "deadline": null,
+  "award": "",
+  "format": "Ten-week summer research internship",
+  "hsi": "",
+  "cit": "us",
+  "citizenship": "U.S. citizens",
+  "funding": "stipend",
+  "type": "Internship",
+  "changeNote": "Added after official-source defense research review on 2026-09-30.",
+  "id": "afrl-repperger",
+  "title": "AFRL Repperger Research Intern Program",
+  "sponsor": "Air Force Research Laboratory, 711th Human Performance Wing / ORISE",
+  "branch": "Air Force",
+  "url": "https://orise.orau.gov/afrl/",
+  "summary": "Mentored summer research in human performance, biomedical engineering, sensors, optics and related STEM fields at AFRL. The completed 2026 cycle included Wright-Patterson AFB and Fort Sam Houston; next-cycle projects and dates are not announced.",
+  "summary_es": "Investigación de verano con mentores de AFRL en rendimiento humano, ingeniería biomédica, sensores, óptica y áreas STEM relacionadas. En 2026 hubo proyectos en Wright-Patterson y Fort Sam Houston; próximos proyectos y fechas sin anunciar.",
+  "eligibility": "Undergraduate, master’s and PhD students enrolled in STEM at an accredited institution; GPA 3.0+. Apply through Zintellect with project preferences and two recommendations. Health insurance required; confirm next-cycle requirements.",
+  "fundingNote": "Published 2026 support: $9,000 undergraduate, $12,000 master’s/early PhD, or $15,000 advanced PhD for ten weeks, plus $500 relocation. Future rates are not confirmed; students arrange their own housing.",
+  "deadlineNote": "Next application cycle not announced. The 2026 deadline was January 19, 2026; that internship ran June 1–August 7, 2026 and has ended.",
+  "location": "2026 host locations: Wright-Patterson AFB (Dayton, OH) and Fort Sam Houston (San Antonio, TX); confirm next-cycle placements",
+  "sources": [
+   "https://orise.orau.gov/afrl/",
+   "https://orise.orau.gov/afrl/applicants/index.html",
+   "https://orise.orau.gov/afrl/project-catalog.html",
+   "https://orise.orau.gov/afrl/documents/repperger-docs/2026/afrl-rhb-26-01-mcintire.pdf",
+   "https://orise.orau.gov/afrl/documents/repperger-docs/2026/afrl-rhd-26-02-burns.pdf"
+  ]
+ },
+ {
+  "added": "2026-09-30",
+  "verified": "2026-09-30",
+  "audience": "student",
+  "levels": [
+   "undergrad",
+   "grad"
+  ],
+  "scope": "Regional",
+  "regions": [
+   "Southern California"
+  ],
+  "campuses": [],
+  "sites": [
+   {
+    "name": "Naval Health Research Center — San Diego, CA",
+    "lat": 32.7,
+    "lon": -117.24
+   }
+  ],
+  "status": "published",
+  "seed": false,
+  "recurs": true,
+  "needsCheck": true,
+  "opens": "2026-09-15",
+  "deadline": "2026-11-30",
+  "award": "",
+  "format": "Ten-week summer research internship",
+  "hsi": "",
+  "cit": "us",
+  "citizenship": "NREIP normally requires U.S. citizenship; confirm dual-citizenship or permanent-resident exceptions directly with NHRC. Security-clearance eligibility required.",
+  "funding": "stipend",
+  "type": "Internship",
+  "changeNote": "Added a distinct NREIP host from the current official lab directory. Confirm lab citizenship exceptions directly.",
+  "branch": "Navy",
+  "url": "https://www.navalsteminterns.us/internships/nreip/labs/",
+  "fundingNote": "NREIP ten-week stipend: $7,500 new undergraduates, $9,000 returning undergraduates, $11,500 graduate students. Housing, commuting and health insurance are the student’s responsibility.",
+  "deadlineNote": "Summer 2027: apply through NREIP by November 30, 2026 at 11:59 p.m. Central and identify this host lab among your preferences.",
+  "sources": [
+   "https://www.navalsteminterns.us/internships/nreip/labs/",
+   "https://www.navalsteminterns.us/internships/nreip/",
+   "https://www.navalsteminterns.us/internships/nreip/faqs/"
+  ],
+  "id": "nhrc-san-diego",
+  "title": "Naval Health Research Center, San Diego (NREIP host)",
+  "sponsor": "Naval Health Research Center / Office of Naval Research",
+  "summary": "Paid NREIP research in warfighter health, human performance, injury prevention, biomedical engineering and medical data science at Naval Base Point Loma. Select NHRC through the NREIP application.",
+  "summary_es": "Investigación pagada mediante NREIP sobre salud militar, rendimiento humano, prevención de lesiones, ingeniería biomédica y datos médicos en Point Loma. Seleccione NHRC en la solicitud de NREIP.",
+  "eligibility": "NREIP college/graduate eligibility applies. NHRC additionally requires age 18 by the start, eligibility for a security clearance, a driver’s license and personal transportation.",
+  "location": "Naval Base Point Loma, San Diego, CA"
+ },
+ {
+  "added": "2026-09-30",
+  "verified": "2026-09-30",
+  "audience": "student",
+  "levels": [
+   "undergrad",
+   "grad"
+  ],
+  "scope": "Regional",
+  "regions": [
+   "Southern California"
+  ],
+  "campuses": [],
+  "sites": [
+   {
+    "name": "NSWC Port Hueneme, CA",
+    "lat": 34.16,
+    "lon": -119.2
+   }
+  ],
+  "status": "published",
+  "seed": false,
+  "recurs": true,
+  "needsCheck": true,
+  "opens": "2026-09-15",
+  "deadline": "2026-11-30",
+  "award": "",
+  "format": "Ten-week summer research internship",
+  "hsi": "",
+  "cit": "us",
+  "citizenship": "NREIP normally requires U.S. citizenship; host-specific dual-citizenship and permanent-resident exceptions are not confirmed.",
+  "funding": "stipend",
+  "type": "Internship",
+  "changeNote": "Added a distinct NREIP host from the current official lab directory; host-specific student requirements are still listed as TBD.",
+  "branch": "Navy",
+  "url": "https://www.navalsteminterns.us/internships/nreip/labs/",
+  "fundingNote": "NREIP ten-week stipend: $7,500 new undergraduates, $9,000 returning undergraduates, $11,500 graduate students. Housing, commuting and health insurance are the student’s responsibility.",
+  "deadlineNote": "Summer 2027: apply through NREIP by November 30, 2026 at 11:59 p.m. Central and identify this host lab among your preferences.",
+  "sources": [
+   "https://www.navalsteminterns.us/internships/nreip/labs/",
+   "https://www.navalsteminterns.us/internships/nreip/",
+   "https://www.navalsteminterns.us/internships/nreip/faqs/"
+  ],
+  "id": "nswc-port-hueneme",
+  "title": "NSWC Port Hueneme Division (NREIP host)",
+  "sponsor": "Naval Surface Warfare Center Port Hueneme / Office of Naval Research",
+  "summary": "Paid NREIP experience in ship combat systems, systems engineering, modeling and simulation, and test and evaluation. Select NSWC Port Hueneme through the NREIP application.",
+  "summary_es": "Experiencia pagada mediante NREIP en sistemas de combate naval, ingeniería de sistemas, modelado, simulación y pruebas. Seleccione NSWC Port Hueneme en la solicitud de NREIP.",
+  "eligibility": "NREIP college/graduate eligibility applies. The host directory lists additional student requirements as TBD; confirm academic, access and clearance requirements with the lab.",
+  "location": "Port Hueneme, CA"
  }
 ]
