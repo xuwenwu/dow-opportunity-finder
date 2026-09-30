@@ -519,6 +519,12 @@ function campusLL(campus=st.prefs.campus){return CAMPUS_LL[campus]||null;}
 function campusShort(campus=st.prefs.campus){const c=campusLL(campus);return c?c[2]:"";}
 function distOf(o,campus=st.prefs.campus){const c=campusLL(campus);if(!c||!Array.isArray(o.sites)||!o.sites.length)return null;let best=null;
   o.sites.forEach(s=>{if(typeof s.lat!=="number"||typeof s.lon!=="number")return;const m=miles(c[0],c[1],s.lat,s.lon);if(!best||m<best.mi)best={mi:m,site:s.name};});return best;}
+function withinDistance(o,campus,radius){
+  if(!campusLL(campus)||!radius)return true;
+  const d=distOf(o,campus);
+  if(d)return d.mi<=radius;
+  return o.scope!=="Regional"||(o.regions||[]).includes(regionOf(campus));
+}
 /* Albers equal area projection matching the embedded US map (lower 48). */
 function proj(lat,lon){const r=Math.PI/180,p1=29.5*r,p2=45.5*r,n=(Math.sin(p1)+Math.sin(p2))/2,C=Math.cos(p1)**2+2*n*Math.sin(p1),r0=Math.sqrt(C)/n;
   const f=(l,ph)=>{const rr=Math.sqrt(C-2*n*Math.sin(ph))/n;return[rr*Math.sin(l*n),r0-rr*Math.cos(l*n)];};
@@ -656,9 +662,7 @@ function visible(audience,scopeOnly,ignoreFunded){
     if(lvl&&o.audience==="student"&&Array.isArray(o.levels)&&!o.levels.includes(lvl))return false;
     if(cit==="pr"&&o.cit==="us")return false;
     if(cit==="other"&&(o.cit==="us"||o.cit==="us_pr"))return false;
-    if(region&&o.scope==="Regional"){const dd=distOf(o);
-      if(dd){if(st.prefs.radius&&dd.mi>st.prefs.radius)return false;}
-      else if(!(o.regions||[]).includes(region))return false;}
+    if(!withinDistance(o,st.prefs.campus,st.prefs.radius))return false;
     if(soon){const d=daysUntil(o.deadline);if(d===null||d<0||d>60)return false;}
     return true;
   });
@@ -781,11 +785,12 @@ function renderList(){
   renderDist();renderMap(items,local);
 }
 /* ---------- hero, distance chips, closing soon, map ---------- */
-function distChips(){return RADII.map(r=>'<button type="button" class="dchip" data-radius="'+r+'" aria-pressed="'+(st.prefs.radius===r)+'">'+esc(r?T("withinMi",{n:r}):T("anyDist"))+'</button>').join("");}
+function distChips(radius=st.prefs.radius){return RADII.map(r=>'<button type="button" class="dchip" data-radius="'+r+'" aria-pressed="'+(radius===r)+'">'+esc(r?T("withinMi",{n:r}):T("anyDist"))+'</button>').join("");}
+function distanceControls(campus,radius){return campusLL(campus)?'<span>'+esc(T("distLabel",{c:campusShort(campus)}))+'</span>'+distChips(radius):'<span class="hint">'+esc(T("distHint"))+'</span>';}
 function renderDist(){
   const has=!!campusLL();
-  $("#h-dist").innerHTML=has?'<span>'+esc(T("distLabel",{c:campusShort()}))+'</span>'+distChips():'<span class="hint">'+esc(T("distHint"))+'</span>';
-  const bar=$("#distBar");bar.hidden=!(st.tab==="local"&&has);if(!bar.hidden)bar.innerHTML='<span>'+esc(T("distLabel",{c:campusShort()}))+'</span>'+distChips();
+  $("#h-dist").innerHTML=distanceControls(st.prefs.campus,st.prefs.radius);
+  const bar=$("#distBar");bar.hidden=!(st.tab==="local"&&has);if(!bar.hidden)bar.innerHTML=distanceControls(st.prefs.campus,st.prefs.radius);
 }
 function setRadius(r,goLocal){st.prefs.radius=r;lsSet("prefs",st.prefs);if(goLocal&&st.tab!=="local"){st.tab="local";lsSet("tab",st.tab);}render();}
 function renderHero(){
@@ -813,13 +818,13 @@ function renderSoon(){
 }
 function jumpTo(id){const o=st.opps.find(x=>x.id===id);if(!o)return;
   st.tab=o.audience==="faculty"?"faculty":(o.scope==="Regional"?"local":"students");lsSet("tab",st.tab);
-  if(!visible(st.tab==="local"?"":(st.tab==="faculty"?"faculty":"student"),st.tab==="students"?"National":(st.tab==="local"?"Regional":"")).some(x=>x.id===id)){$("#f-funded").checked=false;$("#f-q").value="";$("#h-q").value="";if(st.tab==="local")st.prefs.radius=0;}
+  if(!visible(st.tab==="local"?"":(st.tab==="faculty"?"faculty":"student"),st.tab==="students"?"National":(st.tab==="local"?"Regional":"")).some(x=>x.id===id)){$("#f-funded").checked=false;$("#f-q").value="";$("#h-q").value="";st.prefs.radius=0;}
   render();setTimeout(()=>{const el=document.querySelector('.opp[data-id="'+CSS.escape(id)+'"]');if(el){el.scrollIntoView({behavior:"smooth",block:"center"});el.classList.remove("flash");void el.offsetWidth;el.classList.add("flash");}},60);}
 function renderMap(items,enabled,{box=$("#mapBox"),campus=st.prefs.campus,radius=st.prefs.radius,title=""}={}){
   box.hidden=!enabled||!st.loaded;if(box.hidden)return;
   const c=campusLL(campus);const groups={};
   items.forEach(o=>(o.sites||[]).forEach(s=>{
-    if(!Number.isFinite(s.lat)||!Number.isFinite(s.lon))return;const k=s.lat.toFixed(2)+","+s.lon.toFixed(2);(groups[k]=groups[k]||{s,items:[]}).items.push(o);}));
+    if(!Number.isFinite(s.lat)||!Number.isFinite(s.lon)||c&&radius&&miles(c[0],c[1],s.lat,s.lon)>radius)return;const k=s.lat.toFixed(2)+","+s.lon.toFixed(2);(groups[k]=groups[k]||{s,items:[]}).items.push(o);}));
   /* Zoom to the chosen distance ring around the campus; whole map otherwise. */
   let vb=[0,0,975,610],k=1,me=null;
   const ringPx=r=>{const[,y1]=proj(c[0],c[1]),[,y2]=proj(c[0]+r/69.05,c[1]);return Math.abs(y1-y2);};
@@ -965,7 +970,7 @@ $("#h-q").addEventListener("input",()=>{$("#f-q").value=$("#h-q").value;if(st.ta
 $("#f-q").addEventListener("input",()=>{$("#h-q").value=$("#f-q").value;});
 $("#hForm").addEventListener("submit",e=>{e.preventDefault();$("#f-q").value=$("#h-q").value;const go=campusLL()&&!$("#h-q").value.trim()?"local":(st.tab==="faculty"||st.tab==="local"?st.tab:"students");st.tab=go;lsSet("tab",go);render();$("#view-list").scrollIntoView({behavior:"smooth",block:"start"});});
 document.addEventListener("click",e=>{
-  const rb=e.target.closest("[data-radius]");if(rb){setRadius(Number(rb.dataset.radius),!!rb.closest("#h-dist"));return;}
+  const rb=e.target.closest("[data-radius]");if(rb){if(rb.closest("#featureView")&&feature.mode==="matches"){feature.radius=Number(rb.dataset.radius);renderFeatures();}else setRadius(Number(rb.dataset.radius),!!rb.closest("#h-dist"));return;}
   const dr=e.target.closest("[data-door]");if(dr){const k=dr.dataset.door;if(k==="faculty"){st.tab="faculty";}else{st.tab="students";st.prefs.level=k;$("#p-level").value=k;lsSet("prefs",st.prefs);}lsSet("tab",st.tab);render();$("#view-list").scrollIntoView({behavior:"smooth",block:"start"});return;}
   const jp=e.target.closest("[data-jump]");if(jp){
     const inMatches=!!jp.closest("#featureMap"),id=jp.dataset.jump;
