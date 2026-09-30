@@ -2716,5 +2716,67 @@
    "https://www.scale4me.org/about",
    "https://www.scale4me.org/partners"
   ]
+ },
+ {
+  "id": "uc-ppfp-national-labs",
+  "title": "UC President’s Postdoctoral Fellowship — National Laboratories",
+  "sponsor": "University of California / Lawrence Berkeley, Lawrence Livermore and Los Alamos national laboratories",
+  "branch": "Defense research",
+  "type": "Postdoc",
+  "audience": "student",
+  "levels": [
+   "postdoc"
+  ],
+  "scope": "National",
+  "regions": [
+   "Northern California",
+   "New Mexico"
+  ],
+  "campuses": [],
+  "location": "Berkeley and Livermore, CA; Los Alamos, NM",
+  "sites": [
+   {
+    "name": "Lawrence Berkeley National Laboratory — Berkeley, CA",
+    "lat": 37.88,
+    "lon": -122.25
+   },
+   {
+    "name": "Lawrence Livermore National Laboratory — Livermore, CA",
+    "lat": 37.69,
+    "lon": -121.7
+   },
+   {
+    "name": "Los Alamos National Laboratory — Los Alamos, NM",
+    "lat": 35.88,
+    "lon": -106.3
+   }
+  ],
+  "summary": "UC-sponsored STEM postdoctoral research at Lawrence Berkeley, Lawrence Livermore or Los Alamos, with mentoring, professional development and networking. Apply through the central PPFP portal and identify a host-laboratory technical adviser.",
+  "summary_es": "Investigación posdoctoral en áreas STEM patrocinada por UC en Lawrence Berkeley, Lawrence Livermore o Los Alamos, con mentoría y desarrollo profesional. Presente la solicitud mediante PPFP e identifique un asesor técnico del laboratorio anfitrión.",
+  "eligibility": "STEM PhD recipients or candidates expecting completion by July 1, 2027. Enter the sponsoring laboratory technical adviser as primary mentor; a tenured UC faculty co-mentor is identified after selection. Confirm the host lab’s appointment requirements; this is a postdoctoral opportunity.",
+  "cit": "varies",
+  "citizenship": "General PPFP eligibility includes non-U.S. citizens with appropriate work authorization. Confirm host-laboratory citizenship, access and visa-sponsorship rules separately.",
+  "funding": "stipend",
+  "fundingNote": "Paid postdoctoral fellowship; confirm salary, benefits, research support and appointment duration with the host laboratory. UC-campus salary figures should not be assumed to apply to laboratory appointments.",
+  "award": "Postdoctoral research fellowship with mentoring and professional development; laboratory-specific financial terms require confirmation",
+  "opens": "2026-09-01",
+  "deadline": "2026-11-01",
+  "deadlineNote": "Central PPFP application deadline: November 1, 2026; mentor/reference letters: December 1, 2026. Confirm any lab-specific instructions and submission time with ppf_nationallabs@lanl.gov.",
+  "url": "https://ppfp.ucop.edu/info/how-to-apply/",
+  "sources": [
+   "https://ppfp.ucop.edu/info/how-to-apply/",
+   "https://ppfp.ucop.edu/info/about/partnerships.html",
+   "https://ppfp.ucop.edu/info/how-to-apply/applicant-faqs.html",
+   "https://ppfp.ucop.edu/info/how-to-apply/terms_of_award.html"
+  ],
+  "status": "published",
+  "needsCheck": true,
+  "changeNote": "Added only the national-laboratory pathway. Confirm laboratory-specific financial and appointment terms; UC-campus award and FAQ pages give differing salary figures.",
+  "verified": "2026-09-30",
+  "added": "2026-09-30",
+  "recurs": true,
+  "seed": false,
+  "hsi": "",
+  "format": "Host-laboratory research appointment"
  }
 ]
