@@ -9,6 +9,9 @@ FX.en.voiceDone='Transcript added. Review the text before sending it to AI.';
 FX.es.voiceDone='Transcripción agregada. Revisa el texto antes de enviarlo a la IA.';
 FX.en.collectionNote='Selected opportunities with current listing details. Save this collection to keep it on this device.';
 FX.es.collectionNote='Oportunidades seleccionadas con detalles actuales. Guarda la colección para conservarla en este dispositivo.';
+FX.en.matchMap='Locations for your matches';FX.es.matchMap='Ubicaciones de tus coincidencias';
+FX.en.mapCoverage='Showing locations for {mapped} of {total} matches. Opportunities without a listed site remain in the full list below.';
+FX.es.mapCoverage='Se muestran ubicaciones de {mapped} de {total} coincidencias. Las oportunidades sin sede indicada permanecen en la lista completa de abajo.';
 const F=k=>FX[st.lang][k]||FX.en[k]||k;
 const feature={mode:null,ids:[],title:'',localId:null,matches:new Map(),criteria:null,collections:[],endpoint:'',busy:false,request:null,recognition:null};
 try{feature.collections=(lsGet('dow.collections.v1')||[]).slice(0,100).map(c=>({...OpportunityTools.collection(c),localId:String(c.localId||'')}));}catch(_){}
@@ -33,7 +36,7 @@ discovery.innerHTML=`<details class="panel" id="matchPanel"><summary><h2 data-fx
  <details class="panel"><summary><h2 data-fx="collections"></h2></summary><p class="hint" data-fx="device"></p><button class="btn" type="button" data-feature="saved" data-fx="saved"></button><div id="collectionList"></div></details>`;
 document.querySelector('nav.tabs').after(discovery);
 const featureView=document.createElement('section');featureView.id='featureView';featureView.hidden=true;
-featureView.innerHTML='<div class="results-head"><h2 id="featureTitle" tabindex="-1"></h2><div class="search-actions"><button class="btn primary" type="button" data-feature="edit-search" data-fx="editSearch"></button><button class="btn" type="button" data-feature="new-search" data-fx="newSearch"></button><button class="btn" type="button" data-feature="back" data-fx="back"></button></div></div><p class="hint" id="featureNote"></p><div class="collection-toolbar" id="featureToolbar"></div><div class="list" id="featureList"></div>';
+featureView.innerHTML='<div class="results-head"><h2 id="featureTitle" tabindex="-1"></h2><div class="search-actions"><button class="btn primary" type="button" data-feature="edit-search" data-fx="editSearch"></button><button class="btn" type="button" data-feature="new-search" data-fx="newSearch"></button><button class="btn" type="button" data-feature="back" data-fx="back"></button></div></div><p class="hint" id="featureNote"></p><div class="collection-toolbar" id="featureToolbar"></div><div class="mapbox" id="featureMap" hidden></div><div class="list" id="featureList"></div>';
 $('#view-list').before(featureView);
 const toolbar=document.createElement('div');toolbar.id='resultsToolbar';toolbar.className='collection-toolbar';$('#resultCount').parentElement.after(toolbar);
 const editDialog=document.createElement('dialog');editDialog.className='feature-dialog';editDialog.setAttribute('aria-labelledby','collectionHeading');
@@ -73,7 +76,13 @@ function renderFeatures(){
  $('#featureToolbar').innerHTML=toolButtons()+(feature.localId?'<button class="btn" type="button" data-feature="edit-collection">'+esc(F('edit'))+'</button>':'');
  const items=currentItems();
  $('#featureNote').textContent=feature.mode==='matches'?F('check')+' '+F('timing'):(items.length<feature.ids.length?F('unavailable'):F('collectionNote'));
- $('#featureList').innerHTML=st.loaded?(items.length?items.map(card).join(''):'<p class="empty">'+esc(F('empty'))+'</p>'):'<p class="empty">'+esc(T('loading'))+'</p>';
+ $('#featureList').innerHTML=st.loaded?(items.length?items.map(o=>feature.mode==='matches'?card(o,{campus:feature.criteria?.campus||''}):card(o)).join(''):'<p class="empty">'+esc(F('empty'))+'</p>'):'<p class="empty">'+esc(T('loading'))+'</p>';
+ const map=$('#featureMap');
+ renderMap(items,feature.mode==='matches'&&items.length>0,{box:map,campus:feature.criteria?.campus||'',radius:0,title:F('matchMap')});
+ if(!map.hidden){
+  const mapped=new Set(Object.values(map._groups).flatMap(g=>g.items.map(o=>o.id))).size;
+  const note=document.createElement('p');note.className='hint';note.textContent=F('mapCoverage').replace('{mapped}',mapped).replace('{total}',items.length);map.append(note);
+ }
  $('#featureToolbar').querySelectorAll('button').forEach(b=>b.disabled=!st.loaded||!items.length);
  if(feature.needsScroll&&st.loaded){feature.needsScroll=false;requestAnimationFrame(()=>{featureView.scrollIntoView({block:'start',behavior:'instant'});$('#featureTitle').focus({preventScroll:true});});}
 }
