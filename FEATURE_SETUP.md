@@ -52,3 +52,11 @@ Browser tests require Playwright with installed Chromium or Microsoft Edge. They
 - [OpenAI structured outputs](https://developers.openai.com/api/docs/guides/structured-outputs)
 - [Browser speech recognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition)
 - [Native device sharing](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share)
+
+## Free public address
+
+`https://hsrufinder.pages.dev/` is the public Cloudflare Pages address. The `hosting/` project serves only the fixed public files from the existing GitHub Pages deployment, with a 60-second edge/browser cache. This keeps frontend fixes and weekly data updates synchronized without another deployment token or a domain purchase. Browser query parameters and fragments still work locally; query strings, cookies, and authorization headers are not forwarded to GitHub.
+
+Deploy hosting changes with `wrangler pages deploy hosting --project-name hsrufinder --branch main`. Only changes to this small hosting layer require a separate deployment; ordinary site/data changes still follow the repository's GitHub Pages workflow. New public file paths must be added to the allowlist in `hosting/_worker.js`. Hosting depends on the original GitHub Pages site and Cloudflare Pages Functions free-plan limits. A provider outage is reported as unavailable; there is no paid plan upgrade configured by this change.
+
+The matching service allows both the GitHub origin and `https://hsrufinder.pages.dev`. Preview origins are intentionally not enabled. Saved items and collections are browser-origin-specific; visitors can transfer a collection with its share link but existing local saves are not automatically copied between the two addresses.

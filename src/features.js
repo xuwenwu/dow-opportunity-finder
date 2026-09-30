@@ -113,7 +113,7 @@ async function collectionImage(){
  function wrap(s,y,size,maxLines){x.font='bold '+size+'px sans-serif';let line='',n=0;for(const word of s.split(/\s+/)){if(x.measureText(line+' '+word).width>920&&line){x.fillText(line,80,y,920);y+=size*1.3;line='';if(++n>=maxLines-1){line='…';break;}}line+=(line?' ':'')+word;}x.fillText(line,80,y,920);return y+size*1.5;}
  x.fillStyle='#14231E';let y=wrap(sharing.title,125,58,3)+40;
  sharing.items.slice(0,5).forEach((o,i)=>{y=wrap((i+1)+'. '+o.title,y,34,2)+18;});
- x.fillStyle='#4F6059';x.font='30px sans-serif';x.fillText(sharing.items.length+' '+F('selected'),80,1160);x.fillText('DoW Opportunity Finder',80,1220);x.font='24px sans-serif';x.fillText('xuwenwu.github.io/dow-opportunity-finder/',80,1270);
+ x.fillStyle='#4F6059';x.font='30px sans-serif';x.fillText(sharing.items.length+' '+F('selected'),80,1160);x.fillText('DoW Opportunity Finder',80,1220);x.font='24px sans-serif';x.fillText(location.host+location.pathname,80,1270);
  const blob=await new Promise(r=>c.toBlob(r,'image/png'));if(blob)await saveFile('opportunities-instagram.png',blob);
  $('#shareStatus').textContent=F('caption')+': '+F('shareNote');
 }
