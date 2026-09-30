@@ -272,6 +272,21 @@ dl.facts dd{font-size:14px;margin-top:2px}
 @keyframes flash{0%,40%{box-shadow:0 0 0 3px var(--sun)}100%{box-shadow:none}}
 footer{border-top:1px solid var(--line)}
 @media (prefers-reduced-motion:reduce){.door,.opp{transition:none}.flash{animation:none}}
+
+.discovery{display:grid;align-items:start;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:16px;margin:16px 0 24px}
+.match-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+#matchForm{display:grid;gap:12px}#matchForm button{justify-self:start}
+.collection-toolbar,.collection-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0}
+.collection-row{justify-content:space-between;overflow-wrap:anywhere}
+.feature-dialog{width:min(640px,calc(100% - 24px));max-height:85dvh;overflow:auto;border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--surface);color:var(--ink)}
+.feature-dialog::backdrop{background:rgb(0 0 0 / .45)}
+.feature-dialog h2{margin-top:0;font-family:var(--display)}
+.feature-dialog form{display:grid;gap:12px}.feature-dialog fieldset{border:1px solid var(--line);border-radius:8px;margin:0;padding:12px}
+#collectionChoices{display:grid;gap:10px;max-height:42vh;overflow:auto}
+#shareEmailForm{margin:16px 0}#shareLink{overflow-wrap:anywhere;min-height:80px}
+.match-reason{background:var(--accent-soft);border-radius:8px;padding:10px;font-size:13px;display:grid;gap:4px}
+#featureView{scroll-margin-top:16px}#featureTitle{overflow-wrap:anywhere}
+@media(max-width:720px){.discovery,.match-fields{grid-template-columns:minmax(0,1fr)}.feature-dialog{padding:16px}}
 </style>
 
 <div class="topbar"><div class="topbar-in">
@@ -719,20 +734,22 @@ function card(o){
   else if(o.deadlineNote)facts.push([T("timing"),o.deadlineNote]);
   if(o.verified)facts.push([T("checked"),fmtLong(o.verified)]);
   const saved=st.saved.has(o.id);
-  const u=encodeURIComponent(o.url),txt=encodeURIComponent(shareText(o));
+  const u=encodeURIComponent(listingLink(o)),txt=encodeURIComponent(shareText(o));
   const sess=activeSess();const inSess=sess&&sess.items.some(i=>i.id===o.id);
   const summary=st.lang==="es"&&o.summary_es?o.summary_es:o.summary;
   const cal=o.deadline&&d>=0?'<details class="menu"><summary class="btn">'+esc(T("addCal"))+'</summary><div class="menu-pop"><a href="'+esc(gcal(o))+'" target="_blank" rel="noopener" data-track="cal">Google Calendar</a><a href="'+esc(outlook(o))+'" target="_blank" rel="noopener" data-track="cal">Outlook</a></div></details>':"";
-  return '<article class="opp" data-id="'+esc(o.id)+'">'+whenBlock(o)+'<div class="body"><div class="chips">'+chips.join("")+'</div><h3>'+esc(o.title)+'</h3><p class="spons">'+esc(o.sponsor)+'</p>'+(summary?'<p class="sum">'+esc(summary)+'</p>':"")+
+  return '<article class="opp" data-id="'+esc(o.id)+'">'+whenBlock(o)+'<div class="body"><div class="chips">'+chips.join("")+'</div><h3>'+esc(o.title)+'</h3>'+matchReason(o)+'<p class="spons">'+esc(o.sponsor)+'</p>'+(summary?'<p class="sum">'+esc(summary)+'</p>':"")+
   '<dl class="facts">'+facts.map(f=>'<div'+(String(f[1]).length>70?' class="wide"':'')+'><dt>'+esc(f[0])+'</dt><dd>'+esc(f[1])+'</dd></div>').join("")+'</dl>'+
   '<div class="actions"><a class="btn primary" href="'+esc(o.url)+'" target="_blank" rel="noopener" data-track="open">'+esc(T("official"))+'</a>'+
   '<button class="btn" type="button" data-act="save" aria-pressed="'+saved+'">'+esc(saved?T("saved"):T("save"))+'</button>'+
   (sess?'<button class="btn" type="button" data-act="sess" aria-pressed="'+(!!inSess)+'">'+esc(inSess?T("inSession"):T("addToSession"))+'</button>':"")+cal+
-  '<details class="menu"><summary class="btn">'+esc(T("share"))+'</summary><div class="menu-pop">'+
+  '<button class="btn" type="button" data-feature="item-email" data-id="'+esc(o.id)+'">'+esc(F('email'))+'</button>'+
+   '<details class="menu"><summary class="btn">'+esc(T("share"))+'</summary><div class="menu-pop">'+
    '<a href="https://www.linkedin.com/sharing/share-offsite/?url='+u+'" target="_blank" rel="noopener" data-track="shares">LinkedIn</a>'+
    '<a href="https://twitter.com/intent/tweet?text='+txt+'&url='+u+'" target="_blank" rel="noopener" data-track="shares">X</a>'+
    '<a href="https://www.facebook.com/sharer/sharer.php?u='+u+'" target="_blank" rel="noopener" data-track="shares">Facebook</a>'+
-   '<a href="https://bsky.app/intent/compose?text='+encodeURIComponent(shareText(o)+" "+o.url)+'" target="_blank" rel="noopener" data-track="shares">Bluesky</a>'+
+   '<a href="https://bsky.app/intent/compose?text='+encodeURIComponent(shareText(o)+" "+listingLink(o))+'" target="_blank" rel="noopener" data-track="shares">Bluesky</a>'+
+   '<button type="button" data-feature="item-share" data-id="'+esc(o.id)+'">'+esc(F('native'))+'</button>'+
    '<button type="button" data-act="ig">'+esc(T("igCard"))+'</button>'+
    '<button type="button" data-act="copylink">'+esc(T("copyLink"))+'</button>'+
   '</div></details>'+
@@ -748,6 +765,7 @@ function renderList(){
   const local=st.tab==="local",aud=st.tab==="faculty"?"faculty":"student";
   const scopeOnly=st.tab==="students"?"National":(local?"Regional":"");
   const items=visible(local?"":aud,scopeOnly);
+  st.currentResults=items;
   const hidden=$("#f-funded").checked?visible(local?"":aud,scopeOnly,true).length-items.length:0;
   const soonN=items.filter(o=>{const d=daysUntil(o.deadline);return d!==null&&d>=0&&d<=30;}).length;
   const region=regionOf(st.prefs.campus);
@@ -934,6 +952,7 @@ function render(){
   if(st.tab==="people")renderPeople();
   if(st.tab==="advise")renderAdvise();
   if(st.tab==="review"&&st.canEdit)renderReview();
+  renderFeatures();
 }
 
 /* ---------- events ---------- */
@@ -963,16 +982,16 @@ document.addEventListener("click",e=>{
 });
 document.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.matches&&e.target.matches("[data-pin]")){e.preventDefault();showPin(e.target.dataset.pin,e.target);}});
 let savingSaved=Promise.resolve();
-function persistSaved(){lsSet("saved",[...st.saved]);if(!st.db||!st.uid)return;const ids=[...st.saved];savingSaved=savingSaved.then(()=>st.db.doc("data/users/"+st.uid+"/saved").set({ids})).catch(()=>{});}
+function persistSaved(){try{localStorage.setItem("saved",JSON.stringify([...st.saved]));}catch(_){return false;}if(!st.db||!st.uid)return true;const ids=[...st.saved];savingSaved=savingSaved.then(()=>st.db.doc("data/users/"+st.uid+"/saved").set({ids})).catch(()=>{});return true;}
 document.addEventListener("click",e=>{
   const tr=e.target.closest("[data-track]");if(tr){const card=tr.closest(".opp");bump(tr.dataset.track==="open"?"opens":tr.dataset.track,card?card.dataset.id:null);}
   const a=e.target.closest("[data-act]");if(a){
     const id=a.closest(".opp").dataset.id,o=st.opps.find(x=>x.id===id);if(!o)return;
     const act=a.dataset.act;
-    if(act==="save"){if(st.saved.has(id))st.saved.delete(id);else{st.saved.add(id);bump("saves",id);}persistSaved();render();toast(st.saved.has(id)?T("savedToList"):T("removedFromList"));}
+    if(act==="save"){if(st.saved.has(id))st.saved.delete(id);else{st.saved.add(id);bump("saves",id);}if(!persistSaved()){if(st.saved.has(id))st.saved.delete(id);else st.saved.add(id);toast(F("storageError"));return;}render();toast(st.saved.has(id)?F("savedOK"):T("removedFromList"));}
     if(act==="sess"){const s=activeSess();if(s){if(s.items.some(i=>i.id===id))s.items=s.items.filter(i=>i.id!==id);else s.items.push({id,step:""});persistSessions();render();}}
     if(act==="note"){bump("notes",id);copy(studentNote(o),T("noteCopied"));}
-    if(act==="copylink"){bump("shares",id);copy(o.url,T("linkCopied"));}
+    if(act==="copylink"){bump("shares",id);copy(listingLink(o),T("linkCopied"));}
     if(act==="ig"){bump("shares",id);igCard(o);}
     if(act==="report")openComments({type:"error",where:o.title+" ("+o.url+")"});
     const m=a.closest("details.menu");if(m)m.open=false;
@@ -1129,6 +1148,8 @@ async function igCard(o){
   const blob=await new Promise(r=>c.toBlob(r,"image/png"));
   await saveFile((o.id||"opportunity")+"-instagram.png",blob);
 }
+
+/*FEATURES*/
 
 /* ---------- data ---------- */
 const localTab=lsGet("tab");

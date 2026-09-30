@@ -1,0 +1,43 @@
+{
+  "campuses": [
+    "San Diego State University",
+    "University of California, Irvine",
+    "University of California, Riverside",
+    "University of California, Santa Barbara",
+    "University of California, Davis",
+    "University of California, Merced",
+    "University of California, Santa Cruz",
+    "Arizona State University",
+    "University of Arizona",
+    "University of Nevada, Las Vegas",
+    "University of New Mexico",
+    "New Mexico State University",
+    "University of Texas at El Paso",
+    "University of Texas at San Antonio",
+    "University of Texas at Arlington",
+    "University of Texas at Austin",
+    "University of North Texas",
+    "University of Houston",
+    "Texas A&M University",
+    "Texas Tech University",
+    "University of Colorado Denver",
+    "University of Illinois Chicago",
+    "CUNY Graduate Center",
+    "New Jersey Institute of Technology",
+    "University of Central Florida",
+    "Florida International University",
+    "Florida Atlantic University"
+  ],
+  "types": [
+    "Faculty fellowship",
+    "Faculty grant",
+    "Fellowship",
+    "Internship",
+    "Postdoc",
+    "Research job",
+    "Research program",
+    "Scholarship",
+    "Training program",
+    "Workshop"
+  ]
+}
