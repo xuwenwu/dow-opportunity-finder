@@ -2,7 +2,9 @@
 
 A searchable, shareable list of Department of War (DoW) and defense related scholarships, fellowships, internships, workshops, trainings and faculty programs for students and faculty at the 20+ universities of the Alliance of Hispanic Serving Research Universities (HSRU).
 
-**Live site:** https://xuwenwu.github.io/dow-opportunity-finder/
+**Live site:** https://hsrufinder.pages.dev/
+
+The GitHub Pages address remains available. Cloudflare serves the same maintained build, so weekly data updates also appear at the shorter address.
 
 It started as a prototype for the ASCENDR Opportunity Advising Think Lab. It is an independent project, not an official site of the Department of War or of HSRU. Every listing links to the official program page, which is the final word on eligibility and deadlines.
 
