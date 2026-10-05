@@ -101,7 +101,7 @@
   "award": "",
   "branch": "Air Force",
   "campuses": [],
-  "changeNote": "Official-source review 2026-09-30: faculty laboratory research, student participation, funding and application status clarified.",
+  "changeNote": "Link check returned error (SSLError) on 2026-10-05",
   "cit": "us",
   "citizenship": "U.S. citizens; permanent residents are not eligible. Additional dual-citizenship restrictions apply at some directorates.",
   "deadline": null,
@@ -115,7 +115,7 @@
    "faculty"
   ],
   "location": "AFRL sites",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [],
@@ -1151,7 +1151,7 @@
   "award": "",
   "branch": "NNSA defense lab",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Link check returned 404 on 2026-10-05",
   "cit": "unknown",
   "citizenship": "",
   "deadline": null,
@@ -1166,7 +1166,7 @@
    "grad"
   ],
   "location": "Los Alamos, NM",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [
@@ -1731,7 +1731,7 @@
   "award": "",
   "branch": "Navy",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Link check returned 404 on 2026-10-05",
   "cit": "us",
   "citizenship": "Solely U.S. citizens able to obtain a security clearance",
   "deadline": "2026-11-30",
@@ -1746,7 +1746,7 @@
    "grad"
   ],
   "location": "Corona, CA",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [
@@ -1818,7 +1818,7 @@
   "award": "",
   "branch": "Navy",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Link check returned error (ConnectTimeout) on 2026-10-05",
   "cit": "unknown",
   "citizenship": "",
   "deadline": "2026-10-30",
@@ -1832,7 +1832,7 @@
    "faculty"
   ],
   "location": "Your university",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [],
