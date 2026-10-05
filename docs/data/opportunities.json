@@ -5,7 +5,7 @@
   "award": "",
   "branch": "Army",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: Army overview confirms paid pathways; individual placement eligibility, deadlines and awards not fully reverified.",
   "cit": "unknown",
   "citizenship": "",
   "deadline": null,
@@ -21,7 +21,7 @@
    "postdoc"
   ],
   "location": "Army labs nationwide",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [],
@@ -35,7 +35,10 @@
   "type": "Internship",
   "url": "https://usaeop.com/",
   "verified": "2026-09-29",
-  "id": "aeop"
+  "id": "aeop",
+  "sources": [
+   "https://usaeop.com/"
+  ]
  },
  {
   "added": "2026-09-29",
@@ -43,12 +46,12 @@
   "award": "",
   "branch": "Space Force",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: Removed inferred February 2027 deadline: linked fact sheet is dated 2025 and does not announce a 2027 cycle. Program and linked 2025 fact sheet reviewed; no year-specific 2027 call. Removed extrapolated date; current vacancy terms need review.",
   "cit": "us",
   "citizenship": "U.S. citizens able to obtain a Secret clearance",
-  "deadline": "2027-02-26",
-  "deadlineNote": "The program fact sheet lists the last Friday of February",
-  "eligibility": "Full time rising sophomores, juniors, seniors and graduate students.",
+  "deadline": null,
+  "deadlineNote": "The 2025 fact sheet says last Friday of February; a year-specific 2027 deadline has not been confirmed. Current vacancy deadlines control.",
+  "eligibility": "Full-time enrollment in an accredited degree-granting college/university; ability to obtain and maintain the required security clearance. Check the current vacancy for degree-level requirements.",
   "format": "",
   "funding": "full",
   "fundingNote": "Paid internship with relocation assistance and holiday pay",
@@ -58,7 +61,7 @@
    "grad"
   ],
   "location": "El Segundo, CA; Colorado Springs, CO; Albuquerque, NM",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [
@@ -93,6 +96,11 @@
     "lat": 35.08,
     "lon": -106.65
    }
+  ],
+  "sources": [
+   "https://aerospace.org/careers/students-and-recent-graduates",
+   "https://aerospace.org/fact-sheet/internships-aerospace",
+   "https://aerospace.org/sites/default/files/2025-02/Internship%20Program_0.pdf"
   ]
  },
  {
@@ -101,7 +109,7 @@
   "award": "",
   "branch": "Air Force",
   "campuses": [],
-  "changeNote": "Official-source review 2026-09-30: faculty laboratory research, student participation, funding and application status clarified.",
+  "changeNote": "Weekly review 2026-10-05: Rendered operator confirms indefinite hold. No reopening or future faculty/student support available; prior eligibility is historical. SSL failure alone was not evidence.",
   "cit": "us",
   "citizenship": "U.S. citizens; permanent residents are not eligible. Additional dual-citizenship restrictions apply at some directorates.",
   "deadline": null,
@@ -115,7 +123,7 @@
    "faculty"
   ],
   "location": "AFRL sites",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [],
@@ -138,18 +146,18 @@
  {
   "added": "2026-09-29",
   "audience": "faculty",
-  "award": "$150,000 a year minimum, up to $450,000 over three years",
+  "award": "Up to $150,000 per year for three years ($450,000 total)",
   "branch": "Air Force",
   "campuses": [],
-  "changeNote": "Link audit 2026-09-29: award, open date and citizenship added from Grants.gov",
+  "changeNote": "Weekly review 2026-10-05: Added mandatory October 9 white paper before the December 4 full proposal; corrected award ceiling and PhD cutoff. FY2027 notice and September 24 Q&A reviewed: mandatory white paper, proposal, award ceiling, appointment and citizenship rules.",
   "cit": "us_pr",
   "citizenship": "U.S. citizens, nationals or permanent residents",
-  "deadline": "2026-12-04",
-  "deadlineNote": "11:59 PM Eastern",
-  "eligibility": "PhD or equivalent received after April 1, 2019.",
+  "deadline": "2026-10-09",
+  "deadlineNote": "Required white paper: October 9, 2026, 11:59 PM Eastern. Full proposal: December 4, 2026, 11:59 PM Eastern; do not skip the white-paper stage.",
+  "eligibility": "PhD or equivalent on or after April 1, 2019; qualifying full-time permanent/career-competitive or tenure-track appointment. Limited-term appointments require the institutional assurances specified in the FY2027 notice. FFRDC and DoW laboratory researchers are not eligible.",
   "format": "",
   "funding": "grant",
-  "fundingNote": "Research grant; about 50 awards, $4.5 million total",
+  "fundingNote": "Individual research award up to $450,000 over three years; student and postdoctoral personnel may be supported. Co-PIs and collaborators are not permitted.",
   "hsi": "",
   "levels": [
    "faculty"
@@ -163,13 +171,18 @@
   "seed": true,
   "sponsor": "Air Force Office of Scientific Research",
   "status": "published",
-  "summary": "Early career basic research grants; about 50 awards expected, $4.5 million total.",
-  "summary_es": "Subvenciones de investigación básica para docentes al inicio de su carrera; se esperan unas 50 adjudicaciones.",
+  "summary": "Early-career basic research grant up to $450,000 over three years. A required white paper is due October 9, 2026; full proposals are due December 4.",
+  "summary_es": "Subvención de investigación básica de hasta $450,000 durante tres años para docentes al inicio de su carrera. La propuesta preliminar obligatoria vence el 9 de octubre de 2026; la propuesta completa, el 4 de diciembre.",
   "title": "Air Force Young Investigator Program (FY2027)",
   "type": "Faculty grant",
   "url": "https://simpler.grants.gov/opportunity/c342c01d-4f34-440f-8bb2-4bdd4d763df0",
-  "verified": "2026-09-29",
-  "id": "afosr-yip"
+  "verified": "2026-10-05",
+  "id": "afosr-yip",
+  "sources": [
+   "https://simpler.grants.gov/opportunity/c342c01d-4f34-440f-8bb2-4bdd4d763df0",
+   "https://files.simpler.grants.gov/opportunities/c342c01d-4f34-440f-8bb2-4bdd4d763df0/attachments/84ad5127-ad85-4495-8277-01179ad54902/FA955026S0003FY27YIPFINAL.pdf",
+   "https://files.simpler.grants.gov/opportunities/c342c01d-4f34-440f-8bb2-4bdd4d763df0/attachments/9cf2fa75-6fdf-4713-a203-3f849f3001af/FA955026S0003_Qs_and_As.pdf"
+  ]
  },
  {
   "added": "2026-09-29",
@@ -177,7 +190,7 @@
   "award": "",
   "branch": "Air Force",
   "campuses": [],
-  "changeNote": "Link audit 2026-09-29: now links to the AFWERX location page",
+  "changeNote": "Weekly review 2026-10-05: 2027 dates confirmed; stipend tables describe the most recent session, not guaranteed 2027 rates. 2027 dates and program/location pages reviewed; stipend table labels figures most recent session. 2027 amounts, allowances and project terms unconfirmed.",
   "cit": "us",
   "citizenship": "U.S. citizens only",
   "deadline": "2027-01-11",
@@ -185,14 +198,14 @@
   "eligibility": "Undergraduate and graduate STEM students (some sites also take upper level high school students). GPA of 3.0 encouraged, not required.",
   "format": "",
   "funding": "stipend",
-  "fundingNote": "Weekly stipend by level: $621.60 (undergrad under 60 credits), $870.40 (undergrad 60+ credits), $1,182.80 (master's), $1,431.20 (PhD)",
+  "fundingNote": "Weekly stipend by level: $621.60 (undergrad under 60 credits), $870.40 (undergrad 60+ credits), $1,182.80 (master's), $1,431.20 (PhD). Published most-recent-session rates; confirm the 2027 offer and allowances.",
   "hsi": "",
   "levels": [
    "undergrad",
    "grad"
   ],
   "location": "AFWERX sites in Nevada and Texas",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": "2026-10-12",
   "recurs": true,
   "regions": [
@@ -221,6 +234,13 @@
     "lat": 30.27,
     "lon": -97.74
    }
+  ],
+  "sources": [
+   "https://afrlscholars.usra.edu/scholarsprogram/locations/afwerx/",
+   "https://afrlscholars.usra.edu/scholarsprogram/",
+   "https://afrlscholars.usra.edu/scholarsprogram/dates/",
+   "https://afrlscholars.usra.edu/scholarsprogram/stipends/",
+   "https://afrlscholars.usra.edu/scholarsprogram/eligibility/"
   ]
  },
  {
@@ -229,7 +249,7 @@
   "award": "",
   "branch": "Air Force",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: 2027 dates confirmed; stipend tables describe the most recent session, not guaranteed 2027 rates. 2027 dates and program/location pages reviewed; stipend table labels figures most recent session. 2027 amounts, allowances and project terms unconfirmed.",
   "cit": "us",
   "citizenship": "U.S. citizens only",
   "deadline": "2027-01-11",
@@ -237,14 +257,14 @@
   "eligibility": "Undergraduate and graduate STEM students (some sites also take upper level high school students). GPA of 3.0 encouraged, not required.",
   "format": "",
   "funding": "stipend",
-  "fundingNote": "Weekly stipend by level: $621.60 (undergrad under 60 credits), $870.40 (undergrad 60+ credits), $1,182.80 (master's), $1,431.20 (PhD)",
+  "fundingNote": "Weekly stipend by level: $621.60 (undergrad under 60 credits), $870.40 (undergrad 60+ credits), $1,182.80 (master's), $1,431.20 (PhD). Published most-recent-session rates; confirm the 2027 offer and allowances.",
   "hsi": "",
   "levels": [
    "undergrad",
    "grad"
   ],
   "location": "Catalyst Campus, Colorado",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": "2026-10-12",
   "recurs": true,
   "regions": [
@@ -267,6 +287,13 @@
     "lat": 38.83,
     "lon": -104.82
    }
+  ],
+  "sources": [
+   "https://afrlscholars.usra.edu/scholarsprogram/locations/",
+   "https://afrlscholars.usra.edu/scholarsprogram/",
+   "https://afrlscholars.usra.edu/scholarsprogram/dates/",
+   "https://afrlscholars.usra.edu/scholarsprogram/stipends/",
+   "https://afrlscholars.usra.edu/scholarsprogram/eligibility/"
   ]
  },
  {
@@ -275,7 +302,7 @@
   "award": "",
   "branch": "Air Force",
   "campuses": [],
-  "changeNote": "Link audit 2026-09-29: Edwards pays the higher Los Angeles area rates",
+  "changeNote": "Weekly review 2026-10-05: 2027 dates confirmed; stipend tables describe the most recent session, not guaranteed 2027 rates. 2027 dates and program/location pages reviewed; stipend table labels figures most recent session. 2027 amounts, allowances and project terms unconfirmed.",
   "cit": "us",
   "citizenship": "U.S. citizens only (not open to permanent residents)",
   "deadline": "2027-01-11",
@@ -283,14 +310,14 @@
   "eligibility": "Undergraduate and graduate STEM students (some sites also take upper level high school students). GPA of 3.0 encouraged, not required. Age 18 or older at California sites.",
   "format": "",
   "funding": "full",
-  "fundingNote": "Edwards locality weekly stipend: $1,212.17 (freshman) to $1,333.43 (senior), $1,482.64 (master's), $1,793.96 (PhD), plus a travel stipend of $269 a week and a one time $1,129 transportation payment",
+  "fundingNote": "Edwards locality weekly stipend: $1,212.17 (freshman) to $1,333.43 (senior), $1,482.64 (master's), $1,793.96 (PhD), plus a travel stipend of $269 a week and a one time $1,129 transportation payment. Published most-recent-session rates; confirm the 2027 offer and allowances.",
   "hsi": "",
   "levels": [
    "undergrad",
    "grad"
   ],
   "location": "Edwards AFB, CA",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": "2026-10-12",
   "recurs": true,
   "regions": [
@@ -313,6 +340,13 @@
     "lat": 34.905,
     "lon": -117.884
    }
+  ],
+  "sources": [
+   "https://afrlscholars.usra.edu/scholarsprogram/locations/edwards-afb/",
+   "https://afrlscholars.usra.edu/scholarsprogram/",
+   "https://afrlscholars.usra.edu/scholarsprogram/dates/",
+   "https://afrlscholars.usra.edu/scholarsprogram/stipends/",
+   "https://afrlscholars.usra.edu/scholarsprogram/eligibility/"
   ]
  },
  {
@@ -321,7 +355,7 @@
   "award": "",
   "branch": "Air Force",
   "campuses": [],
-  "changeNote": "Link audit 2026-09-29: now links to the Eglin location page",
+  "changeNote": "Weekly review 2026-10-05: 2027 dates confirmed; stipend tables describe the most recent session, not guaranteed 2027 rates. 2027 dates and program/location pages reviewed; stipend table labels figures most recent session. 2027 amounts, allowances and project terms unconfirmed.",
   "cit": "us",
   "citizenship": "U.S. citizens only",
   "deadline": "2027-01-11",
@@ -329,14 +363,14 @@
   "eligibility": "Undergraduate and graduate STEM students (some sites also take upper level high school students). GPA of 3.0 encouraged, not required.",
   "format": "",
   "funding": "stipend",
-  "fundingNote": "Weekly stipend by level: $621.60 (undergrad under 60 credits), $870.40 (undergrad 60+ credits), $1,182.80 (master's), $1,431.20 (PhD)",
+  "fundingNote": "Weekly stipend by level: $621.60 (undergrad under 60 credits), $870.40 (undergrad 60+ credits), $1,182.80 (master's), $1,431.20 (PhD). Published most-recent-session rates; confirm the 2027 offer and allowances.",
   "hsi": "",
   "levels": [
    "undergrad",
    "grad"
   ],
   "location": "Eglin AFB, FL",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": "2026-10-12",
   "recurs": true,
   "regions": [
@@ -359,6 +393,13 @@
     "lat": 30.483,
     "lon": -86.525
    }
+  ],
+  "sources": [
+   "https://afrlscholars.usra.edu/scholarsprogram/locations/eglin/",
+   "https://afrlscholars.usra.edu/scholarsprogram/",
+   "https://afrlscholars.usra.edu/scholarsprogram/dates/",
+   "https://afrlscholars.usra.edu/scholarsprogram/stipends/",
+   "https://afrlscholars.usra.edu/scholarsprogram/eligibility/"
   ]
  },
  {
@@ -367,7 +408,7 @@
   "award": "",
   "branch": "Air Force",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: 2027 dates confirmed; stipend tables describe the most recent session, not guaranteed 2027 rates. 2027 dates and program/location pages reviewed; stipend table labels figures most recent session. 2027 amounts, allowances and project terms unconfirmed.",
   "cit": "us",
   "citizenship": "U.S. citizens only",
   "deadline": "2027-01-11",
@@ -375,14 +416,14 @@
   "eligibility": "Undergraduate and graduate STEM students (some sites also take upper level high school students). GPA of 3.0 encouraged, not required.",
   "format": "",
   "funding": "stipend",
-  "fundingNote": "Weekly stipend by level: $621.60 (undergrad under 60 credits), $870.40 (undergrad 60+ credits), $1,182.80 (master's), $1,431.20 (PhD)",
+  "fundingNote": "Weekly stipend by level: $621.60 (undergrad under 60 credits), $870.40 (undergrad 60+ credits), $1,182.80 (master's), $1,431.20 (PhD). Published most-recent-session rates; confirm the 2027 offer and allowances.",
   "hsi": "",
   "levels": [
    "undergrad",
    "grad"
   ],
   "location": "Kirtland AFB, Albuquerque, NM",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": "2026-10-12",
   "recurs": true,
   "regions": [
@@ -405,6 +446,13 @@
     "lat": 35.04,
     "lon": -106.61
    }
+  ],
+  "sources": [
+   "https://afrlscholars.usra.edu/scholarsprogram/locations/kirtland/",
+   "https://afrlscholars.usra.edu/scholarsprogram/",
+   "https://afrlscholars.usra.edu/scholarsprogram/dates/",
+   "https://afrlscholars.usra.edu/scholarsprogram/stipends/",
+   "https://afrlscholars.usra.edu/scholarsprogram/eligibility/"
   ]
  },
  {
@@ -413,7 +461,7 @@
   "award": "",
   "branch": "Air Force",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: 2027 dates confirmed; stipend tables describe the most recent session, not guaranteed 2027 rates. 2027 dates and program/location pages reviewed; stipend table labels figures most recent session. 2027 amounts, allowances and project terms unconfirmed.",
   "cit": "us",
   "citizenship": "U.S. citizens only",
   "deadline": "2027-01-11",
@@ -421,14 +469,14 @@
   "eligibility": "Undergraduate and graduate STEM students (some sites also take upper level high school students). GPA of 3.0 encouraged, not required.",
   "format": "",
   "funding": "stipend",
-  "fundingNote": "Weekly stipend by level: $621.60 (undergrad under 60 credits), $870.40 (undergrad 60+ credits), $1,182.80 (master's), $1,431.20 (PhD)",
+  "fundingNote": "Weekly stipend by level: $621.60 (undergrad under 60 credits), $870.40 (undergrad 60+ credits), $1,182.80 (master's), $1,431.20 (PhD). Published most-recent-session rates; confirm the 2027 offer and allowances.",
   "hsi": "",
   "levels": [
    "undergrad",
    "grad"
   ],
   "location": "Rome, NY",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": "2026-10-12",
   "recurs": true,
   "regions": [
@@ -451,6 +499,13 @@
     "lat": 43.22,
     "lon": -75.41
    }
+  ],
+  "sources": [
+   "https://afrlscholars.usra.edu/scholarsprogram/locations/",
+   "https://afrlscholars.usra.edu/scholarsprogram/",
+   "https://afrlscholars.usra.edu/scholarsprogram/dates/",
+   "https://afrlscholars.usra.edu/scholarsprogram/stipends/",
+   "https://afrlscholars.usra.edu/scholarsprogram/eligibility/"
   ]
  },
  {
@@ -459,7 +514,7 @@
   "award": "Paid summer internship",
   "branch": "Air Force",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: 2027 dates confirmed; stipend tables describe the most recent session, not guaranteed 2027 rates. 2027 dates and program/location pages reviewed; stipend table labels figures most recent session. 2027 amounts, allowances and project terms unconfirmed.",
   "cit": "us",
   "citizenship": "U.S. citizens only; permanent residents not eligible",
   "deadline": "2027-01-11",
@@ -467,14 +522,14 @@
   "eligibility": "Undergraduate and graduate STEM students (some sites also take upper level high school students). GPA of 3.0 encouraged, not required. Age 16 or older (18 at California sites).",
   "format": "",
   "funding": "stipend",
-  "fundingNote": "Weekly stipend by level: $621.60 (undergrad under 60 credits), $870.40 (undergrad 60+ credits), $1,182.80 (master's), $1,431.20 (PhD); housing not provided at most sites",
+  "fundingNote": "Weekly stipend by level: $621.60 (undergrad under 60 credits), $870.40 (undergrad 60+ credits), $1,182.80 (master's), $1,431.20 (PhD); housing not provided at most sites. Published most-recent-session rates; confirm the 2027 offer and allowances.",
   "hsi": "",
   "levels": [
    "undergrad",
    "grad"
   ],
   "location": "AFRL sites nationwide",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": "2026-10-12",
   "recurs": true,
   "regions": [],
@@ -488,7 +543,13 @@
   "type": "Internship",
   "url": "https://afrlscholars.usra.edu/scholarsprogram/",
   "verified": "2026-09-29",
-  "id": "afrl-scholars"
+  "id": "afrl-scholars",
+  "sources": [
+   "https://afrlscholars.usra.edu/scholarsprogram/",
+   "https://afrlscholars.usra.edu/scholarsprogram/dates/",
+   "https://afrlscholars.usra.edu/scholarsprogram/stipends/",
+   "https://afrlscholars.usra.edu/scholarsprogram/eligibility/"
+  ]
  },
  {
   "added": "2026-09-29",
@@ -496,7 +557,7 @@
   "award": "",
   "branch": "Army",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: Official page still describes closed January 12, 2024 call; no current call or replacement funding verified.",
   "cit": "us_pr",
   "citizenship": "U.S. citizens, nationals or permanent residents",
   "deadline": null,
@@ -510,7 +571,7 @@
    "faculty"
   ],
   "location": "Your university",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [],
@@ -524,7 +585,10 @@
   "type": "Faculty grant",
   "url": "https://arl.devcom.army.mil/collaborate-with-us/opportunity/devcom-arl-hbcu-mi-early-career-program/",
   "verified": "2026-09-29",
-  "id": "arl-hbcumi-ecp"
+  "id": "arl-hbcumi-ecp",
+  "sources": [
+   "https://arl.devcom.army.mil/collaborate-with-us/opportunity/devcom-arl-hbcu-mi-early-career-program/"
+  ]
  },
  {
   "added": "2026-09-29",
@@ -532,7 +596,7 @@
   "award": "",
   "branch": "Army",
   "campuses": [],
-  "changeNote": "Link audit 2026-09-29: postdoc page and benefits added",
+  "changeNote": "Weekly review 2026-10-05: ORAU application/benefits/eligibility reviewed; year-round pathways confirmed, but individual host funding/access/citizenship not fully established.",
   "cit": "unknown",
   "citizenship": "",
   "deadline": null,
@@ -546,7 +610,7 @@
    "postdoc"
   ],
   "location": "ARL sites",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [],
@@ -560,7 +624,10 @@
   "type": "Postdoc",
   "url": "https://www.orau.org/ARLFellowship/fellowship-types/how-to-apply-postdoc.htm",
   "verified": "2026-09-29",
-  "id": "arl-postdoc"
+  "id": "arl-postdoc",
+  "sources": [
+   "https://www.orau.org/ARLFellowship/fellowship-types/how-to-apply-postdoc.htm"
+  ]
  },
  {
   "added": "2026-09-29",
@@ -568,22 +635,22 @@
   "award": "",
   "branch": "Army",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: Official operator explicitly describes paid research; amount and next cycle remain unannounced. Operator confirms paid research and 2026 eligibility; cycle closed February 25. Next timing/amount unannounced; recurrence not assumed.",
   "cit": "open",
   "citizenship": "U.S. citizenship not required to apply",
   "deadline": null,
   "deadlineNote": "2027 call not posted yet; the 2026 call closed February 25, 2026",
   "eligibility": "Undergraduate through PhD students and recent graduates; GPA 2.5 or higher; age 18 or older.",
   "format": "",
-  "funding": "unknown",
-  "fundingNote": "Pay not stated on the program page; ask ORAU when you apply",
+  "funding": "stipend",
+  "fundingNote": "Paid research experience; amount not published. The reviewed 2026 cycle is closed; 2027 terms are not yet announced.",
   "hsi": "",
   "levels": [
    "undergrad",
    "grad"
   ],
   "location": "Austin, TX",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [
@@ -593,8 +660,8 @@
   "seed": true,
   "sponsor": "Army Research Laboratory, administered by ORAU",
   "status": "published",
-  "summary": "Army Research Laboratory's Austin site is one of three hosts for the Summer Student Experience.",
-  "summary_es": "La sede de Austin del Laboratorio de Investigación del Ejército es una de las tres sedes del programa de verano para estudiantes.",
+  "summary": "Paid summer research at the Army Research Laboratory in Austin. The 2026 cycle is closed; the next application window is unconfirmed.",
+  "summary_es": "Investigación remunerada de verano en el Laboratorio de Investigación del Ejército en Austin. La convocatoria de 2026 está cerrada; aún no se confirma la siguiente.",
   "title": "ARL South summer students (Austin)",
   "type": "Internship",
   "url": "https://www.orau.org/ARLFellowship/fellowship-types/how-to-apply-summer-student-experience.htm",
@@ -606,6 +673,9 @@
     "lat": 30.285,
     "lon": -97.734
    }
+  ],
+  "sources": [
+   "https://www.orau.org/ARLFellowship/fellowship-types/how-to-apply-summer-student-experience.htm"
   ]
  },
  {
@@ -614,22 +684,22 @@
   "award": "Paid summer appointment; see listing",
   "branch": "Army",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: Official operator explicitly describes paid research; amount and next cycle remain unannounced. Operator confirms paid research and 2026 eligibility; cycle closed February 25. Next timing/amount unannounced; recurrence not assumed.",
   "cit": "open",
   "citizenship": "U.S. citizenship not required to apply",
   "deadline": null,
   "deadlineNote": "2027 call not posted yet; the 2026 call closed February 25, 2026 for appointments from May to September",
   "eligibility": "Undergraduate through PhD students and recent bachelor's or master's graduates; GPA 2.5 or higher; age 18 or older.",
   "format": "",
-  "funding": "unknown",
-  "fundingNote": "Pay not stated on the program page; ask ORAU when you apply",
+  "funding": "stipend",
+  "fundingNote": "Paid research experience; amount not published. The reviewed 2026 cycle is closed; 2027 terms are not yet announced.",
   "hsi": "",
   "levels": [
    "undergrad",
    "grad"
   ],
   "location": "Adelphi and Aberdeen, Maryland; Austin, Texas",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [],
@@ -637,8 +707,8 @@
   "seed": true,
   "sponsor": "Army Research Laboratory, administered by ORAU",
   "status": "published",
-  "summary": "Summer research at the Army Research Laboratory for students from undergraduate through PhD, plus recent graduates.",
-  "summary_es": "Investigación de verano en el Laboratorio de Investigación del Ejército para estudiantes desde licenciatura hasta doctorado y recién graduados.",
+  "summary": "Paid summer research at Army Research Laboratory sites. The 2026 cycle is closed; the next application window is unconfirmed.",
+  "summary_es": "Investigación remunerada de verano en sedes del Laboratorio de Investigación del Ejército. La convocatoria de 2026 está cerrada; aún no se confirma la siguiente.",
   "title": "DEVCOM ARL Summer Student Experience",
   "type": "Internship",
   "url": "https://www.orau.org/ARLFellowship/fellowship-types/how-to-apply-summer-student-experience.htm",
@@ -660,6 +730,9 @@
     "lat": 30.285,
     "lon": -97.734
    }
+  ],
+  "sources": [
+   "https://www.orau.org/ARLFellowship/fellowship-types/how-to-apply-summer-student-experience.htm"
   ]
  },
  {
@@ -670,7 +743,7 @@
   "campuses": [
    "University of Texas at Austin"
   ],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: Official directory confirms paid undergraduate/graduate pathways; current vacancy eligibility, tuition assistance and citizenship incomplete.",
   "cit": "unknown",
   "citizenship": "",
   "deadline": null,
@@ -685,7 +758,7 @@
    "grad"
   ],
   "location": "Austin, TX",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [
@@ -708,6 +781,9 @@
     "lat": 30.39,
     "lon": -97.73
    }
+  ],
+  "sources": [
+   "https://www.arlut.utexas.edu/students.shtml"
   ]
  },
  {
@@ -716,7 +792,7 @@
   "award": "",
   "branch": "Army",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: Official directory contains multiple historical/current pathways, not one open award. Linked programs need separate cycle review.",
   "cit": "unknown",
   "citizenship": "",
   "deadline": null,
@@ -730,7 +806,7 @@
    "grad"
   ],
   "location": "Army labs",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [],
@@ -744,7 +820,10 @@
   "type": "Research program",
   "url": "https://hbcumiresearch.army.mil/research-teaming-opportunities/graduate-students-and-doctoral-candidates/",
   "verified": "2026-09-29",
-  "id": "army-hbcumi-grad"
+  "id": "army-hbcumi-grad",
+  "sources": [
+   "https://hbcumiresearch.army.mil/research-teaming-opportunities/graduate-students-and-doctoral-candidates/"
+  ]
  },
  {
   "added": "2026-09-29",
@@ -752,7 +831,7 @@
   "award": "",
   "branch": "HSRU",
   "campuses": [],
-  "changeNote": "Link audit 2026-09-29: HSRU moved this page; link updated",
+  "changeNote": "Weekly review 2026-10-05: Official page describes institutional advising development and ended September 28–30 Think Lab; future student-facing service availability/cost not established.",
   "cit": "unknown",
   "citizenship": "",
   "deadline": null,
@@ -768,7 +847,7 @@
    "postdoc"
   ],
   "location": "HSRU campuses",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [],
@@ -782,7 +861,10 @@
   "type": "Workshop",
   "url": "https://www.hsru.org/ascendr/advising",
   "verified": "2026-09-29",
-  "id": "ascendr-advising"
+  "id": "ascendr-advising",
+  "sources": [
+   "https://www.hsru.org/ascendr/advising"
+  ]
  },
  {
   "added": "2026-09-29",
@@ -790,7 +872,7 @@
   "award": "$12,500",
   "branch": "HSRU",
   "campuses": [],
-  "changeNote": "Link audit 2026-09-29: citizenship clarified",
+  "changeNote": "Weekly review 2026-10-05: 2027–28 timetable, $12,500 award, U.S. citizenship, HSRU full-time STEM PhD, GPA 3.5 and mentor/materials confirmed. Closing time not stated.",
   "cit": "us",
   "citizenship": "U.S. citizens (born or naturalized); permanent residents are not eligible",
   "deadline": "2027-01-31",
@@ -817,8 +899,11 @@
   "title": "AscendR Fellowship",
   "type": "Fellowship",
   "url": "https://www.hsru.org/ascendr/fellowship",
-  "verified": "2026-09-29",
-  "id": "ascendr-fellowship"
+  "verified": "2026-10-05",
+  "id": "ascendr-fellowship",
+  "sources": [
+   "https://www.hsru.org/ascendr/fellowship"
+  ]
  },
  {
   "added": "2026-09-29",
@@ -826,7 +911,7 @@
   "award": "Full tuition and fees, books/supplies, living stipend, certification allowance and paid summer internship; up to five years of support subject to program requirements",
   "branch": "DoW wide",
   "campuses": [],
-  "changeNote": "Clarified official program name, former CySP name, benefits and next-cycle timing using the AY 2026–2027 announcement.",
+  "changeNote": "Weekly review 2026-10-05: Sponsor page/document attempted, but current recruitment cycle and campus-specific terms not substantively established.",
   "cit": "us",
   "citizenship": "U.S. citizens able to obtain a security clearance",
   "deadline": null,
@@ -841,7 +926,7 @@
    "grad"
   ],
   "location": "Participating NCAE-C universities",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [],
@@ -857,8 +942,8 @@
   "verified": "2026-09-30",
   "id": "cyber-csa",
   "sources": [
-   "https://dowcio.war.gov/Portals/0/Documents/Announcement/CSA%20CIO%20Applicaton%20Announcement_Fall%202026-Spring%202027.pdf",
-   "https://www.cloud.mil/Academic-Programs/DoW-Cyber-Service-Academy/"
+   "https://www.cloud.mil/Academic-Programs/DoW-Cyber-Service-Academy/",
+   "https://dowcio.war.gov/Portals/0/Documents/Announcement/CSA%20CIO%20Applicaton%20Announcement_Fall%202026-Spring%202027.pdf"
   ]
  },
  {
@@ -867,7 +952,7 @@
   "award": "",
   "branch": "DoW wide",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: Current DARPA overview reviewed; no dated FY2027 solicitation established. Typical annual timing is not an announced call.",
   "cit": "unknown",
   "citizenship": "",
   "deadline": null,
@@ -881,7 +966,7 @@
    "faculty"
   ],
   "location": "Your university",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [],
@@ -895,7 +980,10 @@
   "type": "Faculty grant",
   "url": "https://www.darpa.mil/work-with-us/for-universities/young-faculty-award",
   "verified": "2026-09-29",
-  "id": "darpa-yfa"
+  "id": "darpa-yfa",
+  "sources": [
+   "https://www.darpa.mil/work-with-us/for-universities/young-faculty-award"
+  ]
  },
  {
   "added": "2026-09-29",
@@ -903,7 +991,7 @@
   "award": "Full tuition, fees and a monthly stipend, plus summer internships and early job placement",
   "branch": "DoW wide",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: Official page still describes Cohort 27 beginning Fall 2025; next-cohort recruitment and terms require confirmation.",
   "cit": "us",
   "citizenship": "U.S. citizens able to obtain a security clearance",
   "deadline": null,
@@ -917,7 +1005,7 @@
    "undergrad"
   ],
   "location": "University of Arizona, Tucson",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [
@@ -940,6 +1028,9 @@
     "lat": 32.232,
     "lon": -110.953
    }
+  ],
+  "sources": [
+   "https://deanofstudents.arizona.edu/defense-civilian-training-corps-program"
   ]
  },
  {
@@ -948,7 +1039,7 @@
   "award": "",
   "branch": "Army",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: Official directory reviewed; paid/unpaid programs have separate requirements and calls. No uniform eligibility/funding inferred.",
   "cit": "unknown",
   "citizenship": "",
   "deadline": null,
@@ -963,7 +1054,7 @@
    "grad"
   ],
   "location": "DEVCOM centers nationwide",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [],
@@ -977,7 +1068,10 @@
   "type": "Internship",
   "url": "https://devcom.army.mil/join-our-team/internships-and-other-programs/",
   "verified": "2026-09-29",
-  "id": "devcom-internships"
+  "id": "devcom-internships",
+  "sources": [
+   "https://devcom.army.mil/join-our-team/internships-and-other-programs/"
+  ]
  },
  {
   "added": "2026-09-29",
@@ -985,7 +1079,7 @@
   "award": "",
   "branch": "DoW wide",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: FY2027 landing-page deadline confirmed through web retrieval, but notice PDF not fully retrieved; complete eligibility/equipment-cost terms unverified.",
   "cit": "unknown",
   "citizenship": "",
   "deadline": "2026-11-06",
@@ -999,7 +1093,7 @@
    "faculty"
   ],
   "location": "Your university",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [],
@@ -1013,7 +1107,10 @@
   "type": "Faculty grant",
   "url": "https://www.onr.navy.mil/work-with-us/funding-opportunities/fiscal-year-fy-2027-department-war-dow-defense-university",
   "verified": "2026-09-29",
-  "id": "durip"
+  "id": "durip",
+  "sources": [
+   "https://www.onr.navy.mil/work-with-us/funding-opportunities/fiscal-year-fy-2027-department-war-dow-defense-university"
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1021,7 +1118,7 @@
   "award": "Stipend set by the lab, with possible relocation and travel allowances; part or full time for up to 12 months",
   "branch": "Army",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: Official ORISE posting describes 2026 research/benefits; no new 2027 posting or award terms established.",
   "cit": "unknown",
   "citizenship": "",
   "deadline": null,
@@ -1037,7 +1134,7 @@
    "postdoc"
   ],
   "location": "Champaign, IL",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [
@@ -1060,6 +1157,9 @@
     "lat": 40.11,
     "lon": -88.24
    }
+  ],
+  "sources": [
+   "https://www.zintellect.com/Opportunity/Details/ERDC-CERL-2026-0001"
   ]
  },
  {
@@ -1068,11 +1168,11 @@
   "award": "",
   "branch": "Defense industry",
   "campuses": [],
-  "changeNote": "Link audit 2026-09-29: travel, housing and dates added from GA's page",
+  "changeNote": "Weekly review 2026-10-05: Clarified that many vacancies close in January despite broader September–March recruiting. Employer overview/FAQ reviewed: pay, eligibility, location and conditional travel/housing; recruiting season clarified against earlier vacancy closures.",
   "cit": "varies",
   "citizenship": "Many positions require U.S. citizenship",
   "deadline": null,
-  "deadlineNote": "Applications accepted September through the end of March; decisions by the end of March",
+  "deadlineNote": "The overview describes September–March recruiting; its FAQ says most internship postings close in January. Apply early and follow the individual vacancy deadline.",
   "eligibility": "Bachelor's, master's or PhD students (first year students may apply); GPA 3.0 preferred.",
   "format": "",
   "funding": "stipend",
@@ -1098,7 +1198,7 @@
   "title": "General Atomics summer internships",
   "type": "Internship",
   "url": "https://www.ga.com/careers/early-career",
-  "verified": "2026-09-29",
+  "verified": "2026-10-05",
   "id": "general-atomics",
   "sites": [
    {
@@ -1106,6 +1206,9 @@
     "lat": 32.89,
     "lon": -117.23
    }
+  ],
+  "sources": [
+   "https://www.ga.com/careers/early-career"
   ]
  },
  {
@@ -1114,7 +1217,7 @@
   "award": "$1,500 a week (2026) plus housing and travel",
   "branch": "DoW wide",
   "campuses": [],
-  "changeNote": "Link audit 2026-09-29: program renamed HBCU/TCU; pay, housing and travel confirmed on the program's 2026 details page",
+  "changeNote": "Weekly review 2026-10-05: Main program text now uses HBCU/MI; metadata still uses HBCU/TCU. Next-cycle eligibility/funding unconfirmed. Operator overview says HBCU/MI while metadata retains HBCU/TCU. No dated 2027 call; next-cycle eligibility/benefits not fully retrieved.",
   "cit": "us",
   "citizenship": "U.S. citizens (no dual citizenship)",
   "deadline": null,
@@ -1129,7 +1232,7 @@
    "grad"
   ],
   "location": "DoW facilities nationwide",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [],
@@ -1137,13 +1240,17 @@
   "seed": true,
   "sponsor": "Department of War",
   "status": "published",
-  "summary": "Summer research placements of about 11 weeks at DoW facilities for students and recent graduates of HBCUs, Tribal Colleges and Universities, and Minority Institutions.",
-  "summary_es": "Estancias de investigación de verano de unas 11 semanas en instalaciones del DoW para estudiantes y recién graduados de HBCU, universidades tribales e Instituciones de Minorías.",
-  "title": "DoW HBCU/TCU Summer Research Internship Program",
+  "summary": "Defense-facility summer research for students and recent graduates of participating HBCUs and Minority Institutions. Confirm your institution’s eligibility and the next cycle; earlier awards do not establish 2027 funding.",
+  "summary_es": "Investigación de verano en instalaciones de defensa para estudiantes y recién graduados de HBCU e instituciones minoritarias participantes. Confirme la elegibilidad institucional y la próxima convocatoria; las becas anteriores no garantizan fondos para 2027.",
+  "title": "DoW HBCU/MI Summer Research Internship Program",
   "type": "Internship",
   "url": "https://dowhbcutcuinternship.com/",
   "verified": "2026-09-29",
-  "id": "hbcumi-intern"
+  "id": "hbcumi-intern",
+  "sources": [
+   "https://dowhbcutcuinternship.com/",
+   "https://dowhbcutcuinternship.com/selection-process/"
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1151,7 +1258,7 @@
   "award": "",
   "branch": "NNSA defense lab",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: Student overview loaded despite automated 404; undergraduate/graduate subprogram eligibility and current benefits not fully reverified.",
   "cit": "unknown",
   "citizenship": "",
   "deadline": null,
@@ -1166,7 +1273,7 @@
    "grad"
   ],
   "location": "Los Alamos, NM",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [
@@ -1189,6 +1296,9 @@
     "lat": 35.88,
     "lon": -106.3
    }
+  ],
+  "sources": [
+   "https://www.lanl.gov/engage/collaboration/student-programs"
   ]
  },
  {
@@ -1197,7 +1307,7 @@
   "award": "",
   "branch": "NNSA defense lab",
   "campuses": [],
-  "changeNote": "Link audit 2026-09-29: title and dates matched to the linked Computing internships page",
+  "changeNote": "Weekly review 2026-10-05: Official student page gives September 1, 2026–January 15, 2027 recruiting, paid work, age 18, enrollment and role-dependent access/relocation.",
   "cit": "varies",
   "citizenship": "U.S. citizens; some positions open to foreign nationals",
   "deadline": "2027-01-15",
@@ -1227,7 +1337,7 @@
   "title": "Lawrence Livermore National Laboratory computing summer internships",
   "type": "Internship",
   "url": "https://computing.llnl.gov/careers/interns",
-  "verified": "2026-09-29",
+  "verified": "2026-10-05",
   "id": "llnl",
   "sites": [
    {
@@ -1235,6 +1345,9 @@
     "lat": 37.69,
     "lon": -121.7
    }
+  ],
+  "sources": [
+   "https://computing.llnl.gov/careers/interns"
   ]
  },
  {
@@ -1243,12 +1356,12 @@
   "award": "",
   "branch": "Navy",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: Completed official student-employment eligibility. Official Navy employment pages reviewed for applications, age/enrollment/GPA, citizenship/access, locations and paid work.",
   "cit": "us",
   "citizenship": "U.S. citizens",
   "deadline": null,
   "deadlineNote": "Continuous applications",
-  "eligibility": "30 or more college credits; GPA 2.5 or higher.",
+  "eligibility": "U.S. citizen, age 18 when applying, accepted/enrolled in a STEM degree program, at least 30 college credits and GPA 2.5 or higher; background investigation required.",
   "format": "",
   "funding": "stipend",
   "fundingNote": "Paid student employment",
@@ -1273,7 +1386,7 @@
   "title": "NAWCAD STEM Student Employment Program",
   "type": "Internship",
   "url": "https://www.navair.navy.mil/nawcad/undergrad",
-  "verified": "2026-09-29",
+  "verified": "2026-10-05",
   "id": "nawcad-ssep",
   "sites": [
    {
@@ -1286,6 +1399,9 @@
     "lat": 38.29,
     "lon": -76.41
    }
+  ],
+  "sources": [
+   "https://www.navair.navy.mil/nawcad/undergrad"
   ]
  },
  {
@@ -1294,12 +1410,12 @@
   "award": "",
   "branch": "Navy",
   "campuses": [],
-  "changeNote": "Link audit 2026-09-29: old lab page was removed; now links to the NREIP labs list",
+  "changeNote": "Weekly review 2026-10-05: Added current NREIP deadline time and host access requirements. 2027 program, stipend tiers, FAQ and host directory reviewed; November 30, 11:59 PM Central deadline. Host restrictions preserved.",
   "cit": "us",
   "citizenship": "U.S. citizens only; no dual citizens at this lab",
   "deadline": "2026-11-30",
-  "deadlineNote": "Apply through NREIP and choose NAWCTSD",
-  "eligibility": "",
+  "deadlineNote": "Summer 2027 NREIP: November 30, 2026, 11:59 PM Central.",
+  "eligibility": "NREIP college/graduate requirements apply. NAWCTSD requires solely U.S. citizenship (no permanent residents or dual citizens), age 18 before the start, a driver’s license and personal transportation.",
   "format": "",
   "funding": "stipend",
   "fundingNote": "NREIP stipend ($7,500 to $11,500 for 10 weeks)",
@@ -1310,7 +1426,7 @@
   ],
   "location": "Orlando, FL",
   "needsCheck": false,
-  "opens": null,
+  "opens": "2026-09-15",
   "recurs": true,
   "regions": [
    "Florida"
@@ -1324,7 +1440,7 @@
   "title": "NAWC Training Systems Division (NREIP host)",
   "type": "Internship",
   "url": "https://www.navalsteminterns.us/internships/nreip/labs/",
-  "verified": "2026-09-29",
+  "verified": "2026-10-05",
   "id": "nawctsd",
   "sites": [
    {
@@ -1332,6 +1448,11 @@
     "lat": 28.59,
     "lon": -81.2
    }
+  ],
+  "sources": [
+   "https://www.navalsteminterns.us/internships/nreip/labs/",
+   "https://www.navalsteminterns.us/internships/nreip/",
+   "https://www.navalsteminterns.us/internships/nreip/faqs/"
   ]
  },
  {
@@ -1340,7 +1461,7 @@
   "award": "",
   "branch": "Navy",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: Official Navy employment pages reviewed for applications, age/enrollment/GPA, citizenship/access, locations and paid work.",
   "cit": "us",
   "citizenship": "U.S. citizens able to obtain a Secret clearance",
   "deadline": null,
@@ -1370,7 +1491,7 @@
   "title": "NAWC Weapons Division student programs",
   "type": "Internship",
   "url": "https://www.navair.navy.mil/nawcwd/now_hiring",
-  "verified": "2026-09-29",
+  "verified": "2026-10-05",
   "id": "nawcwd",
   "sites": [
    {
@@ -1383,6 +1504,9 @@
     "lat": 34.12,
     "lon": -119.12
    }
+  ],
+  "sources": [
+   "https://www.navair.navy.mil/nawcwd/now_hiring"
   ]
  },
  {
@@ -1391,12 +1515,12 @@
   "award": "Three years: full tuition and fees, $3,600 a month stipend, up to $1,600 a year medical insurance",
   "branch": "DoW wide",
   "campuses": [],
-  "changeNote": "Rechecked application window and tuition/insurance benefits; expanded the program name for search.",
+  "changeNote": "Weekly review 2026-10-05: Added explicit 2026 degree-timing and remaining-study requirements. 2026 application, eligibility and benefits reviewed: October 30, 5 PM Eastern; degree by 2026, three graduate years remaining, tuition/stipend.",
   "cit": "us",
-  "citizenship": "U.S. citizens or nationals",
+  "citizenship": "U.S. citizens (including dual citizens) or U.S. nationals; permanent residents are not eligible.",
   "deadline": "2026-10-30",
   "deadlineNote": "5 PM Eastern",
-  "eligibility": "Doctoral students in DoW relevant science and engineering fields; use the eligibility check on the program site.",
+  "eligibility": "U.S. citizen (including dual citizen) or national; baccalaureate received by 2026 for a Fall 2027 fellowship. Applying to/accepted at a U.S. graduate institution, or within the first two graduate years; at least three graduate years remaining at application; research aligned with the specified defense topics.",
   "format": "",
   "funding": "full",
   "fundingNote": "Full tuition and fees, a $3,600 monthly stipend ($43,200 a year) and up to $1,600 a year for medical insurance, for three years",
@@ -1418,11 +1542,14 @@
   "title": "NDSEG Fellowship",
   "type": "Fellowship",
   "url": "https://ndseg.sysplus.com/",
-  "verified": "2026-09-30",
+  "verified": "2026-10-05",
   "id": "ndseg",
   "sources": [
+   "https://ndseg.sysplus.com/",
    "https://ndseg.sysplus.com/NDSEG/Applicants/How-to-Apply",
-   "https://ndseg.sysplus.com/NDSEG/Fellows/Tuition-Fees-Benefits"
+   "https://ndseg.sysplus.com/NDSEG/Fellows/Tuition-Fees-Benefits",
+   "https://ndseg.sysplus.com/NDSEG/about/eligibility",
+   "https://ndseg.sysplus.com/NDSEG/Fellows/Stipends-Travel"
   ]
  },
  {
@@ -1431,7 +1558,7 @@
   "award": "",
   "branch": "Navy",
   "campuses": [],
-  "changeNote": "Link audit 2026-09-29: deadline note clarified",
+  "changeNote": "Weekly review 2026-10-05: Official page denied access in direct retrieval and browser. No conclusion about closure; existing terms and verified date retained.",
   "cit": "us",
   "citizenship": "U.S. citizens (some NREIP labs accept permanent residents or dual citizens); background check and security clearance required for student jobs",
   "deadline": "2026-11-30",
@@ -1446,7 +1573,7 @@
    "grad"
   ],
   "location": "San Diego, CA",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [
@@ -1469,6 +1596,9 @@
     "lat": 32.71,
     "lon": -117.24
    }
+  ],
+  "sources": [
+   "https://www.niwcpacific.navy.mil/Connect/Internships-Externships-Student-Employment/"
   ]
  },
  {
@@ -1479,7 +1609,7 @@
   "campuses": [
    "New Mexico State University"
   ],
-  "changeNote": "Replaced general PSL link with CREW page; clarified experience requirement, schedule, funding and conditional clearance sponsorship.",
+  "changeNote": "Weekly review 2026-10-05: Rendered CREW page confirms schedule, experience and contract-dependent clearance; exact student-level/citizenship eligibility still needs confirmation.",
   "cit": "unknown",
   "citizenship": "Confirm citizenship and clearance eligibility with CREW; sponsorship depends on PSL’s DoD contract.",
   "deadline": null,
@@ -1494,7 +1624,7 @@
    "grad"
   ],
   "location": "Las Cruces, NM",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [
@@ -1529,12 +1659,12 @@
   "award": "",
   "branch": "NNSA defense lab",
   "campuses": [],
-  "changeNote": "Link audit 2026-09-29: eligibility added",
+  "changeNote": "Weekly review 2026-10-05: Removed predicted December opening and outdated participation statistics; refreshed posted eligibility. Official program/eligibility reviewed; 2027 window and vacancy arrangements unconfirmed. Removed predicted opening and stale statistics.",
   "cit": "us",
   "citizenship": "U.S. citizens",
   "deadline": null,
-  "deadlineNote": "The 2026 call closed January 30, 2026; watch for the 2027 call in December",
-  "eligibility": "First year of college completed, GPA 3.0 or higher, drug screen and a driver's license.",
+  "deadlineNote": "The last recorded 2026 deadline was January 30, 2026. No dated 2027 application window was confirmed; monitor current student vacancies.",
+  "eligibility": "U.S. citizen residing in the contiguous United States; first college year completed when applying; GPA 3.0+, valid driver’s license and drug screening. Engineering degrees require ABET accreditation; eligible STEM degrees require calculus-based coursework.",
   "format": "",
   "funding": "stipend",
   "fundingNote": "Paid internship; housing not mentioned",
@@ -1544,7 +1674,7 @@
    "grad"
   ],
   "location": "Las Vegas area, NV",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [
@@ -1554,8 +1684,8 @@
   "seed": false,
   "sponsor": "Nevada National Security Site (NNSA)",
   "status": "published",
-  "summary": "Twelve week paid summer internships, in person or hybrid; about 60 percent of 2025 interns kept working part time during the school year.",
-  "summary_es": "Prácticas pagadas de verano de doce semanas, presenciales o híbridas; cerca del 60 por ciento continuó a tiempo parcial durante el año escolar.",
+  "summary": "Paid summer student work supporting the Nevada National Security Site; part-time academic-year work may be available. Check current vacancies for dates and work arrangements.",
+  "summary_es": "Trabajo estudiantil remunerado de verano en apoyo al Nevada National Security Site; puede haber trabajo a tiempo parcial durante el año académico. Consulte las vacantes para fechas y modalidad.",
   "title": "Nevada National Security Site student program",
   "type": "Internship",
   "url": "https://nnss.gov/careers/student-programs/",
@@ -1567,6 +1697,10 @@
     "lat": 36.2,
     "lon": -115.12
    }
+  ],
+  "sources": [
+   "https://nnss.gov/careers/student-programs/",
+   "https://nnss.gov/careers/student-programs/eligibility-and-application-information/"
   ]
  },
  {
@@ -1575,7 +1709,7 @@
   "award": "",
   "branch": "Defense industry",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: Employer overview contains mixed dated material; current vacancies, pay and access restrictions not fully established.",
   "cit": "unknown",
   "citizenship": "",
   "deadline": null,
@@ -1590,7 +1724,7 @@
    "grad"
   ],
   "location": "Sites nationwide",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [],
@@ -1604,7 +1738,10 @@
   "type": "Internship",
   "url": "https://www.northropgrumman.com/careers/internships-at-northrop-grumman",
   "verified": "2026-09-29",
-  "id": "northrop"
+  "id": "northrop",
+  "sources": [
+   "https://www.northropgrumman.com/careers/internships-at-northrop-grumman"
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1612,7 +1749,7 @@
   "award": "",
   "branch": "Navy",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: Official page confirms 2027 summer schedules and general requirements; project-specific selection/funding needs confirmation.",
   "cit": "us",
   "citizenship": "U.S. citizens",
   "deadline": "2026-11-30",
@@ -1627,7 +1764,7 @@
    "grad"
   ],
   "location": "Monterey, CA",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [
@@ -1650,6 +1787,9 @@
     "lat": 36.6,
     "lon": -121.87
    }
+  ],
+  "sources": [
+   "https://nps.edu/web/stem/college"
   ]
  },
  {
@@ -1658,12 +1798,12 @@
   "award": "Stipend set by host lab; 12 months, renewable for 12 to 24 more",
   "branch": "Multiple agencies",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: Corrected the next application deadline to November 2 under the official weekend/holiday rule. Application page explicitly gives September 1–November 2, 2026; degree/senior-track, tenure, lab-specific citizenship and benefits reviewed.",
   "cit": "varies",
   "citizenship": "Varies by host laboratory",
-  "deadline": "2026-11-01",
-  "deadlineNote": "Four cycles a year: February 1, May 1, August 1, November 1 (5 PM Eastern)",
-  "eligibility": "PhD or equivalent earned within five years for the postdoctoral track; a senior track exists for more experienced researchers.",
+  "deadline": "2026-11-02",
+  "deadlineNote": "Current window: September 1–November 2, 2026, closing 5 PM Eastern. Quarterly February/May/August/November deadlines move to the next business day when the first falls on a weekend or federal holiday.",
+  "eligibility": "Doctorate required before tenure starts. Postdoctoral applicants: less than five years since doctorate at the deadline. Senior track: five or more years or an eligible permanent appointment with an established research record. Citizenship and prior host-lab affiliation restrictions depend on the laboratory.",
   "format": "",
   "funding": "stipend",
   "fundingNote": "Stipend set by the host lab for 12 months, renewable",
@@ -1673,7 +1813,7 @@
   ],
   "location": "Federal labs nationwide",
   "needsCheck": false,
-  "opens": null,
+  "opens": "2026-09-01",
   "recurs": true,
   "regions": [],
   "scope": "National",
@@ -1685,8 +1825,11 @@
   "title": "NRC Research Associateship Programs",
   "type": "Postdoc",
   "url": "https://www.nationalacademies.org/programs/PGA-FP-18-P-23/application-process",
-  "verified": "2026-09-29",
-  "id": "nrc-rap"
+  "verified": "2026-10-05",
+  "id": "nrc-rap",
+  "sources": [
+   "https://www.nationalacademies.org/programs/PGA-FP-18-P-23/application-process"
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1694,7 +1837,7 @@
   "award": "Stipend: $7,500 new undergraduates, $9,000 returning undergraduates, $11,500 graduate students",
   "branch": "Navy",
   "campuses": [],
-  "changeNote": "Link audit 2026-09-29: citizenship clarified from the NREIP FAQ",
+  "changeNote": "Weekly review 2026-10-05: 2027 program, stipend tiers, FAQ and host directory reviewed; November 30, 11:59 PM Central deadline. Host restrictions preserved.",
   "cit": "varies",
   "citizenship": "U.S. citizens; a few labs consider permanent residents",
   "deadline": "2026-11-30",
@@ -1722,8 +1865,11 @@
   "title": "Naval Research Enterprise Internship Program (NREIP)",
   "type": "Internship",
   "url": "https://www.navalsteminterns.us/internships/nreip/",
-  "verified": "2026-09-29",
-  "id": "nreip"
+  "verified": "2026-10-05",
+  "id": "nreip",
+  "sources": [
+   "https://www.navalsteminterns.us/internships/nreip/"
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1731,12 +1877,12 @@
   "award": "",
   "branch": "Navy",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: Replaced broken host URL with official NREIP directory; added host restrictions. 2027 program, stipend tiers, FAQ and host directory reviewed; November 30, 11:59 PM Central deadline. Host restrictions preserved.",
   "cit": "us",
   "citizenship": "Solely U.S. citizens able to obtain a security clearance",
   "deadline": "2026-11-30",
-  "deadlineNote": "Apply through NREIP",
-  "eligibility": "",
+  "deadlineNote": "Summer 2027 NREIP: November 30, 2026, 11:59 PM Central.",
+  "eligibility": "NREIP college/graduate requirements apply. Corona requires solely U.S. citizenship (no permanent residents or dual citizens), clearance before the start, and students to arrange housing and transportation.",
   "format": "",
   "funding": "stipend",
   "fundingNote": "NREIP stipend ($7,500 to $11,500 for 10 weeks)",
@@ -1747,7 +1893,7 @@
   ],
   "location": "Corona, CA",
   "needsCheck": false,
-  "opens": null,
+  "opens": "2026-09-15",
   "recurs": true,
   "regions": [
    "Southern California"
@@ -1760,8 +1906,8 @@
   "summary_es": "Centro de la Marina dedicado a evaluación de sistemas y ciencia de la medición; recibe practicantes de NREIP.",
   "title": "NSWC Corona Division (NREIP host)",
   "type": "Internship",
-  "url": "https://www.navalsteminterns.us/nreip/labs/nswc_corona.html",
-  "verified": "2026-09-29",
+  "url": "https://www.navalsteminterns.us/internships/nreip/labs/",
+  "verified": "2026-10-05",
   "id": "nswc-corona",
   "sites": [
    {
@@ -1769,6 +1915,11 @@
     "lat": 33.87,
     "lon": -117.57
    }
+  ],
+  "sources": [
+   "https://www.navalsteminterns.us/internships/nreip/labs/",
+   "https://www.navalsteminterns.us/internships/nreip/",
+   "https://www.navalsteminterns.us/internships/nreip/faqs/"
   ]
  },
  {
@@ -1777,30 +1928,30 @@
   "award": "$1,650 to $2,150 per week depending on fellow level",
   "branch": "Navy",
   "campuses": [],
-  "changeNote": "Official-source review 2026-09-30: faculty laboratory research, student participation, funding and application status clarified.",
+  "changeNote": "Weekly review 2026-10-05: Added announced 2027 application window and corrected stipends by faculty rank. Host eligibility still needs confirmation. Operator posted 2027 dates and rank stipends; closing time and full host citizenship/appointment rules not restated. Confirm eligibility with host.",
   "cit": "us_pr",
   "citizenship": "U.S. citizens or legal permanent residents, subject to laboratory restrictions; the operator currently lists additional dual-citizenship restrictions. Confirm eligibility with the host.",
-  "deadline": null,
-  "deadlineNote": "No upcoming application dates posted on the operator site as of September 30, 2026; check with the program and host laboratory.",
-  "eligibility": "Teaching or research appointment at a U.S. college or university. Appointment levels include assistant, associate and full professors; the six-years-since-PhD guideline applies to the junior level, not all applicants. Host-specific citizenship and access restrictions apply.",
+  "deadline": "2026-12-14",
+  "deadlineNote": "Summer 2027 applications: October 1–December 14, 2026. Announcements March 1, 2027; fellowships begin May 3, 2027. Closing time/time zone not stated.",
+  "eligibility": "Faculty appointments at U.S. colleges/universities; assistant, associate and full professors are listed. Confirm citizenship, dual-citizenship and laboratory-access rules with the host; the redesigned operator pages do not restate all restrictions.",
   "format": "Ten continuous weeks on site, May-August",
   "funding": "stipend",
-  "fundingNote": "Tentative weekly stipends: $1,650 (Summer), $1,900 (Senior), $2,150 (Distinguished); $4,500 travel/housing allowance for eligible relocation over 50 miles.",
+  "fundingNote": "Weekly stipend: assistant $1,650; associate $1,900; full professor $2,050; program-designated distinguished faculty $2,150. Eligible relocation over 50 miles: $4,500 for travel and temporary housing.",
   "hsi": "",
   "levels": [
    "faculty"
   ],
   "location": "Participating Navy laboratories nationwide; NIWC Pacific in San Diego is one host",
-  "needsCheck": false,
-  "opens": null,
+  "needsCheck": true,
+  "opens": "2026-10-01",
   "recurs": true,
   "regions": [],
   "scope": "National",
   "seed": true,
   "sponsor": "Office of Naval Research",
   "status": "published",
-  "summary": "Ten-week paid summer research at Navy laboratories, with junior, senior and distinguished faculty appointments. Student participation: the faculty fellowship does not promise accompanying student places; ask the host about separately selected NREIP internships and a shared project.",
-  "summary_es": "Investigación pagada de diez semanas en laboratorios de la Marina, con categorías para docentes de distinta experiencia. Estudiantes: la beca docente no garantiza plazas acompañantes; consulte al anfitrión sobre prácticas NREIP de selección separada y un proyecto compartido.",
+  "summary": "Ten weeks of paid research on site at Navy laboratories. Summer 2027 applications close December 14, 2026. Accompanying student places are not guaranteed; NREIP selection is separate.",
+  "summary_es": "Diez semanas de investigación remunerada y presencial en laboratorios de la Marina. La solicitud para verano de 2027 vence el 14 de diciembre de 2026. No se garantizan plazas para estudiantes acompañantes; la selección NREIP es independiente.",
   "title": "ONR Summer Faculty Research Program",
   "type": "Faculty fellowship",
   "url": "https://onroutreach-summer-faculty-research-sabbatical.com/summer-faculty-research-program/",
@@ -1809,24 +1960,26 @@
   "sources": [
    "https://onroutreach-summer-faculty-research-sabbatical.com/summer-faculty-research-program/",
    "https://www.niwcpacific.navy.mil/Connect/STEM-Main-Page-NEW/STEM-University-Engagement/",
-   "https://www.navsea.navy.mil/Home/Warfare-Centers/NSWC-Carderock/STEM/Internships-University-Engagement/"
+   "https://www.navsea.navy.mil/Home/Warfare-Centers/NSWC-Carderock/STEM/Internships-University-Engagement/",
+   "https://onroutreach-summer-faculty-research-sabbatical.com/important-dates/",
+   "https://onroutreach-summer-faculty-research-sabbatical.com/summer-faculty-research-program-application-process/"
   ]
  },
  {
   "added": "2026-09-29",
   "audience": "faculty",
-  "award": "",
+  "award": "Up to $250,000 per year for three years ($750,000 total)",
   "branch": "Navy",
   "campuses": [],
-  "changeNote": "",
-  "cit": "unknown",
-  "citizenship": "",
+  "changeNote": "Weekly review 2026-10-05: Rechecked FY2027 notice; added citizenship and individual award ceiling; resolved the automated timeout warning. FY2027 notice reviewed for deadlines, PhD/appointment eligibility, citizenship and award ceiling; timeout was not closure.",
+  "cit": "us_pr",
+  "citizenship": "U.S. citizens, nationals or permanent residents by the proposal deadline.",
   "deadline": "2026-10-30",
-  "deadlineNote": "5 PM Eastern",
+  "deadlineNote": "October 30, 2026, 5 PM Eastern. Technical/eligibility questions: October 16, 5 PM Eastern; Grants.gov submission questions: October 29, 5 PM Eastern.",
   "eligibility": "First or second full time tenure track (or equivalent) appointment; PhD on or after January 1, 2019.",
   "format": "",
   "funding": "grant",
-  "fundingNote": "Research grant to your university",
+  "fundingNote": "University research award up to $750,000 over three years, subject to the FY2027 notice.",
   "hsi": "",
   "levels": [
    "faculty"
@@ -1845,8 +1998,12 @@
   "title": "ONR Young Investigator Program (FY2027)",
   "type": "Faculty grant",
   "url": "https://www.onr.navy.mil/work-with-us/funding-opportunities/fiscal-year-fy-2027-young-investigator-program-yip",
-  "verified": "2026-09-29",
-  "id": "onr-yip"
+  "verified": "2026-10-05",
+  "id": "onr-yip",
+  "sources": [
+   "https://www.onr.navy.mil/work-with-us/funding-opportunities/fiscal-year-fy-2027-young-investigator-program-yip",
+   "https://www.onr.navy.mil/assets/2026-08/FY27-YIP-NOFO-N0001426SF004.pdf"
+  ]
  },
  {
   "added": "2026-09-29",
@@ -1893,7 +2050,7 @@
   "award": "",
   "branch": "Army",
   "campuses": [],
-  "changeNote": "Link audit 2026-09-29: old HBCU/MI facility page no longer exists; now links to the Armaments Center's own student programs page",
+  "changeNote": "Weekly review 2026-10-05: Official page describes several pathways; individual current calls, amounts and eligibility require separate review.",
   "cit": "unknown",
   "citizenship": "",
   "deadline": null,
@@ -1908,7 +2065,7 @@
    "grad"
   ],
   "location": "Picatinny Arsenal, NJ",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [
@@ -1931,6 +2088,9 @@
     "lat": 40.95,
     "lon": -74.55
    }
+  ],
+  "sources": [
+   "https://ac.devcom.army.mil/people-careers/"
   ]
  },
  {
@@ -1939,7 +2099,7 @@
   "award": "",
   "branch": "Defense industry",
   "campuses": [],
-  "changeNote": "Link audit 2026-09-29: now links to the RTX internship search; pay not stated on official landing pages",
+  "changeNote": "Weekly review 2026-10-05: Official page denied access in direct retrieval and browser. No conclusion about closure; existing terms and verified date retained.",
   "cit": "us",
   "citizenship": "Many roles require U.S. citizenship for a clearance",
   "deadline": null,
@@ -1977,6 +2137,9 @@
     "lat": 32.15,
     "lon": -110.93
    }
+  ],
+  "sources": [
+   "https://careers.rtx.com/global/en/internship-search-results"
   ]
  },
  {
@@ -1985,7 +2148,7 @@
   "award": "",
   "branch": "NNSA defense lab",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: Direct/browser source returned a loading shell rather than substantive terms; no program closure inferred.",
   "cit": "unknown",
   "citizenship": "",
   "deadline": null,
@@ -2000,7 +2163,7 @@
    "grad"
   ],
   "location": "Albuquerque, NM and Livermore, CA",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [
@@ -2029,6 +2192,9 @@
     "lat": 37.68,
     "lon": -121.7
    }
+  ],
+  "sources": [
+   "https://sandia.jobs/job-family/student/jobs/"
   ]
  },
  {
@@ -2037,7 +2203,7 @@
   "award": "Full tuition, annual stipend of $30,000 to $46,000 by degree level, book and health allowances, summer internships",
   "branch": "DoW wide",
   "campuses": [],
-  "changeNote": "Confirmed 2026 application eligibility, including five eligible citizenships, incoming freshmen and August 2027 funding start.",
+  "changeNote": "Weekly review 2026-10-05: Rendered 2026 eligibility/instructions confirm Fall 2027 requirements and December 4 deadline; exact stipend/allowance schedule not fully reverified.",
   "cit": "varies",
   "citizenship": "Citizens of the United States, Australia, Canada, New Zealand or United Kingdom; must obtain and maintain a security clearance.",
   "deadline": "2026-12-04",
@@ -2052,7 +2218,7 @@
    "grad"
   ],
   "location": "Accredited U.S. universities, with internships and service at a sponsoring DoW facility",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": "2026-08-01",
   "recurs": true,
   "regions": [],
@@ -2079,7 +2245,7 @@
   "award": "",
   "branch": "DoW wide",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: Rendered official library contains 2026 kickoff and facility videos; free recorded guidance remains available, not a separate award.",
   "cit": "unknown",
   "citizenship": "",
   "deadline": null,
@@ -2107,8 +2273,11 @@
   "title": "SMART application webinars and tips",
   "type": "Workshop",
   "url": "https://www.smartscholarship.org/smart/en?id=smart_videos",
-  "verified": "2026-09-29",
-  "id": "smart-webinars"
+  "verified": "2026-10-05",
+  "id": "smart-webinars",
+  "sources": [
+   "https://www.smartscholarship.org/smart/en?id=smart_videos"
+  ]
  },
  {
   "added": "2026-09-29",
@@ -2116,7 +2285,7 @@
   "award": "",
   "branch": "Defense research",
   "campuses": [],
-  "changeNote": "",
+  "changeNote": "Weekly review 2026-10-05: Official page confirms pay and conditional San Antonio housing/travel; current role eligibility/citizenship and 2027 deadlines not fully checked.",
   "cit": "unknown",
   "citizenship": "",
   "deadline": null,
@@ -2131,7 +2300,7 @@
    "grad"
   ],
   "location": "San Antonio, TX",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [
@@ -2154,6 +2323,9 @@
     "lat": 29.45,
     "lon": -98.62
    }
+  ],
+  "sources": [
+   "https://www.swri.org/careers/interns"
   ]
  },
  {
@@ -2164,7 +2336,7 @@
   "campuses": [
    "University of Central Florida"
   ],
-  "changeNote": "Link audit 2026-09-29: sponsor and citizenship corrected from UCF's pages",
+  "changeNote": "Weekly review 2026-10-05: Official center confirms intelligence-education pathway; individual award cycles, amounts and eligibility not fully reverified.",
   "cit": "us",
   "citizenship": "U.S. citizens (required for the travel stipend)",
   "deadline": null,
@@ -2179,7 +2351,7 @@
    "grad"
   ],
   "location": "Orlando, FL",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [
@@ -2202,6 +2374,9 @@
     "lat": 28.6,
     "lon": -81.2
    }
+  ],
+  "sources": [
+   "https://sciences.ucf.edu/politics/iccae/"
   ]
  },
  {
@@ -2210,7 +2385,7 @@
   "award": "",
   "branch": "Army",
   "campuses": [],
-  "changeNote": "Link audit 2026-09-29: application route corrected",
+  "changeNote": "Weekly review 2026-10-05: Official Army page confirms Alamo LSAMP/HBCU-MI pathways; next placements, funding and partner eligibility not established.",
   "cit": "unknown",
   "citizenship": "",
   "deadline": null,
@@ -2224,7 +2399,7 @@
    "undergrad"
   ],
   "location": "Joint Base San Antonio, TX",
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [
@@ -2247,6 +2422,9 @@
     "lat": 29.46,
     "lon": -98.43
    }
+  ],
+  "sources": [
+   "https://usaisr.health.mil/index.cfm/join/students"
   ]
  },
  {
@@ -2255,13 +2433,13 @@
   "award": "Hourly pay plus paid housing and travel",
   "branch": "DoW wide",
   "campuses": [],
-  "changeNote": "Link audit 2026-09-29: moved from a news article to the official TRMC internship page; added pay, housing, travel and dates",
+  "changeNote": "Weekly review 2026-10-05: Rechecked 2027 dates, eligible paid housing/travel and assignment rules; map locations are potential hosts. Rendered operator overview and expanded FAQ confirm 2027 dates, pay and eligible travel/housing; assignments depend on program needs.",
   "cit": "us",
   "citizenship": "U.S. citizens eligible for a Secret clearance",
   "deadline": "2026-11-30",
-  "deadlineNote": "Apply September 30 to November 30, 2026 for a 10 week internship, June 7 to August 13, 2027",
+  "deadlineNote": "Apply September 30–November 30, 2026; closing time/time zone not stated. Ten-week program: June 7–August 13, 2027.",
   "eligibility": "Students pursuing a STEM bachelor's, master's or PhD, a technical trade school program, or a cybersecurity related degree.",
-  "format": "",
+  "format": "In person; June 7–August 13, 2027, ten weeks.",
   "funding": "full",
   "fundingNote": "Hourly pay, and eligible interns have housing, travel and logistics arranged and paid for by the program",
   "hsi": "",
@@ -2286,12 +2464,12 @@
   "seed": false,
   "sponsor": "DoW Test Resource Management Center, run with ASRC Federal",
   "status": "published",
-  "summary": "Paid 10 week summer internships at DoW test ranges across the country, with housing and travel covered for eligible interns. Past White Sands interns included UTEP and NMSU students.",
-  "summary_es": "Prácticas pagadas de verano de 10 semanas en campos de pruebas del DoW en todo el país, con vivienda y viaje cubiertos para practicantes elegibles. Entre los practicantes anteriores en White Sands hubo estudiantes de UTEP y NMSU.",
+  "summary": "Paid ten-week research/test internships at DoW ranges, with housing and travel for eligible interns. Locations on the map are potential hosts; final assignments depend on program needs and are not guaranteed.",
+  "summary_es": "Prácticas remuneradas de diez semanas en investigación y pruebas en campos del DoW, con vivienda y viajes para participantes elegibles. El mapa muestra posibles sedes; la asignación final depende del programa y no está garantizada.",
   "title": "Test Resource Management Center (TRMC) internships at DoW test ranges",
   "type": "Internship",
   "url": "https://www.asrcfederal.com/trmc-internships/",
-  "verified": "2026-09-29",
+  "verified": "2026-10-05",
   "id": "wsmr",
   "sites": [
    {
@@ -2424,6 +2602,9 @@
     "lat": 42.89,
     "lon": -78.88
    }
+  ],
+  "sources": [
+   "https://www.asrcfederal.com/trmc-internships/"
   ]
  },
  {
@@ -2480,7 +2661,7 @@
   "status": "published",
   "seed": false,
   "recurs": true,
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "deadline": null,
   "award": "Salary-gap stipend; eligible travel and relocation assistance",
@@ -2488,7 +2669,7 @@
   "hsi": "",
   "cit": "us_pr",
   "citizenship": "U.S. citizens or legal permanent residents; eligibility and access restrictions vary by laboratory.",
-  "changeNote": "Added after official-source faculty research review on 2026-09-30.",
+  "changeNote": "Weekly review 2026-10-05: Operator confirms semester-to-year on-site research, salary-gap support, relocation and six-month lead time; host eligibility/intake need confirmation.",
   "title": "ONR Sabbatical Leave Program",
   "sponsor": "Office of Naval Research",
   "branch": "Navy",
@@ -2522,7 +2703,7 @@
   "status": "published",
   "seed": false,
   "recurs": true,
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "deadline": null,
   "award": "",
@@ -2530,7 +2711,7 @@
   "hsi": "",
   "cit": "unknown",
   "citizenship": "Project-specific; confirm in the opportunity description and with the ARL host.",
-  "changeNote": "Added after official-source faculty research review on 2026-09-30.",
+  "changeNote": "Weekly review 2026-10-05: ORAU application/benefits/eligibility reviewed; year-round pathways confirmed, but individual host funding/access/citizenship not fully established.",
   "title": "DEVCOM Army Research Laboratory Faculty Fellowship (RAP)",
   "sponsor": "DEVCOM Army Research Laboratory; administered by ORAU",
   "branch": "Army",
@@ -2573,7 +2754,7 @@
   "hsi": "",
   "cit": "us",
   "citizenship": "The 2025 faculty call required U.S. citizenship; confirm the next cycle.",
-  "changeNote": "Added after official-source faculty research review on 2026-09-30.",
+  "changeNote": "Weekly review 2026-10-05: Sponsor program remains listed; last dated faculty call closed in 2025. No current call verified; not treated as discontinued.",
   "title": "HPCMP Faculty Immersion Experience (FIX)",
   "sponsor": "DoW High Performance Computing Modernization Program",
   "branch": "DoW wide",
@@ -2614,7 +2795,7 @@
   "hsi": "",
   "cit": "varies",
   "citizenship": "Institutional grant; individual student and laboratory-access requirements depend on the project.",
-  "changeNote": "Added after official-source faculty research review on 2026-09-30.",
+  "changeNote": "Weekly review 2026-10-05: Official opportunity remains forecasted, not open; old pre-release dates are not current. No revised solicitation verified.",
   "title": "Naval Engineering Education Consortium (NEEC) faculty-student research",
   "sponsor": "NAVSEA Warfare Centers / NSWC Dahlgren",
   "branch": "Navy",
@@ -2638,7 +2819,7 @@
   "audience": "student",
   "branch": "DoW wide",
   "campuses": [],
-  "changeNote": "Added after official program review on 2026-09-30",
+  "changeNote": "Weekly review 2026-10-05: Official internship/partner pages reviewed; benefits and MAVEN/ENVOY described but no dated current window. Image mentioning 2027 does not establish dates.",
   "cit": "us",
   "deadline": null,
   "format": "",
@@ -2647,7 +2828,7 @@
    "undergrad",
    "grad"
   ],
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [],
@@ -2680,7 +2861,7 @@
   "audience": "student",
   "branch": "DoW wide",
   "campuses": [],
-  "changeNote": "Added after official program review on 2026-09-30",
+  "changeNote": "Weekly review 2026-10-05: Official application/overview/partners confirm pathways; institution/project funding and deadlines vary and were not fully reverified.",
   "cit": "us",
   "deadline": null,
   "format": "",
@@ -2689,7 +2870,7 @@
    "undergrad",
    "grad"
   ],
-  "needsCheck": false,
+  "needsCheck": true,
   "opens": null,
   "recurs": true,
   "regions": [],
@@ -2771,7 +2952,7 @@
   ],
   "status": "published",
   "needsCheck": true,
-  "changeNote": "Added only the national-laboratory pathway. Confirm laboratory-specific financial and appointment terms; UC-campus award and FAQ pages give differing salary figures.",
+  "changeNote": "Weekly review 2026-10-05: Central 2026 deadline and lab/UC mentor pathway reviewed. Central salaries differ and are not lab-specific terms; lab pay, access and submission time unresolved.",
   "verified": "2026-09-30",
   "added": "2026-09-30",
   "recurs": true,
@@ -2804,7 +2985,7 @@
   "citizenship": "U.S. citizens",
   "funding": "stipend",
   "type": "Internship",
-  "changeNote": "Verified program and closed 2026 call. The linked ORISE project catalog redirects to a general page; no unverified host coordinates or future dates assigned.",
+  "changeNote": "Weekly review 2026-10-05: Official 2026 call closed March 26, 6 PM Eastern; future cycle unannounced. Prior benefits not extrapolated.",
   "id": "hpcmp-hip",
   "title": "HPCMP High Performance Computing Internship Program (HIP)",
   "sponsor": "DoW High Performance Computing Modernization Program / ORISE",
@@ -2860,7 +3041,7 @@
   "citizenship": "U.S. citizens",
   "funding": "stipend",
   "type": "Internship",
-  "changeNote": "Added after official-source defense research review on 2026-09-30.",
+  "changeNote": "Weekly review 2026-10-05: Official 2026 materials describe completed June–August internships despite stale open banner; no 2027 call verified.",
   "id": "afrl-repperger",
   "title": "AFRL Repperger Research Intern Program",
   "sponsor": "Air Force Research Laboratory, 711th Human Performance Wing / ORISE",
@@ -2913,7 +3094,7 @@
   "citizenship": "NREIP normally requires U.S. citizenship; confirm dual-citizenship or permanent-resident exceptions directly with NHRC. Security-clearance eligibility required.",
   "funding": "stipend",
   "type": "Internship",
-  "changeNote": "Added a distinct NREIP host from the current official lab directory. Confirm lab citizenship exceptions directly.",
+  "changeNote": "Weekly review 2026-10-05: NREIP/host directory reviewed; NHRC access requirements confirmed but citizenship exceptions need host confirmation.",
   "branch": "Navy",
   "url": "https://www.navalsteminterns.us/internships/nreip/labs/",
   "fundingNote": "NREIP ten-week stipend: $7,500 new undergraduates, $9,000 returning undergraduates, $11,500 graduate students. Housing, commuting and health insurance are the student’s responsibility.",
@@ -2964,7 +3145,7 @@
   "citizenship": "NREIP normally requires U.S. citizenship; host-specific dual-citizenship and permanent-resident exceptions are not confirmed.",
   "funding": "stipend",
   "type": "Internship",
-  "changeNote": "Added a distinct NREIP host from the current official lab directory; host-specific student requirements are still listed as TBD.",
+  "changeNote": "Weekly review 2026-10-05: NREIP 2027 terms confirmed; host directory leaves additional requirements to be determined.",
   "branch": "Navy",
   "url": "https://www.navalsteminterns.us/internships/nreip/labs/",
   "fundingNote": "NREIP ten-week stipend: $7,500 new undergraduates, $9,000 returning undergraduates, $11,500 graduate students. Housing, commuting and health insurance are the student’s responsibility.",
@@ -3021,7 +3202,7 @@
   "sources": [
    "https://www.lockheedmartin.com/en-us/careers/candidates/students-early-careers/internships.html"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: Employer overview reviewed; uniform pay/citizenship/deadlines not established and individual defense vacancies not fully checked."
  },
  {
   "id": "bae-leap",
@@ -3063,7 +3244,7 @@
    "https://jobs.baesystems.com/global/en/studentsandgraduates",
    "https://jobs.baesystems.com/global/en/faq"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: Rendered employer overview confirms year-round/core summer program and variable formats; detailed eligibility/benefits source not fully accessible."
  },
  {
   "id": "l3harris-internships",
@@ -3104,7 +3285,7 @@
   "sources": [
    "https://careers.l3harris.com/en/new-grads-and-interns"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: Employer overview reviewed; uniform pay/citizenship/deadlines not established and individual defense vacancies not fully checked."
  },
  {
   "id": "gdms-internships",
@@ -3135,7 +3316,7 @@
   "deadline": null,
   "deadlineNote": "Typically 10–12 weeks in summer. No common closing date verified; apply to current vacancies.",
   "status": "published",
-  "needsCheck": false,
+  "needsCheck": true,
   "verified": "2026-09-30",
   "added": "2026-09-30",
   "recurs": true,
@@ -3145,7 +3326,7 @@
   "sources": [
    "https://gdmissionsystems.com/careers/students-and-recent-graduates"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: Official page denied access in direct retrieval and browser. No conclusion about closure; existing terms and verified date retained."
  },
  {
   "id": "hii-internships",
@@ -3186,7 +3367,7 @@
   "sources": [
    "https://www.hii.com/careers/students-early-career"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: Employer confirms division-specific paid programs; corporate 2026 closed and 2027 dates unconfirmed. Mission Technologies recruits year-round."
  },
  {
   "id": "booz-summer-games",
@@ -3217,7 +3398,7 @@
   "deadlineNote": "Recruiting begins in late August and continues through fall for the following summer; closing dates vary.",
   "status": "published",
   "needsCheck": false,
-  "verified": "2026-09-30",
+  "verified": "2026-10-05",
   "added": "2026-09-30",
   "recurs": true,
   "seed": false,
@@ -3226,7 +3407,7 @@
   "sources": [
    "https://www.boozallen.com/careers/internships-and-early-careers.html"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: Employer FAQ confirms paid ten-week program, target student stage, fall recruiting and no housing/relocation; role-specific requirements remain explicit."
  },
  {
   "id": "caci-internships",
@@ -3267,7 +3448,7 @@
   "sources": [
    "https://careers.caci.com/intern"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: Employer overview reviewed; uniform pay/citizenship/deadlines not established and individual defense vacancies not fully checked."
  },
  {
   "id": "peraton-internships",
@@ -3299,7 +3480,7 @@
   "deadlineNote": "Typical recruiting: September–November and January–March; summer program generally ten weeks, June–August.",
   "status": "published",
   "needsCheck": false,
-  "verified": "2026-09-30",
+  "verified": "2026-10-05",
   "added": "2026-09-30",
   "recurs": true,
   "seed": false,
@@ -3308,7 +3489,7 @@
   "sources": [
    "https://www.careers.peraton.com/students-early-career"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: Employer page confirms U.S. citizenship, enrollment, hourly pay and timing; individual vacancies govern selection and location."
  },
  {
   "id": "snc-internships",
@@ -3349,15 +3530,15 @@
   "sources": [
    "https://www.sncorp.com/careers/students-early-career"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: Employer overview loaded but FAQ answers did not render reliably; student requirements, dates and benefits remain incomplete."
  },
  {
   "id": "textron-systems-internships",
   "title": "Textron Systems defense internships",
   "sponsor": "Textron Systems — defense contractor",
   "url": "https://www.textronsystems.com/careers/student-candidates",
-  "summary": "Student placements at the defense-focused Textron Systems business. Search the student portal for current engineering and other vacancies.",
-  "summary_es": "Prácticas en Textron Systems, empresa de tecnologías de defensa. Consulte el portal estudiantil para conocer las vacantes vigentes.",
+  "summary": "Student placements at defense-focused Textron Systems, with a stipend toward summer living costs. Search the student portal for current 2027 vacancies and role-specific pay.",
+  "summary_es": "Prácticas en Textron Systems, empresa de defensa, con un estipendio para gastos de verano. Consulte el portal para conocer las vacantes de 2027 y la remuneración de cada puesto.",
   "branch": "Defense industry",
   "type": "Internship",
   "audience": "student",
@@ -3373,15 +3554,15 @@
   "eligibility": "Internship must be completed before earning the degree; other requirements vary by position.",
   "cit": "varies",
   "citizenship": "Citizenship, work authorization and clearance requirements are position-specific.",
-  "funding": "unknown",
-  "fundingNote": "Uniform pay and housing terms are not established by the program overview; consult the individual vacancy.",
+  "funding": "stipend",
+  "fundingNote": "Interns receive a stipend toward summer living costs; amount not specified. Salary and other benefits depend on the vacancy.",
   "award": "",
   "opens": null,
   "deadline": null,
   "deadlineNote": "Page directs applicants to search 2027 Intern roles. Recommended application season: late August–February; vacancy deadlines control.",
   "status": "published",
-  "needsCheck": true,
-  "verified": "2026-09-30",
+  "needsCheck": false,
+  "verified": "2026-10-05",
   "added": "2026-09-30",
   "recurs": true,
   "seed": false,
@@ -3390,7 +3571,7 @@
   "sources": [
    "https://www.textronsystems.com/careers/student-candidates"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: Added summer-cost stipend explicitly described in the employer FAQ. Employer FAQ confirms a summer-cost stipend, pre-degree internship and 2027 vacancy search; amount and role salary unspecified."
  },
  {
   "id": "aerovironment-internships",
@@ -3435,9 +3616,9 @@
     "lon": -122.64
    }
   ],
-  "eligibility": "Student enrollment, degree field and graduation requirements vary; check the specific vacancy.",
+  "eligibility": "Enrolled in college/university, sophomore year or above; available full-time on a 9/80 summer schedule; able to pass background and drug screening. Additional requirements depend on the vacancy.",
   "cit": "varies",
-  "citizenship": "Citizenship, work authorization and clearance requirements are position-specific.",
+  "citizenship": "Program minimum: U.S. citizen, permanent resident, or qualifying asylee/refugee under the stated ITAR definition. Check additional role-specific clearance restrictions.",
   "funding": "stipend",
   "fundingNote": "Paid 8–12-week internships; housing may be available for selected roles, case by case.",
   "award": "",
@@ -3446,7 +3627,7 @@
   "deadlineNote": "Program verified; availability and closing dates depend on individual vacancies.",
   "status": "published",
   "needsCheck": false,
-  "verified": "2026-09-30",
+  "verified": "2026-10-05",
   "added": "2026-09-30",
   "recurs": true,
   "seed": false,
@@ -3455,7 +3636,7 @@
   "sources": [
    "https://www.avinc.com/careers/internships/"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: Added current minimum enrollment, availability and U.S.-person requirements. Employer page confirms paid duration, conditional housing, locations, sophomore minimum, summer availability and U.S.-person categories."
  },
  {
   "id": "shield-ai-software-2027",
@@ -3520,7 +3701,7 @@
   "sources": [
    "https://jobs.lever.co/shieldai/8c850c75-081d-4d09-bebf-096379a93010"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: Live 2027 posting confirms locations, degree fields and $37–$97/hour; citizenship/authorization not stated and requires confirmation."
  },
  {
   "id": "anduril-coops-2027",
@@ -3584,7 +3765,7 @@
   "sources": [
    "https://www.anduril.com/open-roles"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: Careers page rendered an empty/JavaScript shell; 2027 co-op terms could not be reverified. No closure inferred."
  },
  {
   "id": "boeing-spirit-defense-it-2027",
@@ -3624,7 +3805,7 @@
   "deadlineNote": "Summer 2027 requisition 2026-17483, posted September 9, 2026; no closing date stated.",
   "status": "published",
   "needsCheck": false,
-  "verified": "2026-09-30",
+  "verified": "2026-10-05",
   "added": "2026-09-30",
   "recurs": false,
   "seed": false,
@@ -3633,7 +3814,7 @@
   "sources": [
    "https://jobs.boeing.com/job/wichita/spirit-defense-summer-2027-internship-program-paid-information-digital-technology-and-security-idt-/185/100378295744"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: Official requisition 2026-17483 confirms Wichita summer 2027 defense IT, $19.73–$33.05/hour, degree enrollment and U.S.-citizen clearance; no closing date."
  },
  {
   "id": "mit-lincoln-summer",
@@ -3673,7 +3854,7 @@
   "deadlineNote": "Generally mid-May–mid-August; consult current student vacancies for the next cycle and deadlines.",
   "status": "published",
   "needsCheck": false,
-  "verified": "2026-09-30",
+  "verified": "2026-10-05",
   "added": "2026-09-30",
   "recurs": true,
   "seed": false,
@@ -3682,7 +3863,7 @@
   "sources": [
    "https://www.ll.mit.edu/careers/student-opportunities/summer-research-program"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: Official program confirms pay, sophomore completion/graduate eligibility, U.S. citizenship, housing/transport terms and May–August duration; vacancies control dates."
  },
  {
   "id": "jhu-apl-defense-internships",
@@ -3733,7 +3914,7 @@
    "https://careers.jhuapl.edu/jobs/60048?lang=en-us",
    "https://careers.jhuapl.edu/jobs/59759?lang=en-us"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: Program/requisition pages returned loading/verification screens; eligibility, salary and availability could not be reverified."
  },
  {
   "id": "mitre-national-security-intern",
@@ -3774,7 +3955,7 @@
   "sources": [
    "https://careers.mitre.org/us/en/national-security-intern"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: Official pathway confirms national-security mission and clearance sponsorship; current role pay, enrollment and deadlines incomplete."
  },
  {
   "id": "draper-internships",
@@ -3803,7 +3984,7 @@
   "award": "",
   "opens": null,
   "deadline": null,
-  "deadlineNote": "Program verified; availability and closing dates depend on individual vacancies.",
+  "deadlineNote": "Published recurring schedule: spring co-ops posted in October (January–June work); summer internships posted in November (May–August); fall co-ops posted in February (August–December). Individual vacancy deadlines control.",
   "status": "published",
   "needsCheck": true,
   "verified": "2026-09-30",
@@ -3815,7 +3996,7 @@
   "sources": [
    "https://www.draper.com/education-programs/student-opportunities"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: Added employer recurring posting schedule without inventing a dated 2027 deadline. Employer overview gives recurring posting/work seasons; individual vacancy pay, access and closing dates unverified."
  },
  {
   "id": "draper-scholars",
@@ -3874,15 +4055,15 @@
    "https://www.draper.com/education-programs/draper-scholars-program",
    "https://www.draper.com/media-center/featured-stories/detail/25391/mentoring-the-engineers-of-the-future"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: Official page retains closed February 1, 2026 deadline and partner-school pathway. Next cycle/awards unconfirmed."
  },
  {
   "id": "swe-rtx-scholarship",
   "title": "SWE RTX Scholarship — awaiting next cycle",
   "sponsor": "RTX / Society of Women Engineers — defense contractor-sponsored scholarship",
   "url": "https://swe.org/scholarships/swe-rtx-scholarship/",
-  "summary": "Engineering/computing scholarship sponsored by RTX, with preference for HBCU/HSI enrollment. The 2026–27 SWE application cycle is closed.",
-  "summary_es": "Beca de ingeniería e informática patrocinada por RTX, con preferencia por estudiantes de HBCU/HSI. La convocatoria SWE 2026–27 está cerrada.",
+  "summary": "RTX-sponsored engineering/computing scholarship with HBCU/HSI preference. The shared SWE collegiate application opens December 1, 2026; confirm RTX participation and terms for 2027–28.",
+  "summary_es": "Beca de ingeniería e informática patrocinada por RTX, con preferencia por HBCU/HSI. La solicitud general universitaria de SWE abre el 1 de diciembre de 2026; confirme la participación y las condiciones de RTX para 2027–28.",
   "branch": "Defense industry",
   "type": "Scholarship",
   "audience": "student",
@@ -3900,9 +4081,9 @@
   "funding": "stipend",
   "fundingNote": "Eight $5,000 awards listed; partial scholarship, not full tuition or a guaranteed internship.",
   "award": "",
-  "opens": null,
+  "opens": "2026-12-01",
   "deadline": null,
-  "deadlineNote": "2026–27 closed; a 2027–28 interest form is available. Next application deadline unconfirmed.",
+  "deadlineNote": "Shared SWE collegiate/graduate application opens December 1, 2026 for 2027–28. RTX-specific next-cycle availability and closing deadline remain unconfirmed; the 2026–27 cycle is closed.",
   "status": "published",
   "needsCheck": true,
   "verified": "2026-09-30",
@@ -3915,7 +4096,7 @@
    "https://swe.org/scholarships/swe-rtx-scholarship/",
    "https://swe.org/scholarships-overview/"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: Added announced shared SWE 2027–28 collegiate opening; RTX-specific next-cycle terms remain unconfirmed. RTX award and SWE opening pages reviewed; December 1 is common collegiate opening, not confirmation of RTX next-cycle availability/deadline."
  },
  {
   "id": "snc-stem-scholarship",
@@ -3956,7 +4137,7 @@
   "sources": [
    "https://scholarshipamerica.org/scholarship/snc/"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: 2026 cycle remains closed; $7,500 and eligibility reviewed, but two-year/four-year enrollment wording conflicts. Next cycle unknown."
  },
  {
   "id": "shield-ai-scholarship",
@@ -3996,6 +4177,6 @@
   "sources": [
    "https://shield.ai/scholarship-application/"
   ],
-  "changeNote": "Official-source review: defense contractor or defense research pathway; not represented as a direct DoW scholarship."
+  "changeNote": "Weekly review 2026-10-05: Rendered page shows closed April 15, 2026 cycle; next dates, amount and citizenship not established."
  }
 ]

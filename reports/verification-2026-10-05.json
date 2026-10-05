@@ -1,0 +1,1553 @@
+{
+  "date": "2026-10-05",
+  "publishedRecords": 85,
+  "attemptedRecords": 85,
+  "outcomes": {
+    "reviewed": 20,
+    "partial": 59,
+    "blocked": 6
+  },
+  "records": [
+    {
+      "id": "aeop",
+      "title": "Army Educational Outreach Program internships and fellowships",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Army overview confirms paid pathways; individual placement eligibility, deadlines and awards not fully reverified.",
+      "change": "",
+      "sources": [
+        "https://usaeop.com/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "aerospace-corp",
+      "title": "The Aerospace Corporation internships",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Program and linked 2025 fact sheet reviewed; no year-specific 2027 call. Removed extrapolated date; current vacancy terms need review.",
+      "change": "Removed inferred February 2027 deadline: linked fact sheet is dated 2025 and does not announce a 2027 cycle.",
+      "sources": [
+        "https://aerospace.org/careers/students-and-recent-graduates",
+        "https://aerospace.org/fact-sheet/internships-aerospace",
+        "https://aerospace.org/sites/default/files/2025-02/Internship%20Program_0.pdf"
+      ],
+      "changedFields": [
+        "changeNote",
+        "deadline",
+        "deadlineNote",
+        "eligibility",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "af-sffp",
+      "title": "Air Force Summer Faculty Fellowship Program (on hold)",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Rendered operator confirms indefinite hold. No reopening or future faculty/student support available; prior eligibility is historical. SSL failure alone was not evidence.",
+      "change": "",
+      "sources": [
+        "https://afsffp.sysplus.com/",
+        "https://afresearchlab.com/afosr-summer-faculty-fellowship-program/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck"
+      ]
+    },
+    {
+      "id": "afosr-yip",
+      "title": "Air Force Young Investigator Program (FY2027)",
+      "outcome": "reviewed",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-10-05",
+      "findings": "FY2027 notice and September 24 Q&A reviewed: mandatory white paper, proposal, award ceiling, appointment and citizenship rules.",
+      "change": "Added mandatory October 9 white paper before the December 4 full proposal; corrected award ceiling and PhD cutoff.",
+      "sources": [
+        "https://simpler.grants.gov/opportunity/c342c01d-4f34-440f-8bb2-4bdd4d763df0",
+        "https://files.simpler.grants.gov/opportunities/c342c01d-4f34-440f-8bb2-4bdd4d763df0/attachments/84ad5127-ad85-4495-8277-01179ad54902/FA955026S0003FY27YIPFINAL.pdf",
+        "https://files.simpler.grants.gov/opportunities/c342c01d-4f34-440f-8bb2-4bdd4d763df0/attachments/9cf2fa75-6fdf-4713-a203-3f849f3001af/FA955026S0003_Qs_and_As.pdf"
+      ],
+      "changedFields": [
+        "award",
+        "changeNote",
+        "deadline",
+        "deadlineNote",
+        "eligibility",
+        "fundingNote",
+        "summary",
+        "summary_es",
+        "verified",
+        "sources"
+      ]
+    },
+    {
+      "id": "afrl-afwerx",
+      "title": "AFRL Scholars at AFWERX",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "2027 dates and program/location pages reviewed; stipend table labels figures most recent session. 2027 amounts, allowances and project terms unconfirmed.",
+      "change": "2027 dates confirmed; stipend tables describe the most recent session, not guaranteed 2027 rates.",
+      "sources": [
+        "https://afrlscholars.usra.edu/scholarsprogram/locations/afwerx/",
+        "https://afrlscholars.usra.edu/scholarsprogram/",
+        "https://afrlscholars.usra.edu/scholarsprogram/dates/",
+        "https://afrlscholars.usra.edu/scholarsprogram/stipends/",
+        "https://afrlscholars.usra.edu/scholarsprogram/eligibility/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "fundingNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "afrl-catalyst",
+      "title": "AFRL Scholars at Catalyst Campus",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "2027 dates and program/location pages reviewed; stipend table labels figures most recent session. 2027 amounts, allowances and project terms unconfirmed.",
+      "change": "2027 dates confirmed; stipend tables describe the most recent session, not guaranteed 2027 rates.",
+      "sources": [
+        "https://afrlscholars.usra.edu/scholarsprogram/locations/",
+        "https://afrlscholars.usra.edu/scholarsprogram/",
+        "https://afrlscholars.usra.edu/scholarsprogram/dates/",
+        "https://afrlscholars.usra.edu/scholarsprogram/stipends/",
+        "https://afrlscholars.usra.edu/scholarsprogram/eligibility/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "fundingNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "afrl-edwards",
+      "title": "AFRL Scholars at Edwards AFB",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "2027 dates and program/location pages reviewed; stipend table labels figures most recent session. 2027 amounts, allowances and project terms unconfirmed.",
+      "change": "2027 dates confirmed; stipend tables describe the most recent session, not guaranteed 2027 rates.",
+      "sources": [
+        "https://afrlscholars.usra.edu/scholarsprogram/locations/edwards-afb/",
+        "https://afrlscholars.usra.edu/scholarsprogram/",
+        "https://afrlscholars.usra.edu/scholarsprogram/dates/",
+        "https://afrlscholars.usra.edu/scholarsprogram/stipends/",
+        "https://afrlscholars.usra.edu/scholarsprogram/eligibility/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "fundingNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "afrl-eglin",
+      "title": "AFRL Scholars at Eglin AFB",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "2027 dates and program/location pages reviewed; stipend table labels figures most recent session. 2027 amounts, allowances and project terms unconfirmed.",
+      "change": "2027 dates confirmed; stipend tables describe the most recent session, not guaranteed 2027 rates.",
+      "sources": [
+        "https://afrlscholars.usra.edu/scholarsprogram/locations/eglin/",
+        "https://afrlscholars.usra.edu/scholarsprogram/",
+        "https://afrlscholars.usra.edu/scholarsprogram/dates/",
+        "https://afrlscholars.usra.edu/scholarsprogram/stipends/",
+        "https://afrlscholars.usra.edu/scholarsprogram/eligibility/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "fundingNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "afrl-kirtland",
+      "title": "AFRL Scholars at Kirtland AFB",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "2027 dates and program/location pages reviewed; stipend table labels figures most recent session. 2027 amounts, allowances and project terms unconfirmed.",
+      "change": "2027 dates confirmed; stipend tables describe the most recent session, not guaranteed 2027 rates.",
+      "sources": [
+        "https://afrlscholars.usra.edu/scholarsprogram/locations/kirtland/",
+        "https://afrlscholars.usra.edu/scholarsprogram/",
+        "https://afrlscholars.usra.edu/scholarsprogram/dates/",
+        "https://afrlscholars.usra.edu/scholarsprogram/stipends/",
+        "https://afrlscholars.usra.edu/scholarsprogram/eligibility/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "fundingNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "afrl-rome",
+      "title": "AFRL Scholars at Rome Laboratory",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "2027 dates and program/location pages reviewed; stipend table labels figures most recent session. 2027 amounts, allowances and project terms unconfirmed.",
+      "change": "2027 dates confirmed; stipend tables describe the most recent session, not guaranteed 2027 rates.",
+      "sources": [
+        "https://afrlscholars.usra.edu/scholarsprogram/locations/",
+        "https://afrlscholars.usra.edu/scholarsprogram/",
+        "https://afrlscholars.usra.edu/scholarsprogram/dates/",
+        "https://afrlscholars.usra.edu/scholarsprogram/stipends/",
+        "https://afrlscholars.usra.edu/scholarsprogram/eligibility/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "fundingNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "afrl-scholars",
+      "title": "AFRL Scholars Program",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "2027 dates and program/location pages reviewed; stipend table labels figures most recent session. 2027 amounts, allowances and project terms unconfirmed.",
+      "change": "2027 dates confirmed; stipend tables describe the most recent session, not guaranteed 2027 rates.",
+      "sources": [
+        "https://afrlscholars.usra.edu/scholarsprogram/",
+        "https://afrlscholars.usra.edu/scholarsprogram/dates/",
+        "https://afrlscholars.usra.edu/scholarsprogram/stipends/",
+        "https://afrlscholars.usra.edu/scholarsprogram/eligibility/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "fundingNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "arl-hbcumi-ecp",
+      "title": "DEVCOM ARL HBCU/MI Early Career Program",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Official page still describes closed January 12, 2024 call; no current call or replacement funding verified.",
+      "change": "",
+      "sources": [
+        "https://arl.devcom.army.mil/collaborate-with-us/opportunity/devcom-arl-hbcu-mi-early-career-program/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "arl-postdoc",
+      "title": "DEVCOM ARL Postdoctoral Fellowship",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "ORAU application/benefits/eligibility reviewed; year-round pathways confirmed, but individual host funding/access/citizenship not fully established.",
+      "change": "",
+      "sources": [
+        "https://www.orau.org/ARLFellowship/fellowship-types/how-to-apply-postdoc.htm"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "arl-south",
+      "title": "ARL South summer students (Austin)",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Operator confirms paid research and 2026 eligibility; cycle closed February 25. Next timing/amount unannounced; recurrence not assumed.",
+      "change": "Official operator explicitly describes paid research; amount and next cycle remain unannounced.",
+      "sources": [
+        "https://www.orau.org/ARLFellowship/fellowship-types/how-to-apply-summer-student-experience.htm"
+      ],
+      "changedFields": [
+        "changeNote",
+        "funding",
+        "fundingNote",
+        "needsCheck",
+        "summary",
+        "summary_es",
+        "sources"
+      ]
+    },
+    {
+      "id": "arl-sse",
+      "title": "DEVCOM ARL Summer Student Experience",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Operator confirms paid research and 2026 eligibility; cycle closed February 25. Next timing/amount unannounced; recurrence not assumed.",
+      "change": "Official operator explicitly describes paid research; amount and next cycle remain unannounced.",
+      "sources": [
+        "https://www.orau.org/ARLFellowship/fellowship-types/how-to-apply-summer-student-experience.htm"
+      ],
+      "changedFields": [
+        "changeNote",
+        "funding",
+        "fundingNote",
+        "needsCheck",
+        "summary",
+        "summary_es",
+        "sources"
+      ]
+    },
+    {
+      "id": "arlut",
+      "title": "Applied Research Laboratories student jobs and research assistantships",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Official directory confirms paid undergraduate/graduate pathways; current vacancy eligibility, tuition assistance and citizenship incomplete.",
+      "change": "",
+      "sources": [
+        "https://www.arlut.utexas.edu/students.shtml"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "army-hbcumi-grad",
+      "title": "Army HBCU/MI Research Teaming: graduate students",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Official directory contains multiple historical/current pathways, not one open award. Linked programs need separate cycle review.",
+      "change": "",
+      "sources": [
+        "https://hbcumiresearch.army.mil/research-teaming-opportunities/graduate-students-and-doctoral-candidates/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "ascendr-advising",
+      "title": "AscendR Opportunity Advising",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Official page describes institutional advising development and ended September 28–30 Think Lab; future student-facing service availability/cost not established.",
+      "change": "",
+      "sources": [
+        "https://www.hsru.org/ascendr/advising"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "ascendr-fellowship",
+      "title": "AscendR Fellowship",
+      "outcome": "reviewed",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-10-05",
+      "findings": "2027–28 timetable, $12,500 award, U.S. citizenship, HSRU full-time STEM PhD, GPA 3.5 and mentor/materials confirmed. Closing time not stated.",
+      "change": "",
+      "sources": [
+        "https://www.hsru.org/ascendr/fellowship"
+      ],
+      "changedFields": [
+        "changeNote",
+        "verified",
+        "sources"
+      ]
+    },
+    {
+      "id": "cyber-csa",
+      "title": "DoW Cyber Service Academy (CSA) Scholarship",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Sponsor page/document attempted, but current recruitment cycle and campus-specific terms not substantively established.",
+      "change": "",
+      "sources": [
+        "https://www.cloud.mil/Academic-Programs/DoW-Cyber-Service-Academy/",
+        "https://dowcio.war.gov/Portals/0/Documents/Announcement/CSA%20CIO%20Applicaton%20Announcement_Fall%202026-Spring%202027.pdf"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "darpa-yfa",
+      "title": "DARPA Young Faculty Award",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Current DARPA overview reviewed; no dated FY2027 solicitation established. Typical annual timing is not an announced call.",
+      "change": "",
+      "sources": [
+        "https://www.darpa.mil/work-with-us/for-universities/young-faculty-award"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "dctc-arizona",
+      "title": "Defense Civilian Training Corps at the University of Arizona",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Official page still describes Cohort 27 beginning Fall 2025; next-cohort recruitment and terms require confirmation.",
+      "change": "",
+      "sources": [
+        "https://deanofstudents.arizona.edu/defense-civilian-training-corps-program"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "devcom-internships",
+      "title": "Army DEVCOM internships and academic programs",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Official directory reviewed; paid/unpaid programs have separate requirements and calls. No uniform eligibility/funding inferred.",
+      "change": "",
+      "sources": [
+        "https://devcom.army.mil/join-our-team/internships-and-other-programs/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "durip",
+      "title": "Defense University Research Instrumentation Program (DURIP, FY2027)",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "FY2027 landing-page deadline confirmed through web retrieval, but notice PDF not fully retrieved; complete eligibility/equipment-cost terms unverified.",
+      "change": "",
+      "sources": [
+        "https://www.onr.navy.mil/work-with-us/funding-opportunities/fiscal-year-fy-2027-department-war-dow-defense-university"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "erdc-cerl",
+      "title": "Construction Engineering Research Laboratory internships",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Official ORISE posting describes 2026 research/benefits; no new 2027 posting or award terms established.",
+      "change": "",
+      "sources": [
+        "https://www.zintellect.com/Opportunity/Details/ERDC-CERL-2026-0001"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "general-atomics",
+      "title": "General Atomics summer internships",
+      "outcome": "reviewed",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-10-05",
+      "findings": "Employer overview/FAQ reviewed: pay, eligibility, location and conditional travel/housing; recruiting season clarified against earlier vacancy closures.",
+      "change": "Clarified that many vacancies close in January despite broader September–March recruiting.",
+      "sources": [
+        "https://www.ga.com/careers/early-career"
+      ],
+      "changedFields": [
+        "changeNote",
+        "deadlineNote",
+        "verified",
+        "sources"
+      ]
+    },
+    {
+      "id": "hbcumi-intern",
+      "title": "DoW HBCU/MI Summer Research Internship Program",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Operator overview says HBCU/MI while metadata retains HBCU/TCU. No dated 2027 call; next-cycle eligibility/benefits not fully retrieved.",
+      "change": "Main program text now uses HBCU/MI; metadata still uses HBCU/TCU. Next-cycle eligibility/funding unconfirmed.",
+      "sources": [
+        "https://dowhbcutcuinternship.com/",
+        "https://dowhbcutcuinternship.com/selection-process/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "summary",
+        "summary_es",
+        "title",
+        "sources"
+      ]
+    },
+    {
+      "id": "lanl",
+      "title": "Los Alamos National Laboratory student programs",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Student overview loaded despite automated 404; undergraduate/graduate subprogram eligibility and current benefits not fully reverified.",
+      "change": "",
+      "sources": [
+        "https://www.lanl.gov/engage/collaboration/student-programs"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "llnl",
+      "title": "Lawrence Livermore National Laboratory computing summer internships",
+      "outcome": "reviewed",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-10-05",
+      "findings": "Official student page gives September 1, 2026–January 15, 2027 recruiting, paid work, age 18, enrollment and role-dependent access/relocation.",
+      "change": "",
+      "sources": [
+        "https://computing.llnl.gov/careers/interns"
+      ],
+      "changedFields": [
+        "changeNote",
+        "verified",
+        "sources"
+      ]
+    },
+    {
+      "id": "nawcad-ssep",
+      "title": "NAWCAD STEM Student Employment Program",
+      "outcome": "reviewed",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-10-05",
+      "findings": "Official Navy employment pages reviewed for applications, age/enrollment/GPA, citizenship/access, locations and paid work.",
+      "change": "Completed official student-employment eligibility.",
+      "sources": [
+        "https://www.navair.navy.mil/nawcad/undergrad"
+      ],
+      "changedFields": [
+        "changeNote",
+        "eligibility",
+        "verified",
+        "sources"
+      ]
+    },
+    {
+      "id": "nawctsd",
+      "title": "NAWC Training Systems Division (NREIP host)",
+      "outcome": "reviewed",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-10-05",
+      "findings": "2027 program, stipend tiers, FAQ and host directory reviewed; November 30, 11:59 PM Central deadline. Host restrictions preserved.",
+      "change": "Added current NREIP deadline time and host access requirements.",
+      "sources": [
+        "https://www.navalsteminterns.us/internships/nreip/labs/",
+        "https://www.navalsteminterns.us/internships/nreip/",
+        "https://www.navalsteminterns.us/internships/nreip/faqs/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "deadlineNote",
+        "eligibility",
+        "opens",
+        "verified",
+        "sources"
+      ]
+    },
+    {
+      "id": "nawcwd",
+      "title": "NAWC Weapons Division student programs",
+      "outcome": "reviewed",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-10-05",
+      "findings": "Official Navy employment pages reviewed for applications, age/enrollment/GPA, citizenship/access, locations and paid work.",
+      "change": "",
+      "sources": [
+        "https://www.navair.navy.mil/nawcwd/now_hiring"
+      ],
+      "changedFields": [
+        "changeNote",
+        "verified",
+        "sources"
+      ]
+    },
+    {
+      "id": "ndseg",
+      "title": "NDSEG Fellowship",
+      "outcome": "reviewed",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-10-05",
+      "findings": "2026 application, eligibility and benefits reviewed: October 30, 5 PM Eastern; degree by 2026, three graduate years remaining, tuition/stipend.",
+      "change": "Added explicit 2026 degree-timing and remaining-study requirements.",
+      "sources": [
+        "https://ndseg.sysplus.com/",
+        "https://ndseg.sysplus.com/NDSEG/Applicants/How-to-Apply",
+        "https://ndseg.sysplus.com/NDSEG/Fellows/Tuition-Fees-Benefits",
+        "https://ndseg.sysplus.com/NDSEG/about/eligibility",
+        "https://ndseg.sysplus.com/NDSEG/Fellows/Stipends-Travel"
+      ],
+      "changedFields": [
+        "changeNote",
+        "citizenship",
+        "eligibility",
+        "verified",
+        "sources"
+      ]
+    },
+    {
+      "id": "niwc-pacific",
+      "title": "NIWC Pacific student internships",
+      "outcome": "blocked",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Official page denied access in direct retrieval and browser. No conclusion about closure; existing terms and verified date retained.",
+      "change": "",
+      "sources": [
+        "https://www.niwcpacific.navy.mil/Connect/Internships-Externships-Student-Employment/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "nmsu-crew",
+      "title": "NMSU PSL — Classified Ready Employee Workforce (CREW)",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Rendered CREW page confirms schedule, experience and contract-dependent clearance; exact student-level/citizenship eligibility still needs confirmation.",
+      "change": "",
+      "sources": [
+        "https://psl.nmsu.edu/student-programs/crew.html",
+        "https://psl.nmsu.edu/news/2025/crew-program-prepares-nmsu-students-for-national-security-careers.html"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck"
+      ]
+    },
+    {
+      "id": "nnss",
+      "title": "Nevada National Security Site student program",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Official program/eligibility reviewed; 2027 window and vacancy arrangements unconfirmed. Removed predicted opening and stale statistics.",
+      "change": "Removed predicted December opening and outdated participation statistics; refreshed posted eligibility.",
+      "sources": [
+        "https://nnss.gov/careers/student-programs/",
+        "https://nnss.gov/careers/student-programs/eligibility-and-application-information/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "deadlineNote",
+        "eligibility",
+        "needsCheck",
+        "summary",
+        "summary_es",
+        "sources"
+      ]
+    },
+    {
+      "id": "northrop",
+      "title": "Northrop Grumman summer internships",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Employer overview contains mixed dated material; current vacancies, pay and access restrictions not fully established.",
+      "change": "",
+      "sources": [
+        "https://www.northropgrumman.com/careers/internships-at-northrop-grumman"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "nps-monterey",
+      "title": "Naval Postgraduate School internships (NREIP host)",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Official page confirms 2027 summer schedules and general requirements; project-specific selection/funding needs confirmation.",
+      "change": "",
+      "sources": [
+        "https://nps.edu/web/stem/college"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "nrc-rap",
+      "title": "NRC Research Associateship Programs",
+      "outcome": "reviewed",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-10-05",
+      "findings": "Application page explicitly gives September 1–November 2, 2026; degree/senior-track, tenure, lab-specific citizenship and benefits reviewed.",
+      "change": "Corrected the next application deadline to November 2 under the official weekend/holiday rule.",
+      "sources": [
+        "https://www.nationalacademies.org/programs/PGA-FP-18-P-23/application-process"
+      ],
+      "changedFields": [
+        "changeNote",
+        "deadline",
+        "deadlineNote",
+        "eligibility",
+        "opens",
+        "verified",
+        "sources"
+      ]
+    },
+    {
+      "id": "nreip",
+      "title": "Naval Research Enterprise Internship Program (NREIP)",
+      "outcome": "reviewed",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-10-05",
+      "findings": "2027 program, stipend tiers, FAQ and host directory reviewed; November 30, 11:59 PM Central deadline. Host restrictions preserved.",
+      "change": "",
+      "sources": [
+        "https://www.navalsteminterns.us/internships/nreip/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "verified",
+        "sources"
+      ]
+    },
+    {
+      "id": "nswc-corona",
+      "title": "NSWC Corona Division (NREIP host)",
+      "outcome": "reviewed",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-10-05",
+      "findings": "2027 program, stipend tiers, FAQ and host directory reviewed; November 30, 11:59 PM Central deadline. Host restrictions preserved.",
+      "change": "Replaced broken host URL with official NREIP directory; added host restrictions.",
+      "sources": [
+        "https://www.navalsteminterns.us/internships/nreip/labs/",
+        "https://www.navalsteminterns.us/internships/nreip/",
+        "https://www.navalsteminterns.us/internships/nreip/faqs/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "deadlineNote",
+        "eligibility",
+        "opens",
+        "url",
+        "verified",
+        "sources"
+      ]
+    },
+    {
+      "id": "onr-sfrp",
+      "title": "ONR Summer Faculty Research Program",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Operator posted 2027 dates and rank stipends; closing time and full host citizenship/appointment rules not restated. Confirm eligibility with host.",
+      "change": "Added announced 2027 application window and corrected stipends by faculty rank. Host eligibility still needs confirmation.",
+      "sources": [
+        "https://onroutreach-summer-faculty-research-sabbatical.com/summer-faculty-research-program/",
+        "https://www.niwcpacific.navy.mil/Connect/STEM-Main-Page-NEW/STEM-University-Engagement/",
+        "https://www.navsea.navy.mil/Home/Warfare-Centers/NSWC-Carderock/STEM/Internships-University-Engagement/",
+        "https://onroutreach-summer-faculty-research-sabbatical.com/important-dates/",
+        "https://onroutreach-summer-faculty-research-sabbatical.com/summer-faculty-research-program-application-process/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "deadline",
+        "deadlineNote",
+        "eligibility",
+        "fundingNote",
+        "needsCheck",
+        "opens",
+        "summary",
+        "summary_es",
+        "sources"
+      ]
+    },
+    {
+      "id": "onr-yip",
+      "title": "ONR Young Investigator Program (FY2027)",
+      "outcome": "reviewed",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-10-05",
+      "findings": "FY2027 notice reviewed for deadlines, PhD/appointment eligibility, citizenship and award ceiling; timeout was not closure.",
+      "change": "Rechecked FY2027 notice; added citizenship and individual award ceiling; resolved the automated timeout warning.",
+      "sources": [
+        "https://www.onr.navy.mil/work-with-us/funding-opportunities/fiscal-year-fy-2027-young-investigator-program-yip",
+        "https://www.onr.navy.mil/assets/2026-08/FY27-YIP-NOFO-N0001426SF004.pdf"
+      ],
+      "changedFields": [
+        "award",
+        "changeNote",
+        "cit",
+        "citizenship",
+        "deadlineNote",
+        "fundingNote",
+        "verified",
+        "sources"
+      ]
+    },
+    {
+      "id": "picatinny",
+      "title": "DEVCOM Armaments Center student programs (Picatinny Arsenal)",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Official page describes several pathways; individual current calls, amounts and eligibility require separate review.",
+      "change": "",
+      "sources": [
+        "https://ac.devcom.army.mil/people-careers/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "rtx-tucson",
+      "title": "RTX Raytheon internships in Tucson",
+      "outcome": "blocked",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Official page denied access in direct retrieval and browser. No conclusion about closure; existing terms and verified date retained.",
+      "change": "",
+      "sources": [
+        "https://careers.rtx.com/global/en/internship-search-results"
+      ],
+      "changedFields": [
+        "changeNote",
+        "sources"
+      ]
+    },
+    {
+      "id": "sandia",
+      "title": "Sandia National Laboratories internships",
+      "outcome": "blocked",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Direct/browser source returned a loading shell rather than substantive terms; no program closure inferred.",
+      "change": "",
+      "sources": [
+        "https://sandia.jobs/job-family/student/jobs/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "smart",
+      "title": "SMART Scholarship for Service",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Rendered 2026 eligibility/instructions confirm Fall 2027 requirements and December 4 deadline; exact stipend/allowance schedule not fully reverified.",
+      "change": "",
+      "sources": [
+        "https://www.smartscholarship.org/smart/en",
+        "https://www.smartscholarship.org/smart/en?id=smart_eligibility",
+        "https://www.smartscholarship.org/smart/en?id=kb_article&sys_id=0383c5d6db2a03006bb8f4b40f961956"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck"
+      ]
+    },
+    {
+      "id": "smart-webinars",
+      "title": "SMART application webinars and tips",
+      "outcome": "reviewed",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-10-05",
+      "findings": "Rendered official library contains 2026 kickoff and facility videos; free recorded guidance remains available, not a separate award.",
+      "change": "",
+      "sources": [
+        "https://www.smartscholarship.org/smart/en?id=smart_videos"
+      ],
+      "changedFields": [
+        "changeNote",
+        "verified",
+        "sources"
+      ]
+    },
+    {
+      "id": "swri",
+      "title": "Southwest Research Institute summer internships",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Official page confirms pay and conditional San Antonio housing/travel; current role eligibility/citizenship and 2027 deadlines not fully checked.",
+      "change": "",
+      "sources": [
+        "https://www.swri.org/careers/interns"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "ucf-iccae",
+      "title": "UCF Intelligence Community Center for Academic Excellence awards",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Official center confirms intelligence-education pathway; individual award cycles, amounts and eligibility not fully reverified.",
+      "change": "",
+      "sources": [
+        "https://sciences.ucf.edu/politics/iccae/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "usaisr",
+      "title": "Army Institute of Surgical Research summer research",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-09-29",
+      "findings": "Official Army page confirms Alamo LSAMP/HBCU-MI pathways; next placements, funding and partner eligibility not established.",
+      "change": "",
+      "sources": [
+        "https://usaisr.health.mil/index.cfm/join/students"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck",
+        "sources"
+      ]
+    },
+    {
+      "id": "wsmr",
+      "title": "Test Resource Management Center (TRMC) internships at DoW test ranges",
+      "outcome": "reviewed",
+      "verifiedBefore": "2026-09-29",
+      "verifiedAfter": "2026-10-05",
+      "findings": "Rendered operator overview and expanded FAQ confirm 2027 dates, pay and eligible travel/housing; assignments depend on program needs.",
+      "change": "Rechecked 2027 dates, eligible paid housing/travel and assignment rules; map locations are potential hosts.",
+      "sources": [
+        "https://www.asrcfederal.com/trmc-internships/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "deadlineNote",
+        "format",
+        "summary",
+        "summary_es",
+        "verified",
+        "sources"
+      ]
+    },
+    {
+      "id": "onr-sabbatical",
+      "title": "ONR Sabbatical Leave Program",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Operator confirms semester-to-year on-site research, salary-gap support, relocation and six-month lead time; host eligibility/intake need confirmation.",
+      "change": "",
+      "sources": [
+        "https://onroutreach-summer-faculty-research-sabbatical.com/sabbatical-leave-program/",
+        "https://onroutreach-summer-faculty-research-sabbatical.com/",
+        "https://www.niwcpacific.navy.mil/Connect/STEM-Main-Page-NEW/STEM-University-Engagement/"
+      ],
+      "changedFields": [
+        "needsCheck",
+        "changeNote"
+      ]
+    },
+    {
+      "id": "arl-rap-faculty",
+      "title": "DEVCOM Army Research Laboratory Faculty Fellowship (RAP)",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "ORAU application/benefits/eligibility reviewed; year-round pathways confirmed, but individual host funding/access/citizenship not fully established.",
+      "change": "",
+      "sources": [
+        "https://orau.org/arlfellowship/fellowship-types/how-to-apply-faculty-fellow.htm",
+        "https://orau.org/arlfellowship/applicants/incentives.htm",
+        "https://orau.org/arlfellowship/applicants/eligibility.htm",
+        "https://orau.org/arlfellowship/fellowship-types/how-to-apply-summer-student-experience.htm"
+      ],
+      "changedFields": [
+        "needsCheck",
+        "changeNote"
+      ]
+    },
+    {
+      "id": "hpcmp-fix",
+      "title": "HPCMP Faculty Immersion Experience (FIX)",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Sponsor program remains listed; last dated faculty call closed in 2025. No current call verified; not treated as discontinued.",
+      "change": "",
+      "sources": [
+        "https://www.hpc.mil/solution-areas/workforce-development",
+        "https://www.zintellect.com/Opportunity/Details/HPCMP-FIX-2025"
+      ],
+      "changedFields": [
+        "changeNote"
+      ]
+    },
+    {
+      "id": "navsea-neec",
+      "title": "Naval Engineering Education Consortium (NEEC) faculty-student research",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Official opportunity remains forecasted, not open; old pre-release dates are not current. No revised solicitation verified.",
+      "change": "",
+      "sources": [
+        "https://simpler.grants.gov/opportunity/318542ce-ac54-464c-91aa-cf525d3c36d5",
+        "https://www.navsea.navy.mil/Home/Warfare-Centers/NSWC-Carderock/STEM/Internships-University-Engagement/",
+        "https://www.navsea.navy.mil/Portals/103/Documents/NSWC_Phildelphia/Student_Programs_and_Scholarship_Overview.pdf?ver=Nl8JYIoeZ2TjZx2iM_j10A%3D%3D"
+      ],
+      "changedFields": [
+        "changeNote"
+      ]
+    },
+    {
+      "id": "viceroy-scholars",
+      "title": "VICEROY Scholars — MAVEN and ENVOY Internships",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Official internship/partner pages reviewed; benefits and MAVEN/ENVOY described but no dated current window. Image mentioning 2027 does not establish dates.",
+      "change": "",
+      "sources": [
+        "https://www.viceroyscholars.org/viceroy-scholars-internship-program/",
+        "https://www.viceroyscholars.org/viceroy-faqs/",
+        "https://www.viceroyscholars.org/"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck"
+      ]
+    },
+    {
+      "id": "scale",
+      "title": "SCALE — Microelectronics Research and Career Pathways",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Official application/overview/partners confirm pathways; institution/project funding and deadlines vary and were not fully reverified.",
+      "change": "",
+      "sources": [
+        "https://www.scale4me.org/students",
+        "https://www.scale4me.org/about",
+        "https://www.scale4me.org/partners"
+      ],
+      "changedFields": [
+        "changeNote",
+        "needsCheck"
+      ]
+    },
+    {
+      "id": "uc-ppfp-national-labs",
+      "title": "UC President’s Postdoctoral Fellowship — National Laboratories",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Central 2026 deadline and lab/UC mentor pathway reviewed. Central salaries differ and are not lab-specific terms; lab pay, access and submission time unresolved.",
+      "change": "",
+      "sources": [
+        "https://ppfp.ucop.edu/info/how-to-apply/",
+        "https://ppfp.ucop.edu/info/about/partnerships.html",
+        "https://ppfp.ucop.edu/info/how-to-apply/applicant-faqs.html",
+        "https://ppfp.ucop.edu/info/how-to-apply/terms_of_award.html"
+      ],
+      "changedFields": [
+        "changeNote"
+      ]
+    },
+    {
+      "id": "hpcmp-hip",
+      "title": "HPCMP High Performance Computing Internship Program (HIP)",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Official 2026 call closed March 26, 6 PM Eastern; future cycle unannounced. Prior benefits not extrapolated.",
+      "change": "",
+      "sources": [
+        "https://www.hpc.mil/solution-areas/workforce-development",
+        "https://www.zintellect.com/Opportunity/Details/HPCMP-HIP-2026"
+      ],
+      "changedFields": [
+        "changeNote"
+      ]
+    },
+    {
+      "id": "afrl-repperger",
+      "title": "AFRL Repperger Research Intern Program",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Official 2026 materials describe completed June–August internships despite stale open banner; no 2027 call verified.",
+      "change": "",
+      "sources": [
+        "https://orise.orau.gov/afrl/",
+        "https://orise.orau.gov/afrl/applicants/index.html",
+        "https://orise.orau.gov/afrl/project-catalog.html",
+        "https://orise.orau.gov/afrl/documents/repperger-docs/2026/afrl-rhb-26-01-mcintire.pdf",
+        "https://orise.orau.gov/afrl/documents/repperger-docs/2026/afrl-rhd-26-02-burns.pdf"
+      ],
+      "changedFields": [
+        "changeNote"
+      ]
+    },
+    {
+      "id": "nhrc-san-diego",
+      "title": "Naval Health Research Center, San Diego (NREIP host)",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "NREIP/host directory reviewed; NHRC access requirements confirmed but citizenship exceptions need host confirmation.",
+      "change": "",
+      "sources": [
+        "https://www.navalsteminterns.us/internships/nreip/labs/",
+        "https://www.navalsteminterns.us/internships/nreip/",
+        "https://www.navalsteminterns.us/internships/nreip/faqs/"
+      ],
+      "changedFields": [
+        "changeNote"
+      ]
+    },
+    {
+      "id": "nswc-port-hueneme",
+      "title": "NSWC Port Hueneme Division (NREIP host)",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "NREIP 2027 terms confirmed; host directory leaves additional requirements to be determined.",
+      "change": "",
+      "sources": [
+        "https://www.navalsteminterns.us/internships/nreip/labs/",
+        "https://www.navalsteminterns.us/internships/nreip/",
+        "https://www.navalsteminterns.us/internships/nreip/faqs/"
+      ],
+      "changedFields": [
+        "changeNote"
+      ]
+    },
+    {
+      "id": "lockheed-internships",
+      "title": "Lockheed Martin defense internships",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Employer overview reviewed; uniform pay/citizenship/deadlines not established and individual defense vacancies not fully checked.",
+      "change": "",
+      "sources": [
+        "https://www.lockheedmartin.com/en-us/careers/candidates/students-early-careers/internships.html"
+      ],
+      "changedFields": [
+        "changeNote"
+      ]
+    },
+    {
+      "id": "bae-leap",
+      "title": "BAE Systems U.S. LEAP internships and co-ops",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Rendered employer overview confirms year-round/core summer program and variable formats; detailed eligibility/benefits source not fully accessible.",
+      "change": "",
+      "sources": [
+        "https://jobs.baesystems.com/global/en/studentsandgraduates",
+        "https://jobs.baesystems.com/global/en/faq"
+      ],
+      "changedFields": [
+        "changeNote"
+      ]
+    },
+    {
+      "id": "l3harris-internships",
+      "title": "L3Harris defense internships",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Employer overview reviewed; uniform pay/citizenship/deadlines not established and individual defense vacancies not fully checked.",
+      "change": "",
+      "sources": [
+        "https://careers.l3harris.com/en/new-grads-and-interns"
+      ],
+      "changedFields": [
+        "changeNote"
+      ]
+    },
+    {
+      "id": "gdms-internships",
+      "title": "General Dynamics Mission Systems internships",
+      "outcome": "blocked",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Official page denied access in direct retrieval and browser. No conclusion about closure; existing terms and verified date retained.",
+      "change": "",
+      "sources": [
+        "https://gdmissionsystems.com/careers/students-and-recent-graduates"
+      ],
+      "changedFields": [
+        "needsCheck",
+        "changeNote"
+      ]
+    },
+    {
+      "id": "hii-internships",
+      "title": "HII defense internships — shipbuilding and Mission Technologies",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Employer confirms division-specific paid programs; corporate 2026 closed and 2027 dates unconfirmed. Mission Technologies recruits year-round.",
+      "change": "",
+      "sources": [
+        "https://www.hii.com/careers/students-early-career"
+      ],
+      "changedFields": [
+        "changeNote"
+      ]
+    },
+    {
+      "id": "booz-summer-games",
+      "title": "Booz Allen Summer Games — defense and national-security technology",
+      "outcome": "reviewed",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-10-05",
+      "findings": "Employer FAQ confirms paid ten-week program, target student stage, fall recruiting and no housing/relocation; role-specific requirements remain explicit.",
+      "change": "",
+      "sources": [
+        "https://www.boozallen.com/careers/internships-and-early-careers.html"
+      ],
+      "changedFields": [
+        "verified",
+        "changeNote"
+      ]
+    },
+    {
+      "id": "caci-internships",
+      "title": "CACI national-security internships and co-ops",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Employer overview reviewed; uniform pay/citizenship/deadlines not established and individual defense vacancies not fully checked.",
+      "change": "",
+      "sources": [
+        "https://careers.caci.com/intern"
+      ],
+      "changedFields": [
+        "changeNote"
+      ]
+    },
+    {
+      "id": "peraton-internships",
+      "title": "Peraton national-security internships and co-ops",
+      "outcome": "reviewed",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-10-05",
+      "findings": "Employer page confirms U.S. citizenship, enrollment, hourly pay and timing; individual vacancies govern selection and location.",
+      "change": "",
+      "sources": [
+        "https://www.careers.peraton.com/students-early-career"
+      ],
+      "changedFields": [
+        "verified",
+        "changeNote"
+      ]
+    },
+    {
+      "id": "snc-internships",
+      "title": "SNC aerospace and national-security internships",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Employer overview loaded but FAQ answers did not render reliably; student requirements, dates and benefits remain incomplete.",
+      "change": "",
+      "sources": [
+        "https://www.sncorp.com/careers/students-early-career"
+      ],
+      "changedFields": [
+        "changeNote"
+      ]
+    },
+    {
+      "id": "textron-systems-internships",
+      "title": "Textron Systems defense internships",
+      "outcome": "reviewed",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-10-05",
+      "findings": "Employer FAQ confirms a summer-cost stipend, pre-degree internship and 2027 vacancy search; amount and role salary unspecified.",
+      "change": "Added summer-cost stipend explicitly described in the employer FAQ.",
+      "sources": [
+        "https://www.textronsystems.com/careers/student-candidates"
+      ],
+      "changedFields": [
+        "summary",
+        "summary_es",
+        "funding",
+        "fundingNote",
+        "needsCheck",
+        "verified",
+        "changeNote"
+      ]
+    },
+    {
+      "id": "aerovironment-internships",
+      "title": "AeroVironment defense-technology internships",
+      "outcome": "reviewed",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-10-05",
+      "findings": "Employer page confirms paid duration, conditional housing, locations, sophomore minimum, summer availability and U.S.-person categories.",
+      "change": "Added current minimum enrollment, availability and U.S.-person requirements.",
+      "sources": [
+        "https://www.avinc.com/careers/internships/"
+      ],
+      "changedFields": [
+        "eligibility",
+        "citizenship",
+        "verified",
+        "changeNote"
+      ]
+    },
+    {
+      "id": "shield-ai-software-2027",
+      "title": "Shield AI software engineering internship — summer 2027",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Live 2027 posting confirms locations, degree fields and $37–$97/hour; citizenship/authorization not stated and requires confirmation.",
+      "change": "",
+      "sources": [
+        "https://jobs.lever.co/shieldai/8c850c75-081d-4d09-bebf-096379a93010"
+      ],
+      "changedFields": [
+        "changeNote"
+      ]
+    },
+    {
+      "id": "anduril-coops-2027",
+      "title": "Anduril engineering co-ops — winter 2027",
+      "outcome": "blocked",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Careers page rendered an empty/JavaScript shell; 2027 co-op terms could not be reverified. No closure inferred.",
+      "change": "",
+      "sources": [
+        "https://www.anduril.com/open-roles"
+      ],
+      "changedFields": [
+        "changeNote"
+      ]
+    },
+    {
+      "id": "boeing-spirit-defense-it-2027",
+      "title": "Boeing / Spirit Defense IT and cybersecurity internship — summer 2027",
+      "outcome": "reviewed",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-10-05",
+      "findings": "Official requisition 2026-17483 confirms Wichita summer 2027 defense IT, $19.73–$33.05/hour, degree enrollment and U.S.-citizen clearance; no closing date.",
+      "change": "",
+      "sources": [
+        "https://jobs.boeing.com/job/wichita/spirit-defense-summer-2027-internship-program-paid-information-digital-technology-and-security-idt-/185/100378295744"
+      ],
+      "changedFields": [
+        "verified",
+        "changeNote"
+      ]
+    },
+    {
+      "id": "mit-lincoln-summer",
+      "title": "MIT Lincoln Laboratory Summer Research Program",
+      "outcome": "reviewed",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-10-05",
+      "findings": "Official program confirms pay, sophomore completion/graduate eligibility, U.S. citizenship, housing/transport terms and May–August duration; vacancies control dates.",
+      "change": "",
+      "sources": [
+        "https://www.ll.mit.edu/careers/student-opportunities/summer-research-program"
+      ],
+      "changedFields": [
+        "verified",
+        "changeNote"
+      ]
+    },
+    {
+      "id": "jhu-apl-defense-internships",
+      "title": "Johns Hopkins APL national-defense research internships",
+      "outcome": "blocked",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Program/requisition pages returned loading/verification screens; eligibility, salary and availability could not be reverified.",
+      "change": "",
+      "sources": [
+        "https://careers.jhuapl.edu/internships",
+        "https://careers.jhuapl.edu/jobs/60048?lang=en-us",
+        "https://careers.jhuapl.edu/jobs/59759?lang=en-us"
+      ],
+      "changedFields": [
+        "changeNote"
+      ]
+    },
+    {
+      "id": "mitre-national-security-intern",
+      "title": "MITRE National Security Intern Program",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Official pathway confirms national-security mission and clearance sponsorship; current role pay, enrollment and deadlines incomplete.",
+      "change": "",
+      "sources": [
+        "https://careers.mitre.org/us/en/national-security-intern"
+      ],
+      "changedFields": [
+        "changeNote"
+      ]
+    },
+    {
+      "id": "draper-internships",
+      "title": "Draper defense-research internships and co-ops",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Employer overview gives recurring posting/work seasons; individual vacancy pay, access and closing dates unverified.",
+      "change": "Added employer recurring posting schedule without inventing a dated 2027 deadline.",
+      "sources": [
+        "https://www.draper.com/education-programs/student-opportunities"
+      ],
+      "changedFields": [
+        "deadlineNote",
+        "changeNote"
+      ]
+    },
+    {
+      "id": "draper-scholars",
+      "title": "Draper Scholars graduate fellowship — awaiting next cycle",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Official page retains closed February 1, 2026 deadline and partner-school pathway. Next cycle/awards unconfirmed.",
+      "change": "",
+      "sources": [
+        "https://www.draper.com/education-programs/draper-scholars-program",
+        "https://www.draper.com/media-center/featured-stories/detail/25391/mentoring-the-engineers-of-the-future"
+      ],
+      "changedFields": [
+        "changeNote"
+      ]
+    },
+    {
+      "id": "swe-rtx-scholarship",
+      "title": "SWE RTX Scholarship — awaiting next cycle",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "RTX award and SWE opening pages reviewed; December 1 is common collegiate opening, not confirmation of RTX next-cycle availability/deadline.",
+      "change": "Added announced shared SWE 2027–28 collegiate opening; RTX-specific next-cycle terms remain unconfirmed.",
+      "sources": [
+        "https://swe.org/scholarships/swe-rtx-scholarship/",
+        "https://swe.org/scholarships-overview/"
+      ],
+      "changedFields": [
+        "summary",
+        "summary_es",
+        "opens",
+        "deadlineNote",
+        "changeNote"
+      ]
+    },
+    {
+      "id": "snc-stem-scholarship",
+      "title": "SNC STEM Scholarship — awaiting next cycle",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "2026 cycle remains closed; $7,500 and eligibility reviewed, but two-year/four-year enrollment wording conflicts. Next cycle unknown.",
+      "change": "",
+      "sources": [
+        "https://scholarshipamerica.org/scholarship/snc/"
+      ],
+      "changedFields": [
+        "changeNote"
+      ]
+    },
+    {
+      "id": "shield-ai-scholarship",
+      "title": "Shield AI Future Innovators Scholarship — awaiting next cycle",
+      "outcome": "partial",
+      "verifiedBefore": "2026-09-30",
+      "verifiedAfter": "2026-09-30",
+      "findings": "Rendered page shows closed April 15, 2026 cycle; next dates, amount and citizenship not established.",
+      "change": "",
+      "sources": [
+        "https://shield.ai/scholarship-application/"
+      ],
+      "changedFields": [
+        "changeNote"
+      ]
+    }
+  ]
+}
