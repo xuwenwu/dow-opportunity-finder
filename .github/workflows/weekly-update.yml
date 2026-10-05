@@ -4,8 +4,6 @@ name: Weekly update
 # opportunities with Claude, rebuild the feed and digest, and open a pull request
 # for a person to review. Nothing reaches the public site until the PR is merged.
 on:
-  schedule:
-    - cron: "45 10 * * 1"   # Mondays 10:45 UTC (6:45 AM Eastern in summer)
   workflow_dispatch:
     inputs:
       discover:
