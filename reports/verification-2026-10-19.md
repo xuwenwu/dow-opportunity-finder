@@ -1,6 +1,6 @@
 # Weekly opportunity verification - October 19, 2026
 
-All **103 published listings** attempted; four archived entries retained. Outcomes: **24 reviewed, 73 partial, 6 blocked**. 197 distinct stored/linked official URLs attempted directly, supplemented with rendered and web retrieval. No new records added.
+All **103 published listings** attempted; four archived entries retained. Outcomes: **24 reviewed, 73 partial, 6 blocked**. 198 distinct stored/linked official URLs attempted directly, supplemented with rendered and web retrieval. No new records added.
 
 ## Method and limits
 
@@ -14,7 +14,7 @@ Only completed reviews advance verified dates. Partial/blocked records retain th
 - **ascendr-research**: Added the nine currently published participating institutions, dated October 13. Institutional notice remains open until October 23, so the list is not treated as a final exclusion filter. [Live listing](https://hsrufinder.pages.dev/#opportunity=ascendr-research).
 - **swe-rtx-scholarship**: Corrected the shared SWE collegiate/graduate deadline from February 8 to February 1, 2027; RTX-specific availability remains unconfirmed. [Live listing](https://hsrufinder.pages.dev/#opportunity=swe-rtx-scholarship).
 - **anduril-coops-2027**: Flagged contradictory season wording in the manufacturing co-op posting instead of asserting one confirmed season for all roles. [Live listing](https://hsrufinder.pages.dev/#opportunity=anduril-coops-2027).
-- **nnsa-stockpile-science-fellowship**: Confirmed the 2027 application is open and updated reference-submission instructions; teaching-policy conflict remains unresolved. [Live listing](https://hsrufinder.pages.dev/#opportunity=nnsa-stockpile-science-fellowship).
+- **nnsa-stockpile-science-fellowship**: Recovered replacement application FAQ: deadline January 5, 2027 at 5 PM Central; one-term teaching policy confirmed. Citizenship conflicts between citizen-only rules and a FAQ answer mentioning permanent residents; eligibility requires clarification. [Live listing](https://hsrufinder.pages.dev/#opportunity=nnsa-stockpile-science-fellowship).
 - **smart-webinars**: Added the newly listed October 2026 retention webinar. [Live listing](https://hsrufinder.pages.dev/#opportunity=smart-webinars).
 
 ## Important interpretation
@@ -744,11 +744,11 @@ Archived entry preserved without changing its status, content or verified date. 
 - Change: No substantive listing change.
 
 ### nnsa-stockpile-science-fellowship - partial
-Current operator confirms open application, January 5 deadline, online references, award and defense-lab practicum. Teaching rule remains one term on eligibility page versus previously retrieved two-term FAQ; FAQ inaccessible today. Retain no complete verified date.
+Replacement application FAQ substantively reviewed. It confirms January 5 at 5 PM CST and one-term teaching waiver, permits direct email/mail reference letters, and allows delayed fall transcripts under its stated exception. Citizen-only overview/eligibility and FAQ introduction conflict with one FAQ answer mentioning lawful permanent residents. Keep conservative U.S.-citizen filter and needsCheck; no complete verified date.
 
 - Complete verified date: None -> None.
-- Official evidence: [1](https://www.krellinst.org/ssgf/); [2](https://www.krellinst.org/ssgf/how-apply); [3](https://www.krellinst.org/ssgf/about-doe-nnsa-ssgf/benefits-opportunities); [4](https://www.krellinst.org/ssgf/about-doe-nnsa-ssgf/eligibility-program-requirements); [5](https://www.krellinst.org/ssgf/how-apply/frequently-asked-questions); [6](https://www.krellinst.org/ssgf/doe-lab-practicum).
-- Change: Confirmed the 2027 application is open and updated reference-submission instructions; teaching-policy conflict remains unresolved.
+- Official evidence: [1](https://www.krellinst.org/ssgf/); [2](https://www.krellinst.org/ssgf/how-apply); [3](https://www.krellinst.org/ssgf/about-doe-nnsa-ssgf/benefits-opportunities); [4](https://www.krellinst.org/ssgf/about-doe-nnsa-ssgf/eligibility-program-requirements); [5](https://www.krellinst.org/ssgf/how-apply/frequently-asked-questions); [6](https://www.krellinst.org/ssgf/doe-lab-practicum); [7](https://ssgf.krellinst.org/application/faq).
+- Change: Recovered replacement application FAQ: deadline January 5, 2027 at 5 PM Central; one-term teaching policy confirmed. Citizenship conflicts between citizen-only rules and a FAQ answer mentioning permanent residents; eligibility requires clarification.
 
 ### nnsa-laboratory-residency-fellowship - reviewed
 Current official program terms re-examined against the listing; no substantive discrepancy found. Application, eligibility, benefits and laboratory-residency pages reviewed: February 16, 2027, U.S.-citizen first/second/third-year full-time PhD with eighteen months remaining, tuition/$45,000 stipend and two residencies. Closing time not published.

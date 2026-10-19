@@ -5,7 +5,7 @@
   "publishedAttempted": 103,
   "archivedRetained": 4,
   "addedRecords": [],
-  "uniqueSourceUrlsAttempted": 197,
+  "uniqueSourceUrlsAttempted": 198,
   "outcomes": {
     "reviewed": 24,
     "partial": 73,
@@ -17,7 +17,7 @@
     "ascendr-research": "Added the nine currently published participating institutions, dated October 13. Institutional notice remains open until October 23, so the list is not treated as a final exclusion filter.",
     "swe-rtx-scholarship": "Corrected the shared SWE collegiate/graduate deadline from February 8 to February 1, 2027; RTX-specific availability remains unconfirmed.",
     "anduril-coops-2027": "Flagged contradictory season wording in the manufacturing co-op posting instead of asserting one confirmed season for all roles.",
-    "nnsa-stockpile-science-fellowship": "Confirmed the 2027 application is open and updated reference-submission instructions; teaching-policy conflict remains unresolved.",
+    "nnsa-stockpile-science-fellowship": "Recovered replacement application FAQ: deadline January 5, 2027 at 5 PM Central; one-term teaching policy confirmed. Citizenship conflicts between citizen-only rules and a FAQ answer mentioning permanent residents; eligibility requires clarification.",
     "smart-webinars": "Added the newly listed October 2026 retention webinar."
   },
   "records": [
@@ -3437,21 +3437,26 @@
       "id": "nnsa-stockpile-science-fellowship",
       "title": "DOE NNSA Stockpile Science Graduate Fellowship (SSGF)",
       "outcome": "partial",
-      "findings": "Current operator confirms open application, January 5 deadline, online references, award and defense-lab practicum. Teaching rule remains one term on eligibility page versus previously retrieved two-term FAQ; FAQ inaccessible today. Retain no complete verified date.",
+      "findings": "Replacement application FAQ substantively reviewed. It confirms January 5 at 5 PM CST and one-term teaching waiver, permits direct email/mail reference letters, and allows delayed fall transcripts under its stated exception. Citizen-only overview/eligibility and FAQ introduction conflict with one FAQ answer mentioning lawful permanent residents. Keep conservative U.S.-citizen filter and needsCheck; no complete verified date.",
       "sources": [
         "https://www.krellinst.org/ssgf/",
         "https://www.krellinst.org/ssgf/how-apply",
         "https://www.krellinst.org/ssgf/about-doe-nnsa-ssgf/benefits-opportunities",
         "https://www.krellinst.org/ssgf/about-doe-nnsa-ssgf/eligibility-program-requirements",
         "https://www.krellinst.org/ssgf/how-apply/frequently-asked-questions",
-        "https://www.krellinst.org/ssgf/doe-lab-practicum"
+        "https://www.krellinst.org/ssgf/doe-lab-practicum",
+        "https://ssgf.krellinst.org/application/faq"
       ],
-      "change": "Confirmed the 2027 application is open and updated reference-submission instructions; teaching-policy conflict remains unresolved.",
+      "change": "Recovered replacement application FAQ: deadline January 5, 2027 at 5 PM Central; one-term teaching policy confirmed. Citizenship conflicts between citizen-only rules and a FAQ answer mentioning permanent residents; eligibility requires clarification.",
       "verifiedBefore": null,
       "verifiedAfter": null,
       "changedFields": [
         "deadlineNote",
-        "changeNote"
+        "changeNote",
+        "eligibility",
+        "summary",
+        "summary_es",
+        "sources"
       ],
       "sourceAttempts": [
         {
@@ -3494,6 +3499,13 @@
           "status": 200,
           "textCharacters": 1363,
           "textSha256": "2188cc27edcf5d81a83c8d0eaba3077d6fe3a96b5c9187a8c13fdfcf3207ee52",
+          "error": null
+        },
+        {
+          "url": "https://ssgf.krellinst.org/application/faq",
+          "status": 200,
+          "textCharacters": 18304,
+          "textSha256": "e2811e27ba83bd452ec040a4defbc17b1521f1cd33df045c8c2b1d21083cfa0d",
           "error": null
         }
       ]
@@ -3682,7 +3694,7 @@
     "tests": "14 matching, hosting and AI service tests passed",
     "browser": "Six changed cards: official links, English/Spanish summaries, mobile width; Fellowship inclusion for SDSU/NMSU and exclusion for FAU; provisional Research list; normal search, closed-cycle labels, campus distance, matching and map passed; no page errors. Initial scratch test used hidden mobile filter; corrected its viewport before rerun.",
     "sourceDiffReview": "Six material changes reviewed against current official source bodies/PDF and rendered campus lists. All 107 IDs and four archived records preserved; incomplete verified dates retained.",
-    "publication": "Pending PR checks, merge and live confirmation."
+    "publication": "Pending updated PR checks, merge and live confirmation."
   },
   "supplementalEvidence": [
     {

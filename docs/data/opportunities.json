@@ -4929,7 +4929,7 @@
   "funding": "full",
   "fundingNote": "Published support: full tuition/required fees, $45,000 yearly stipend, $2,000 academic allowance; renewable up to four years subject to funds/progress. Defense-lab practicum includes augmented stipend and travel reimbursement.",
   "award": "Full tuition/required fees, $45,000 annual stipend and $2,000 annual academic allowance",
-  "eligibility": "U.S. citizens who are senior undergraduates or first-/second-year doctoral students, planning full-time PhD study at an accredited U.S. university in high-energy-density physics, nuclear science or materials under extreme conditions. Department teaching limits conflict across official pages; confirm before accepting.",
+  "eligibility": "U.S.-citizen senior undergraduates or first-/second-year doctoral students planning full-time PhD study at an accredited U.S. university in stockpile-science fields. Department must waive teaching beyond one term. Citizenship needs clarification: overview, eligibility and FAQ introduction require U.S. citizenship, but one FAQ answer mentions lawful permanent residents; do not assume permanent-resident eligibility.",
   "cit": "us",
   "citizenship": "U.S. citizenship required.",
   "levels": [
@@ -4961,10 +4961,10 @@
    }
   ],
   "location": "U.S. PhD institution; practicum at Livermore, Los Alamos or Sandia (host not guaranteed)",
-  "summary": "NNSA-funded PhD fellowship in stockpile science with full tuition, $45,000 yearly stipend and a defense-lab practicum. The 2027-28 deadline is January 5, 2027; official teaching limits need clarification.",
-  "summary_es": "Beca doctoral NNSA en ciencia de arsenales nucleares con matrícula completa, $45,000 anuales y una estancia en laboratorio de defensa. Vence el 5 de enero de 2027; confirme los límites de docencia, pues las páginas oficiales difieren.",
+  "summary": "NNSA-funded PhD fellowship in stockpile science with full tuition, $45,000 yearly stipend and a defense-lab practicum. Apply by January 5, 2027 at 5 PM Central; conflicting citizenship wording needs clarification.",
+  "summary_es": "Beca doctoral NNSA en ciencia de arsenales nucleares con matrícula completa, $45,000 anuales y una estancia en laboratorio de defensa. Solicite antes del 5 de enero de 2027 a las 5 p. m. hora Central; hay requisitos de ciudadanía contradictorios.",
   "deadline": "2027-01-05",
-  "deadlineNote": "2027 application is open; applications, transcripts and references due January 5, 2027. Closing time/time zone not stated. References are requested/submitted through the online system. Confirm teaching requirements: eligibility page says waive beyond one term; previously reviewed FAQ permitted two and could not be retrieved this week.",
+  "deadlineNote": "2027 application is open. Apply by January 5, 2027 at 5 PM Central (CST). References and transcripts are requested by the same deadline; the FAQ allows late official fall transcripts under its stated exception. Online reference submission is preferred; direct email/mail from the reference is also allowed.",
   "opens": null,
   "added": "2026-10-12",
   "verified": null,
@@ -4973,14 +4973,15 @@
   "seed": false,
   "hsi": "",
   "format": "Doctoral study plus at least one twelve-week onsite defense-laboratory practicum.",
-  "changeNote": "Weekly audit 2026-10-19: Current operator confirms open application, January 5 deadline, online references, award and defense-lab practicum. Teaching rule remains one term on eligibility page versus previously retrieved two-term FAQ; FAQ inaccessible today. Retain no complete verified date.",
+  "changeNote": "Weekly audit 2026-10-19: Replacement application FAQ substantively reviewed. It confirms January 5 at 5 PM CST and one-term teaching waiver, permits direct email/mail reference letters, and allows delayed fall transcripts under its stated exception. Citizen-only overview/eligibility and FAQ introduction conflict with one FAQ answer mentioning lawful permanent residents. Keep conservative U.S.-citizen filter and needsCheck; no complete verified date.",
   "sources": [
    "https://www.krellinst.org/ssgf/",
    "https://www.krellinst.org/ssgf/how-apply",
    "https://www.krellinst.org/ssgf/about-doe-nnsa-ssgf/benefits-opportunities",
    "https://www.krellinst.org/ssgf/about-doe-nnsa-ssgf/eligibility-program-requirements",
    "https://www.krellinst.org/ssgf/how-apply/frequently-asked-questions",
-   "https://www.krellinst.org/ssgf/doe-lab-practicum"
+   "https://www.krellinst.org/ssgf/doe-lab-practicum",
+   "https://ssgf.krellinst.org/application/faq"
   ]
  },
  {
